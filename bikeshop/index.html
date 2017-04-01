@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The bike shop</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style-min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header__wrapper">
+      <div class="header__logo">
+        <img class="header__picture" src="img/logo.png" width="160" height="50" alt="logo the bike shop">
+      </div>
+      <nav class="main-menu">
+        <ul class="main-menu__list">
+          <li class="main-menu__item">
+            <a class="main-menu__link  main-menu__link--active" href="#">Bicycles</a>
+            <ul class="main-menu__sub-menu">
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Fixed / single speed</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">City bikes</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Premium series</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">Parts</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">Accessories</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">Extras</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__basket">
+        <a class="header__link" href="#">Корзина</a>
+      </div>
+      <h1 class="header__title">Handmade bicycle</h1>
+      <p class="header__text">
+        You <span class="header__text--yellow">create</span> the <span class="header__text--yellow">journey,</span> we supply the <span class="header__text--yellow">parts.</span>
+      </p>
+      <a class="header__btn-shop  btn">Shop bikes</a>
+      <button class="header__btn  header__btn--left" type="button">Левый переключатель</button>
+      <button class="header__btn  header__btn--right" type="button">Правый переключатель</button>
+      <div class="header__scroll-picture">Скролл картинка</div>
+    </div>
+  </header>
+  
+  <main class="main">
+    <div class="container">
+      <section class="catalog">
+        <h2 class="catalog__title">Categories</h2>
+        <div class="catalog__item  catalog__item--bg-1">
+          <h3 class="catalog__name">Fixed / single speed</h3>
+          <p class="catalog__text">Are You ready for the 27.5 Revolution?</p>
+          <a class="catalog__btn  btn" href="#">Go to store</a>
+        </div>
+        <div class="catalog__item  catalog__item--bg-2">
+          <h3 class="catalog__name">Premium series</h3>
+          <p class="catalog__text">Exclusive  Bike Components</p>
+          <a class="catalog__btn  btn" href="#">Go to store</a>
+        </div>
+        <div class="catalog__item  catalog__item--bg-3">
+          <h3 class="catalog__name">City bikes</h3>
+          <p class="catalog__text">Street Playground</p>
+          <a class="catalog__btn  btn" href="#">Go to store</a>
+        </div>
+      </section>
+
+      <section class="popular">
+        <div class="popular__wrapper">
+          <h2 class="popular__title">Popular bikes</h2>
+          <div class="product  clearfix">
+            <img class="product__picture" src="img/bikes-item-1.jpg" width="444" height="270" alt="Fixed Gear">
+            <div class="product__info">
+              <h3 class="product__name">Fixed gear</h3>
+              <span class="product__price">$249.00</span>
+            </div>
+            <form class="product__form" action="#" method="get">
+              <select class="product__select-list">
+                <option class="product__select">Option</option>
+                <option class="product__select">Option 2</option>
+              </select>
+              <button class="product__submit  btn" type="submit">Buy</button>
+            </form>
+          </div>
+          <div class="product  clearfix">
+            <img class="product__picture" src="img/bikes-item-2.jpg" width="456" height="272" alt="Big boy ultra">
+            <div class="product__info">
+              <h3 class="product__name">Big boy ultra</h3>
+              <span class="product__price">$249.00</span>
+            </div>
+            <form class="product__form" action="#" method="get">
+              <select class="product__select-list">
+                <option class="product__select">Option</option>
+                <option class="product__select">Option 2</option>
+              </select>
+              <button class="product__submit  btn" type="submit">Buy</button>
+            </form>
+          </div>
+          <div class="product  clearfix">
+            <img class="product__picture" src="img/bikes-item-3.jpg" width="467" height="272" alt="Sanchaez">
+            <div class="product__info">
+              <h3 class="product__name">Sanchaez</h3>
+              <span class="product__price">$249.00</span>
+            </div>
+            <form class="product__form" action="#" method="get">
+              <select class="product__select-list">
+                <option class="product__select">Option</option>
+                <option class="product__select">Option 2</option>
+              </select>
+              <button class="product__submit  btn" type="submit">Buy</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="feedback">
+        <div class="feedback__wrapper">
+          <h2 class="feedback__title">About us</h2>
+          <p class="feedback__text">Please contact us for all inquiries and purchase options.</p>
+          <form class="feedback__form" action="file_add.php" method="post">
+            <input class="feedback__item  feedback__name" type="text" name="name" id="name" placeholder="Name" required>
+            <label class="feedback__label" for="name">Имя</label>
+
+            <input class="feedback__item  feedback__surname" type="text" name="surname" id="surname"  placeholder="Surname" required>
+            <label class="feedback__label" for="surname">Фамилия</label>
+
+            <input class="feedback__item  feedback__email" type="email" name="email" id="email" placeholder="User@domain.com" required>
+            <label class="feedback__label" for="email">Почта</label>
+
+            <textarea class="feedback__item  feedback__textarea" name="message" id="message" rows="5" placeholder="Message"></textarea>
+            <label class="feedback__label" for="message">Сообщение</label>
+
+            <button class="feedback__submit" type="submit">Send</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper  clearfix">
+      <div class="footer__logo">
+        <img class="footer__picture" src="img/logo.png" width="160" height="50" alt="logo the bike shop">
+      </div>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Bicycles</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Parts</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Accessories</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Extras</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
