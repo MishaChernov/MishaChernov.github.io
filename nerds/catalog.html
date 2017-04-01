@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Nerd's: catalog</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&subset=latin,cyrillic" rel="stylesheet">
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/style-min.css" rel="stylesheet">
+</head>
+<body>
+	<header class="main-header">
+		<div class="container">
+			<div class="header-top clearfix">
+        <div class="header-logo">
+          <a href="index.html" class="logo-link">
+            <img src="img/logo.png" width="160" height="65" alt="logo nerds">
+          </a>
+        </div>
+				<nav class="main-menu">
+					<ul>
+						<li>
+							<a href="index.html">Студия</a>
+						</li>
+						<li>
+							<a href="#">Клиенты</a>
+						</li>
+						<li>
+							<span class="active-page">Магазин</span>
+						</li>
+						<li>
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header-basket">
+					<a href="#" class="icon">Корзина</a>
+				</div>
+			</div>
+			<h1>Магазин готовых шаблонов</h1>
+		</div>
+	</header>
+	<main>
+		<div class="container clearfix">
+			<section class="content-left">
+				<form action="#" method="get" oninput="ratemin.value=rangemin.value, ratemax.value=rangemax.value">
+					<fieldset class="main-range">
+						<legend>Стоимость:</legend>
+						<div class="price-range">
+              <div class="box-range">
+                <div class="price-length">
+                  <div class="min-value"></div>
+                  <div class="max-value"></div>
+                </div>
+              </div>
+            </div>
+					  <div class="min-max">
+  						<label for="min">От</label>
+              <input type="text" name="min-price" id="min" value="0">
+  						<label for="max">До</label>
+              <input type="text" name="max-price" id="max" value="15000">
+            </div>
+					</fieldset>
+					<fieldset class="main-radio">
+						<legend>Сетка:</legend>
+						<input type="radio" name="radio" id="radio-1" checked>
+						<label for="radio-1">Адаптивная</label>
+						<input type="radio" name="radio" id="radio-2">
+						<label for="radio-2">Фиксированная</label>
+						<input type="radio" name="radio" id="radio-3" disabled>
+						<label for="radio-3">Резиновая</label>
+					</fieldset>
+					<fieldset class="main-checkbox">
+						<legend>Особенности:</legend>
+						<input type="checkbox" name="slide" id="check-1" checked>
+						<label for="check-1">Слайдер</label>
+						<input type="checkbox" name="block" id="check-2">
+						<label for="check-2">Блок преимуществ</label>
+						<input type="checkbox" name="news" id="check-3" checked>
+						<label for="check-3">Новости</label>
+						<input type="checkbox" name="gallery" id="check-4">
+						<label for="check-4">Галерея</label>
+						<input type="checkbox" name="basket" id="check-5" disabled>
+						<label for="check-5">Корзина</label>
+					</fieldset>
+					<div class="main-btn">
+						<button class="btn-form" type="submit">Показать</button>
+					</div>
+				</form>
+			</section>
+			<section class="content-right">
+				<div class="main-sort clearfix">
+          <span class="sort-txt">Сортировать:</span>
+					<ul class="sort-list">
+						<li>
+							<a href="#" class="active">По цене</a>
+						</li>
+						<li>
+							<a href="#">По типу</a>
+						</li>
+						<li>
+							<a href="#">По названию</a>
+						</li>
+            <li class="rows-left row-active"></li>
+            <li class="rows-right"></li>
+					</ul>
+				</div>
+				<div class="gallery-product clearfix">
+					<article class="product">
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<div class="product-img">
+							<a href="#">
+								<img src="img/product-1.jpg" width="360" height="576" alt="Sedona">
+							</a>
+						</div>
+						<div class="product-hidden">
+							<h3>Sedona</h3>
+							<p>Информационный сайт
+              для туристов</p>
+							<a href="#" class="btn">9 900 руб.</a>
+						</div>
+					</article>
+					<article class="product">
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<div class="product-img">
+							<a href="#">
+								<img src="img/product-2.jpg" width="360" height="576" alt="Pink">
+							</a>
+						</div>
+						<div class="product-hidden">
+							<h3>Pink app</h3>
+							<p>Продуктовый лендинг
+              приложения для iOS и Android</p>
+							<a href="#" class="btn">9 900 руб.</a>
+						</div>
+					</article>
+					<article class="product">
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<div class="product-img">
+							<a href="#">
+								<img src="img/product-3.jpg" width="360" height="576" alt="Barbershop">
+							</a>
+						</div>
+						<div class="product-hidden">
+							<h3>Barbershop</h3>
+							<p>Сайт салоны красоты.
+              Для мужчин, да.</p>
+							<a href="#" class="btn">9 900 руб.</a>
+						</div>
+					</article>
+					<article class="product">
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<div class="product-img">
+							<a href="#">
+								<img src="img/product-4.jpg" width="360" height="576" alt="Mishka">
+							</a>
+						</div>
+						<div class="product-hidden">
+							<h3>Mishka</h3>
+							<p>Интернет-магазин
+              вязаных игрушек</p>
+							<a href="#" class="btn">9 900 руб.</a>
+						</div>
+					</article>
+					<article class="product">
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<div class="product-img">
+							<a href="#">
+								<img src="img/product-5.jpg" width="360" height="576" alt="A Plus">
+							</a>
+						</div>
+						<div class="product-hidden">
+							<h3>A Plus</h3>
+							<p>Лендинг курсов повышения
+              квалификации</p>
+							<a href="#" class="btn">9 900 руб.</a>
+						</div>
+					</article>
+					<article class="product">
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<div class="product-img">
+							<a href="#">
+								<img src="img/product-6.jpg" width="360" height="576" alt="Kvast">
+							</a>
+						</div>
+						<div class="product-hidden">
+							<h3>Кваст</h3>
+							<p>Промо-сайт производителя
+              крафтового кваса</p>
+							<a href="#" class="btn">9 900 руб.</a>
+						</div>
+					</article>
+				</div>
+				<ul class="pagination">
+					<li>
+						<span class="active">1</span>
+					</li>
+					<li>
+						<a href="#">2</a>
+					</li>
+					<li>
+						<a href="#">3</a>
+					</li>
+					<li>
+						<a href="#" class="next">Следующая</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<section class="main-contacts">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.599104365163!2d30.320894616160455!3d59.938794181876176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1489349432621" width="100%" height="416" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <div class="contacts">
+        <h3>Nerds design studio</h3>
+        <p>
+          191186, Санкт-Путурбург,<br>
+          ул. Б. Конюшенная, д. 19/8
+        </p>
+        <a href="tel:+78122757575" class="phone">
+            тел. +7(812)275-75-75
+        </a>
+        <a href="#" class="btn-contacts">Напишите нам</a>
+      </div>
+    </section>
+    <section class="popup clearfix">
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Напишите нам</legend>
+          <div class="left">
+            <label for="name">Ваше имя:</label>
+            <input type="text" name="name" id="name" required placeholder="Представьтесь, пожалуйста" autofocus>
+          </div>
+          <div class="right">
+            <label for="email">Ваш e-mail:</label>
+            <input type="email" name="email" id="email" required placeholder="Для отправки ответа" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
+          </div>
+          <div class="message">
+            <label for="message">Текст письма:</label>
+            <textarea name="message" id="message" required placeholder="В свободной форме" rows="5"></textarea>
+          </div>
+          <input type="submit" value="Отправить" class="btn">
+          <button type="button" class="icon btn-close">Закрыть</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <div class="container clearfix">
+      <section class="social">
+        <a href="https://vk.com" class="icon social-vk">Вконтакте</a>
+        <a href="https://facebook.com" class="icon social-fb">Фейсбук</a>
+        <a href="https://instagram.com" class="icon social-inst">Инстаграм</a>
+      </section>
+      <section class="footer-info">
+        <h2>Давайте дружить, это выгодно!</h2>
+        <p>Скидка 10% для друзей из социальных сетей</p>
+      </section>
+    </div>
+  </footer>
+  <script src="js/main-min.js"></script>
+</body>
+</html>
