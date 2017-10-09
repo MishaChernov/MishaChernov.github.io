@@ -1,0 +1,1 @@
+"use strict";function form(){submitFormFirst.addEventListener("submit",function(){window.open("../features.html")}),submitFormSecond.addEventListener("submit",function(){window.open("../features.html")})}var submitFormFirst=document.querySelector(".product__form--first"),submitFormSecond=document.querySelector(".product__form--second");form();
