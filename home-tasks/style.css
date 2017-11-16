@@ -1,0 +1,95 @@
+.task {
+  border-bottom: 1px solid black;
+}
+
+.btn-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.showAnswerBtn {
+  display: none;
+}
+
+.showAnswerBtn__label {
+  display: block;
+  padding-top: 30px;
+}
+
+.showAnswerBtn__label::before {
+  content: "Показать ответ";
+  position: absolute;
+  left: 0px;
+  top: 7px;
+  display: block;
+  width: 200px;
+  height: 25px;
+  cursor: pointer;
+  padding-top: 5px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.showAnswerBtn__label:hover::before {
+  border: 1px solid black;
+}
+
+.showAnswerBtn__label xmp {
+  display: none;
+}
+
+.showAnswerBtn:checked ~ .showAnswerBtn__label::before {
+  content: "Скрыть ответ";
+  border: none;
+}
+
+.showAnswerBtn:checked ~ .showAnswerBtn__label xmp {
+  display: block;
+  padding: 10px;
+  animation-name: btnBorder;
+  animation-duration: 3s;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes btnBorder {
+  0% {
+    box-shadow: 0;
+  }
+  25% {
+    box-shadow: 0 1px 0 black;
+  }
+  50% {
+    box-shadow: 0 1px 0 black,
+                -1px 1px 0 black;
+  }
+  75% {
+    box-shadow: 0 1px 0 black,
+                -1px 1px 0 black,
+                1px -1px 0 black;
+  }
+  100% {
+    box-shadow: 0 1px 3px black,
+                1px 1px 3px black,
+                -1px -1px 3px black,
+                1px -1px 3px black;
+  }
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.link {
+  text-decoration: none;
+  padding: 5px;
+  text-align: center;
+}
+
+.link:hover {
+  color: black;
+}
