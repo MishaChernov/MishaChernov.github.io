@@ -93,3 +93,12 @@
 .link:hover {
   color: black;
 }
+
+
+.link-back {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  padding: 5px;
+  text-align: center;
+}
