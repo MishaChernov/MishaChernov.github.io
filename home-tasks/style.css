@@ -34,7 +34,11 @@
   border: 1px solid black;
 }
 
-.showAnswerBtn__label xmp {
+pre {
+  white-space: pre-wrap;
+}
+
+.showAnswerBtn__label pre {
   display: none;
 }
 
@@ -43,9 +47,10 @@
   border: none;
 }
 
-.showAnswerBtn:checked ~ .showAnswerBtn__label xmp {
+.showAnswerBtn:checked ~ .showAnswerBtn__label pre {
   display: block;
   padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .main-menu {
@@ -69,6 +74,7 @@
 .link-back {
   display: block;
   width: 100%;
+  box-sizing: border-box;
   text-decoration: none;
   padding: 5px;
   text-align: center;
