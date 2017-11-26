@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>JS:Function</title>
-  <link href="style.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
 </head>
 <body>
   <h1 style="text-align: center">Функции</h1>
-  <a class="link-back" href="index.html">На главную</a>
+  <a class="link-back" href="../index.html">На главную</a>
   <p class="task">
     <h3># Задача 1:</h3>
     <div class="btn-wrapper">
@@ -118,40 +118,40 @@ function filterFn(arr) {
       <input class="showAnswerBtn" type="checkbox" id="showAnswerBtn3">
       <label class="showAnswerBtn__label" for="showAnswerBtn3">
         <pre>
-var firstNumber = prompt('Введите число: ', '');
-var res = +firstNumber;
-
-let calculator = {
-  sum: function() {
+function calc (digit) {
+let res = digit;
+  return {
+  sum() {
     for(let i = 0; i < arguments.length; i++) {
       res += arguments[i];
     }
     return res;
   },
 
-  dif: function() {
-    for(let i = 0; i < arguments.length; i++) {
-      res -= arguments[i];
-    }
-    return res;
-  },
+    dif() {
+      for(let i = 0; i < arguments.length; i++) {
+        res -= arguments[i];
+      }
+      return res;
+    },
 
-  div: function() {
-    for(let i = 0; i < arguments.length; i++) {
-      res /= arguments[i];
-    }
-    return res;
-  },
+    div() {
+      for(let i = 0; i < arguments.length; i++) {
+        res /= arguments[i];
+      }
+      return res;
+    },
 
-  mul: function() {
-    for(let i = 0; i < arguments.length; i++) {
-      res *= arguments[i];
+    mul() {
+      for(let i = 0; i < arguments.length; i++) {
+        res *= arguments[i];
+      }
+      return res;
     }
-    return res;
   }
 }
 
-console.log(calculator.mul(2, 2));
+  console.log(calc(100).sum(1, 2, 3));
         </pre>
       </label>
     </div>
