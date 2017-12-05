@@ -1,11 +1,12 @@
 'use strict'
 
 $('.recommended__list').slick({
- slidesToShow: 3,
+ slidesToShow: 6,
  slidesToScroll: 1,
+ adaptiveHeight: true,
  arrows: true,
- asNavFor: '.recommended__link',
- centerMode: true,
+ autoplay: true,
+ centerMode: false,
  focusOnSelect: false,
  responsive: [{
      breakpoint: 1190,
@@ -24,7 +25,7 @@ $('.recommended__list').slick({
    {
      breakpoint: 650,
      settings: {
-       slidesToShow: 2,
+       slidesToShow: 1,
        slidesToScroll: 1,
      }
    },
@@ -33,8 +34,14 @@ $('.recommended__list').slick({
      settings: {
        slidesToShow: 1,
        slidesToScroll: 1,
-       arrows: false,
+       arrows: true,
      }
    }
  ]
+});
+
+
+$('.main-footer__form-ttl').click(function() {
+  $('.main-footer__form-hide').toggleClass('main-footer__form-visibility');
+  $('.main-footer__form-ttl--hide').toggleClass('main-footer__form-ttl--visibility');
 });

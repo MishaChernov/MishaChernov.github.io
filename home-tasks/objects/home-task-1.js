@@ -2,10 +2,16 @@
 
 var array = [1, 2, 3, 4, 5, 6];
 
-var obj =  {
-  forEach: function(array) {
-    for (let i = 0; i < array.length; i++) {
-      return 
-    }
+let methods = {
+  slice: function(index) {
+      let res = array;
+
+  		for(let i = 0; i < index; i++) {
+  			res.shift();
+      }
+  		return res;
+    },
+  filter: function(number) {
+
   }
 }

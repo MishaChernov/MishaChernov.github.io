@@ -16,7 +16,7 @@
 
 <body>
   <div id="wrapper">
-    <header class="main-header">
+    <header class="main-header" id="main-header">
       <div class="container">
         <a class="main-header__signin" href="#">Sign In</a>
         <a class="main-header__logo" href="https://www.engrip.com/">
@@ -30,7 +30,7 @@
       <!-- additional blog for skew background img -->
       <div class="bg-wr">
         <div class="bg"></div>
-        <div class="container" style="height: 100%">
+        <div class="promo__container  container" style="height: 100%">
           <div class="bg-man">
             <img src="img/bg-header.png" alt="">
           </div>
@@ -51,14 +51,14 @@
           </div>
           <!-- .col-lg-6 -->
         </div>
-        <a class="btn-croll" href="#"></a>
+        <a class="btn-croll" href="#resume"></a>
       </div>
       <!-- .container -->
     </div>
 
     <main class="page-main">
       <div class="container">
-        <section class="resume">
+        <section class="resume" id="resume">
 
             <h2 class="resume__title  title">The problem with your traditional resume </h2>
             <ul class="resume__list">
@@ -87,10 +87,10 @@
             </div>
           </div>
         </div>
-        <a class="btn-croll  btn-croll__talent" href="#"></a>
+        <a class="btn-croll  btn-croll__talent" href="#method"></a>
       </section>
 
-      <section class="method">
+      <section class="method" id="method">
         <div class="bg-wr">
           <div class="method__bg  bg"></div>
         </div>
@@ -189,13 +189,13 @@
           <div class="row">
             <div class="col-lg-12">
               <h2 class="recommended__title  title">Recommended by universities and colleges</h2>
-              <div class="recommended__list  col-md-12">
-                <a class="recommended__link" href="#">Durham College</a>
-                <a class="recommended__link" href="#">Cuyamaca College</a>
-                <a class="recommended__link" href="#">Luzerne</a>
-                <a class="recommended__link" href="#">Gordon</a>
-                <a class="recommended__link" href="#">Niagara College Canada</a>
-                <a class="recommended__link" href="#">College</a>
+              <div class="recommended__list">
+                <a class="recommended__link  recommended__link--durham" href="#">Durham College</a>
+                <a class="recommended__link  recommended__link--cuyamaca" href="#">Cuyamaca College</a>
+                <a class="recommended__link  recommended__link--luzerne" href="#">Luzerne</a>
+                <a class="recommended__link  recommended__link--gordon" href="#">Gordon</a>
+                <a class="recommended__link  recommended__link--niagara" href="#">Niagara College Canada</a>
+                <a class="recommended__link  recommended__link--college" href="#">College</a>
               </div>
             </div>
           </div>
@@ -226,7 +226,7 @@
             <div class="main-footer__bottom">
               <div class="main-footer__form">
                 <form action="https://www.engrip.com/#">
-                  <div class="main-footer__form-ttl">Have a question?</div>
+                  <div class="main-footer__form-ttl  main-footer__form-ttl--hide">Have a question?</div>
                   <div class="main-footer__form-hide">
                     <div class="main-footer__form-desc"> Leave a request, we will contact you! </div>
                     <!-- .main-footer__form-desc --><input id="feedback_email_input" type="text" placeholder="Your email address (optional)"> <textarea name="feedback_comments_text" id="feedback_comments_text" placeholder="Enter your question here. Maximum 300 characters"></textarea>
@@ -260,6 +260,7 @@
         <!-- .row -->
       </div>
       <!-- .container -->
+      <a class="btn-croll  btn-croll__footer" href="#main-header"></a>
     </footer>
     <!-- .main-footer -->
     <div class="copyright">
