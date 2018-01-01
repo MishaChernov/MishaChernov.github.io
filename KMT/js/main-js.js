@@ -6,7 +6,7 @@ $('.slider').slick({
  adaptiveHeight: true,
  arrows: true,
  autoplay: false,
- centerMode: true,
+ centerMode: false,
  focusOnSelect: false,
  responsive: [{
      breakpoint: 400,
