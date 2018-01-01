@@ -15,6 +15,12 @@ $('.slider').slick({
        autoplay: true
      }
    },
+   {
+     breakpoint: 768,
+     settings: {
+       arrows: false
+     }
+   },
  ]
 });
 
@@ -52,7 +58,7 @@ $('.brands__wrapper').slick({
      settings: {
        slidesToShow: 2,
        slidesToScroll: 2,
-       arrows: true,
+       arrows: false,
      }
    }
  ]
