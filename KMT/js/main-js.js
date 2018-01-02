@@ -11,14 +11,14 @@ $('.slider').slick({
  responsive: [{
      breakpoint: 400,
      settings: {
-       arrows: false,
+       arrows: true,
        autoplay: true
      }
    },
    {
      breakpoint: 768,
      settings: {
-       arrows: false
+       arrows: true
      }
    },
  ]
@@ -57,8 +57,7 @@ $('.brands__wrapper').slick({
      breakpoint: 400,
      settings: {
        slidesToShow: 2,
-       slidesToScroll: 2,
-       arrows: false,
+       slidesToScroll: 2
      }
    }
  ]
