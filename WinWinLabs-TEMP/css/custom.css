@@ -359,7 +359,7 @@ background: linear-gradient(left, #8391A6, #536175);
 	margin-left:-10px;margin-top: 3px;
 }
 .cardGallery{
-	margin-top:80px;
+	margin-top:20px;
 }
 
 .userInfo {
@@ -411,7 +411,7 @@ background: linear-gradient(left, #8391A6, #536175);
 #charityCard{
 	height: 85vh;
 	margin-top:20px;
-	overflow-y:scroll;
+	overflow-y:hidden;
 }
 
 .w3-sidebar {
@@ -503,13 +503,14 @@ background: linear-gradient(left, #8391A6, #536175);
   margin: 5px 0;
 }
 .container-fluid.contact-section--padding-left {
-  padding-left: 45px !important;
+  padding-left: 50px !important;
   padding-right: -15px !important;
   margin-right: -15px;
 }
 
 .w3-row.linksVerify.w3-hide-large.w3-center {
   margin-bottom: 40px;
+  display: none;
 }
 
 @media (max-width: 749px) {
@@ -519,9 +520,10 @@ background: linear-gradient(left, #8391A6, #536175);
 
   .w3-row--buttons {
     z-index: 9999 !important;
-    position: absolute;
-    margin-bottom: -60px;
-    width: 80%;
+    position: relative;
+    margin-bottom: -70px;
+    margin-top: 30px;
+    width: 100%;
   }
 }
 
@@ -550,7 +552,7 @@ background: linear-gradient(left, #8391A6, #536175);
   padding-left: 45px !important;
 }
 .container-fluid.contact-section--padding-left {
-  padding-left: 45px !important;
+  padding-left: 50px !important;
   padding-right: -15px !important;
 }
 
@@ -607,6 +609,13 @@ background: linear-gradient(left, #8391A6, #536175);
 
 .subCharityCard-width-more {
   width: 100% !important;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) and (max-width: 749px) {
+  .w3-col.s6.m6.l6.subCharityCard-width-more {
+    width: 100% !important;
+  }
 }
 
 .our-img-video {
@@ -752,7 +761,13 @@ nav.w3-sidebar {
 .w3-sidebar--bottom {
   position: absolute;
   top: auto;
-  width: 100px;
+  width: 50px;
+}
+
+@media (min-width: 500px) {
+  .w3-sidebar--bottom {
+    width: 100px;
+  }
 }
 
 .item .bubble{
