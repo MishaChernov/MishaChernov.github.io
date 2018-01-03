@@ -114,7 +114,11 @@ body, html {
     background-image: url("../images/bg/bg2.jpg");
     min-height: 100%;
 }
+
 .w3-bar .w3-button {
+    padding: 19px;
+}
+.w3-bar .w3-button--padding {
     padding: 20px;
 }
 #myNavbar{
@@ -411,13 +415,14 @@ background: linear-gradient(left, #8391A6, #536175);
 }
 
 .w3-sidebar {
+  display: block;
   width: 100px;
   padding-top: 50px;
 }
 
-.w3-sidebar--hide {
+/* .w3-sidebar--hide {
   display: none;
-}
+} */
 
 .w3-sidebar--active {
   display: block;
@@ -482,7 +487,6 @@ background: linear-gradient(left, #8391A6, #536175);
 }
 
 .subTools img {
-  width: 50px;
   margin: 0 auto;
 }
 
@@ -500,16 +504,33 @@ background: linear-gradient(left, #8391A6, #536175);
   margin: 5px;
 }
 
+.w3-row-padding--margin-left {
+  padding-left: 91px ;
+}
+.about-section--padding-left {
+  padding-left: 91px !important;
+}
+.out-section--padding-left {
+  padding-left: 91px !important;
+}
+.feedback-section--padding-left {
+  padding-left: 91px !important;
+}
+.FAQ-section--padding-left {
+  padding-left: 91px !important;
+}
+.container-fluid.contact-section--padding-left {
+  padding-left: 91px !important;
+  padding-right: -15px !important;
+}
+
 @media (min-width: 900px) {
-  .w3-sidebar__button {
-    display: none;
-  }
   .w3-sidebar {
     display: block;
   }
-  .w3-row-padding--margin-left {
+  /* .w3-row-padding--margin-left {
     margin-left: 95px;
-  }
+  } */
   .about-section--padding-left {
     padding-left: 100px !important;
   }
@@ -528,27 +549,118 @@ background: linear-gradient(left, #8391A6, #536175);
   }
 }
 
+.subCharityCard-img-none {
+  display: none;
+}
+
+.subCharityCard-width-more {
+  width: 100% !important;
+}
+
+.our-img-video {
+  padding: none;
+}
 
 @media (min-width: 405px) {
   .subCards {
     width: 49% !important;
   }
+  .subCharityCard-img-none {
+    display: block;
+  }
+  .subCharityCard-width-more {
+    width: 49.9% !important;
+  }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 993px) {
   .container {
     width: auto;
   }
 }
 
-@media (min-width: 601px) {
+@media (min-width: 600px) {
+  .our-img-video {
+    padding: 30px !important;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 993px) {
   .w3-col.m6, .w3-half {
     width: 100%;
   }
 }
 
-@media (min-width: 750px) {
+@media (min-width: 750px) and (max-width: 1200px) {
   .w3-col.m6, .w3-half {
-    width: 49%;
+    width: 49% !important;;
   }
+}
+
+@media (min-width: 993px) {
+  .subCards {
+    width: 24.999% !important;
+  }
+  .charity-lg {
+    width: 33.3% !important;
+  }
+  .subTools img {
+    width: auto;
+  }
+  .carousel {
+    width: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel {
+    width: 700px;
+  }
+  .right-div {
+    text-align: right;
+  }
+}
+
+@media (min-width: 1330px) {
+  #game .carousel-inner {
+    width: 60%;
+  }
+  .w3-row-padding--margin-left {
+    margin-left: 0;
+  }
+  .subCards {
+    width: 24.999% !important;
+  }
+  .cardGallery {
+    width: 100% !important;
+  }
+  .w3-row-padding--margin-left {
+    padding-left: 0 !important;
+  }
+  .about-section--padding-left {
+    padding-left: 0 !important;
+  }
+  .out-section--padding-left {
+    padding-left: 0 !important;
+  }
+  .feedback-section--padding-left {
+    padding-left: 0 !important;
+  }
+  .FAQ-section--padding-left {
+    padding-left: 0 !important;
+  }
+  .container-fluid.contact-section--padding-left {
+    padding-left: 0 !important;
+    padding-right: -15px !important;
+  }
+}
+
+.w3-sidebar--fixed {
+  display: fixed !important;
+}
+
+.w3-sidebar--bottom {
+  position: absolute;
+  top: auto;
+  width: 100px;
 }
