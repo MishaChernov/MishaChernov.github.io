@@ -417,7 +417,6 @@ background: linear-gradient(left, #8391A6, #536175);
 .w3-sidebar {
   display: block;
   width: 100px;
-  padding-top: 50px;
 }
 
 /* .w3-sidebar--hide {
@@ -505,23 +504,45 @@ background: linear-gradient(left, #8391A6, #536175);
 }
 
 .w3-row-padding--margin-left {
-  padding-left: 91px ;
+  padding-left: 45px ;
 }
 .about-section--padding-left {
-  padding-left: 91px !important;
+  padding-left: 45px !important;
 }
 .out-section--padding-left {
-  padding-left: 91px !important;
+  padding-left: 45px !important;
 }
 .feedback-section--padding-left {
-  padding-left: 91px !important;
+  padding-left: 45px !important;
 }
 .FAQ-section--padding-left {
-  padding-left: 91px !important;
+  padding-left: 45px !important;
 }
 .container-fluid.contact-section--padding-left {
-  padding-left: 91px !important;
+  padding-left: 45px !important;
   padding-right: -15px !important;
+}
+
+@media (min-width: 500px) {
+  .w3-row-padding--margin-left {
+    padding-left: 100px !important ;
+  }
+  .about-section--padding-left {
+    padding-left: 100px !important;
+  }
+  .out-section--padding-left {
+    padding-left: 100px !important;
+  }
+  .feedback-section--padding-left {
+    padding-left: 100px !important;
+  }
+  .FAQ-section--padding-left {
+    padding-left: 100px !important;
+  }
+  .container-fluid.contact-section--padding-left {
+    padding-left: 100px !important;
+    padding-right: -15px !important;
+  }
 }
 
 @media (min-width: 900px) {
@@ -562,7 +583,7 @@ background: linear-gradient(left, #8391A6, #536175);
 }
 
 .subTools img {
-  width: 50px;
+  width: 50px !important;
 }
 
 @media (min-width: 405px) {
@@ -577,9 +598,34 @@ background: linear-gradient(left, #8391A6, #536175);
   }
 }
 
+.w3-sidebar {
+  width: 50px;
+}
+
+.userImg {
+  width: 40px;
+}
+
+.asideNavBtn button img {
+  margin-left: -6px;
+}
+
+nav.w3-sidebar {
+  width: 100px;
+}
+
 @media (min-width: 500px) {
   .subTools img {
-    width: auto;
+    width: 65px !important;
+  }
+  .w3-sidebar {
+    width: 100px;
+  }
+  .userImg {
+    width: auto !important;
+  }
+  .asideNavBtn button img {
+    margin-left: 20px !important;
   }
 }
 
@@ -628,6 +674,9 @@ background: linear-gradient(left, #8391A6, #536175);
   }
   .right-div {
     text-align: right;
+  }
+  .Filter {
+    margin: 0px;
   }
 }
 
