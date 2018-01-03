@@ -28,41 +28,43 @@ window.onload = function(){ document.getElementById("loading").style.display = "
   <img id="loading-image" src="images/Preloader_10.gif" alt="Loading..." />
 </div>
 <!-- <button class="w3-sidebar__button  w3-sidebar__button--open"></button> -->
-<div class="w3-sidebar w3-sidebar--height  w3-sidebar--hide   w3-bar-block w3-black" id="sideBarFixed" style="margin-top: 65px;">
+<div class="w3-sidebar  w3-sidebar--hide   w3-bar-block w3-black" id="sideBarFixed" style="margin-top: 65px;">
  <!-- <div class="aside-top"> -->
-						<div class="userInfo">
-							<div class="userImg">
-								<img src="images/side-bar-img/user_photo.png" alt="user photo" >
-							</div>
-							<div class="userName">
-							<h3 class="centered" style="color:#fff">scott</h3>
-							</div>
-						</div>
+						<div class="w3-sidebar--height">
+              <div class="userInfo">
+  							<div class="userImg">
+  								<img src="images/side-bar-img/user_photo.png" alt="user photo" >
+  							</div>
+  							<div class="userName">
+  							<h3 class="centered" style="color:#fff">scott</h3>
+  							</div>
+  						</div>
 
-						<div class="asideNavBtn">
-							<button><img src="images/side-bar-img/side_menu_close.png" alt=""></button>
-						</div>
-						<div class="side" >
-						  <a href="javascript:void(0)" class="subTools" >
-							<img src="images/side-bar-img/play.png" alt="play games" >
-						  </a>
+  						<div class="asideNavBtn">
+  							<button><img src="images/side-bar-img/side_menu_close.png" alt=""></button>
+  						</div>
+  						<div class="side" >
+  						  <a href="javascript:void(0)" class="subTools" >
+  							<img src="images/side-bar-img/play.png" alt="play games" >
+  						  </a>
 
-						  <a href="" class="subTools">
-						    <img src="images/side-bar-img/add.png" alt="create games" >
-						  </a>
+  						  <a href="" class="subTools">
+  						    <img src="images/side-bar-img/add.png" alt="create games" >
+  						  </a>
 
-						  <a href="javascript:void(0)" class="subTools">
-							<img src="images/side-bar-img/manage.png" alt="manage games" >
-						  </a>
+  						  <a href="javascript:void(0)" class="subTools">
+  							<img src="images/side-bar-img/manage.png" alt="manage games" >
+  						  </a>
 
-						  <a href="game-charity.php" class="subTools">
-							<img src="images/side-bar-img/credit.png" alt="credits">
-						  </a>
+  						  <a href="game-charity.php" class="subTools">
+  							<img src="images/side-bar-img/credit.png" alt="credits">
+  						  </a>
 
-						   <a href="game-charity.php" class="subTools">
-							<img src="images/side-bar-img/charity.png" alt="Charities" >
-						  </a>
-						</div>
+  						   <a href="game-charity.php" class="subTools">
+  							<img src="images/side-bar-img/charity.png" alt="Charities" >
+  						  </a>
+  						</div>
+            </div>
 					<!-- </div> -->
 </div>
 
@@ -145,28 +147,7 @@ window.onload = function(){ document.getElementById("loading").style.display = "
     <div class="w3-col l8 m6 s12" >
 
       <h3 class="w3-center"><b>Create and play games for charity, learn programming and earn money</b></h3>
-      <div class="w3-bar w3-hide-small w3-hide-medium">
-        <div class="main_cata" style="margin-left: 15px">
-          <div class="w3-dropdown-hover Filter">
-              <!-- <button class="w3-button w3-mybutton Filter" >All Games</button> -->
-              <button type="button" class="btn btn-danger topMenu" data-toggle="collapse" data-target="#demo">All Games</button>
-            </div>
-            <div class="w3-dropdown-hover Filter">
-               <button type="button" class="btn btn-danger topMenu"  data-toggle="collapse" data-target="#demo2" menu="PrizeGames" style="margin-left:5px">Prize Games</button>
-            </div>
-            <div class="w3-dropdown-hover Filter">
-            <button type="button" class="btn btn-danger topMenu"  data-toggle="collapse" data-target="#demo3" menu="PuzzleGames" style="margin-left:5px">Puzzle Games</button>
-            </div>
-            <div class="w3-dropdown-hover Filter">
-              <button type="button" class="btn btn-danger topMenu"  data-toggle="collapse" data-target="#demo4" menu="QuizGames" style="margin-left:5px">Quiz Games</button>
-            </div>
-            <div class="w3-dropdown-hover Filter">
-              <button type="button" class="btn btn-danger topMenu"  data-toggle="collapse" data-target="#demo5" menu="2048Games" style="margin-left:5px">2048 Games</button>
-            </div>
 
-        </div>
-
-      </div>
       <div class="w3-row linksVerify w3-hide-large w3-center">
 
           <a title="100000Credits"  class="w3-col s6" ><div class="w3-text-black w3-bar-item">100,000+ Credits</div></a>
@@ -199,6 +180,27 @@ window.onload = function(){ document.getElementById("loading").style.display = "
         <li class="subTools"><a><img src="images/side-bar-img/charity.png"></a></li>
       </ul>
       </div> -->
+
+        <div class="main_cata" style="margin-left: 15px">
+          <div class="w3-dropdown-hover Filter">
+              <!-- <button class="w3-button w3-mybutton Filter" >All Games</button> -->
+              <button type="button" class="btn btn-danger topMenu" data-toggle="collapse" data-target="#demo">All Games</button>
+            </div>
+            <div class="w3-dropdown-hover Filter">
+               <button type="button" class="btn btn-danger topMenu"  data-toggle="collapse" data-target="#demo2" menu="PrizeGames" style="margin-left:5px">Prize Games</button>
+            </div>
+            <div class="w3-dropdown-hover Filter">
+            <button type="button" class="btn btn-danger topMenu"  data-toggle="collapse" data-target="#demo3" menu="PuzzleGames" style="margin-left:5px">Puzzle Games</button>
+            </div>
+            <div class="w3-dropdown-hover Filter">
+              <button type="button" class="btn btn-danger topMenu"  data-toggle="collapse" data-target="#demo4" menu="QuizGames" style="margin-left:5px">Quiz Games</button>
+            </div>
+            <div class="w3-dropdown-hover Filter">
+              <button type="button" class="btn btn-danger topMenu"  data-toggle="collapse" data-target="#demo5" menu="2048Games" style="margin-left:5px">2048 Games</button>
+            </div>
+
+        </div>
+
        <div id="demo" class="collapse">
         <ul class="my-row linksVerify">
           <li><a title="100000Credits" type="button" class="btn btn-info">100,000+ Credits</a></li>
@@ -748,6 +750,10 @@ window.onload = function(){ document.getElementById("loading").style.display = "
 				<img  style="padding-top:10px;" src="images/winwinlabs_logo.png" width="130px" />
 			</a>
 			<P style="text-align:justify;font-size:12px;padding-top:10px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <P style="text-align:justify;font-size:12px;padding-top:10px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <P style="text-align:justify;font-size:12px;padding-top:10px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <P style="text-align:justify;font-size:12px;padding-top:10px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <P style="text-align:justify;font-size:12px;padding-top:10px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 			<p style="display:inline-block;float:left;clear:left"><i class="w3-text-theme fa fa-map-marker"></i> Denver, US</p>
 			<p style="display:inline-block;"><i class="w3-text-theme fa fa-phone"></i> +00 0000000</p>
 		</div>
