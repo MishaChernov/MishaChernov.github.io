@@ -507,8 +507,29 @@ background: linear-gradient(left, #8391A6, #536175);
   padding-right: -15px !important;
   margin-right: -15px;
 }
+
+.w3-row.linksVerify.w3-hide-large.w3-center {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 749px) {
+  .w3-col.s6.w3-button.w3-light-grey.cardButton {
+    width: 50%;
+  }
+
+  .w3-row--buttons {
+    z-index: 9999 !important;
+    position: absolute;
+    margin-bottom: -60px;
+    width: 80%;
+  }
+}
+
 @media (min-width: 993px) {
   .w3-col.s6.w3-button.w3-light-grey.cardButton {
+    display: none;
+  }
+  .w3-row.linksVerify.w3-hide-large.w3-center {
     display: none;
   }
 }
@@ -732,4 +753,8 @@ nav.w3-sidebar {
   position: absolute;
   top: auto;
   width: 100px;
+}
+
+.item .bubble{
+  backface-visibility: hidden !important;
 }

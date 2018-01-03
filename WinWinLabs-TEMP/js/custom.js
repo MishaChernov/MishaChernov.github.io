@@ -305,3 +305,34 @@ $(window).scroll(function () {
           	$('.w3-sidebar--height').removeClass('w3-sidebar--bottom');
       	}
 });
+
+
+
+//carousel feedback
+
+// $('.btnFeed--carousel').click(function(e){
+//   e.preventDefault();
+// });
+//
+// var slideIndex = 1;
+// showDivs(slideIndex);
+//
+// function plusDivs(n) {
+//     showDivs(slideIndex += n);
+// }
+//
+// function showDivs(n) {
+//     var i;
+//     var x = document.getElementsByClassName("bubble");
+//     if (n > x.length) {slideIndex = 1}
+//     if (n < 1) {slideIndex = x.length} ;
+//     for (i = 0; i < x.length; i++) {
+//
+// 				x[i].style.display = "none";
+// 		    x[i].style.left = "1000px";
+// 				x[i].style.perspective = "1000px";
+//     }
+// 		x[slideIndex-1].style.display = "block";
+//     x[slideIndex-1].style.left = "0";
+// 		x[slideIndex-1].style.transform = "translate3d(0,0,0)";
+// }
