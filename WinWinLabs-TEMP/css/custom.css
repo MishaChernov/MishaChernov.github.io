@@ -502,7 +502,11 @@ background: linear-gradient(left, #8391A6, #536175);
 .Filter {
   margin: 5px 0;
 }
-
+.container-fluid.contact-section--padding-left {
+  padding-left: 45px !important;
+  padding-right: -15px !important;
+  margin-right: -15px;
+}
 @media (min-width: 993px) {
   .w3-col.s6.w3-button.w3-light-grey.cardButton {
     display: none;
