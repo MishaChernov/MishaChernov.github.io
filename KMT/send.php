@@ -1,18 +1,96 @@
-<?php
-  $name = $_POST['name'];
-  $visitor_email = $_POST['email'];
-  $phone = $_POST['phone'];
+<?
+// ----------------------------конфигурация-------------------------- //
+
+$adminemail="support@team-boost.ru";  // e-mail админа
 
 
-  $email_from = 'eyalivne@gmail.com';
-  $email_subject = "New Form submission";
-  $email_body = "You have received a new message from the user $name.\n".
-                          "Here is the phone:\n $phone".
+$date=date("d.m.y"); // число.месяц.год
 
-  $to = "eyalivne@gmail.com";
-  $headers = "From: $email_from \r\n";
-  $headers .= "Reply-To: $visitor_email \r\n";
+$time=date("H:i"); // часы:минуты:секунды
 
-  mail($to,$email_subject,$email_body,$headers);
+$backurl="http://test.team-boost.ru/";  // На какую страничку переходит после отправки письма
 
- ?>
+//---------------------------------------------------------------------- //
+
+
+
+// Принимаем данные с формы
+
+$name=$_POST['name'];
+
+$email=$_POST['email'];
+
+$msg=$_POST['message'];
+
+
+
+// Проверяем валидность e-mail
+
+if (!preg_match("|^([a-z0-9_\.\-]{1,20})@([a-z0-9\.\-]{1,20})\.([a-z]{2,4})|is",
+strtolower($email)))
+
+ {
+
+  echo
+"<center>Вернитесь <a
+href='javascript:history.back(1)'><B>назад</B></a>. Вы
+указали неверные данные!";
+
+  }
+
+ else
+
+ {
+
+
+$msg="
+
+
+<p>Имя: $name</p>
+
+
+<p>E-mail: $email</p>
+
+
+<p>Сообщение: $msg</p>
+
+
+";
+
+
+
+ // Отправляем письмо админу
+
+mail("$adminemail", "$date $time Сообщение
+от $name", "$msg");
+
+
+
+// Сохраняем в базу данных
+
+$f = fopen("message.txt", "a+");
+
+fwrite($f," \n $date $time Сообщение от $name");
+
+fwrite($f,"\n $msg ");
+
+fwrite($f,"\n ---------------");
+
+fclose($f);
+
+
+
+// Выводим сообщение пользователю
+
+print "<script language='Javascript'><!--
+function reload() {location = \"$backurl\"}; setTimeout('reload()', 6000);
+//--></script>
+
+$msg
+
+<p>Сообщение отправлено! Подождите, сейчас вы будете перенаправлены на главную страницу...</p>";
+exit;
+
+ }
+
+?>
