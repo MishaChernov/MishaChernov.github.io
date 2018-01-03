@@ -500,7 +500,13 @@ background: linear-gradient(left, #8391A6, #536175);
 }
 
 .Filter {
-  margin: 5px;
+  margin: 5px 0;
+}
+
+@media (min-width: 993px) {
+  .w3-col.s6.w3-button.w3-light-grey.cardButton {
+    display: none;
+  }
 }
 
 .w3-row-padding--margin-left {
