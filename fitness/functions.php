@@ -18,7 +18,7 @@ if(isset($_POST['submit'])) {
 	 mail('eyalivne@gmail.com' ,'נרשם חדש - KMT - מרכזיית VOIP' , $msg);
 
 	//mail($to,$subject,$txt,$headers);
-		header('Location: thankyou.php');
+		header('Location: thanks.php');
 		echo $msg;
 }
 ?>

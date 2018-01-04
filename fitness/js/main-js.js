@@ -74,3 +74,29 @@ $('.form').submit(function() {
 
   alert(phone.value + ' ' + name.value + ' ' + email.value);
 });
+
+
+//video popup
+
+$('.video-play').click(function(){
+  $('.video').removeClass('video--block');
+  $('.video').addClass('video--hidden');
+  $('.video-popup').removeClass('video-popup--hidden');
+  $('.video-popup').addClass('video-popup--block');
+});
+
+$('.video-popup__button').click(function(){
+  $('.video').removeClass('video--hidden');
+  $('.video').addClass('video--block');
+  $('.video-popup').removeClass('video-popup--block');
+  $('.video-popup').addClass('video-popup--hidden');
+});
+
+$('html').keydown(function(e){
+  if(e.keyCode == 27) {
+    $('.video').removeClass('video--hidden');
+    $('.video').addClass('video--block');
+    $('.video-popup').removeClass('video-popup--block');
+    $('.video-popup').addClass('video-popup--hidden');
+  }
+})
