@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Audit</title>
-  <link rel="stylesheet" href="css/style-min.css";
+  <link rel="stylesheet" href="css/style-min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
   <main class="mich_page-main">
@@ -34,27 +35,27 @@
         <h2 class="mich_popular__title">Наиболее распространенные взлома Asterisk: </h2>
 
         <ul class="mich_popular__list">
-          <li class="mich_popular__item  mich_popular__item--first  col-md-6">
+          <li class="mich_popular__item  mich_popular__item--first  col-xs-12  col-md-6">
             <h2 class="mich_popular__item-title">Автоподбор паролей</h2>
             <p class="mich_popular__item-text">Отсутствие защиты сервера от подбора паролей</p>
           </li>
-          <li class="mich_popular__item  mich_popular__item--second  col-md-6">
+          <li class="mich_popular__item  mich_popular__item--second  col-xs-12  col-md-6">
             <h2 class="mich_popular__item-title">Конфигурация</h2>
             <p class="mich_popular__item-text">Использование некорректной конфигурация АТС</p>
           </li>
-          <li class="mich_popular__item  mich_popular__item--third  col-md-6">
+          <li class="mich_popular__item  mich_popular__item--third  col-xs-12  col-md-6">
             <h2 class="mich_popular__item-title">Стандартные пароли</h2>
             <p class="mich_popular__item-text">Использование паролей по умолчанию для АТС</p>
           </li>
-          <li class="mich_popular__item  mich_popular__item--fourth  col-md-6">
+          <li class="mich_popular__item  mich_popular__item--fourth  col-xs-12  col-md-6">
             <h2 class="mich_popular__item-title">Отсутствие паролей</h2>
             <p class="mich_popular__item-text">Применение простых паролей доступа на телефонные номера или их отсутствие</p>
           </li>
-          <li class="mich_popular__item  mich_popular__item--fiftg  col-md-6">
+          <li class="mich_popular__item  mich_popular__item--fiftg  col-xs-12  col-md-6">
             <h2 class="mich_popular__item-title">Отсутствие ограничений</h2>
             <p class="mich_popular__item-text">Отсутствие сетевых ограничений по доступу</p>
           </li>
-          <li class="mich_popular__item  mich_popular__item--sixth  col-md-6">
+          <li class="mich_popular__item  mich_popular__item--sixth  col-xs-12  col-md-6">
             <h2 class="mich_popular__item-title">Устаревшие версии</h2>
             <p class="mich_popular__item-text">Использование старых версий программного обеспечения</p>
           </li>
@@ -62,24 +63,152 @@
       </div>
     </section>
 
-    <section class="mich_info">
+    <section class="mich_info  container">
       <h2 class="mich_info__title">Объекты проведения аудита от компании Voxlink:</h2>
 
-      <ul class="mich_info__list">
-        <li class="mich_info__item">Периферийные устройства</li>
-        <li class="mich_info__item">ОС</li>
-        <li class="mich_info__item">Asterisk</li>
-        <li class="mich_info__item">FreePBX или другая web оболочка (при ее наличии)</li>
-        <li class="mich_info__item">MySQL</li>
-        <li class="mich_info__item">Сетевая защита</li>
-        <li class="mich_info__item">Дополнительные средства защиты</li>
-        <li class="mich_info__item">Интеграции с другими АТС</li>
-        <li class="mich_info__item">Интеграции со сторонним ПО</li>
-        <li class="mich_info__item">Рекомендации</li>
-      </ul>
+      <div class="mich_info__wrapper">
+        <div class="mich_info__list-wrapper">
+          <!-- <select class="mich_info__list  col-md-4" id="mich_info__list" size="1">
+            <option class="mich_info__option" value="1">Периферийные устройства</option>
+            <option class="mich_info__option" value="2">ОС</option>
+            <option class="mich_info__option" value="3">Asterisk</option>
+            <option class="mich_info__option" value="4"><h5>FreePBX или другая web оболочка (при ее наличии)</h5></option>
+            <option class="mich_info__option" value="5">MySQL</option>
+            <option class="mich_info__option" value="6">Сетевая защита</option>
+            <option class="mich_info__option" value="7">Дополнительные средства защиты</option>
+            <option class="mich_info__option" value="8">Интеграции с другими АТС</option>
+            <option class="mich_info__option" value="9">Интеграции со сторонним ПО</option>
+            <option class="mich_info__option" value="10">Рекомендации</option>
+          </select> -->
 
-      <div class="mich_info__content">
+          <div class="mich_info__list  col-md-4">
+            <label class="mich_info__item">
+              <input class="mich_info__radio" type="radio" name="radio" value="1">
+              <span class="mich_info__item-text">Периферийные устройства</span>
+            </label>
+            <label class="mich_info__item">
+              <input class="mich_info__radio" type="radio" name="radio" value="2">
+              <span class="mich_info__item-text">ОС</span>
+            </label>
+            <label class="mich_info__item">
+              <input class="mich_info__radio" type="radio" name="radio" value="3">
+              <span class="mich_info__item-text">Asterisk</span>
+            </label>
+            <label class="mich_info__item">
+              <input class="mich_info__radio" type="radio" name="radio" value="4" checked>
+              <span class="mich_info__item-text">FreePBX или другая web оболочка (при ее наличии)</span>
+            </label>
+            <label class="mich_info__item">
+              <input class="mich_info__radio" type="radio" name="radio" value="5">
+              <span class="mich_info__item-text">MySQL</span>
+            </label>
+            <label class="mich_info__item">
+              <input class="mich_info__radio" type="radio" name="radio" value="6">
+              <span class="mich_info__item-text">Сетевая защита</span>
+            </label>
+            <label class="mich_info__item">
+              <input class="mich_info__radio" type="radio" name="radio" value="7">
+              <span class="mich_info__item-text">Дополнительные средства защиты</span>
+            </label>
+            <label class="mich_info__item">
+              <input class="mich_info__radio" type="radio" name="radio" value="8">
+              <span class="mich_info__item-text">Интеграции с другими АТС</span>
+            </label>
+            <label class="mich_info__item">
+              <input class="mich_info__radio" type="radio" name="radio" value="9">
+              <span class="mich_info__item-text">Интеграции со сторонним ПО</span>
+            </label>
+            <label class="mich_info__item">
+              <input class="mich_info__radio" type="radio" name="radio" value="10">
+              <span class="mich_info__item-text">Рекомендации</span>
+            </label>
+          </div>
+        </div>
 
+        <div class="mich_info__content-wrapper">
+          <article class="mich_info__content" id="mich_info__content-1">
+            <h3 class="mich_info__subtitle">1</h3>
+            <p class="mich_info__subtext">Проверка актуальности версии, конфигураций, наличия необходимых обновлений, а также наличие дополнительной системы безопасности аутентификации.</p>
+            <img class="mich_info__img" src="../img/laptop.jpg" alt="img">
+          </article>
+          <article class="mich_info__content" id="mich_info__content-2">
+            <h3 class="mich_info__subtitle">2</h3>
+            <p class="mich_info__subtext">Проверка актуальности версии, конфигураций, наличия необходимых обновлений, а также наличие дополнительной системы безопасности аутентификации.</p>
+            <img class="mich_info__img" src="../img/laptop.jpg" alt="img">
+          </article>
+          <article class="mich_info__content" id="mich_info__content-3">
+            <h3 class="mich_info__subtitle">3</h3>
+            <p class="mich_info__subtext">Проверка актуальности версии, конфигураций, наличия необходимых обновлений, а также наличие дополнительной системы безопасности аутентификации.</p>
+            <img class="mich_info__img" src="../img/laptop.jpg" alt="img">
+          </article>
+          <article class="mich_info__content" id="mich_info__content-4">
+            <h3 class="mich_info__subtitle">FreePBX или другая web оболочка(при ее наличии)</h3>
+            <p class="mich_info__subtext">Проверка актуальности версии, конфигураций, наличия необходимых обновлений, а также наличие дополнительной системы безопасности аутентификации.</p>
+            <img class="mich_info__img" src="../img/laptop.jpg" alt="img">
+          </article>
+          <article class="mich_info__content" id="mich_info__content-5">
+            <h3 class="mich_info__subtitle">5</h3>
+            <p class="mich_info__subtext">Проверка актуальности версии, конфигураций, наличия необходимых обновлений, а также наличие дополнительной системы безопасности аутентификации.</p>
+            <img class="mich_info__img" src="../img/laptop.jpg" alt="img">
+          </article>
+          <article class="mich_info__content" id="mich_info__content-6">
+            <h3 class="mich_info__subtitle">6</h3>
+            <p class="mich_info__subtext">Проверка актуальности версии, конфигураций, наличия необходимых обновлений, а также наличие дополнительной системы безопасности аутентификации.</p>
+            <img class="mich_info__img" src="../img/laptop.jpg" alt="img">
+          </article>
+          <article class="mich_info__content" id="mich_info__content-7">
+            <h3 class="mich_info__subtitle">7</h3>
+            <p class="mich_info__subtext">Проверка актуальности версии, конфигураций, наличия необходимых обновлений, а также наличие дополнительной системы безопасности аутентификации.</p>
+            <img class="mich_info__img" src="../img/laptop.jpg" alt="img">
+          </article>
+          <article class="mich_info__content" id="mich_info__content-8">
+            <h3 class="mich_info__subtitle">8</h3>
+            <p class="mich_info__subtext">Проверка актуальности версии, конфигураций, наличия необходимых обновлений, а также наличие дополнительной системы безопасности аутентификации.</p>
+            <img class="mich_info__img" src="../img/laptop.jpg" alt="img">
+          </article>
+          <article class="mich_info__content" id="mich_info__content-9">
+            <h3 class="mich_info__subtitle">9</h3>
+            <p class="mich_info__subtext">Проверка актуальности версии, конфигураций, наличия необходимых обновлений, а также наличие дополнительной системы безопасности аутентификации.</p>
+            <img class="mich_info__img" src="../img/laptop.jpg" alt="img">
+          </article>
+          <article class="mich_info__content" id="mich_info__content-10">
+            <h3 class="mich_info__subtitle">10</h3
+              <p class="mich_info__subtext">Проверка актуальности версии, конфигураций, наличия необходимых обновлений, а также наличие дополнительной системы безопасности аутентификации.</p>
+              <img class="mich_info__img" src="../img/laptop.jpg" alt="img">>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="mich_options">
+      <div class="mich_options__wrapper  container">
+        <table class="mich_options__table" border="1">
+          <tbody class="mich_options__tbody">
+            <tr class="mich_options__tr  mich_options__tr--header">
+              <td class="mich_options__td"></td>
+              <td class="mich_options__td">Письменный</td>
+              <td class="mich_options__td">Устный</td>
+            </tr>
+            <tr class="mich_options__tr">
+              <td class="mich_options__td  mich_options__td--main">Что входит:</td>
+              <td class="mich_options__td  mich_options__td--price" colspan="2">Комплекс работ по диагностике и безопасности Вашей телефонии</td>
+            </tr>
+            <tr class="mich_options__tr">
+              <td class="mich_options__td  mich_options__td--main">Сроки:</td>
+              <td class="mich_options__td  mich_options__td--ammount">2 рабочих дня</td>
+              <td class="mich_options__td  mich_options__td--price">1 рабочий день</td>
+            </tr>
+            <tr class="mich_options__tr">
+              <td class="mich_options__td  mich_options__td--main">Стоимость:</td>
+              <td class="mich_options__td  mich_options__td--ammount">13200</td>
+              <td class="mich_options__td  mich_options__td--price">6600</td>
+            </tr>
+            <tr class="mich_options__tr">
+              <td class="mich_options__td  mich_options__td--main">Отчёт:</td>
+              <td class="mich_options__td  mich_options__td--ammount">Документ с описанием и указанием проблем/ не безопасных частей системы от наших инженеров.</td>
+              <td class="mich_options__td  mich_options__td--price">Покажем, расскажем и подведем итоги аудита в телефонном звонке.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </main>
