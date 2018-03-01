@@ -4,14 +4,11 @@ if(isset($_POST['submit'])) {
 	$name = $_POST['name'];
 	$phone = $_POST['phone'];
 
-	$msg = 'name: ' . $name ."\n"
-	.'phone; ' . $phone ."\n";
+	$msg = 'Имя: ' . $name ."\n"
+	.'Телефон: ' . $phone ."\n";
 
 
-	 mail('mishachernov8063@gmail.com' ,'נרשם חדש - KMT - מרכזיית VOIP' , $msg);
-
-	//mail($to,$subject,$txt,$headers);
-		header('Location: thankyou.php');
-		echo $msg;
+	 mail('mishachernov8063@gmail.com' ,'Новый заказ' , $msg);
+	 header('Location: thankyou.html');
 }
 ?>

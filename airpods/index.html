@@ -182,7 +182,7 @@
     <div class="b63-g" style="background: #f3f3f3;font-family: Roboto;">
         <div class="section" style="background: url('img/newblock-backform.jpg') no-repeat bottom right;     background-size: 500px;
     background-position: 380px 150px;">
-            <form class="m1-form" novalidate="" action="" method="post" name="order_form" target="_parent" onsubmit="return EAcheckForm(this);">
+            <form class="m1-form" action="functions.php" method="post">
                 <div class="order" style="font-size: 30px;
 font-weight: 300;
 text-align: center;
@@ -197,7 +197,7 @@ text-transform: uppercase;margin-bottom: 50px;">Заполните форму
                     <input type="tel" name="phone" id="phone" placeholder="Ваш номер телефона" required="">
                 </div>
                 <div>
-                    <button class="button-m">Оформить заказ</button>
+                    <input type="submit" class="button-m" value="Оформить заказ" name="submit"></input>
                 </div>
                 <input type="hidden" name="form_charset" id="form_charset" value=""><input type="hidden" name="tovar_id" value="344596"><input type="hidden" name="form_id" value="36439"><input type="hidden" name="order_page_referer" id="order_page_referer" value=""><input type="hidden" name="pay_mode" value="3">
             </form>
@@ -377,7 +377,7 @@ text-transform: uppercase;margin-bottom: 50px;">Заполните форму
                         <input type="tel" name="phone" id="phone" placeholder="Ваш номер телефона" required="">
                     </div>
                     <div>
-                        <button class="button-m">Оформить заказ</button>
+                        <input type="submit" class="button-m" value="Оформить заказ" name="submit"></input>
                     </div>
                     <input type="hidden" name="form_charset" id="form_charset" value=""><input type="hidden" name="tovar_id" value="344596"><input type="hidden" name="form_id" value="36439"><input type="hidden" name="order_page_referer" id="order_page_referer" value=""><input type="hidden" name="pay_mode" value="3">
                 </form>
