@@ -1,5 +1,52 @@
 'use strict'
 
+// slick portfolio
+
+$('.portfolio__wrapper').slick({
+ slidesToShow: 5,
+ slidesToScroll: 3,
+ adaptiveHeight: true,
+ arrows: false,
+ dots: true,
+ autoplay: false,
+ autoplaySpeed: 5000,
+ centerMode: false,
+ focusOnSelect: false,
+ infinite: true,
+ pauseOnFocus: false,
+ pauseOnHover: false,
+
+ responsive: [{
+     breakpoint: 1190,
+     settings: {
+       slidesToShow: 5,
+       slidesToScroll: 4,
+     }
+   },
+   {
+     breakpoint: 850,
+     settings: {
+       slidesToShow: 5,
+       slidesToScroll: 2,
+     }
+   },
+   {
+     breakpoint: 650,
+     settings: {
+       slidesToShow: 3,
+       slidesToScroll: 2,
+     }
+   },
+   {
+     breakpoint: 400,
+     settings: {
+       slidesToShow: 2,
+       slidesToScroll: 2,
+     }
+   }
+ ]
+});
+
 //burger
 $('.no-js').removeClass('no-js');
 
@@ -20,12 +67,33 @@ separator.addEventListener('mousedown', function(event) {
   flag = true;
 }, false);
 
+separator.addEventListener('touchstart', function(event) {
+  event.preventDefault();
+  flag = true;
+}, false);
+
 document.addEventListener('mouseup', function(event) {
+  flag = false;
+}, false);
+
+document.addEventListener('touchend', function(event) {
   flag = false;
 }, false);
 
 photoContainer.addEventListener('mousemove', function(event) {
   var res = event.pageX - this.offsetLeft;
+
+  if (flag && (res > 0) && (res < filteredPhoto.offsetWidth)) {
+    separator.style.left = res + 'px';
+    originalPhoto.style.width = res + 'px';
+  }
+
+}, false);
+
+photoContainer.addEventListener('touchmove', function(event) {
+  var touch = event.touches[0];
+  var res = touch.pageX - this.offsetLeft;
+  console.log(touch);
 
   if (flag && (res > 0) && (res < filteredPhoto.offsetWidth)) {
     separator.style.left = res + 'px';
@@ -57,32 +125,3 @@ for (var i = 0; i < portfolioItem.length; i++) {
 
   });
 }
-
-//portfolio
-var controls = document.querySelectorAll('.toggle-controls li');
-var photo = document.querySelector('.photo');
-
-for (var i = 0; i < controls.length; i++) {
-  controls[i].innerHTML = controls[i].dataset.filter;
-  clickControl(controls[i]);
-}
-
-function toggleFilter(control) {
-  for (var i = 0; i < controls.length; i++) {
-    controls[i].classList.remove('active');
-    photo.classList.remove(controls[i].dataset.filter);
-  }
-  control.classList.add('active');
-  if (photo) {
-    photo.classList.add(control.dataset.filter);
-  }
-}
-
-function clickControl(control) {
-  control.addEventListener('click', function() {
-    toggleFilter(control);
-  });
-}
-
-var defaultFilter = document.querySelector('li.oldie');
-toggleFilter(defaultFilter);
