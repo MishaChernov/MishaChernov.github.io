@@ -1,5 +1,3 @@
 'use strict'
 
-$('.slider').slick({
- dots: true
-});
+$('.slider').slick({dots: true});

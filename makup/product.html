@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Flawless</title>
   <link rel="stylesheet" href="css/style-min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
 </head>
 <body class="product-page">
   <svg id="svg-icons" xmlns="http://www.w3.org/2000/svg" style="display:none">
@@ -67,11 +68,25 @@
     </main>
 
     <footer>
-      <form action="/">
-        <input type="text" placeholder="שם מלא" name="name">
-        <input type="text" placeholder="טלפון" name="phone">
-        <input type="text" placeholder="מייל" name="email">
+      <form action="functions.php" method="post" name="form">
+        <input type="text" placeholder="שם מלא" name="name" required>
+        <input type="text" placeholder="טלפון" name="phone" required>
+        <input type="text" placeholder="מייל" name="email" required>
       </form>
+      <script>
+        $('input').keydown(function (e) {
+          var sendform = $(this).closest('form');
+          var name = $( "input[name='name']" );
+          var email = $( "input[name='email']" );
+          var phone = $( "input[name='phone']" );
+
+          if(e.keyCode == 13 && name.val().length >= 2 && email.val().length >= 5 && phone.val().length >= 4) {
+            $(sendform).submit();
+          } else if (e.keyCode == 13){
+            alert('Fill in all the fields');
+          }
+        });
+      </script>
 
       <div class="contacts">
         <a class="adress" href="/">
@@ -89,7 +104,6 @@
       </div>
     </footer>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
   <script src="js/main-js.js" type="text/javascript"></script>
 </body>
 </html>
