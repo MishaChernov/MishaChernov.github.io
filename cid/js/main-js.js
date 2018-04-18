@@ -7,8 +7,8 @@ $('.main-slider').slick({
  slidesToScroll: 1,
  adaptiveHeight: true,
  arrows: false,
- autoplay: false,
- autoplaySpeed: 6000,
+ autoplay: true,
+ autoplaySpeed: 5000,
  centerMode: false,
  focusOnSelect: false
 });
