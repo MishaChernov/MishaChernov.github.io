@@ -250,7 +250,7 @@ a {
 .footer__payment {
   margin: 20px auto;
   padding: 0 30px;
-  max-width: 650px;
+  max-width: 680px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
@@ -375,7 +375,8 @@ img {
           transform: translate(-50%, -50%);
   margin: 0 auto;
   opacity: 1;
-  transition: margin-top 150ms ease-out, opacity 150ms ease-out;
+  transition: margin-top 150ms ease-out,
+ opacity 150ms ease-out;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6); }
   .modal__toggler {
     display: none; }
