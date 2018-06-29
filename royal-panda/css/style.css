@@ -4,7 +4,7 @@ body, html {
   padding: 0; }
 
 body {
-  font-size: sans-serif; }
+  font-family: 'Lato', sans-serif; }
 
 html {
   font-size: 100%; }
@@ -83,7 +83,7 @@ a {
   padding-top: 50px;
   padding-bottom: 50px; }
   .preview__wrapper h1 {
-    margin-top: 0;
+    margin-top: 20px;
     color: #fff;
     font-weight: 900;
     text-align: center;
@@ -375,8 +375,7 @@ img {
           transform: translate(-50%, -50%);
   margin: 0 auto;
   opacity: 1;
-  transition: margin-top 150ms ease-out,
- opacity 150ms ease-out;
+  transition: margin-top 150ms ease-out, opacity 150ms ease-out;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6); }
   .modal__toggler {
     display: none; }
