@@ -1,0 +1,38 @@
+li {
+  display: inline-block;
+  width: 100%;
+  font-size: 1em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 2.5rem;
+}
+
+@media (min-width: 500px) {
+  li {
+    width: auto;
+  }
+}
+
+@media (min-width: 600px) {
+  li {
+    font-size: 1.2em;
+  }
+  li span {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  li {
+    font-size: 1.5em;
+    padding: 1em;
+  }
+  li span {
+    font-size: 4.5rem;
+  }
+}

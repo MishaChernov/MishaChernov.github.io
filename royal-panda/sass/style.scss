@@ -71,8 +71,8 @@ a {
   position: absolute;
   right: 0;
   top: -70px;
-  width: 60px;
-  height: 40px;
+  width: 70px;
+  height: 50px;
 }
 
 .header__flag-wrapper {
@@ -187,11 +187,6 @@ a {
 .steps {
   padding-top: 20px;
   padding-bottom: 50px;
-}
-
-.steps__btn {
-  display: block !important;
-  margin: 0 auto;
 }
 
 .steps__list {
@@ -411,6 +406,22 @@ a {
   }
 }
 
+.countdown {
+  padding: 0;
+  padding-bottom: 70px;
+}
+
+.countdown__timer {
+  padding: 0;
+  text-align: center;
+}
+
+.countdown__btn {
+  display: block !important;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
 @media (min-width: 500px) {
   h1 {
     font-size: 45px;
@@ -437,7 +448,7 @@ a {
   }
   .preview {
     background: none;
-    max-height: 500px;
+    max-height: 540px;
     overflow: hidden;
   }
   .preview__info {
@@ -482,7 +493,7 @@ a {
     font-size: 40px;
   }
   .steps {
-    padding-bottom: 85px;
+    padding-bottom: 30px;
   }
   .header__flag {
     right: 35%;
@@ -498,3 +509,4 @@ a {
 }
 
 @import "popup.scss";
+@import "countdown.scss";
