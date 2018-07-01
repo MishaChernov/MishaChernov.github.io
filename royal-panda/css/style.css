@@ -471,11 +471,14 @@ li span {
 .countdown {
   padding: 0;
   margin-top: 60px;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  margin-bottom: 40px; }
   .countdown--header {
     color: #ffffff; }
   .countdown--main {
     margin-top: 0; }
+  .countdown p {
+    text-align: center; }
 
 .countdown__timer {
   padding: 0;
