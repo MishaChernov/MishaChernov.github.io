@@ -186,7 +186,7 @@ a {
 
 .steps {
   padding-top: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .steps__list {
@@ -430,6 +430,10 @@ a {
 @media (min-width: 768px) {
   .preview__video {
     display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
   }
   .preview {
     background: none;
@@ -479,7 +483,7 @@ a {
   }
   .steps {
     padding-bottom: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   .header__flag {
     right: 35%;
@@ -490,9 +494,10 @@ a {
 @media (min-width: 1200px) {
   .preview__video {
     position: relative;
-    bottom: 177px;
+    width: 140%;
   }
 }
 
 @import "popup.scss";
 @import "countdown.scss";
+@import "responsive-header.scss";

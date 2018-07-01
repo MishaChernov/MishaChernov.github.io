@@ -15,6 +15,14 @@ li span {
   padding: 0;
   margin-top: 60px;
   padding-bottom: 30px;
+
+  &--header {
+    color: #ffffff;
+  }
+
+  &--main {
+    margin-top: 0;
+  }
 }
 
 .countdown__timer {

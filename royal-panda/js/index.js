@@ -14,4 +14,8 @@ let countDown = new Date('July 10, 2028 00:00:00').getTime(),
 		document.getElementById('hours').innerText = 0,
 		document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
 		document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
-  }, second)
+
+		document.getElementById('hours_second').innerText = 0,
+		document.getElementById('minutes_second').innerText = Math.floor((distance % (hour)) / (minute)),
+		document.getElementById('seconds_second').innerText = Math.floor((distance % (minute)) / second);
+  }, second);

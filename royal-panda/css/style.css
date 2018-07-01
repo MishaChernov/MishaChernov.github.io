@@ -174,7 +174,7 @@ a {
 
 .steps {
   padding-top: 20px;
-  padding-bottom: 50px; }
+  padding-bottom: 30px; }
 
 .steps__list {
   display: flex;
@@ -472,6 +472,10 @@ li span {
   padding: 0;
   margin-top: 60px;
   padding-bottom: 30px; }
+  .countdown--header {
+    color: #ffffff; }
+  .countdown--main {
+    margin-top: 0; }
 
 .countdown__timer {
   padding: 0;
@@ -486,6 +490,12 @@ li span {
   display: block;
   max-width: 600px;
   text-align: center; }
+
+.preview {
+  min-height: 100vh; }
+
+.preview__info {
+  min-height: 100vh; }
 
 @media (min-width: 400px) {
   li {
@@ -514,7 +524,11 @@ li span {
 
 @media (min-width: 768px) {
   .preview__video {
-    display: block; }
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto; }
   .preview {
     background: none;
     max-height: 540px;
@@ -558,14 +572,14 @@ li span {
     font-size: 40px; }
   .steps {
     padding-bottom: 30px;
-    margin-bottom: 40px; }
+    margin-bottom: 30px; }
   .header__flag {
     right: 35%; } }
 
 @media (min-width: 1200px) {
   .preview__video {
     position: relative;
-    bottom: 177px; } }
+    width: 140%; } }
 
 @media screen and (max-height: 500px) {
     .modal {
