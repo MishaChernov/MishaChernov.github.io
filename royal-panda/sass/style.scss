@@ -246,7 +246,7 @@ a {
   background-color: #191c24;
   color: #999999;
   padding: 50px 0;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
 
 
   p {
@@ -269,6 +269,7 @@ a {
     display: block;
     text-align: center;
     margin: 0 auto;
+    margin-top: 70px;
   }
 }
 
@@ -408,7 +409,8 @@ a {
 
 .countdown {
   padding: 0;
-  padding-bottom: 70px;
+  margin-top: 60px;
+  padding-bottom: 30px;
 }
 
 .countdown__timer {
@@ -419,7 +421,13 @@ a {
 .countdown__btn {
   display: block !important;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
+}
+
+.countdown h2 {
+  display: block;
+  max-width: 600px;
+  text-align: center;
 }
 
 @media (min-width: 500px) {
@@ -494,6 +502,7 @@ a {
   }
   .steps {
     padding-bottom: 30px;
+    margin-bottom: 40px;
   }
   .header__flag {
     right: 35%;
