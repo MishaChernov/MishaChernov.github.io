@@ -354,25 +354,6 @@ a {
     width: 73px;
     height: 20px; }
 
-.countdown {
-  padding: 0;
-  margin-top: 60px;
-  padding-bottom: 30px; }
-
-.countdown__timer {
-  padding: 0;
-  text-align: center; }
-
-.countdown__btn {
-  display: block !important;
-  margin: 0 auto;
-  margin-top: 30px; }
-
-.countdown h2 {
-  display: block;
-  max-width: 600px;
-  text-align: center; }
-
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -478,8 +459,7 @@ form {
 
 li {
   display: inline-block;
-  width: 100%;
-  font-size: 1em;
+  font-size: 0.8em;
   list-style-type: none;
   padding: 1em;
   text-transform: uppercase; }
@@ -487,6 +467,29 @@ li {
 li span {
   display: block;
   font-size: 2.5rem; }
+
+.countdown {
+  padding: 0;
+  margin-top: 60px;
+  padding-bottom: 30px; }
+
+.countdown__timer {
+  padding: 0;
+  text-align: center; }
+
+.countdown__btn {
+  display: block !important;
+  margin: 0 auto;
+  margin-top: 30px; }
+
+.countdown h2 {
+  display: block;
+  max-width: 600px;
+  text-align: center; }
+
+@media (min-width: 400px) {
+  li {
+    font-size: 1em; } }
 
 @media (min-width: 500px) {
   h1 {
@@ -501,7 +504,7 @@ li span {
     width: auto;
     margin: 8px 10px; }
   li {
-    width: auto; } }
+    font-size: 1.2em; } }
 
 @media (min-width: 600px) {
   li {
