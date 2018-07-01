@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Royal Panda</title>
+  <link rel="stylesheet" href="css/style-min.css">
+</head>
+<body>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;n = f.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;n.loaded = !0;n.version = '2.0';n.queue = [];t = b.createElement(e);t.async = !0;
+      t.src = v;s = b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t, s);
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      // Insert Your Facebook Pixel ID below.
+      fbq('init', 'FB_PIXEL_ID');
+      fbq('track', 'PageView');
+
+      function onClick() {
+        fbq('track', 'Purchase', {'value':'5','currency':'EUR'});
+      };
+    </script>
+    <!-- Insert Your Facebook Pixel ID below. -->
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=FB_PIXEL_ID&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="header__logo">
+        <img src="img/logo.png" alt="Royal Panda">
+      </a>
+      <p>Private vip entry</p>
+      <div class="container  header__flag-wrapper">
+        <img class="header__flag" src="img/flag1.png" alt="Indian">
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="preview">
+      <video class="preview__video"  autoplay="" loop="loop" muted="">
+        <source src="dunder-video.mp4" type="video/mp4">
+      </video>
+      <div class="preview__bg"></div>
+      <div class="preview__info">
+        <div class="preview__wrapper  container">
+          <h1>For TODAY Only, We Will Give You 1000 RS FREE!</h1>
+
+          <p>Congrats, if you are accessing this page, that means you have access to exclusive VIP privileges</p>
+          <p>Deposit more than 1000 RS, and we will MATCH whatever you deposit for FREE!</p>
+
+          <div class="countdown  countdown--header">
+            <div class="container">
+              <h2>This offer is only available for the next 60 minutes so act FAST!</h2>
+
+              <ul class="countdown__timer">
+                <li><span id="hours"></span>Hours</li>
+                <li><span id="minutes"></span>Minutes</li>
+                <li><span id="seconds"></span>Seconds</li>
+              </ul>
+
+              <!-- <label class="button countdown__btn  btn" for="open-modal">Start Playing And WINNING Now!</label> -->
+
+              <a class="button countdown__btn  btn" href="/" onclick="onClick()">Start Playing And WINNING Now!</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="steps">
+      <h2>How it works:</h2>
+
+      <div class="container">
+        <ul class="steps__list">
+          <li>Register For Free</li>
+          <li>Enter Your Details</li>
+          <li>Deposit More Than 1000 RS</li>
+          <li>We DOUBLE Your Deposit</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="countdown  countdown--main">
+      <div class="container">
+        <h2>This offer is only available for the next 60 minutes so act FAST!</h2>
+
+        <ul class="countdown__timer">
+          <li><span id="hours_second"></span>Hours</li>
+          <li><span id="minutes_second"></span>Minutes</li>
+          <li><span id="seconds_second"></span>Seconds</li>
+        </ul>
+
+        <a class="button countdown__btn  btn" href="/" onclick="onClick()">Start Playing And WINNING Now!</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__payment">
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </div>
+      <div class="footer__clients">
+        <a href=""><img src="img/1@2x.png"></a>
+        <a href=""><img src="img/2@2x.png"></a>
+        <a href=""><img src="img/3@2x.png"></a>
+        <a href=""><img src="img/4@2x.png"></a>
+        <a href=""><img src="img/5@2x.png"></a>
+        <a href=""><img src="img/6.png"></a>
+      </div>
+      <div class="footer__sponsors">
+        <a href=""><img src="img/interac.png"></a>
+        <a href=""></a>
+      </div>
+      <!-- <div class="footer__links">
+        <a href="">Dunder</a>
+        <a href="">Om Dunder</a>
+        <a href="">Spel</a>
+        <a href="">Hjälp</a>
+        <a href="">Ansvarsfullt </a>
+        <a href="">Spelande</a>
+        <a href="">Användarvillkor</a>
+        <a href="">Dunder affiliates</a>
+      </div> -->
+
+      <!-- <p class="copyright">
+        Dunder är ett registrerat varumärke. Copyright © 2018 Dunder Limited. Alla rättigheter reserverade.
+      </p>
+      <p>
+        Dunder.com drivs av MT SecureTrade Limited, ett företag registrerat i Malta med registreringsnummer C56545 och adress GB Buildings, Penthouse, level 4, Watar Street, Ta' Xbiex XBX 1301, Malta. MT SecureTrade Limited reguleras av Malta Gaming Authority med licensnummer MGA/CL1/954/2014 och MGA/CL1/955/2014 utfärdat den 19:e maj 2014 och The Gambling Commission of Great Britain med referensnummer 39575. N.V. Secure Trade reguleras av myndigeheterna i Curacao med licensnummer 1668/JAZ (CEG-IP/2014-0110).
+      </p> -->
+      <a href="/" class="copy_link">Privacy & Cookie Policy</a>
+    </div>
+  </footer>
+  <!-- <section class="popup">
+
+    <div class="modal__container">
+      <input type="checkbox" id="open-modal" class="modal__toggler"  />
+      <label class="modal__mask" for="open-modal"></label>
+
+      <div class="modal">
+        <label class="modal__close" for="open-modal"></label>
+        <div class="modal__content">
+          <h3 class="modal__title">Create a FREE account and
+start playing at Dunder.</h3>
+          <p>It only takes a minute.</p>
+
+          <form action="/">
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="text" name="name" placeholder="Name" required>
+            <input class="btn" type="submit" name="Send">
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <script src="js/index.js"></script>
+</body>
+</html>
