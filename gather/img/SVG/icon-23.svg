@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33.84" height="26.85" viewBox="0 0 33.84 26.85">
+  <defs>
+    <style>
+      .a {
+        isolation: isolate;
+      }
+
+      .b {
+        mask: url(#a);
+      }
+
+      .c {
+        opacity: 0.6;
+        mix-blend-mode: overlay;
+      }
+
+      .d {
+        fill: aqua;
+        fill-rule: evenodd;
+      }
+    </style>
+    <mask id="a" x="-338.64" y="-115.2" width="460.8" height="1018.56" maskUnits="userSpaceOnUse">
+      <image width="1920" height="4244" transform="translate(-338.64 -115.2) scale(0.24)" xlink:href="icon-231.png"/>
+    </mask>
+  </defs>
+  <title>icon-23</title>
+  <g class="a">
+    <g class="b">
+      <g class="c">
+        <polygon class="d" points="8.96 0 0 19.25 31.15 26.85 33.84 22.38 8.96 0"/>
+      </g>
+    </g>
+  </g>
+</svg>
