@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .nav-menu__link {
@@ -17,6 +17,13 @@
   text-transform: uppercase;
   font-family: $primary-font-family;
   transition: 500ms ease;
+
+  &:nth-of-type(1) {transition-delay: 0.1s;}
+  &:nth-of-type(2) {transition-delay: 0.2s;}
+  &:nth-of-type(3) {transition-delay: 0.3s;}
+  &:nth-of-type(4) {transition-delay: 0.4s;}
+  &:nth-of-type(5) {transition-delay: 0.5s;}
+  &:nth-of-type(6) {transition-delay: 0.6s;}
 
   &::after {
     content: "";

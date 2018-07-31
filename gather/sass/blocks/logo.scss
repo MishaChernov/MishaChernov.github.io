@@ -1,16 +1,18 @@
 .logo {
   display: inline-block;
-  width: 240px;
-  height: 71px;
   vertical-align: middle;
   text-decoration: none;
   font-size: 22px;
   font-weight: 700;
-  padding-top: 19px;
+  padding-top: 20px;
   margin-left: 20px;
   color: #3B414C;
 
   &--color {
     color: #ffffff;
+  }
+  img {
+    width: 200px;
+    height: 61px;
   }
 }
