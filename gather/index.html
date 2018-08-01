@@ -4,44 +4,443 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Gather</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Misha Chernov</title>
+  <link rel="stylesheet" href="css/style-min.css">
 </head>
-<body>
-  <header class="header" id="particles-js">
-    <div class="container  header__position">
-      <div class="header__wrapper">
-        <a class="logo" href="">
-          <img src="img/logo.png" alt="">
+<body id="intro">
+  <input type="checkbox" id="menu"/>
+  <label class="menu" for="menu">
+  	<span class="menu__item"></span>
+  	<span class="menu__item"></span>
+  	<span class="menu__item"></span>
+  </label>
+  <aside class="aside">
+    <a class="logo" href="/">
+      <span class="color-change--text">Misha </span>
+      <span class="logo--color">Chernov</span>
+    </a>
+
+    <nav class="nav-menu">
+      <a class="nav-menu__link  nav-menu__link--intro" href="#intro">Intro</a>
+      <a class="nav-menu__link  nav-menu__link--about" href="#about">About</a>
+      <a class="nav-menu__link  nav-menu__link--skills" href="#skills">Skills</a>
+      <a class="nav-menu__link  nav-menu__link--services" href="#services">Services</a>
+      <a class="nav-menu__link  nav-menu__link--work" href="#work">Work</a>
+    </nav>
+
+    <div class="services">
+
+      <div class="colors" id="colors">
+        <p class="colors__title  services__title">Theme color:</p>
+
+        <label class="colors__label  colors__label--cornflower-blue">
+          <input type="radio" name="color" value="Cornflower Blue" class="colors__icon  colors__icon--cornflower-blue" data-color="#7E6DF6">
+          <span>Cornflower Blue</span>
+        </label>
+        <label class="colors__label  colors__label--lightning-yellow">
+          <input type="radio" name="color" value="Lightning Yellow" class="colors__icon  colors__icon--lightning-yellow" data-color="#FBC02D">
+          <span>Lightning Yellow</span>
+        </label>
+        <label class="colors__label  colors__label--shamrock">
+          <input type="radio" name="color" value="Shamrock" class="colors__icon  colors__icon--shamrock" data-color="#2ECA7F">
+          <span>Shamrock</span>
+        </label>
+        <label class="colors__label  colors__label--orange-peel">
+          <input type="radio" name="color" value="Orange Peel" class="colors__icon  colors__icon--orange-peel" data-color="#FF9800">
+          <span>Orange Peel</span>
+        </label>
+        <label class="colors__label  colors__label--amaranth">
+          <input type="radio" name="color" value="Amaranth<" class="colors__icon  colors__icon--amaranth" data-color="#E91E63">
+          <span>Amaranth</span>
+        </label>
+        <label class="colors__label  colors__label--electric-violet">
+          <input type="radio" name="color" value="Electric Violet" class="colors__icon  colors__icon--electric-violet" data-color="#AA00FF">
+          <span>Electric Violet</span>
+        </label>
+        <label class="colors__label  colors__label--pomegranate">
+          <input type="radio" name="color" value="Pomegranate" class="colors__icon  colors__icon--pomegranate" data-color="#F44336">
+          <span>Pomegranate</span>
+        </label>
+        <label class="colors__label  colors__label--dodger-blue">
+          <input type="radio" name="color" value="Dodger Blue" class="colors__icon  colors__icon--dodger-blue" data-color="#2196F3">
+          <span>Dodger Blue</span>
+        </label>
+        <label class="colors__label  colors__label--bright-gray">
+          <input type="radio" name="color" value="Bright Gray" class="colors__icon  colors__icon--bright-gray" data-color="#3B414C">
+          Reset
+        </label>
+      </div>
+
+      <div class="languages">
+        <p class="languages__title  services__title">Choose Language:</p>
+
+        <label class="languages__label  languages__label--en">
+          <input class="languages__input  languages__input--en" type="radio" value="EN" name="language">
+          <span>EN</span>
+          <span class="languages__color  color-change--background"></span>
+        </label>
+
+        <label class="languages__label  languages__label--ru">
+          <input class="languages__input  languages__input--ru" type="radio" value="RU" name="language" checked>
+          <span>RU</span>
+          <span class="languages__color  color-change--background"></span>
+        </label>
+      </div>
+
+      <div class="social  social--aside">
+        <p class="social__title  services__title">Where I'm:</p>
+        <a class="social__icon  social__icon--001-twitter" href="#">
+          <svg class="icon  icon-001-twitter  color-change--fill">
+            <use xlink:href="img/sprite/sprite.svg#001-twitter"></use>
+          </svg>
         </a>
-
-        <nav class="nav-menu">
-          <button class="burger burger--close">Open</button>
-
-          <a class="nav-menu__link  nav-menu__link--active" href="#">What we do</a>
-          <a class="nav-menu__link" href="#">Technology</a>
-          <a class="nav-menu__link" href="#">Team & advisors</a>
-          <a class="nav-menu__link" href="#">Documentation</a>
-          <a class="nav-menu__link" href="#">FAQ</a>
-          <a class="nav-menu__link" href="#">Contact</a>
-        </nav>
-
-        <a class="sign-up" href="#">Login</a>
+        <a class="social__icon  social__icon--002-skype" href="#">
+          <svg class="icon  icon-002-skype  color-change--fill">
+            <use xlink:href="img/sprite/sprite.svg#002-skype"></use>
+          </svg>
+        </a>
+        <a class="social__icon  social__icon--003-telegram" href="#">
+          <svg class="icon  icon-003-telegram  color-change--fill">
+            <use xlink:href="img/sprite/sprite.svg#003-telegram"></use>
+          </svg>
+        </a>
+        <a class="social__icon  social__icon--005-vk" href="#">
+          <svg class="icon  icon-005-vk  color-change--fill">
+            <use xlink:href="img/sprite/sprite.svg#005-vk"></use>
+          </svg>
+        </a>
+        <a class="social__icon  social__icon--006-instagram" href="#">
+          <svg class="icon  icon-006-instagram  color-change--fill">
+            <use xlink:href="img/sprite/sprite.svg#006-instagram"></use>
+          </svg>
+        </a>
+        <a class="social__icon  social__icon--007-facebook" href="#">
+          <svg class="icon  icon-007-facebook  color-change--fill">
+            <use xlink:href="img/sprite/sprite.svg#007-facebook"></use>
+          </svg>
+        </a>
+        <a class="social__icon  social__icon--008-linkedin" href="#">
+          <svg class="icon  icon-008-linkedin  color-change--fill">
+            <use xlink:href="img/sprite/sprite.svg#008-linkedin"></use>
+          </svg>
+        </a>
+        <a class="social__icon  social__icon--009-github" href="#">
+          <svg class="icon  icon-009-github  color-change--fill">
+            <use xlink:href="img/sprite/sprite.svg#009-github"></use>
+          </svg>
+        </a>
       </div>
-      <div class="header__intro">
-        <h1>Contact</h1>
-      </div>
-      <div class="header__bg">
-        <span></span>
-        <span></span>
-      </div>
+
     </div>
+  </aside>
+  <main class="paralax">
+    <header class="header-content">
+      <div class="header-content__wrapper">
+        <section class="intro">
+          <p class="intro__text">Welcome</p>
 
-  </header>
+          <h1 class="intro__title">I am Misha Chernov</h1>
 
-  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
-  <script src="js/particles-min.js"></script>
-  <!-- stats.js lib -->
-  <script src="js/particle-header.js"></script>
+          <div class="intro__description">
+            <h2 class="intro__subtitle  intro__subtitle--first">Web Designer</h2>
+            <span class="intro__animation-after"></span>
+          </div>
+        </section>
+        <a class="scroll-btn" href="#main-content">
+          <span class="color-change--background"></span>
+          <span class="color-change--background"></span>
+        </a>
+      </div>
+    </header>
+
+    <main class="main-content" id="main-content">
+      <div class="main-content__wrapper">
+        <section class="section  about" id="about">
+          <div class="container  section__border">
+            <div class="about__wrapper  clearfix">
+              <div class="about__img-wrapper">
+                <img class="about__img" src="img/main/preview-me.jpg" alt="">
+                <div class="social  social--about">
+                  <a class="social__icon  social__icon--001-twitter" href="#">
+                    <svg class="icon  icon-001-twitter  color-change--fill">
+                      <use xlink:href="img/sprite/sprite.svg#001-twitter"></use>
+                    </svg>
+                  </a>
+                  <a class="social__icon  social__icon--002-skype" href="#">
+                    <svg class="icon  icon-002-skype  color-change--fill">
+                      <use xlink:href="img/sprite/sprite.svg#002-skype"></use>
+                    </svg>
+                  </a>
+                  <a class="social__icon  social__icon--003-telegram" href="#">
+                    <svg class="icon  icon-003-telegram  color-change--fill">
+                      <use xlink:href="img/sprite/sprite.svg#003-telegram"></use>
+                    </svg>
+                  </a>
+                  <a class="social__icon  social__icon--005-vk" href="#">
+                    <svg class="icon  icon-005-vk  color-change--fill">
+                      <use xlink:href="img/sprite/sprite.svg#005-vk"></use>
+                    </svg>
+                  </a>
+                  <a class="social__icon  social__icon--006-instagram" href="#">
+                    <svg class="icon  icon-006-instagram  color-change--fill">
+                      <use xlink:href="img/sprite/sprite.svg#006-instagram"></use>
+                    </svg>
+                  </a>
+                  <a class="social__icon  social__icon--007-facebook" href="#">
+                    <svg class="icon  icon-007-facebook  color-change--fill">
+                      <use xlink:href="img/sprite/sprite.svg#007-facebook"></use>
+                    </svg>
+                  </a>
+                  <a class="social__icon  social__icon--008-linkedin" href="#">
+                    <svg class="icon  icon-008-linkedin  color-change--fill">
+                      <use xlink:href="img/sprite/sprite.svg#008-linkedin"></use>
+                    </svg>
+                  </a>
+                  <a class="social__icon  social__icon--009-github" href="#">
+                    <svg class="icon  icon-009-github  color-change--fill">
+                      <use xlink:href="img/sprite/sprite.svg#009-github"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="about__info">
+                <h3>About me</h3>
+                <h4>I am UI/UX Developer</h4>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat modi, mollitia distinctio adipisci eius. Ut nihil sapiente harum, perspiciatis quia cumque ea molestias exercitationem rerum alias tenetur minima quis quam.</p>
+
+                <address class="about__data">
+                  <ul>
+                    <li><b>Name: </b><span>Misha Chernov</span></li>
+                    <li><b>Date of Birth: </b><span>19 November 1996</span></li>
+                    <li><b>Address: </b><span>Lutsk, Ukraine</span></li>
+                  </ul>
+                  <ul>
+                    <li><b>Email: </b><span>mishachernov8063@gmail.com</span></li>
+                    <li><b>Phone: </b><span>+38066 6276721</span></li>
+                    <li><b>Freelance: </b><span>Available</span></li>
+                  </ul>
+                </address>
+
+                <div class="about__order">
+                  <a class="about__btn" href="">
+                    Hire Me
+                    <span></span>
+                  </a>
+                  <a class="about__btn" href="#work">
+                    View Work
+                    <span></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="skills">
+          <div class="container  section__border">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde quasi debitis vero reiciendis cumque non fuga at tempore nemo corporis nihil dicta similique expedita, delectus, tempora repellat deleniti eius. Nobis.</p>
+          </div>
+        </section>
+        <section class="section" id="services">
+          <div class="container  section__border">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eaque quod at totam, enim nostrum earum expedita autem velit, nisi, modi ipsam asperiores voluptatem optio fugiat atque porro, recusandae officiis.</p>
+          </div>
+        </section>
+        <section class="section  works" id="work">
+          <div class="container  section__border">
+            <h3>Work</h3>
+            <input class="works__controls-input" type="radio" name="works__page" value="1" id="works__page--1" checked>
+            <input class="works__controls-input" type="radio" name="works__page" value="2" id="works__page--2">
+
+            <div class="works__items  works__items--1">
+              <div class="works__item  works__item--1" href="">
+                <div class="works__item-wrapper">
+                  <img src="img/page-shape.jpg">
+                  <span class="works__item-bg"></span>
+                </div>
+                <a class="works__link" href="">
+                  <svg class="icon  icon-link-symbol  color-change--fill-always">
+                    <use xlink:href="img/sprite/sprite.svg#link-symbol"></use>
+                  </svg>
+                  Landing page "Asterisk"
+                </a>
+              </div>
+
+              <div class="works__item  works__item--2" href="">
+                <div class="works__item-wrapper">
+                  <img src="img/page-shape.jpg">
+                  <span class="works__item-bg"></span>
+                </div>
+
+                <a class="works__link" href="">
+                  <svg class="icon  icon-link-symbol  color-change--fill-always">
+                    <use xlink:href="img/sprite/sprite.svg#link-symbol"></use>
+                  </svg>
+                  Convert PSD to HTML "KMT"
+                </a>
+              </div>
+
+              <div class="works__item  works__item--3" href="">
+                <div class="works__item-wrapper">
+                  <img src="img/page-shape.jpg">
+                  <span class="works__item-bg"></span>
+                </div>
+
+                <a class="works__link" href="">
+                  <svg class="icon  icon-link-symbol  color-change--fill-always">
+                    <use xlink:href="img/sprite/sprite.svg#link-symbol"></use>
+                  </svg>
+                  Landing page "Coldwell Banker"
+                </a>
+              </div>
+
+              <div class="works__item  works__item--4" href="">
+                <div class="works__item-wrapper">
+                  <img src="img/page-shape.jpg">
+                  <span class="works__item-bg"></span>
+                </div>
+
+                <a class="works__link" href="">
+                  <svg class="icon  icon-link-symbol  color-change--fill-always">
+                    <use xlink:href="img/sprite/sprite.svg#link-symbol"></use>
+                  </svg>
+                  Convert design pages to HTML "Device"
+                </a>
+              </div>
+
+              <div class="works__item  works__item--5" href="">
+                <div class="works__item-wrapper">
+                  <img src="img/page-shape.jpg">
+                  <span class="works__item-bg"></span>
+                </div>
+
+                <a class="works__link" href="">
+                  <svg class="icon  icon-link-symbol  color-change--fill-always">
+                    <use xlink:href="img/sprite/sprite.svg#link-symbol"></use>
+                  </svg>
+                  Few pages "LannaNow"
+                </a>
+              </div>
+
+              <div class="works__item  works__item--6" href="">
+                <div class="works__item-wrapper">
+                  <img src="img/page-shape.jpg">
+                  <span class="works__item-bg"></span>
+                </div>
+
+                <a class="works__link" href="">
+                  <svg class="icon  icon-link-symbol  color-change--fill-always">
+                    <use xlink:href="img/sprite/sprite.svg#link-symbol"></use>
+                  </svg>
+                  Convert PSD to HTML "Bikeshop"
+                </a>
+              </div>
+            </div>
+
+            <div class="works__items  works__items--2">
+              <div class="works__item  works__item--7" href="">
+                <div class="works__item-wrapper">
+                  <img src="img/page-shape.jpg">
+                  <span class="works__item-bg"></span>
+                </div>
+
+                <a class="works__link" href="">
+                  <svg class="icon  icon-link-symbol  color-change--fill-always">
+                    <use xlink:href="img/sprite/sprite.svg#link-symbol"></use>
+                  </svg>
+                  Convert design to WordPress "Wine Picker"
+                </a>
+              </div>
+
+              <div class="works__item  works__item--8" href="">
+                <div class="works__item-wrapper">
+                  <img src="img/page-shape.jpg">
+                  <span class="works__item-bg"></span>
+                </div>
+
+                <a class="works__link" href="">
+                  <svg class="icon  icon-link-symbol  color-change--fill-always">
+                    <use xlink:href="img/sprite/sprite.svg#link-symbol"></use>
+                  </svg>
+                  Website of a school "Engrip"
+                </a>
+              </div>
+
+              <div class="works__item  works__item--9" href="">
+                <div class="works__item-wrapper">
+                  <img src="img/page-shape.jpg">
+                  <span class="works__item-bg"></span>
+                </div>
+
+                <a class="works__link" href="">
+                  <svg class="icon  icon-link-symbol  color-change--fill-always">
+                    <use xlink:href="img/sprite/sprite.svg#link-symbol"></use>
+                  </svg>
+                  Landing Page "CID"
+                </a>
+              </div>
+
+              <div class="works__item  works__item--10" href="">
+                <div class="works__item-wrapper">
+                  <img src="img/page-shape.jpg">
+                  <span class="works__item-bg"></span>
+                </div>
+
+                <a class="works__link" href="">
+                  <svg class="icon  icon-link-symbol  color-change--fill-always">
+                    <use xlink:href="img/sprite/sprite.svg#link-symbol"></use>
+                  </svg>
+                  Convert PSD to HTML "Velox"
+                </a>
+              </div>
+
+              <div class="works__item  works__item--11" href="">
+                <div class="works__item-wrapper">
+                  <img src="img/page-shape.jpg">
+                  <span class="works__item-bg"></span>
+                </div>
+
+                <a class="works__link" href="">
+                  <svg class="icon  icon-link-symbol  color-change--fill-always">
+                    <use xlink:href="img/sprite/sprite.svg#link-symbol"></use>
+                  </svg>
+                  Convert PSD to HTML "Nerds"
+                </a>
+              </div>
+
+              <div class="works__item  works__item--12" href="">
+                <div class="works__item-wrapper">
+                  <img src="img/page-shape.jpg">
+                  <span class="works__item-bg"></span>
+                </div>
+
+                <a class="works__link" href="">
+                  <svg class="icon  icon-link-symbol  color-change--fill-always">
+                    <use xlink:href="img/sprite/sprite.svg#link-symbol"></use>
+                  </svg>
+                  Few pages "Sedona"
+                </a>
+              </div>
+            </div>
+
+            <div class="works__controls">
+              <label class="works__controls-label  works__controls-label--1" for="works__page--1">1</label>
+              <label class="works__controls-label  works__controls-label--2" for="works__page--2">2</label>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer-content">
+      <div class="footer-content__wrapper">
+        <h4 class="footer-content__copy">Copy Right © By Misha Chernov 2018.</h4>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/svg4everybody-min.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>

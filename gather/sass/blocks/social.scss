@@ -1,0 +1,24 @@
+.social {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.social__icon {
+  margin: 5px;
+  transition-duration: 500ms;
+
+  svg {
+    display: block;
+    width: 35px;
+    height: 35px;
+    fill: $primary-text-color;
+    transition-duration: 500ms;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}

@@ -6,9 +6,16 @@
 @import 'global/animation.scss';
 @import 'global/sprite.scss';
 
-@import 'blocks/header.scss';
-@import 'blocks/logo.scss';
+@import 'blocks/header-content.scss';
+@import 'blocks/main-content.scss';
+@import 'blocks/footer-content.scss';
 @import 'blocks/nav-menu.scss';
-@import 'blocks/sign-up.scss';
-@import 'blocks/particle-header.scss';
-@import 'blocks/burger.scss';
+@import 'blocks/menu-btn.scss';
+@import 'blocks/aside.scss';
+@import 'blocks/colors.scss';
+@import 'blocks/language.scss';
+@import 'blocks/social.scss';
+@import 'blocks/services.scss';
+@import 'blocks/intro.scss';
+@import 'blocks/scroll-btn.scss';
+@import 'blocks/works.scss';
