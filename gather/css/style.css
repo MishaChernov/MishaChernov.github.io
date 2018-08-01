@@ -3417,7 +3417,7 @@ section {
     width: 100%; }
   .form__input--submit {
     max-width: 240px;
-    margin-top: 65px;
+    margin-top: 35px;
     margin-left: auto;
     margin-right: auto;
     background: none;
@@ -3434,7 +3434,7 @@ section {
       transition: 500ms ease; }
 
 .maps {
-  margin-top: 150px;
+  margin-top: 100px;
   margin-bottom: 0; }
 
 .footer {
