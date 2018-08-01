@@ -1,0 +1,24 @@
+.title {
+  color: $primary-title-text-color;
+  text-align: center;
+  font-size: 37px;
+  letter-spacing: 2.5;
+  font-weight: 800;
+  font-family: $secondary-font-family;
+
+  span {
+    position: relative;
+    padding-bottom: 15px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 40%;
+      height: 3px;
+      background-color: #3cbfbe;
+    }
+  }
+}

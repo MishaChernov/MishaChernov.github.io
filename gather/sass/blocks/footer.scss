@@ -1,0 +1,116 @@
+.footer {
+  margin-top: -10px;
+  background: linear-gradient(to right, rgba(61,161,206,1) 0%,rgba(70,193,190,1) 86%);
+  border-bottom: 40px solid #0f1f45;
+
+  p {
+    font-family: $secondary-font-family;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+.footer__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0  70px 0;
+
+  &--left {
+    padding-top: 100px;
+    padding-bottom: 0;
+    height: 100%;
+  }
+}
+
+.footer__title {
+  font-size: 31px;
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 2.5;
+  line-height: 34px;
+  font-family: $secondary-font-family;
+  margin-bottom: 3px;
+}
+
+.footer__form {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+
+  input {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-family: $secondary-font-family;
+    font-size: 14px;
+    cursor: pointer;
+
+    @include transition(500ms);
+
+    &:hover {
+      @include hover;
+      @include transition(500ms);
+    }
+  }
+  input[type="email"] {
+    flex-grow: 2;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  input[type="submit"] {
+    flex-grow: 1;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: $primary-title-text-color;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+  }
+}
+
+.footer__logo {
+  position: absolute;
+  top: -63px;
+  left: -148px;
+}
+
+.footer__copy {
+  position: relative;
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2;
+  padding-left: 40px;
+  margin-top: 20px;
+
+  @include transition(500ms);
+
+  &:hover {
+    @include hover;
+    @include transition(500ms);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 10px;
+    border-color: transparent transparent transparent #ffffff;
+  }
+}

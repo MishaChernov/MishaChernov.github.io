@@ -1,18 +1,25 @@
 .logo {
   display: inline-block;
   vertical-align: middle;
+  text-align: left;
   text-decoration: none;
   font-size: 22px;
   font-weight: 700;
-  padding-top: 20px;
+  padding-top: 34px;
   margin-left: 20px;
+  margin-right: auto;
   color: #3B414C;
+  animation-name: show-from-up;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
 
   &--color {
     color: #ffffff;
   }
   img {
-    width: 200px;
-    height: 61px;
+    text-align: left;
+    width: 140px;
+    height: 41px;
   }
 }

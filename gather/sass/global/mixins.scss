@@ -1,0 +1,12 @@
+@mixin hover {
+  opacity: 0.6;
+  transition: transform 500ms ease;
+}
+
+@mixin transition($delay) {
+  transition: $delay ease;
+}
+
+@mixin delay($variable) {
+  animation-delay: $variable;
+}

@@ -1,24 +1,25 @@
 .social {
+  z-index: 9;
   display: flex;
-  width: 60%;
-  margin: 0 auto;
-  text-align: center;
-  flex-wrap: wrap;
+  margin: 0;
   justify-content: space-around;
+  width: 180px;
+  margin-top: auto;
+  align-items: left;
+  padding-left: 0;
 }
 
-.social__icon {
-  margin: 5px;
-  transition-duration: 500ms;
+.social__link {
+  @include transition(500ms);
 
-  svg {
-    display: block;
-    width: 35px;
-    height: 35px;
-    fill: $primary-text-color;
-    transition-duration: 500ms;
-  }
   &:hover {
-    opacity: 0.8;
+    @include hover;
+    @include transition(500ms);
+  }
+  
+  svg {
+    width: 26px;
+    height: 26px;
+    fill: #ffffff;
   }
 }
