@@ -8,22 +8,26 @@
     color: #ffffff;
     font-size: 15px;
     line-height: 22px;
+    text-align: center;
   }
 }
 
 .footer__container {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
 
 .footer__wrapper {
   display: flex;
+  width: 100%;
   flex-direction: column;
   padding: 30px 0  70px 0;
 
   &--left {
+    width: 100%;
     padding-top: 100px;
     padding-bottom: 0;
     height: 100%;
@@ -34,6 +38,7 @@
   font-size: 31px;
   color: #ffffff;
   font-weight: 900;
+  text-align: center;
   letter-spacing: 2.5;
   line-height: 34px;
   font-family: $secondary-font-family;
@@ -42,10 +47,12 @@
 
 .footer__form {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   margin-top: 15px;
 
   input {
+    width: 100%;
     padding: 10px 20px;
     border: none;
     outline: none;
@@ -61,14 +68,17 @@
     }
   }
   input[type="email"] {
-    flex-grow: 2;
+    margin-bottom: 0px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-  }
-  input[type="submit"] {
-    flex-grow: 1;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+  }
+  input[type="submit"] {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     background-color: $primary-title-text-color;
     color: #ffffff;
     text-transform: uppercase;
@@ -80,12 +90,14 @@
 .footer__logo {
   position: absolute;
   top: -63px;
-  left: -148px;
+  left: 43%;
+  transform: translateX(-50%);
 }
 
 .footer__copy {
   position: relative;
   display: block;
+  margin: 0 auto;
   color: #ffffff;
   font-size: 14px;
   font-weight: 400;

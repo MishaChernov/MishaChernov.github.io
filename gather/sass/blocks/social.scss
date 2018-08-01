@@ -4,7 +4,8 @@
   margin: 0;
   justify-content: space-around;
   width: 180px;
-  margin-top: auto;
+  margin: 0 auto;
+  margin-top: 70px;
   align-items: left;
   padding-left: 0;
 }
@@ -16,7 +17,7 @@
     @include hover;
     @include transition(500ms);
   }
-  
+
   svg {
     width: 26px;
     height: 26px;
