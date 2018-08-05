@@ -1,0 +1,115 @@
+.features {
+  margin-top: -80px;
+  color: $color-white;
+}
+
+.features__cards {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 80px;
+}
+
+.features__item {
+  position: relative;
+  background-color: $color-white;
+  color: $color-black;
+  width: 270px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: 20px;
+  text-align: center;
+  padding-top: 81px;
+  padding-bottom: 40px;
+
+  h3 {
+    display: block;
+    padding: 0 2px;
+    font-size: 30px;
+    font-weight: bold;
+    color: $color-blue;
+    margin-bottom: 33px;
+  }
+  p {
+    padding: 0 5px;
+    line-height: 24px;
+    color: #333132;
+    font-size: 20px;
+    margin-bottom: 40px;
+    letter-spacing: -0.9px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -47px;
+    left: 55px;
+    display: block;
+    width: 135px;
+    height: 160px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:nth-child(1) {
+    &::before {
+      background-image: url('../img/features-icon-1.png');
+    }
+  }
+  &:nth-child(2) {
+    h3 {
+      padding: 0px;
+    }
+    &::before {
+      width: 145px;
+      height: 160px;
+      background-image: url('../img/features-icon-2.png');
+    }
+  }
+  &:nth-child(3) {
+    &::before {
+      background-image: url('../img/features-icon-3.png');
+    }
+  }
+  &:nth-child(4) {
+    &::before {
+      background-image: url('../img/features-icon-4.png');
+    }
+  }
+}
+
+.features__info {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  color: $color-white;
+  align-items: center;
+
+  h2 {
+    flex: 1;
+    line-height: 59px;
+    font-size: 50px;
+    margin-right: 20px;
+    letter-spacing: -0.5px;
+  }
+  p {
+    margin-left: 20px;
+    line-height: 37px;
+    font-size: 30px;
+    color: $color-white;
+    flex: 1;
+    letter-spacing: -0.5px;
+  }
+  img {
+    margin-top: 112px;
+    margin-bottom: -40px;
+    width: 100%;
+  }
+}

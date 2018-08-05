@@ -1,0 +1,26 @@
+.social {
+  z-index: 9;
+  display: flex;
+  margin: 0;
+  justify-content: space-around;
+  width: 180px;
+  margin: 0 auto;
+  margin-top: 70px;
+  align-items: left;
+  padding-left: 0;
+}
+
+.social__link {
+  @include transition(500ms);
+
+  &:hover {
+    @include hover;
+    @include transition(500ms);
+  }
+
+  svg {
+    width: 26px;
+    height: 26px;
+    fill: #ffffff;
+  }
+}

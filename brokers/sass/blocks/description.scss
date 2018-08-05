@@ -1,0 +1,22 @@
+.description {
+  display: block;
+  margin: 0 auto;
+  max-width: 590px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: 2.5;
+  font-family: $primary-font-family;
+  color: $primary-title-text-color;
+
+  a {
+    color: #3cbfbe;
+    @include transition(500ms);
+
+    &:hover {
+      @include hover;
+      @include transition(500ms);
+    }
+  }
+}

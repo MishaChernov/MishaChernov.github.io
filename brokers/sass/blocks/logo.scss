@@ -1,0 +1,33 @@
+.logo {
+  flex: 1;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+
+  svg {
+    width: 70px;
+    height: 40px;
+    color: $color-green;
+    @include transition(500ms);
+  }
+
+  &:hover svg {
+    fill: $color-gray ;
+    @include transition(500ms);
+  }
+
+  &--footer svg {
+    fill: #a4a6a9;
+    width: 29px;
+    height: 17px;
+  }
+  &--footer {
+    flex: 1;
+    text-align: center;
+
+    &:hover svg {
+      fill: $color-green;
+      @include transition(500ms);
+    }
+  }
+}

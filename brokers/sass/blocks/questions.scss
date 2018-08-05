@@ -1,0 +1,161 @@
+.questions {
+  padding-bottom: 15px;
+  margin-top: 71px;
+}
+
+.questions__item {
+  position: relative;
+  margin: 0 auto;
+  padding: 26px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #d1d2d4;
+
+  transition-duration: 1s;
+
+  &:hover {
+    animation-name: questionsHover;
+    animation-duration: 0.2s;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.questions__title {
+  letter-spacing: 0.3px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.questions__subtitle {
+  position: relative;
+  padding: 0;
+  padding-right: 42px;
+  margin: 0;
+  user-select: none;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  margin: 0;
+  letter-spacing: -0.6px;
+  color: #263139;
+
+  &--active {
+    color: $color-green;
+
+    &::before {
+      background-color: $color-purple;
+    }
+  }
+}
+
+.questions__text {
+  display: none;
+  max-width: 890px;
+  padding: 0;
+  padding-right: 20px;
+  padding-top: 0px;
+  margin-top: 10px;
+  letter-spacing: -0.5px;
+  line-height: 19px;
+  font-size: 16px;
+  color: $color-black;
+
+  &--visually {
+    animation-name: questionsOpen;
+    animation-duration: 0.2s;
+    display: block;
+  }
+  &--hidden {
+    animation-name: questionsClose;
+    animation-duration: 0.2s;
+    display: none;
+  }
+}
+
+.questions__btn {
+  position: absolute;
+  top: 25px;
+  right:  0px;
+
+  display: block;
+  width: 15px;
+  height: 15px;
+
+  font-size: 0;
+
+  background: none;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+
+  @include hover;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+
+    display: block;
+    width: 16px;
+    height: 2px;
+
+    background-color: $color-green;
+    cursor: pointer;
+  }
+  &::after {
+    transform: rotate(90deg);
+  }
+  &--opened {
+    cursor: default;
+
+    &::before {
+      background-color: $color-purple;
+    }
+    &::after {
+      display: none;
+    }
+  }
+}
+
+
+@keyframes questionsOpen {
+  0% {
+    opacity: 0.5;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes questionsClose {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes questionsHover {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-3px);
+  }
+  70% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

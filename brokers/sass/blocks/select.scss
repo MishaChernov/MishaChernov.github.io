@@ -1,0 +1,107 @@
+.select {
+  position: relative;
+  margin-left: 22px;
+  padding-top: 2px;
+  height: 100%;
+
+  label {
+    position: relative;
+    display: block;
+    padding: 12px 20px;
+    padding-right: 12px;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: $color-black;
+    font-family: $primary-font-family;
+    border-left: 1px solid #d1d2d4;
+    cursor: pointer;
+    user-select: none;
+    @include transition(500ms);
+    span {
+      @include transition(500ms);
+      color: $color-green;
+    }
+
+    &:hover {
+      color: $color-green;
+      @include transition(500ms);
+
+      span {
+        color: $color-black;
+        @include transition(500ms);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 13px;
+      transform: rotate(-45deg);
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-left: 2px solid $color-green;
+      border-bottom: 2px solid $color-green;
+      @include transition(500ms);
+    }
+  }
+}
+
+.select__list {
+  position: absolute;
+  bottom: -117px;
+  left: 0;
+  min-width: 300px;
+  margin: 0;
+  padding: 0;
+  display: none;
+  list-style: none;
+  @include transition(500ms);
+  background-color: $color-white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  // animation-name: hidden-select-list;
+  // animation-duration: 0.1s;
+  // animation-fill-mode: both;
+
+  a {
+    display: block;
+    padding: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color-black;
+    font-family: $primary-font-family;
+    text-decoration: none;
+    @include transition(200ms);
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-green;
+      @include transition(200ms);
+    }
+  }
+}
+
+#select {
+  display: none;
+}
+
+#select:checked ~ .select__list {
+  display: block;
+  @include transition(500ms);
+  animation-name: show-select-list;
+  animation-duration: 0.5s;
+}
+
+#select:checked ~ label {
+  &::after {
+    transform: rotate(135deg);
+    top: 15px;
+    @include transition(500ms);
+  }
+}

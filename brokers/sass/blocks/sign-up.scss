@@ -1,0 +1,42 @@
+.sign-up {
+  position: relative;
+  display: block;
+  vertical-align: middle;
+  margin: 5px auto;
+  margin-top: 21px;
+  padding-top: 4px;
+  padding-bottom: 10px;
+  padding-left: 35px;
+  padding-right: 25px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: $primary-font-family;
+  transition: 500ms ease;
+  transform: translateY(-1000px);
+  opacity: 0.5;
+  animation-name: show-from-up;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 24px;
+    height: 25px;
+    background-image: url('../img/sign-up.png');
+    background-size: cover;
+    transition: 500ms ease;
+  }
+  &:hover {
+    &::after {
+      transition: 500ms ease;
+      opacity: 0.8;
+    }
+  }
+}

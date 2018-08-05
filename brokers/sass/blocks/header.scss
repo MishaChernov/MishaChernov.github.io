@@ -1,0 +1,35 @@
+.header {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid $color-green;
+}
+
+.header__web-link {
+  margin-left: 20px;
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 33px;
+  font-weight: bold;
+  @include transition(500ms);
+  font-family: $primary-font-family;
+
+  span {
+    font-weight: 300;
+    color: #8a8c8f;
+  }
+  &:hover {
+    color: $color-green;
+    @include transition(500ms);
+  }
+}
+
+.header__wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}

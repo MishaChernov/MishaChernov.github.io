@@ -1,0 +1,42 @@
+.relationships {
+  margin-top: 40px;
+  background-color: $color-green;
+  color: $color-white;
+  padding: 80px 0;
+
+  h2 {
+    flex: 1;
+    margin-top: 20px;
+    font-size: 70px;
+    line-height: 84px;
+    margin-right: 20px;
+    letter-spacing: -1.6px;
+  }
+}
+
+.relationships__wrapper {
+  display: flex;
+}
+
+.relationships__info {
+  flex: 1;
+  padding-left: 20px;
+
+  p {
+    font-size: 30px;
+    color: $color-white;
+    letter-spacing: -0.6px;
+    line-height: 37px;
+  }
+}
+
+.relationships__btn {
+  margin-top: 73px;
+  letter-spacing: 0.7px;
+  padding-right: 35px;
+  width: 215px;
+  max-width: 240px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid $color-white;
+}
