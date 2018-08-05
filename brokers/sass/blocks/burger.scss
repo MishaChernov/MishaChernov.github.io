@@ -5,15 +5,15 @@
 .burger {
   z-index: 999;
   position: absolute;
-  top: 30px;
-  right: 20px;
+  top: 5px;
+  right: 5px;
   display: flex;
   display: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 25px;
   border-radius: 50%;
   transition: transform 250ms ease;
   cursor: pointer;
@@ -29,8 +29,7 @@
   display: block;
   width: 50%;
   height: 2px;
-  background-color: #010916;
-  background-color: #ffffff;
+  background-color: $color-green;
 
   float: left;
   transform-origin: center center;
@@ -51,8 +50,7 @@
 }
 
 #burger:checked ~ .burger span {
-  background-color: #010916;
-  background-color: #ffffff;
+  background-color: $color-green;
   transition: transform 250ms ease;
 }
 
@@ -68,7 +66,7 @@
     transform: translateY(-1px) rotate(-45deg);
 }
 
-#burger:checked ~ .header__nav {
+#burger:checked ~ .nav-menu {
   box-sizing: border-box;
   transform: translateY(0);
   transition: transform 500ms ease;

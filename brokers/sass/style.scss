@@ -4,7 +4,6 @@
 @import 'global/wow-animation.scss';
 @import 'global/animation.scss';
 @import 'global/global.scss';
-@import 'global/responsive.scss';
 @import 'global/sprite.scss';
 @import 'global/mixins.scss';
 
@@ -24,6 +23,9 @@
 @import 'blocks/features.scss';
 @import 'blocks/about.scss';
 @import 'blocks/relationships.scss';
+
+
+@import 'global/responsive.scss';
 
 
 

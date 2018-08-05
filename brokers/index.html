@@ -11,7 +11,11 @@
   <header class="header">
     <div class="header__wrapper">
       <a class="header__web-link" href="/">MortgageBrokers<span>.com</span></a>
-
+      <a class="logo  logo--hidden" href="#">
+        <svg class="icon  icon-logo">
+          <use xlink:href="img/sprite/sprite.svg#logo"></use>
+        </svg>
+      </a>
       <!-- <div class="custom-select">
         <select>
           <option value="0">For brokers</option>
@@ -35,7 +39,7 @@
       </div>
     </div>
 
-    <a class="logo" href="#">
+    <a class="logo  logo--main" href="#">
       <svg class="icon  icon-logo">
         <use xlink:href="img/sprite/sprite.svg#logo"></use>
       </svg>
@@ -52,7 +56,10 @@
       <div class="nav-menu__wrapper">
         <a class="nav-menu__link" href="#">My deals</a>
         <a class="nav-menu__link  nav-menu__link--active" href="#">Find a deal</a>
-        <a class="nav-menu__link" href="#">Log in</a>
+        <a class="nav-menu__link" href="#">  <!-- add this class to login  nav-menu__link--login -->
+          Log in
+          <img src="img/user.png" alt="User icon">
+        </a>
       </div>
     </nav>
   </header>
@@ -100,25 +107,27 @@
     </div>
 
     <section class="about">
-      <div class="about__wrapper  container">
+      <div class="about__wrapper  container  clearfix">
         <h2 class="title">You are protected with MortgageBrokers.com</h2>
         <p>Every borrower and deal in our platform is vetted by one of our approved mortgage brokers. This ensores relyability and protection for all the lenders. Your investment is safe and discreet.</p>
 
-        <span class="about__bg"></span>
-        <ul class="about__list">
-          <li class="about__item">
+        <div class="about__content">
+          <span class="about__bg"></span>
+          <ul class="about__list">
+            <li class="about__item">
 
-            Borrower posts a request for what mortgage is needed and provides with all the required information.
-          </li>
-          <li class="about__item">
+              Borrower posts a request for what mortgage is needed and provides with all the required information.
+            </li>
+            <li class="about__item">
 
-            Trustworthy, expert and verified broker check all the details and approve the mortgage
-          </li>
-          <li class="about__item">
+              Trustworthy, expert and verified broker check all the details and approve the mortgage
+            </li>
+            <li class="about__item">
 
-            Lender chooses the deal that fit the most to the needs and securely funds the deal. (Coming Soon)
-          </li>
-        </ul>
+              Lender chooses the deal that fit the most to the needs and securely funds the deal. (Coming Soon)
+            </li>
+          </ul>
+        </div>
 
         <a class="about__btn  btn  btn--arrow  btn--bg-purple" href="#">Get started</a>
       </div>
@@ -184,6 +193,11 @@
           <button class="questions__btn  questions__btn--opened">Open</button>
           <p class="questions__text  questions__text--visually">Nunc euismod efficitur lacus et rhoncus. Integer et ante sit amet felis aliquet luctus sit amet a nulla. Etiam rhoncus felis sit amet risus imperdiet, et ullamcorper diam posuere. Nulla eget sem libero. Ut lectus sem, facilisis sed mi sit amet, varius viverra urna. Sed tincidunt metus sit amet risus rutrum pharetra. Ut non faucibus leo, et malesuada sapien. Curabitur sit amet imperdiet tellus..</p>
         </div>
+        <div class="questions__item">
+          <h5 class="questions__subtitle">Fusce porttitor nisi consectetur ex semper accumsan?</h5>
+          <button class="questions__btn">Open</button>
+          <p class="questions__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, et dignissimos sapiente fuga facere libero tempora sit neque blanditiis suscipit officiis error eveniet, distinctio dicta enim nisi consequuntur animi possimus.</p>
+        </div>
       </div>
     </section>
   </main>
@@ -202,30 +216,12 @@
       </svg>
     </a>
     <p class="footer__copy">
-      &copy; 2018 mortgagebrokers.com.
+      &copy; 2018 mortgagebrokers.com. <br />
         all rights recerved.
     </p>
   </footer>
 
-  <script src="js/wow-animation-min.js"></script>
   <script src="js/svg4everybody-min.js"></script>
   <script src="js/index.js"></script>
-  <script>
-    var wow = new WOW(
-      {
-        boxClass:     'wow',      // animated element css class (default is wow)
-        animateClass: 'animated', // animation css class (default is animated)
-        offset:       0,          // distance to the element when triggering the animation (default is 0)
-        mobile:       false,       // trigger animations on mobile devices (default is true)
-        live:         true,       // act on asynchronously loaded content (default is true)
-        callback:     function(box) {
-          // the callback is fired every time an animation is started
-          // the argument that is passed in is the DOM node being animated
-        },
-        scrollContainer: null // optional scroll container selector, otherwise use window
-      }
-    );
-    wow.init();
-  </script>
 </body>
 </html>

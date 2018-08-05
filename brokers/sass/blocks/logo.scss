@@ -4,6 +4,9 @@
   display: block;
   margin: 0 auto;
 
+  &--hidden {
+    display: none;
+  }
   svg {
     width: 70px;
     height: 40px;

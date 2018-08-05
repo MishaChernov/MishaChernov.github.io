@@ -35,4 +35,8 @@
   font-weight: bold;
   margin: 0;
   color: $color-gray;
+
+  br {
+    display: none;
+  }
 }
