@@ -43,10 +43,6 @@
 
   &--active {
     color: $color-green;
-
-    &::before {
-      background-color: $color-purple;
-    }
   }
 }
 

@@ -11,9 +11,11 @@
   font-family: $primary-font-family;
   font-weight: bold;
   letter-spacing: 1px;
+  @include transition(300ms);
 
   &--arrow {
     &::after {
+      @include transition(500ms);
       content: "\2192";
       position: absolute;
       top: 50%;
@@ -23,5 +25,9 @@
       color: $color-white;
       font-weight: 400;
     }
+  }
+  &:hover {
+    @include transition(300ms);
+    @include hover;
   }
 }
