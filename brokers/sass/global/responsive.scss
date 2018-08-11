@@ -4,6 +4,9 @@
     padding-top: 15px;
     padding-bottom: 36px;
   }
+  .search__popular {
+    display: block;
+  }
   .search__form {
     margin-top: -388px;
     opacity: 0;
@@ -713,7 +716,7 @@
     position: absolute;
     bottom: 200px;
     width: 100%;
-    z-index: -1;
+    z-index: 2;
     transition: 500ms ease;
   }
   .nav-menu__wrapper {
@@ -739,7 +742,7 @@
   }
   .select__list {
     position: absolute;
-    z-index: -1;
+    z-index: 2;
     bottom: 300px;
     left: 0;
     width: 100%;
@@ -749,7 +752,6 @@
   }
   #select:checked ~ .select__list {
     bottom: -108px;
-    z-index: -1;
   }
 
 
@@ -796,6 +798,7 @@
   }
   .deal-card__borrower-item {
     width: 100%;
+    flex: 500%;
     margin-top: 16px;
     padding-left: 0;
     margin-bottom: 20px;
@@ -840,6 +843,9 @@
 
   .search {
     padding-bottom: 29px;
+  }
+  .page-nav {
+    margin-right: 0;
   }
 }
 
