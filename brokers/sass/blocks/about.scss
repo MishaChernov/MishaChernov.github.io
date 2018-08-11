@@ -56,15 +56,4 @@
   padding-right: 35px;
   box-sizing: border-box;
   background-color: $color-blue;
-
-  &::after {
-    content: "\2192";
-    position: absolute;
-    top: 50%;
-    right: 28px;
-    transform: translateY(-50%);
-    font-size: 18px;
-    color: $color-white;
-    font-weight: 400;
-  }
 }

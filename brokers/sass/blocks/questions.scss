@@ -5,6 +5,7 @@
 }
 
 .questions__item {
+  overflow: hidden;
   position: relative;
   margin: 0 auto;
   padding: 26px 0;
@@ -54,7 +55,6 @@
 }
 
 .questions__text {
-  display: none;
   max-width: 890px;
   padding: 0;
   padding-right: 20px;
@@ -64,16 +64,26 @@
   line-height: 19px;
   font-size: 16px;
   color: $color-black;
+  @include transition(300ms);
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate( 0 , -50% );
 
   &--visually {
-    animation-name: questionsOpen;
-    animation-duration: 0.2s;
-    display: block;
+
+
+    position: relative;
+    overflow: hidden;
+    max-height: 800px;
+    opacity: 1;
+    transform: translate( 0 , 0 );
   }
   &--hidden {
-    animation-name: questionsClose;
-    animation-duration: 0.2s;
-    display: none;
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    transform: translate( 0 , -50% );
   }
 }
 
@@ -95,6 +105,7 @@
   cursor: pointer;
 
   @include hover;
+  @include transition(300ms);
 
   &::before,
   &::after {
@@ -109,9 +120,11 @@
 
     background-color: $color-green;
     cursor: pointer;
+    @include transition(300ms);
   }
   &::after {
     transform: rotate(90deg);
+    @include transition(300ms);
   }
   &--opened {
     cursor: default;
@@ -122,43 +135,5 @@
     &::after {
       display: none;
     }
-  }
-}
-
-
-@keyframes questionsOpen {
-  0% {
-    opacity: 0.5;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes questionsClose {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0.5;
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes questionsHover {
-  0% {
-    transform: translateY(0);
-  }
-  30% {
-    transform: translateY(-3px);
-  }
-  70% {
-    transform: translateY(1px);
-  }
-  100% {
-    transform: translateY(0px);
   }
 }

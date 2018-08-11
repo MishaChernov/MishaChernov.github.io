@@ -4057,12 +4057,18 @@ h1, h2, h3, h4, h5, h6 {
   .search__item input,
   .search__item select {
     width: 100%;
+    max-height: 40px;
     padding: 9px 8px;
     padding-right: 15px;
     padding-left: 30px;
     text-align: center;
     box-sizing: border-box;
-    letter-spacing: -0.7px; }
+    letter-spacing: -0.7px;
+    background: none;
+    outline: none;
+    border: none;
+    border: 1px solid darkgray;
+    cursor: pointer; }
   .search__item select {
     padding: 10.5px 8px;
     -webkit-appearance: none;
@@ -4134,11 +4140,11 @@ h1, h2, h3, h4, h5, h6 {
 .search__submit {
   flex-basis: calc(33.33% - 14px);
   max-width: 270px;
+  height: 40px;
   margin-top: auto;
   background-color: #382c75;
   border: none;
   padding: 10.4px;
-  max-height: 40px;
   letter-spacing: 0.6px;
   box-sizing: border-box;
   color: #ffffff;
@@ -4245,7 +4251,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: 500ms ease; }
 
 .search__popular {
-  display: block;
+  display: none;
   width: 100%;
   margin-top: 14px;
   font-size: 10px;
@@ -4275,7 +4281,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  display: block;
+  display: none;
   width: 100px;
   padding-bottom: 8px;
   text-align: center;
@@ -4371,14 +4377,15 @@ h1, h2, h3, h4, h5, h6 {
     .deal-card__item--off p a {
       font-size: 14px !important;
       color: #8a8c8f !important;
-      cursor: default !important;
       transition: 300ms ease; }
       .deal-card__item--off p a::after {
         display: none !important; }
       .deal-card__item--off p a:hover {
         transition: 300ms ease;
-        background-color: #e7e7e8 !important;
+        background-color: #8a8c8f !important;
         opacity: 1 !important; }
+        .deal-card__item--off p a:hover span {
+          color: #ffffff !important; }
 
 .deal-card__info {
   display: flex;
@@ -4452,7 +4459,8 @@ h1, h2, h3, h4, h5, h6 {
           color: #0cb175;
           max-width: 100%;
           font-size: 20px;
-          letter-spacing: -0px; }
+          letter-spacing: -0px;
+          padding: 0; }
           .deal-card__wrapper--controls p:last-child .btn::after {
             content: "\2192";
             position: absolute;
@@ -4623,6 +4631,8 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     padding-top: 15px;
     padding-bottom: 36px; }
+  .search__popular {
+    display: block; }
   .search__form {
     margin-top: -388px;
     opacity: 0;
@@ -5076,7 +5086,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     bottom: 200px;
     width: 100%;
-    z-index: -1;
+    z-index: 2;
     transition: 500ms ease; }
   .nav-menu__wrapper {
     flex-direction: column;
@@ -5096,7 +5106,7 @@ h1, h2, h3, h4, h5, h6 {
     position: inherit; }
   .select__list {
     position: absolute;
-    z-index: -1;
+    z-index: 2;
     bottom: 300px;
     left: 0;
     width: 100%;
@@ -5104,8 +5114,7 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
     text-align: center; }
   #select:checked ~ .select__list {
-    bottom: -108px;
-    z-index: -1; }
+    bottom: -108px; }
   .search {
     position: relative;
     padding-top: 15px;
@@ -5138,6 +5147,7 @@ h1, h2, h3, h4, h5, h6 {
       min-height: 225px; }
   .deal-card__borrower-item {
     width: 100%;
+    flex: 500%;
     margin-top: 16px;
     padding-left: 0;
     margin-bottom: 20px; }
@@ -5167,7 +5177,9 @@ h1, h2, h3, h4, h5, h6 {
   .deal-card__wrapper--controls {
     margin-top: 4px; }
   .search {
-    padding-bottom: 29px; } }
+    padding-bottom: 29px; }
+  .page-nav {
+    margin-right: 0; } }
   @media (max-width: 450px) {
   .intro h1 {
     padding-top: 63px;

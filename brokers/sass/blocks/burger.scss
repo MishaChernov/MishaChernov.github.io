@@ -68,6 +68,7 @@
 
 #burger:checked ~ .nav-menu {
   box-sizing: border-box;
-  transform: translateY(0);
-  transition: transform 500ms ease;
+  bottom: -173px;
+  transition: 500ms ease;
+  z-index: -1;
 }

@@ -14,7 +14,7 @@
     margin-top: 0;
     margin-bottom: 66px;
     max-width: 780px;
-    letter-spacing: -2.6px;
+    letter-spacing: -1px;
     line-height: 83px;
     font-size: 70px;
     font-weight: 600;
@@ -74,16 +74,22 @@
     font-size: 14px;
     letter-spacing: 0.5px;
     margin-right: 36px;
+    text-align: center;
 
-    &::after {
-      content: "\2193";
-      position: absolute;
-      top: 50%;
-      right: 38px;
-      transform: translateY(-50%);
-      font-size: 16px;
-      color: $color-white;
-      font-weight: 400;
+    span {
+      position: relative;
+      margin-right: 21px;
+
+      &::after {
+        content: "\2193";
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: $color-white;
+        font-weight: 400;
+      }
     }
   }
   &:last-of-type {

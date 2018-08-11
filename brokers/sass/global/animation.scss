@@ -103,3 +103,47 @@
     transform: translateY(-500px);
   }
 }
+
+
+@keyframes questionsOpen {
+  0% {
+    opacity: 0.5;
+    transform: translateY(-10px);
+  }
+  99% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    display: block;
+  }
+}
+
+@keyframes questionsClose {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  99% {
+    opacity: 0.5;
+    transform: translateY(-10px);
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes questionsHover {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-3px);
+  }
+  70% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

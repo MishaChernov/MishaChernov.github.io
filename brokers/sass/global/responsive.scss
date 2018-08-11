@@ -1,3 +1,136 @@
+@media (max-width: $device-lg-width + 82px) {
+  .search {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 36px;
+  }
+  .search__form {
+    margin-top: -388px;
+    opacity: 0;
+    top: -300px;
+  }
+  .search__wrapper {
+    overflow: hidden;
+  }
+  .search__button {
+    display: block;
+  }
+
+  .search__submit {
+    flex-basis: calc(50% - 14px);
+    max-width: calc(50% - 14px);
+  }
+  .search__item {
+    flex-basis: calc(50% - 14px);
+    max-width: calc(50% - 14px);
+
+    &--range {
+      flex-basis: 100%;
+      max-width: 100%;
+      width: 100%;
+
+      input {
+        width: 47%;
+      }
+    }
+  }
+
+
+  .deal-card {
+
+  }
+  .deal-card__info {
+    flex-wrap: wrap;
+  }
+  .deal-card__wrapper {
+    width: auto;
+
+    &--controls {
+      border-top: 1px solid #f1f2f2;
+      margin-top: 14px;
+      flex-direction: row;
+      max-width: 100%;
+      width: 100%;
+
+      p {
+        border-bottom: none;
+        border-left: none;
+
+        &:first-of-type {
+          padding: 10px 0;
+
+          b {
+            font-size: 20px;
+          }
+        }
+        &:last-of-type {
+          border-right: none;
+        }
+
+        a {
+          &::after {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+  .deal-card__item {
+    margin: 10px 0;
+    margin-right: 0;
+    margin-left: 0px;
+
+    img {
+      margin-right: 0;
+      width: 104%;
+      max-width: 260px;
+    }
+  }
+  .deal-card__info {
+    width: auto;
+    flex-basis: auto;
+    padding-left: 0px;
+  }
+  .deal-card__wrapper  {
+
+    &--description {
+      margin-left: 20px;
+      padding-right: 11px;
+      p {
+        &:nth-of-type(2) {
+          width: 127px;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  .deal-card__description {
+    margin-top: 28px;
+  }
+  .deal-card__wrapper p b {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .deal-card__borrower {
+    font-size: 20px !important;
+  }
+  .deal-card__wrapper--controls p:last-child a {
+
+    &::after {
+      display: none;
+    }
+  }
+
+
+  .page-nav {
+    margin-right: 30px;
+    margin-top: 13px;
+    margin-bottom: 16px;
+  }
+}
+
+
+
 @media (max-width: $device-lg-width) {
   .container {
     padding: 0 20px;
@@ -34,7 +167,7 @@
 
     h1 {
       font-size: 50px;
-      max-width: 500px;
+      max-width: 540px;
       padding-top: 106px;
       margin-bottom: 30px;
       line-height: 61px;
@@ -132,7 +265,7 @@
       line-height: 38px;
       font-size: 30px;
       margin-right: 20px;
-      letter-spacing: -1px;
+      letter-spacing: -0.6px;
     }
     p {
       margin-left: 3px;
@@ -215,7 +348,8 @@
 
 
   .questions {
-    margin-top: 33px;
+    padding-top: 33px;
+    margin-top: 0;
   }
   .questions__item {
     padding: 15px 0;
@@ -261,6 +395,9 @@
 }
 
 @media (max-width: 800px) {
+  .footer {
+    padding: 10px;
+  }
   .container {
     padding: 0 10px;
   }
@@ -270,7 +407,7 @@
   .logo {
 
     &--hidden {
-      margin-left: 0px;
+      margin-left: 6px;
       svg {
         width: 36px;
         height: 21px;
@@ -278,9 +415,8 @@
     }
   }
   .header__wrapper {
-    margin-left: 5px;
-  }
-  .header {
+    padding-left: 5px;
+    margin-left: 0;
     padding: 5px 0;
   }
   .select {
@@ -298,13 +434,8 @@
   #select:checked ~ label::after {
     top: 10px;
   }
-  .select__list {
-    bottom: -113px;
-  }
   #select:checked ~ .select__list {
     transition: 500ms ease;
-    animation-name: show-select-list-mob;
-    animation-duration: 0.5s;
   }
 
 
@@ -550,7 +681,8 @@
 
 
   .questions {
-    margin-top: 13px;
+    padding-top: 13px;
+    margin-top: 0;
     padding-bottom: 70px;
   }
   .title {
@@ -579,9 +711,10 @@
   .nav-menu {
     display: block;
     position: absolute;
-    bottom: -173px;
+    bottom: 200px;
     width: 100%;
-    transform: translateY(-300px);
+    z-index: -1;
+    transition: 500ms ease;
   }
   .nav-menu__wrapper {
     flex-direction: column;
@@ -606,12 +739,107 @@
   }
   .select__list {
     position: absolute;
-    bottom: -108px;
+    z-index: -1;
+    bottom: 300px;
     left: 0;
     width: 100%;
     margin-left: 0;
     box-sizing: border-box;
     text-align: center;
+  }
+  #select:checked ~ .select__list {
+    bottom: -108px;
+    z-index: -1;
+  }
+
+
+
+  .search {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 29px;
+  }
+  .search__form {
+    position: relative;
+    margin-top: -600px;
+    opacity: 0;
+    top: -300px;
+  }
+
+  .search__submit {
+    margin-top: 38px;
+    flex-basis: calc(100%);
+    max-width: calc(100%);
+  }
+  .search__item {
+    flex-basis: calc(100%);
+    max-width: calc(100%);
+    margin-top: 24px;
+  }
+  .search__item--range input {
+    width: 33%;
+  }
+  .search__item--range input:nth-of-type(2) {
+    padding-right: 0;
+  }
+  .deal-card__item {
+    flex-wrap: wrap;
+    margin: 5px 0;
+    margin-left: 0;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      min-height: 225px;
+    }
+  }
+  .deal-card__borrower-item {
+    width: 100%;
+    margin-top: 16px;
+    padding-left: 0;
+    margin-bottom: 20px;
+
+    &::before {
+      top: -43px;
+    }
+  }
+  .deal-card__item {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .deal-card__wrapper--description {
+    margin-left: 8px;
+  }
+  .deal-card__wrapper--description p:nth-of-type(2) {
+    flex: 1;
+    margin: 0;
+  }
+  .deal-card__wrapper--description p:nth-of-type(3) {
+    flex: 1;
+    margin: 0;
+    margin-left: 20px;
+  }
+  .deal-card__wrapper p b {
+    line-height: 24px;
+  }
+  .deal-card__description {
+    margin-top: 14px;
+    p {
+      font-size: 16px;
+      line-height: 20px;
+      padding-right: 20px;
+      letter-spacing: -0.4px;
+    }
+  }
+  .deal-card__wrapper--controls {
+    margin-top: 4px;
+  }
+
+
+
+  .search {
+    padding-bottom: 29px;
   }
 }
 
@@ -779,5 +1007,47 @@
     width: 100%;
     flex: none;
     margin-bottom: 11px;
+  }
+
+
+
+
+  .deal-card__item {
+    flex-wrap: wrap;
+    margin: 5px 0;
+    margin-left: 0px;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      min-height: 160px;
+    }
+  }
+  .page-nav__btn-top {
+    display: block;
+    width: 100% !important;
+    flex: none !important;
+    text-align: center !important;
+    margin-top: 10px !important;
+  }
+  .page-nav {
+    flex-wrap: wrap;
+    div {
+      display: none;
+    }
+  }
+  .page-nav__list {
+    display: flex !important;
+  }
+
+
+  .footer__link {
+    &:last-child {
+      display: block;
+      margin: 0;
+      width: 100%;
+      margin-left: 0;
+    }
   }
 }

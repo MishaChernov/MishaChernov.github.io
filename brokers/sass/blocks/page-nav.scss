@@ -1,0 +1,95 @@
+.page-nav {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 26px;
+  margin-bottom: 36px;
+
+  div {
+    flex: 1;
+  }
+  a {
+    flex: 1;
+    text-align: right;
+  }
+}
+
+
+
+.page-nav__list {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  input {
+    display: none;
+  }
+
+  span {
+    display: block;
+    margin: 5px;
+
+    label {
+      display: block;
+      text-align: center;
+      display: block;
+      width: 29px;
+      height: 29px;
+      padding-top: 7px;
+      font-family: $primary-font-family;
+      font-weight: bold;
+      font-size: 10px;
+      text-transform: uppercase;
+      box-sizing: border-box;
+      background: none;
+      background-color: $color-white;
+      color: $color-black;
+      border: 1px solid $color-gray;
+      outline: none;
+      cursor: pointer;
+      @include transition(200ms);
+
+      &:hover {
+        @include transition(200ms);
+        background-color: $color-black;
+        color: $color-white;
+        border: 1px solid $color-black;
+      }
+    }
+  }
+}
+
+.page-nav__list span input:checked ~ label {
+  background-color: $color-black;
+  color: $color-white;
+  border: 1px solid $color-black;
+  cursor: default;
+
+  &:hover {
+    @include transition(200ms);
+    background-color: $color-black;
+    color: $color-white;
+    border: 1px solid $color-black;
+  }
+}
+
+.page-nav__btn-top {
+  font-size: 10px;
+  color: $color-gray;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+
+  span {
+    font-size: 12px;
+    margin-left: 3px;
+  }
+}

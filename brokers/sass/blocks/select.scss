@@ -19,19 +19,19 @@
     border-left: 1px solid #d1d2d4;
     cursor: pointer;
     user-select: none;
-    @include transition(500ms);
+    @include transition(300ms);
     span {
-      @include transition(500ms);
+      @include transition(300ms);
       color: $color-green;
     }
 
     &:hover {
-      color: $color-green;
-      @include transition(500ms);
+      opacity: 0.8;
+      @include transition(300ms);
 
       span {
-        color: $color-black;
-        @include transition(500ms);
+        opacity: 1;
+        @include transition(300ms);
       }
     }
 
@@ -46,26 +46,25 @@
       height: 5px;
       border-left: 2px solid $color-green;
       border-bottom: 2px solid $color-green;
-      @include transition(500ms);
+      @include transition(300ms);
     }
   }
 }
 
 .select__list {
+  z-index: -1;
   position: absolute;
-  bottom: -117px;
+  bottom: 300px;
   left: 0;
   min-width: 300px;
   margin: 0;
   padding: 0;
-  display: none;
+  display: block;
   list-style: none;
-  @include transition(500ms);
+  @include transition(300ms);
   background-color: $color-white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  // animation-name: hidden-select-list;
-  // animation-duration: 0.1s;
-  // animation-fill-mode: both;
+
 
   a {
     display: block;
@@ -93,9 +92,8 @@
 
 #select:checked ~ .select__list {
   display: block;
+  bottom: -115px;
   @include transition(500ms);
-  animation-name: show-select-list;
-  animation-duration: 0.5s;
 }
 
 #select:checked ~ label {

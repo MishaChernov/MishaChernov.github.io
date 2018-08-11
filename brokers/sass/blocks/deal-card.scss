@@ -1,9 +1,43 @@
 .deal-card {
-
+  margin-top: 10px;
 }
 
 .deal-card__wrapper {
 
+}
+
+.deal-card__broker-chosen {
+  position: absolute;
+  top: 11px;
+  left: -10px;
+  display: none;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Campton", "Arial", sans-serif;
+  line-height: 18px;
+  padding: 0 10px;
+  letter-spacing: 0.2px;
+
+  span {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -11.7px;
+      left: -10px;
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 10px 10px 0;
+      border-color: transparent #a8a9a9 transparent transparent;
+
+    }
+  }
 }
 
 .deal-card__item {
@@ -13,11 +47,54 @@
   flex-wrap: nowrap;
   background-color: $color-white;
   margin: 30px 0;
+  margin-bottom: 10px;
 
   img {
     margin-right: 20px;
     min-width: 180px;
     width: auto;
+  }
+
+  &--label {
+    .deal-card__broker-chosen {
+      display: block;
+    }
+  }
+  &--off {
+    position: relative;
+    background-color: $color-bg-card-off;
+
+    .deal-card__description  {
+      p {
+        color: $color-gray !important;
+        span {
+          color: $color-gray !important;
+        }
+      }
+    }
+    p {
+      span {
+        color: $color-gray !important;
+      }
+      b {
+        color: $color-gray !important;
+      }
+      a {
+        font-size: 14px !important;
+        color: $color-gray !important;
+        cursor: default !important;
+        @include transition(300ms);
+
+        &::after {
+          display: none !important;
+        }
+        &:hover {
+          @include transition(300ms);
+          background-color: $color-bg-card-off !important;
+          opacity: 1 !important;
+        }
+      }
+    }
   }
 }
 
@@ -33,9 +110,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 0px;
     left: 0;
-    transform: translateY(-50%);
     display: block;
     width: 39px;
     height: 39px;
@@ -54,23 +130,21 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  &--description {
+    padding-top: 6px;
+    padding-right: 61px;
+
+    p {
+      &:nth-of-type(2) {
+        width: 175px;
+      }
+    }
+  }
   &--controls {
     flex-direction: column;
     margin-left: auto;
+    max-width: 270px;
 
-    div {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      align-content: center;
-      width: 270px;
-      display: block;
-
-      p {
-        height: auto;
-      }
-    }
     p {
       width: 270px;
       display: block;
@@ -80,10 +154,28 @@
       border: 1px solid #f1f2f2;
       box-sizing: border-box;
 
+      span {
+        line-height: 8px;
+      }
+      &:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        border-top: none;
+      }
+
       &:last-child {
         border-top: none;
+        border-bottom: none;
 
-        button {
+        .btn {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
           width: 100%;
           height: 100%;
           box-sizing: border-box;
@@ -93,9 +185,38 @@
           cursor: pointer;
           color: $color-green;
           max-width: 100%;
+          font-size: 20px;
+          letter-spacing: -0px;
 
           &::after {
+            content: "\2192";
+            position: absolute;
+            display: block;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            font-size: 18px;
             color: $color-green;
+            font-weight: 400;
+          }
+          span {
+            color: $color-green;
+            font-size: 20px;
+            letter-spacing: -0px;
+            &::after {
+              display: none;
+            }
+          }
+          &:hover {
+            background-color: $color-green;
+
+            span {
+              color: $color-white;
+            }
+
+            &::after {
+              color: $color-white;
+            }
           }
           &:focus {
             outline: none;
@@ -112,25 +233,68 @@
       color: $color-gray;
       text-transform: uppercase;
       font-weight: bold;
-      letter-spacing: 0.6px;
+      letter-spacing: 0.3px;
     }
     b {
       display: block;
       font-family: $primary-font-family;
       font-size: 20px;
       color: #333132;
-      font-weight: bold;
-      letter-spacing: 0.6px;
+      font-weight: 300;
+      letter-spacing: -0.6px;
     }
   }
 }
 
 .deal-card__borrower {
+  letter-spacing: -0.6px !important;
   color: $color-black !important;
+  font-weight: bold !important;
+}
+
+.deal-card__time {
+  color: $color-purple !important;
+  font-weight: bold !important;
+  margin-top: 6px;
+
+  &--color {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    color: #f2744d !important;
+  }
 }
 
 .deal-card__description {
   width: 100%;
+  margin-top: 20px;
   align-items: center;
   align-content: center;
+
+  span {
+    font-family: $primary-font-family;
+    font-size: 10px;
+    color: $color-gray;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+  }
+  p {
+    margin-top: 2px;
+    margin-bottom: 12px;
+    font-family: $primary-font-family;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    max-width: 510px;
+
+    span {
+      font-family: $primary-font-family;
+      font-size: 20px;
+      font-weight: 300;
+      text-transform: lowercase;
+      letter-spacing: 0.3px;
+      color: $color-green;
+    }
+  }
 }

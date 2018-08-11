@@ -25,6 +25,9 @@
     color: $color-green;
     @include transition(500ms);
   }
+  &:first-of-type {
+    margin-left: 0;
+  }
 }
 
 .footer__copy {

@@ -14,16 +14,20 @@
   @include transition(300ms);
 
   &--arrow {
-    &::after {
-      @include transition(500ms);
-      content: "\2192";
-      position: absolute;
-      top: 50%;
-      right: 28px;
-      transform: translateY(-50%);
-      font-size: 18px;
-      color: $color-white;
-      font-weight: 400;
+    span {
+      position: relative;
+
+      &::after {
+        @include transition(500ms);
+        content: "\2192";
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: $color-white;
+        font-weight: 400;
+      }
     }
   }
   &:hover {

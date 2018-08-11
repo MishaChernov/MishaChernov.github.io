@@ -10,7 +10,7 @@
     font-size: 70px;
     line-height: 84px;
     margin-right: 20px;
-    letter-spacing: -1.6px;
+    letter-spacing: -0.6px;
   }
 }
 
@@ -39,4 +39,17 @@
   box-sizing: border-box;
   background-color: transparent;
   border: 1px solid $color-white;
+  @include transition(300ms);
+
+  &:hover {
+    @include transition(300ms);
+    background-color: $color-white;
+    color: $color-green;
+
+    span {
+      &::after {
+        color: $color-green;
+      }
+    }
+  }
 }
