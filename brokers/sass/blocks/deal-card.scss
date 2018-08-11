@@ -1,0 +1,136 @@
+.deal-card {
+
+}
+
+.deal-card__wrapper {
+
+}
+
+.deal-card__item {
+  display: flex;
+  width: 100%;
+  flex-basis: 100%;
+  flex-wrap: nowrap;
+  background-color: $color-white;
+  margin: 30px 0;
+
+  img {
+    margin-right: 20px;
+    min-width: 180px;
+    width: auto;
+  }
+}
+
+.deal-card__info {
+  display: flex;
+  width: 100%;
+}
+
+.deal-card__borrower-item {
+  position: relative;
+  padding-left: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    width: 39px;
+    height: 39px;
+    background-color: $color-gray;
+    border: 1px solid $color-white;
+    border-radius: 50%;
+    background-image: url("../img/lock-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+  }
+}
+
+.deal-card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &--controls {
+    flex-direction: column;
+    margin-left: auto;
+
+    div {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      width: 270px;
+      display: block;
+
+      p {
+        height: auto;
+      }
+    }
+    p {
+      width: 270px;
+      display: block;
+      margin: 0;
+      text-align: center;
+      flex: 1;
+      border: 1px solid #f1f2f2;
+      box-sizing: border-box;
+
+      &:last-child {
+        border-top: none;
+
+        button {
+          width: 100%;
+          height: 100%;
+          box-sizing: border-box;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          color: $color-green;
+          max-width: 100%;
+
+          &::after {
+            color: $color-green;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+  p {
+
+    span {
+      font-family: $primary-font-family;
+      font-size: 10px;
+      color: $color-gray;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.6px;
+    }
+    b {
+      display: block;
+      font-family: $primary-font-family;
+      font-size: 20px;
+      color: #333132;
+      font-weight: bold;
+      letter-spacing: 0.6px;
+    }
+  }
+}
+
+.deal-card__borrower {
+  color: $color-black !important;
+}
+
+.deal-card__description {
+  width: 100%;
+  align-items: center;
+  align-content: center;
+}

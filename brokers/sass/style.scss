@@ -6,6 +6,7 @@
 @import 'global/global.scss';
 @import 'global/sprite.scss';
 @import 'global/mixins.scss';
+@import 'global/retinization.scss';
 
 
 @import 'blocks/btn.scss';
@@ -23,7 +24,8 @@
 @import 'blocks/features.scss';
 @import 'blocks/about.scss';
 @import 'blocks/relationships.scss';
-
+@import 'blocks/search.scss';
+@import 'blocks/deal-card.scss';
 
 @import 'global/responsive.scss';
 

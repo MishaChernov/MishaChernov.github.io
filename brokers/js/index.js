@@ -30,4 +30,33 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 	// End qustions events
 
+	// Start Check Click Btn And Scroll
+
+	var linkNav = document.querySelectorAll('[href^="#"]');
+	const SCROLLSPEED = 0.6;
+
+	for (var i = 0; i < linkNav.length; i++) {
+		linkNav[i].addEventListener('click', function(e) {
+			e.preventDefault();
+			var w = window.pageYOffset,
+				hash = this.href.replace(/[^#]*(.*)/, '$1'),
+				t = document.querySelector(hash).getBoundingClientRect().top,
+				start = null;
+
+			requestAnimationFrame(step);
+			function step(time) {
+				if (start === null) start = time;
+				var progress = time - start,
+					r = (t < 0 ? Math.max(w - progress/SCROLLSPEED, w + t) : Math.min(w + progress/SCROLLSPEED, w + t));
+				window.scrollTo(0,r);
+				if (r != w + t) {
+					requestAnimationFrame(step)
+				} else {
+					location.hash = hash;
+				}
+			}
+		}, false);
+	}
+
+	// End Check Click Btn And Scroll
 })

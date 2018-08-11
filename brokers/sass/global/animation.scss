@@ -92,3 +92,14 @@
     display: none;
   }
 }
+
+@keyframes hide-nav-menu {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+}

@@ -1,6 +1,7 @@
 .questions {
   padding-bottom: 90px;
-  margin-top: 71px;
+  margin-top: 0;
+  padding-top: 71px;
 }
 
 .questions__item {
@@ -13,8 +14,12 @@
   transition-duration: 1s;
 
   &:hover {
-    animation-name: questionsHover;
-    animation-duration: 0.2s;
+    // animation-name: questionsHover;
+    // animation-duration: 0.2s;
+    h5 {
+      color: $color-green;
+      @include transition(300ms);
+    }
   }
   &:last-child {
     border-bottom: none;
@@ -24,6 +29,7 @@
 .questions__title {
   letter-spacing: 0.3px;
   font-size: 30px;
+  margin-top: 0;
   font-weight: bold;
   margin-bottom: 40px;
 }
@@ -40,6 +46,7 @@
   margin: 0;
   letter-spacing: -0.6px;
   color: #263139;
+  @include transition(300ms);
 
   &--active {
     color: $color-green;

@@ -10,7 +10,7 @@
     padding: 12px 20px;
     padding-right: 12px;
     vertical-align: middle;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.6px;
@@ -39,7 +39,7 @@
       content: "";
       position: absolute;
       right: 0;
-      top: 13px;
+      top: 15px;
       transform: rotate(-45deg);
       display: block;
       width: 5px;
@@ -101,7 +101,7 @@
 #select:checked ~ label {
   &::after {
     transform: rotate(135deg);
-    top: 15px;
+    top: 18px;
     @include transition(500ms);
   }
 }

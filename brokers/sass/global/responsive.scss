@@ -579,7 +579,7 @@
   .nav-menu {
     display: block;
     position: absolute;
-    bottom: -171px;
+    bottom: -173px;
     width: 100%;
     transform: translateY(-300px);
   }
@@ -770,6 +770,10 @@
     font-size: 10px;
     line-height: 24px;
     transition: 500ms ease;
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
   .footer__nav {
     width: 100%;

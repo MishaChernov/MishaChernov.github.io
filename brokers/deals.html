@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MortgageBrokets</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="" id="top">
+  <header class="header">
+    <div class="header__wrapper">
+      <a class="header__web-link" href="/">MortgageBrokers<span>.com</span></a>
+      <a class="logo  logo--hidden" href="#">
+        <svg class="icon  icon-logo">
+          <use xlink:href="img/sprite/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <!-- <div class="custom-select">
+        <select>
+          <option value="0">For brokers</option>
+          <option value="1">For borrowers</option>
+          <option value="2">BMW</option>
+          <option value="3">Citroen</option>
+        </select>
+        <div class="select-selected select-arrow-active">
+          For <span>Brokers</span>
+        </div>
+      </div> -->
+
+      <div class="select">
+        <input type="checkbox" value="1" name="select" id="select">
+        <label for="select">For <span>Brokers</span></label>
+
+        <ul class="select__list">
+          <li><a class="select__link" href="#">For borrowers</a></li>
+          <li><a class="select__link" href="#">For lorem</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <a class="logo  logo--main" href="#">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+
+    <input id ="burger" type="checkbox">
+    <label class="burger" for="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="nav-menu">
+      <div class="nav-menu__wrapper">
+        <a class="nav-menu__link" href="index.html">My deals</a>
+        <a class="nav-menu__link  nav-menu__link--active" href="#">Find a deal</a>
+        <a class="nav-menu__link" href="#">  <!-- add this class to login  nav-menu__link--login -->
+          Log in
+          <img src="img/user.png" alt="User icon">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <section class="search">
+      <div class="search__wrapper  container  clearfix">
+        <h2 class="title  search__title">Find a Deal</h2>
+
+        <input id="search__button" type="checkbox" name="search-hide">
+
+        <div class="search__popular">
+          <span>New York, NY</span>
+          <span>Condominium</span>
+          <span>Private</span>
+          <span>Good Credit</span>
+          <span>From $400,000 to $1mil</span>
+          <span>1st mortgage</span>
+        </div>
+
+        <label class="search__button" for="search__button">
+          <span class="search__button-text  search__button-text--expand">Expand</span>
+          <span class="search__button-text  search__button-text--collapse">collapse</span>
+        </label>
+
+        <form class="search__form" action="/" method="get">
+
+          <label class="search__item  search__item--location">
+            <span class="search__item-text">In what city?</span>
+            <input type="text" name="city" placeholder="New York, NY">
+          </label>
+
+          <label class="search__item  search__item--select">
+            <span class="search__item-text">What type of propherty?</span>
+
+            <select class="search__input  search__input--select" size="1" name="propherty">
+              <option value="type-1" selected>Condominium</option>
+              <option value="type-2">Type 2</option>
+              <option value="type-3">Type 3</option>
+              <option value="type-4">Type 4</option>
+            </select>
+          </label>
+
+          <label class="search__item  search__item--select">
+            <span class="search__item-text">What type of morgage?</span>
+
+            <select class="search__input  search__input--select" size="1" name="morgage">
+              <option value="type-1" selected>Private</option>
+              <option value="type-2">Type of morgage 2</option>
+              <option value="type-3">Type of morgage 3</option>
+              <option value="type-4">Type of morgage 4</option>
+            </select>
+          </label>
+
+          <label class="search__item  search__item--select">
+            <span class="search__item-text">Credit Score</span>
+
+            <select class="search__input  search__input--select" size="1" name="Credit">
+              <option value="type-1" selected>Good and higher</option>
+              <option value="type-2">Credit 2</option>
+              <option value="type-3">Credit 3</option>
+              <option value="type-4">Credit 4</option>
+            </select>
+          </label>
+
+          <div class="search__item  search__item--range">
+            <span class="search__item-text">Purchase price range</span>
+
+            <div>
+              <input class="search__input  search__input--range" type="text" name="range-from" placeholder="from">
+              <input class="search__input  search__input--range" type="text" name="range-to" placeholder="to">
+            </div>
+          </div>
+
+          <label class="search__item  search__item--select">
+            <span class="search__item-text">Security</span>
+
+            <select class="search__input  search__input--select" size="1" name="Security">
+              <option value="type-1" selected>1st mortgage</option>
+              <option value="type-2">Security 2</option>
+              <option value="type-3">Security 3</option>
+              <option value="type-4">Security 4</option>
+            </select>
+          </label>
+
+          <input class="search__submit" type="submit" name="submit" value="Show Deals">
+
+        </form>
+      </div>
+    </section>
+
+    <section class="deal-card">
+      <div class="deal-card__wrapper  container  clearfix">
+
+        <article class="deal-card__item">
+          <img class="deal-card__img" src="img/cards/card-1.jpg" alt="Borrower Emma A. Property value $23,600,000">
+
+          <div class="deal-card__info">
+            <div class="deal-card__wrapper  deal-card__wrapper--description">
+              <p class="deal-card__borrower-item">
+                <span>Borrower</span>
+                <b class="deal-card__borrower">Emma A.</b>
+              </p>
+              <p>
+                <span>Date posted</span>
+                <b class="deal-card__date">24 minutes ago</b>
+              </p>
+              <p>
+                <span>Property value</span>
+                <b class="deal-card__value">$600,000</b>
+              </p>
+              <div class="deal-card__description">
+                <span>Request summary</span>
+                <p>
+                  Private condominium, 1st mortgage, <span>good</span> credit score, In New York, NY
+                </p>
+              </div>
+            </div>
+            <div class="deal-card__wrapper  deal-card__wrapper--controls">
+              <p>
+                <span>Time Left</span>
+                <b class="deal-card__time">3 Days</b>
+              </p>
+              <p>
+                <a class="btn  btn--arrow">
+                  <span>Bid Now</span>
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="deal-card__broker-chosen">
+            <span>Broker Chosen</span>
+          </div>
+        </article>
+        <article class="deal-card__item">
+          <img class="deal-card__img" src="img/cards/card-1.jpg" alt="Borrower Emma A. Property value $23,600,000">
+
+          <div class="deal-card__info">
+            <div class="deal-card__wrapper  deal-card__wrapper--description">
+              <p class="deal-card__borrower-item">
+                <span>Borrower</span>
+                <b class="deal-card__borrower">Emma A.</b>
+              </p>
+              <p>
+                <span>Date posted</span>
+                <b class="deal-card__date">12 hours ago</b>
+              </p>
+              <p>
+                <span>Property value</span>
+                <b class="deal-card__value">$600,000</b>
+              </p>
+              <div class="deal-card__description">
+                <span>Request summary</span>
+                <p>
+                  Private condominium, 1st mortgage, <span>good</span> credit score, In New York, NY
+                </p>
+              </div>
+            </div>
+            <div class="deal-card__wrapper  deal-card__wrapper--controls">
+              <p>
+                <span>Time Left</span>
+                <b class="deal-card__time  deal-card__time--color">03 : 31 : 21</b>
+              </p>
+              <p>
+                <a class="btn  btn--arrow">
+                  <span>Bid Now</span>
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="deal-card__broker-chosen">
+            <span>Broker Chosen</span>
+          </div>
+        </article>
+        <article class="deal-card__item  deal-card__item--off  deal-card__item--label">
+          <img class="deal-card__img" src="img/cards/card-1.jpg" alt="Borrower Emma A. Property value $23,600,000">
+
+          <div class="deal-card__info">
+            <div class="deal-card__wrapper  deal-card__wrapper--description">
+              <p class="deal-card__borrower-item">
+                <span>Borrower</span>
+                <b class="deal-card__borrower">Emma A.</b>
+              </p>
+              <p>
+                <span>Date posted</span>
+                <b class="deal-card__date">24 hours ago</b>
+              </p>
+              <p>
+                <span>Property value</span>
+                <b class="deal-card__value">$600,000</b>
+              </p>
+              <div class="deal-card__description">
+                <span>Request summary</span>
+                <p>
+                  Private condominium, 1st mortgage, <span>good</span> credit score, In New York, NY
+                </p>
+              </div>
+            </div>
+            <div class="deal-card__wrapper  deal-card__wrapper--controls">
+              <p>
+                <span>Time Left</span>
+                <b class="deal-card__time">00 : 00 : 00</b>
+              </p>
+              <p>
+                <a class="btn  btn--arrow">
+                  <span>Bid Now</span>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="deal-card__broker-chosen">
+            <span>Broker Chosen</span>
+          </div>
+        </article>
+
+
+        <div class="page-nav">
+          <div></div>
+
+          <div class="page-nav__list">
+
+            <span>
+              <input type="radio" value="page-1" name="page" id="deal-page-1" checked>
+              <label for="deal-page-1">1</label>
+            </span>
+
+            <span>
+              <input type="radio" value="page-2" name="page" id="deal-page-2">
+              <label for="deal-page-2">2</label>
+            </span>
+
+            <span>
+              <input type="radio" value="page-3" name="page" id="deal-page-3">
+              <label for="deal-page-3">3</label>
+            </span>
+
+            <span>
+              <input type="radio" value="page-4" name="page" id="deal-page-4">
+              <label for="deal-page-4">4</label>
+            </span>
+
+          </div>
+          <a class="page-nav__btn-top" href="#top">Back to top <span>&uarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__nav">
+      <a class="footer__link" href="#">Calculators</a>
+      <a class="footer__link" href="#">Education</a>
+      <a class="footer__link" href="#">FAQ</a>
+      <a class="footer__link" href="#">Privacy</a>
+      <a class="footer__link" href="#">For borrowers</a>
+    </div>
+    <a class="logo  logo--footer" href="#">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <p class="footer__copy">
+      &copy; 2018 mortgagebrokers.com. <br />
+        all rights recerved.
+    </p>
+  </footer>
+
+  <script src="js/svg4everybody-min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
