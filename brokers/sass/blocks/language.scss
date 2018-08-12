@@ -1,0 +1,20 @@
+.language {
+  display: block;
+  width: 27px;
+  height: 20px;
+  margin: 0 4px;
+  font-size: 0;
+  background-image: url("../img/languages.png");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--german {
+    background-position: -9px -8px;
+  }
+  &--kingdom {
+    background-position: -43px -8px;
+  }
+  &--poland {
+    background-position: -77px -8px;
+  }
+}
