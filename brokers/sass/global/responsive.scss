@@ -7,10 +7,12 @@
   .search__popular {
     display: block;
   }
-  .search__form {
-    margin-top: -388px;
-    opacity: 0;
-    top: -300px;
+  .search--deals {
+    .search__form {
+      margin-top: -388px;
+      opacity: 0;
+      top: -300px;
+    }
   }
   .search__wrapper {
     overflow: hidden;
@@ -761,11 +763,13 @@
     padding-top: 15px;
     padding-bottom: 29px;
   }
-  .search__form {
-    position: relative;
-    margin-top: -600px;
-    opacity: 0;
-    top: -300px;
+  .search--deals {
+    .search__form {
+      position: relative;
+      margin-top: -600px;
+      opacity: 0;
+      top: -300px;
+    }
   }
 
   .search__submit {

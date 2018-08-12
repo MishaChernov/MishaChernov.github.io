@@ -10,3 +10,7 @@
 @mixin delay($variable) {
   animation-delay: $variable;
 }
+
+@mixin set-label() {
+  
+}

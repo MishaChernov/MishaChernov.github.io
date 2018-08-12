@@ -1,0 +1,75 @@
+.page-request {
+  .intro {
+    background-color: #ececec;
+    background-image: url("../img/request-bg.jpg");
+    background-position: top right;
+    color: $color-black;
+    min-height: auto;
+    max-height: 100%;
+    padding-bottom: 42px;
+
+    h1 {
+      display: block;
+      padding-top: 181px;
+      margin-top: 0;
+      margin-bottom: 66px;
+      max-width: 850px;
+      letter-spacing: -3px;
+      line-height: 97px;
+      font-size: 80px;
+      font-weight: 600;
+    }
+  }
+  .intro__list {
+    flex-basis: 732px;
+    max-width: 732px;
+  }
+  .intro__btn:first-of-type {
+    color: $color-black;
+    border: 1px solid $color-black;
+
+    span {
+      &::after {
+        color: $color-black;
+      }
+    }
+  }
+
+
+
+  .search {
+    margin-top: 0;
+    padding-top: 40px;
+  }
+  .search__form {
+    display: flex !important;
+  }
+  .search__submit {
+    width: 100%;
+    margin-top: 30px;
+    padding: 20px 0;
+    max-height: 60px;
+    height: 60px;
+    flex-basis: calc(100%);
+    max-width: calc(100%);
+  }
+  .search__input--languages {
+    background-image: url("../img/input-lang.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .search__item--money {
+    position: relative;
+
+    &::before {
+      content: "$";
+      position: absolute;
+      top: 37px;
+      left: 10px;
+      font-size: 11px;
+      font-weight: 800;
+      color: #8a8c8f;
+    }
+  }
+
+}

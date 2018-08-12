@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MortgageBrokets</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-request" id="top">
+  <header class="header">
+    <div class="header__wrapper">
+      <a class="header__web-link" href="/">MortgageBrokers<span>.com</span></a>
+      <a class="logo  logo--hidden" href="#">
+        <svg class="icon  icon-logo">
+          <use xlink:href="img/sprite/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <!-- <div class="custom-select">
+        <select>
+          <option value="0">For brokers</option>
+          <option value="1">For borrowers</option>
+          <option value="2">BMW</option>
+          <option value="3">Citroen</option>
+        </select>
+        <div class="select-selected select-arrow-active">
+          For <span>Brokers</span>
+        </div>
+      </div> -->
+
+      <div class="select">
+        <input type="checkbox" value="1" name="select" id="select">
+        <label for="select">For <span>Brokers</span></label>
+
+        <ul class="select__list">
+          <li><a class="select__link" href="#">For borrowers</a></li>
+          <li><a class="select__link" href="#">For lorem</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <a class="logo  logo--main" href="#">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+
+    <input id ="burger" type="checkbox">
+    <label class="burger" for="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="nav-menu">
+      <div class="nav-menu__wrapper">
+        <a class="nav-menu__link" href="index.html">My deals</a>
+        <a class="nav-menu__link  nav-menu__link--active" href="#">Find a deal</a>
+        <a class="nav-menu__link" href="#">  <!-- add this class to login  nav-menu__link--login -->
+          Log in
+          <img src="img/user.png" alt="User icon">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <section class="intro">
+      <div class="intro__wrapper  container">
+        <h1>Let Lenders Compete For Your Business.</h1>
+        <ul class="intro__list">
+          <li class="intro__list-item">100% Borrower <br> Privacy</li>
+          <li class="intro__list-item">No Calls, <br> No Spam</li>
+          <li class="intro__list-item">No Credit <br> Score Impact</li>
+          <li class="intro__list-item">Completely <br> FREE</li>
+        </ul>
+        <a class="intro__btn  btn" href="#">
+          <span>See how it works</span>
+        </a>
+        <a class="intro__btn  btn" href="#">
+          <span>Get started</span>
+        </a>
+
+        <div class="intro__card-list">
+
+          <article class="intro__card">
+            <h4>Residential Fixed</h4>
+            <span class="intro__card-percent">3.15</span>
+            <p class="intro__card-info">
+              <img src="img/user-icon-1.jpg" alt="User Name Picture">
+              <img src="img/user-icon-2.jpg" alt="User Name Picture">
+              <img src="img/user-icon-3.jpg" alt="User Name Picture">
+              <a href="#">From these lenders and 68 more...</a>
+            </p>
+            <a class="btn" href="#">Continue</a>
+            <div class="stiсker">
+              <span>As Low As</span>
+            </div>
+          </article>
+
+          <article class="intro__card">
+            <h4>Residential ARM</h4>
+            <span class="intro__card-percent">3.15</span>
+            <p class="intro__card-info">
+              <img src="img/user-icon-1.jpg" alt="User Name Picture">
+              <img src="img/user-icon-2.jpg" alt="User Name Picture">
+              <img src="img/user-icon-3.jpg" alt="User Name Picture">
+              <a href="#">From these lenders and 68 more...</a>
+            </p>
+            <a class="btn" href="#">Continue</a>
+            <div class="stiсker">
+              <span>As Low As</span>
+            </div>
+          </article>
+
+          <article class="intro__card">
+            <h4>Commercial Mortgages</h4>
+            <span class="intro__card-percent">3.15</span>
+            <p class="intro__card-info">
+              <img src="img/user-icon-1.jpg" alt="User Name Picture">
+              <img src="img/user-icon-2.jpg" alt="User Name Picture">
+              <img src="img/user-icon-3.jpg" alt="User Name Picture">
+              <a href="#">From these lenders and 68 more...</a>
+            </p>
+            <a class="btn" href="#">Continue</a>
+            <div class="stiсker">
+              <span>As Low As</span>
+            </div>
+          </article>
+
+          <article class="intro__card">
+            <h4>Private Mortgages</h4>
+            <span class="intro__card-percent">3.15</span>
+            <p class="intro__card-info">
+              <img src="img/user-icon-1.jpg" alt="User Name Picture">
+              <img src="img/user-icon-2.jpg" alt="User Name Picture">
+              <img src="img/user-icon-3.jpg" alt="User Name Picture">
+              <a href="#">From these lenders and 68 more...</a>
+            </p>
+            <a class="btn" href="#">Continue</a>
+            <div class="stiсker">
+              <span>As Low As</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="search">
+      <div class="search__wrapper  container  clearfix">
+        <h2 class="title  search__title">Find a Broker</h2>
+
+        <form class="search__form" action="/" method="get">
+
+          <label class="search__item  search__item--location">
+            <span class="search__item-text">What is your postal code?</span>
+            <input type="text" name="code" placeholder="M4X 1W7">
+          </label>
+
+          <label class="search__item  search__item--money">
+            <span class="search__item-text">How much do you need?</span>
+
+            <input type="text" name="money" placeholder="599,000">
+          </label>
+
+          <label class="search__item  search__item--select">
+            <span class="search__item-text">What type of morgage?</span>
+
+            <select class="search__input  search__input--select" size="1" name="morgage">
+              <option value="morgage-1" selected>Private</option>
+              <option value="morgage-2">Type of morgage 2</option>
+              <option value="morgage-3">Type of morgage 3</option>
+              <option value="morgage-4">Type of morgage 4</option>
+            </select>
+          </label>
+
+          <label class="search__item  search__item--select">
+            <span class="search__item-text">Languages</span>
+
+            <select class="search__input  search__input--select  search__input--languages" size="1" name="Credit">
+              <option value="lang-0" selected></option>
+              <option value="lang-2">German</option>
+              <option value="lang-3">United Kingdom</option>
+              <option value="lang-4">Poland</option>
+            </select>
+          </label>
+
+          <input class="search__submit" type="submit" name="submit" value="Show Brokers">
+
+        </form>
+      </div>
+    </section>
+
+    <section class="limit  container">
+      <div class="limit__wrapper">
+        <h2 class="title  limit__title">Enjoy $50,000 of cash for as little as $139 a month!</h2>
+        <a class="btn  btn--arrow" href="#"><span>Apply now</span></a>
+        <div class="stiсker">
+          <span>Limited The Only</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured">
+      <h2 class="title">Featured Brokers:</h2>
+
+      <div class="featured__cards">
+
+        <article class="featured-card">
+          <header class="featured-card__wrapper  featured-card__wrapper--top">
+            <img class="featured-card__img" src="" alt="">
+            <h4 class="featured-card__name">Alexandra Allen</h4>
+
+            <p class="featured__reputation">
+              <svg class="icon  icon-start">
+                <use xlink:href="img/sprite/sprite.svg#start"></use>
+              </svg>
+              <span class="featured__reputation-percent">96%</span>
+              <span class="featured__reputation-reviews">(127 Reviews)</span>
+            </p>
+          </header>
+
+          <main class="featured-card__wrapper  featured-card__wrapper--content">
+            <p class="featured-card__text">
+              <span>I am:</span>
+              <b>Mortgage Broker, Mortgage Agent, Mortgage Planner</b>
+            </p>
+            <p class="featured-card__text">
+              <span>I Speak:</span>
+              <i class="featured-card__language"></i>
+            </p>
+            <p class="featured-card__text">
+              <span>I Serve:</span>
+              <b>Waterloo, Brampton, Kitchener, London, and 13 more.</b>
+            </p>
+          </main>
+
+          <footer class="featured-card__wrapper  featured-card__wrapper--footer">
+            <a class="btn" href="#">View Profile</a>
+            <a class="btn" href="#">Invite to bid</a>
+          </footer>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__nav">
+      <a class="footer__link" href="#">Calculators</a>
+      <a class="footer__link" href="#">Education</a>
+      <a class="footer__link" href="#">FAQ</a>
+      <a class="footer__link" href="#">Privacy</a>
+      <a class="footer__link" href="#">For borrowers</a>
+    </div>
+    <a class="logo  logo--footer" href="#">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <p class="footer__copy">
+      &copy; 2018 mortgagebrokers.com. <br />
+        all rights recerved.
+    </p>
+  </footer>
+
+  <script src="js/svg4everybody-min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
