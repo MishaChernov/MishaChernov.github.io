@@ -51,6 +51,15 @@
   }
 }
 
+.page-request {
+  .select__list {
+    a {
+      background-color: $color-green;
+      color: $color-white;
+    }
+  }
+}
+
 .select__list {
   z-index: -1;
   position: absolute;
@@ -92,7 +101,7 @@
 
 #select:checked ~ .select__list {
   display: block;
-  bottom: -115px;
+  bottom: -62px;
   @include transition(500ms);
 }
 

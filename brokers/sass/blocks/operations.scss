@@ -29,8 +29,29 @@
   align-content: center;
   margin-bottom: 164px;
 
+  &:first-child {
+    margin-bottom: 190px;
+  }
   &:last-child {
-    margin-bottom: 100px;
+    margin-bottom: 84px;
+
+    .operations__about {
+      margin-top: 20px;
+    }
+  }
+  &:nth-child(2) {
+    margin-bottom: 148px;
+    img {
+      width: 347px;
+      height: 350px;
+      // margin-top: 25px;
+    }
+    .operations__about {
+      margin-top: 10px;
+    }
+    .operations__name span {
+      margin-top: 48px;
+    }
   }
 }
 

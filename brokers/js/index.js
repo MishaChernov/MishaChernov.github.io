@@ -2,6 +2,29 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+	// Start Check Outside Clicks
+
+	var navMenu = document.getElementsByClassName('nav-menu');
+	var burgerBtn = document.getElementById('burger');
+
+	var selectBtn = document.getElementById('select');
+	var selectList = document.getElementsByClassName('select__list');
+
+	document.addEventListener('click', function(event) {
+
+		if(navMenu !== event.target && burgerBtn !== event.target && burgerBtn.checked != false) {
+			event.preventDefault();
+			burgerBtn.checked = false;
+		}
+		if(selectList !== event.target && selectBtn !== event.target && selectBtn.checked != false) {
+			event.preventDefault();
+			selectBtn.checked = false;
+		}
+	});
+	
+	// End Check Outside Clicks
+
+
 	// Start qustions events
 	var qustionsBtn = document.getElementsByClassName('questions__btn');
 	var qustionsItem = document.getElementsByClassName('questions__item');
@@ -33,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Start Check Click Btn And Scroll
 
 	var linkNav = document.querySelectorAll('[href^="#"]');
-	const SCROLLSPEED = 0.6;
+	const SCROLLSPEED = 0.3;
 
 	for (var i = 0; i < linkNav.length; i++) {
 		linkNav[i].addEventListener('click', function(e) {
@@ -60,17 +83,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// End Check Click Btn And Scroll
 
+
+
 	var windowWidth = window.innerWidth;
 
-	console.log(windowWidth);
-
 	if(windowWidth <= 1280) {
+
 		$('.intro__card-list').slick({
 			slidesToShow: 3,
 			slidesToScroll: 1,
 			adaptiveHeight: true,
 			arrows: false,
-			autoplay: true,
+			autoplay: false,
 			autoplaySpeed: 5000,
 			centerMode: true,
 			focusOnSelect: false,
@@ -82,11 +106,14 @@ document.addEventListener('DOMContentLoaded', function() {
 				slidesToScroll: 1,
 				adaptiveHeight: true,
 				arrows: false,
-				autoplay: true,
+				autoplay: false,
 				autoplaySpeed: 5000,
 				centerMode: true,
 				focusOnSelect: false,
 				variableWidth: true
 				});
 	}
+
+
+
 })

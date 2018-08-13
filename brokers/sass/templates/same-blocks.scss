@@ -1,6 +1,6 @@
 .page-request {
   .intro {
-    background-color: #e7e7e8;
+    background-color: #ececec;
     background-image: url("../img/request-bg.jpg");
     background-position: top right;
     color: $color-black;
@@ -12,12 +12,18 @@
       display: block;
       padding-top: 181px;
       margin-top: 0;
-      margin-bottom: 66px;
+      margin-bottom: 64px;
       max-width: 850px;
       letter-spacing: -3px;
       line-height: 97px;
       font-size: 80px;
       font-weight: 600;
+    }
+    .btn {
+      &:last-child {
+        width: 225px;
+        box-sizing: border-box;
+      }
     }
   }
   .intro__list {

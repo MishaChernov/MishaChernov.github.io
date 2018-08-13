@@ -1,13 +1,25 @@
 .limit {
 
   .btn {
+    width: 207px;
+    max-width: 207px;
+    box-sizing: border-box;
     margin-bottom: 40px;
     background-color: transparent;
     border: 1px solid $color-white;
+
+    span {
+      margin-right: 36px;
+      letter-spacing: -0.6px;
+
+      &::after {
+        right: -37px;
+      }
+    }
   }
   .stiсker {
-    top: 20px;
-    left: -15px;
+    top: 22px;
+    left: -20px;
     font-size: 14px;
     padding: 10px;
     letter-spacing: 1px;
@@ -19,9 +31,9 @@
     span {
       &::before {
         content: "";
-        bottom: -24.7px;
+        bottom: -29.7px;
         left: -20px;
-        border-width: 0 15px 15px 0;
+        border-width: 0 20px 20px 0;
       }
     }
   }

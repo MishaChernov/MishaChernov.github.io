@@ -64,7 +64,7 @@ header.featured-card__wrapper {
   margin: 0;
   font-size: 20px;
   color: $color-purple;
-  margin-left: 10px;
+  margin-left: 3px;
 }
 
 .featured__reputation {
@@ -74,6 +74,7 @@ header.featured-card__wrapper {
   font-weight: bold;
   line-height: 17px;
   margin-top: 20px;
+  margin-left: -10px;
   letter-spacing: -0.6px;
 
   svg {

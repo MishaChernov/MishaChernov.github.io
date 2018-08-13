@@ -339,3 +339,11 @@
     display: block;
   }
 }
+
+.search__input--languages option:first-child  {
+  display: none;
+}
+
+.search__input--languages:focus {
+  background-image: none !important;
+}
