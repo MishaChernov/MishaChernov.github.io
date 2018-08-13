@@ -59,4 +59,34 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	// End Check Click Btn And Scroll
+
+	var windowWidth = window.innerWidth;
+
+	console.log(windowWidth);
+
+	if(windowWidth <= 1280) {
+		$('.intro__card-list').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			adaptiveHeight: true,
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 5000,
+			centerMode: true,
+			focusOnSelect: false,
+			variableWidth: true
+			});
+
+			$('.featured__cards').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				adaptiveHeight: true,
+				arrows: false,
+				autoplay: true,
+				autoplaySpeed: 5000,
+				centerMode: true,
+				focusOnSelect: false,
+				variableWidth: true
+				});
+	}
 })

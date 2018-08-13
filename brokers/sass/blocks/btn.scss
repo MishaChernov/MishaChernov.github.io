@@ -18,7 +18,6 @@
       position: relative;
 
       &::after {
-        @include transition(500ms);
         content: "\2192";
         position: absolute;
         top: 50%;

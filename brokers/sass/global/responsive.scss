@@ -397,6 +397,164 @@
       display: block;
     }
   }
+
+
+  .page-request {
+    .intro {
+      h1 {
+        padding-top: 45px;
+        line-height: 60px;
+        max-width: 550px;
+        margin-bottom: 10px;
+        font-size: 50px;
+        letter-spacing: -1.9px;
+      }
+    }
+    .intro__list {
+      margin-top: 30px;
+      margin-bottom: 8px;
+      max-width: 440px;
+      flex-wrap: wrap;
+
+      li {
+        width: 125px;
+        margin-right: 22px;
+        margin-bottom: 32px;
+      }
+    }
+    .intro__card-list {
+      margin-top: 40px;
+    }
+  }
+  .intro__card-list  {
+    max-width: 100%;
+    padding: 0;
+  }
+  .intro__card {
+    &:hover {
+      @include transition(300ms);
+      transform: translateY(0);
+    }
+  }
+  .page-request {
+    .intro {
+      margin-bottom: 0;
+      padding-bottom: 18px;
+    }
+    .search {
+      padding-top: 34px;
+      padding-bottom: 20px;
+    }
+    .search__item {
+      margin-top: 31px;
+    }
+  }
+  .limit__wrapper {
+    margin-top: 18px;
+    height: 305px;
+  }
+  .limit .stiсker {
+    top: 10px;
+    left: -10px;
+    font-size: 10px;
+    padding: 1px;
+    letter-spacing: 0.6px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    span {
+      &::before {
+      bottom: -13px;
+      left: -10px;
+      border-width: 0 10px 10px 0;
+      }
+    }
+  }
+  .limit__title {
+    margin-top: 52px;
+    font-size: 40px;
+    letter-spacing: -2px;
+    line-height: 48px;
+    max-width: 330px;
+  }
+  .limit__wrapper {
+    padding-left: 20px;
+  }
+  .limit .btn {
+    margin-bottom: 20px;
+    max-width: 167px;
+    font-size: 14px;
+
+    span {
+      margin-right: 33px;
+
+      &::after {
+        right: -34px;
+      }
+    }
+  }
+  .featured__title {
+    font-size: 20px;
+  }
+  .operations {
+    margin-top: 0;
+  }
+  .operations__title {
+    padding-top: 33px;
+    height: 93px;
+    // padding-right: 37px;
+  }
+
+  .operations {
+    background-size: cover;
+    padding-bottom: 59px;
+  }
+  .operations__img {
+    width: 231px;
+    height: 231px;
+  }
+  .operations__list {
+    margin-top: 67px;
+    padding: 0 40px;
+  }
+  .operations__title {
+    margin-bottom: 0;
+  }
+  .operations__name {
+    max-height: 300px;
+    span {
+      font-size: 10px;
+      margin-top: 31px;
+    }
+  }
+  .operations__name h4 {
+    font-size: 30px;
+  }
+  .operations__item {
+    margin-bottom: 65px;
+
+    &:last-child {
+      margin-bottom: 90px;
+    }
+  }
+  .operations__about {
+    width: 274px;
+    max-width: 274px;
+    height: 274px;
+    padding: 0 38px;
+    margin-left: 16px;
+    flex-basis: auto;
+
+    p {
+      font-size: 14px;
+      color: #382c75;
+      font-weight: 400;
+      line-height: 17px;
+      text-align: center;
+      margin: 8px 0;
+      letter-spacing: -0.6px;
+    }
+  }
 }
 
 @media (max-width: 800px) {
@@ -455,6 +613,13 @@
       font-size: 30px;
       margin-bottom: 18px;
     }
+  }
+  .page-request .intro h1 {
+    max-width: 310px;
+    line-height: 36px;
+    font-size: 30px;
+    margin-bottom: 18px;
+    padding-top: 23px;
   }
   .intro__list {
     margin-bottom: 0px;
@@ -850,6 +1015,86 @@
   }
   .page-nav {
     margin-right: 0;
+  }
+
+
+  .page-request .intro__list {
+    margin-top: 13px;
+    margin-bottom: 32px;
+
+    br {
+      display: none;
+    }
+    li {
+      width: 100%;
+      margin-bottom: 6px;
+    }
+  }
+  .intro__card {
+    width: 180px !important;
+
+    h4 {
+      font-size: 16px;
+    }
+  }
+  .intro__card .stiсker {
+    top: 72px;
+  }
+  .intro__card-percent {
+    font-size: 60px;
+    margin-top: 34px;
+
+    &::before {
+      top: 9px;
+      right: 7px;
+      font-size: 27px;
+    }
+    &::after {
+      top: 40px;
+      right: 0;
+      font-size: 10px;
+    }
+  }
+  .page-request .intro__card-list {
+    margin-top: 22px;
+  }
+  .intro__card-info {
+    flex-wrap: wrap;
+    a {
+      display: block;
+      width: 100%;
+    }
+  }
+  .intro__btn:first-of-type {
+    padding-left: 15px;
+  }
+  .intro__card-info {
+    justify-content: flex-start;
+  }
+  .intro__card-info a {
+    margin-top: 12px;
+    margin-left: 0;
+    padding-right: 10px;
+  }
+  .intro__card .btn {
+    margin-top: 19px;
+    padding: 12px;
+    font-size: 12px;
+  }
+  .page-request {
+    .search {
+      padding-top: 15px;
+    }
+    .search__item {
+      margin-top: 26px;
+    }
+    .search__submit {
+      padding: 11px 0;
+      max-height: 37px;
+    }
+    .intro {
+      padding-bottom: 23px;
+    }
   }
 }
 

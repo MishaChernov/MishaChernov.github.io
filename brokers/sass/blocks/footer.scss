@@ -10,6 +10,8 @@
 
 .footer__nav {
   flex: 1;
+  margin-left: 4px;
+  margin-top: -4px;
 }
 
 .footer__link {
@@ -17,7 +19,7 @@
   text-decoration: none;
   color: #000000;
   font-weight: bold;
-  margin: 8px;
+  margin: 9px;
   font-size: 10px;
   @include transition(500ms);
 
