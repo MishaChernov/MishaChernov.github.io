@@ -151,19 +151,19 @@
   text-transform: uppercase;
   cursor: pointer;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 800;
   font-family: $primary-font-family;
   @include transition(300ms);
 
   &:hover {
     @include transition(300ms);
-    background-color: $color-green;
+    color: darken($color-white, 20%);
   }
 }
 
 .search__item-text {
   display: block;
-  letter-spacing: -0.7px;
+  letter-spacing: 0px;
   font-size: 14px;
   line-height: auto;
   font-weight: 600;
@@ -174,28 +174,28 @@
 .search__form ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   font-size: 14px;
   font-family: $primary-font-family;
-  font-weight: bold;
+  font-weight: 800;
   color: $color-black;
   text-transform: uppercase;
 }
 .search__form ::-moz-placeholder { /* Firefox 19+ */
   font-size: 14px;
   font-family: $primary-font-family;
-  font-weight: bold;
+  font-weight: 800;
   color: $color-black;
   text-transform: uppercase;
 }
 .search__form :-ms-input-placeholder { /* IE 10+ */
   font-size: 14px;
   font-family: $primary-font-family;
-  font-weight: bold;
+  font-weight: 800;
   color: $color-black;
   text-transform: uppercase;
 }
 .search__form :-moz-placeholder { /* Firefox 18- */
   font-size: 14px;
   font-family: $primary-font-family;
-  font-weight: bold;
+  font-weight: 800;
   color: $color-black;
   text-transform: uppercase;
 }
@@ -217,7 +217,7 @@
   text-align: center;
   font-size: 14px;
   font-family: $primary-font-family;
-  font-weight: bold;
+  font-weight: 800;
   color: $color-black;
   text-transform: uppercase;
   text-align-last:center;
@@ -228,7 +228,7 @@
     line-height: 30px;
     font-size: 14px;
     font-family: $primary-font-family;
-    font-weight: bold;
+    font-weight: 800;
     color: $color-black;
     text-transform: uppercase;
     text-align-last:center;
@@ -261,14 +261,15 @@
   font-size: 10px;
   letter-spacing: 0.6px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 800;
   text-transform: uppercase;
 
   span {
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    padding-right: 7px;
+    padding-right: 8px;
+    font-weight: 900;
 
     &::after {
       content: "/";
@@ -276,7 +277,7 @@
       margin-left: 6px;
       letter-spacing: 0.4px;
       text-align: center;
-      font-weight: bold;
+      font-weight: 800;
       text-transform: uppercase;
     }
     &:last-of-type {
@@ -297,7 +298,7 @@
   padding-bottom: 8px;
   text-align: center;
   font-size: 10px;
-  font-weight: bold;
+  font-weight: 800;
   letter-spacing: 0;
   color: $color-gray;
   background-color: $color-white;

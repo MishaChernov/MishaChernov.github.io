@@ -15,7 +15,7 @@
   color: $color-black;
   width: 270px;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 5px;
   margin: 20px;
   text-align: center;
   padding-top: 81px;
@@ -25,17 +25,17 @@
     display: block;
     padding: 0 2px;
     font-size: 30px;
-    font-weight: bold;
+    font-weight: 800;
     color: $color-blue;
     margin-bottom: 33px;
   }
   p {
-    padding: 0 5px;
+    padding: 0 14px;
     line-height: 24px;
     color: #333132;
     font-size: 20px;
     margin-bottom: 40px;
-    letter-spacing: -0.9px;
+    letter-spacing: 0;
   }
 
   &::before {
@@ -97,7 +97,7 @@
     line-height: 59px;
     font-size: 50px;
     margin-right: 20px;
-    letter-spacing: -0.6px;
+    letter-spacing: 0;
   }
   p {
     margin-left: 20px;
@@ -105,7 +105,7 @@
     font-size: 30px;
     color: $color-white;
     flex: 1;
-    letter-spacing: -0.5px;
+    letter-spacing: 0;
   }
   img {
     margin-top: 112px;

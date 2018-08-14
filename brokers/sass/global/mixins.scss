@@ -1,5 +1,4 @@
 @mixin hover {
-  opacity: 0.9;
   transition: transform 100ms ease;
 }
 
@@ -12,5 +11,5 @@
 }
 
 @mixin set-label() {
-  
+
 }

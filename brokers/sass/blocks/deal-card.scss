@@ -14,7 +14,7 @@
   background-color: #000000;
   color: #ffffff;
   font-size: 10px;
-  font-weight: bold;
+  font-weight: 800;
   text-transform: uppercase;
   font-family: "Campton", "Arial", sans-serif;
   line-height: 18px;
@@ -89,7 +89,7 @@
         }
         &:hover {
           @include transition(300ms);
-          background-color: $color-gray !important;
+          background-color: lighten($color-gray, 20%) !important;
           opacity: 1 !important;
 
           span {
@@ -139,7 +139,11 @@
 
     p {
       &:nth-of-type(2) {
-        width: 175px;
+        width: 166px;
+
+        b {
+          letter-spacing: 0;
+        }
       }
     }
   }
@@ -206,8 +210,8 @@
           }
           span {
             color: $color-green;
-            font-size: 20px;
-            letter-spacing: -0px;
+            font-size: 14px;
+            letter-spacing: 0.5px;
             &::after {
               display: none;
             }
@@ -237,7 +241,7 @@
       font-size: 10px;
       color: $color-gray;
       text-transform: uppercase;
-      font-weight: bold;
+      font-weight: 800;
       letter-spacing: 0.3px;
     }
     b {
@@ -246,7 +250,7 @@
       font-size: 20px;
       color: #333132;
       font-weight: 300;
-      letter-spacing: -0.6px;
+      letter-spacing: 1px;
     }
   }
 }
@@ -254,12 +258,12 @@
 .deal-card__borrower {
   letter-spacing: -0.6px !important;
   color: $color-black !important;
-  font-weight: bold !important;
+  font-weight: 800 !important;
 }
 
 .deal-card__time {
   color: $color-purple !important;
-  font-weight: bold !important;
+  font-weight: 800 !important;
   margin-top: 6px;
 
   &--color {
@@ -280,7 +284,7 @@
     font-size: 10px;
     color: $color-gray;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 800;
     letter-spacing: 0.3px;
   }
   p {
@@ -290,7 +294,7 @@
     font-size: 20px;
     line-height: 24px;
     font-weight: 300;
-    letter-spacing: -0.5px;
+    letter-spacing: 0;
     max-width: 510px;
 
     span {
@@ -298,7 +302,7 @@
       font-size: 20px;
       font-weight: 300;
       text-transform: lowercase;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.5px;
       color: $color-green;
     }
   }

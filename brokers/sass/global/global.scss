@@ -21,6 +21,10 @@ h1,h2,h3,h4,h5,h6 {
   font-family: $primary-font-family;
 }
 
+h1 {
+  font-weight: 800 !important;
+}
+
 .clearfix::after {
   content: "";
   display: table;

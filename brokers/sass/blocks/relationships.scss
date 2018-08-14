@@ -10,7 +10,7 @@
     font-size: 70px;
     line-height: 84px;
     margin-right: 20px;
-    letter-spacing: -0.6px;
+    letter-spacing: 0;
   }
 }
 
@@ -25,14 +25,13 @@
   p {
     font-size: 30px;
     color: $color-white;
-    letter-spacing: -0.6px;
+    letter-spacing: 0;
     line-height: 37px;
   }
 }
 
 .relationships__btn {
   margin-top: 73px;
-  letter-spacing: 0.7px;
   padding-right: 35px;
   width: 215px;
   max-width: 240px;
@@ -50,6 +49,11 @@
       &::after {
         color: $color-green;
       }
+    }
+  }
+  span {
+    &::after {
+      right: -32px;
     }
   }
 }

@@ -290,7 +290,7 @@
       line-height: 38px;
       font-size: 30px;
       margin-right: 20px;
-      letter-spacing: -0.6px;
+      letter-spacing: 0;
     }
     p {
       margin-left: 3px;
@@ -354,7 +354,7 @@
     }
   }
   .relationships__info {
-    padding-left: 0px;
+    padding-left: 12px;
     padding-right: 10px;
 
     p {
@@ -371,7 +371,9 @@
 
 
 
-
+  .questions__btn {
+    top: 15px;
+  }
   .questions {
     padding-top: 33px;
     margin-top: 0;
@@ -427,7 +429,7 @@
         max-width: 550px;
         margin-bottom: 10px;
         font-size: 50px;
-        letter-spacing: -1.9px;
+        letter-spacing: 0;
       }
     }
     .intro__list {
@@ -487,9 +489,9 @@
     }
   }
   .limit__title {
-    margin-top: 52px;
+    margin-top: 57px;
     font-size: 40px;
-    letter-spacing: -2px;
+    letter-spacing: 0;
     line-height: 48px;
     max-width: 330px;
   }
@@ -503,9 +505,10 @@
 
     span {
       margin-right: 33px;
+      letter-spacing: 1px;
 
       &::after {
-        right: -34px;
+        right: -40px;
       }
     }
   }
@@ -791,7 +794,7 @@
       flex: none;
     }
     p {
-      max-width: 400px;
+      max-width: 414px;
       margin: 0 auto;
       margin-top: 12px;
       text-align: center;
@@ -810,7 +813,7 @@
     margin-bottom: 0px;
   }
   .about {
-    margin-top: 25px;
+    margin-top: 14px;
     margin-bottom: 20px;
 
     h2 {
@@ -820,7 +823,8 @@
     p {
       font-size: 14px;
       line-height: 17px;
-      letter-spacing: -0.6px;
+      letter-spacing: 0;
+      padding: 0;
     }
   }
   .about__bg {
@@ -835,8 +839,8 @@
   .about__list {
     padding-top: 40px;
     padding-bottom: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 19px;
+    padding-right: 10px;
     box-sizing: border-box;
     margin-top: 0;
     flex-direction: column;
@@ -853,16 +857,14 @@
     justify-content: center;
   }
   .about__btn {
-    width: 105%;
-    max-width: 105%;
+    width: 95%;
+    max-width: 450px;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 25px;
     padding: 10px 0;
     padding-left: 20px;
     padding-right: 50px;
     box-sizing: border-box;
-    margin-left: -10px;
-    margin-right: -10px;
 
     &::after {
       right: 35%;
@@ -898,8 +900,8 @@
     }
   }
   .relationships__btn {
-    width: 102%;
-    max-width: 102%;
+    width: 95%;
+    max-width: 450px;
     margin: 0 auto;
     margin-top: 18px;
     padding: 10px 0;
@@ -1139,7 +1141,11 @@
     }
   }
   .intro__btn:first-of-type {
-    padding-left: 15px;
+    padding-left: 12px;
+    letter-spacing: 1px;
+    padding-right: 0;
+    width: 208px;
+    margin-right: 0px;
   }
   .intro__card-info {
     justify-content: flex-start;
@@ -1190,7 +1196,7 @@
     max-width: 160px;
     margin-top: 60px;
     font-size: 20px;
-    letter-spacing: -1px;
+    letter-spacing: 0;
     line-height: 24px;
   }
   .featured__title {
@@ -1449,8 +1455,6 @@
     min-height: 326px;
   }
   .about__btn {
-    width: 107%;
-    max-width: 107%;
     margin-top: 27px;
   }
 
@@ -1480,7 +1484,7 @@
     text-transform: uppercase;
     text-decoration: none;
     color: #000000;
-    font-weight: bold;
+    font-weight: 800;
     margin: 15px 7px;
     font-size: 10px;
     line-height: 24px;
@@ -1542,5 +1546,38 @@
   .page-request .intro .btn:last-child  {
     width: 100%;
     max-width: 100%;
+  }
+  .intro__list-item {
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
+  .intro__btn:first-of-type {
+    padding-right: 0px;
+
+    span {
+      margin-right: 31px;
+    }
+  }
+  .features__item p {
+    letter-spacing: 0;
+    padding: 0 2px;
+  }
+  .features__item h3 {
+    letter-spacing: 0;
+  }
+  .about__list {
+    padding-right: 0;
+    padding-left: 9px;
+    min-height: 320px;
+  }
+  .about__item {
+    line-height: 15px;
+  }
+  .about__btn {
+    margin-top: 33px;
   }
 }

@@ -2,6 +2,7 @@
   position: relative;
   display: block;
   color: $color-white;
+  // border-radius: 4px;
   padding: 20px;
   background-color: $color-green;
   max-width: 200px;
@@ -9,8 +10,8 @@
   text-transform: uppercase;
   text-decoration: none;
   font-family: $primary-font-family;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
   @include transition(300ms);
 
   &--arrow {
@@ -24,13 +25,16 @@
         right: -20px;
         transform: translateY(-50%);
         font-size: 18px;
-        color: $color-white;
+        color: inherit;
         font-weight: 400;
       }
+    }
+    &:hover span::after {
+      color: darken($color-white, 50%);
     }
   }
   &:hover {
     @include transition(300ms);
-    @include hover;
+    color: darken($color-white, 20%);
   }
 }

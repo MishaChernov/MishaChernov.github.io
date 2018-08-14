@@ -10,14 +10,12 @@
 
     h1 {
       display: block;
-      padding-top: 181px;
+      padding-top: 184px;
       margin-top: 0;
-      margin-bottom: 64px;
+      margin-bottom: 59px;
       max-width: 850px;
-      letter-spacing: -3px;
       line-height: 97px;
       font-size: 80px;
-      font-weight: 600;
     }
     .btn {
       &:last-child {
@@ -58,6 +56,8 @@
     height: 60px;
     flex-basis: calc(100%);
     max-width: calc(100%);
+    letter-spacing: 1.2px;
+    padding-top: 24px;
   }
   .search__input--languages {
     background-image: url("../img/input-lang.png");

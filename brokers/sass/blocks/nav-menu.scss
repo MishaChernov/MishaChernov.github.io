@@ -21,9 +21,9 @@
   color: $color-black;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
+  letter-spacing: 1px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 12px;
   @include transition(300ms);
 
@@ -31,14 +31,18 @@
     color: $color-gray;
   }
   &:hover {
-    color: $color-white;
-    background-color: $color-green;
+    color: $color-green;
     @include transition(300ms);
   }
   &--active {
     color: $color-white;
     background-color: $color-green;
     @include transition(300ms);
+    cursor: default;
+
+    &:hover {
+      color: $color-white;
+    }
   }
 
   img {

@@ -8,11 +8,13 @@
   overflow: hidden;
   position: relative;
   margin: 0 auto;
-  padding: 26px 0;
+  padding: 25px 0;
+  padding-bottom: 26px;
   cursor: pointer;
   border-bottom: 1px solid #d1d2d4;
 
-  transition-duration: 1s;
+  @include transition(500ms);
+  transition-timing-function: linear;
 
   &:hover {
     // animation-name: questionsHover;
@@ -20,6 +22,7 @@
     h5 {
       color: $color-green;
       @include transition(300ms);
+      transition-timing-function: linear;
     }
   }
   &:last-child {
@@ -28,10 +31,10 @@
 }
 
 .questions__title {
-  letter-spacing: 0.3px;
+  letter-spacing: 0;
   font-size: 30px;
   margin-top: 0;
-  font-weight: bold;
+  font-weight: 800;
   margin-bottom: 40px;
 }
 
@@ -45,9 +48,10 @@
   font-size: 20px;
   line-height: 22px;
   margin: 0;
-  letter-spacing: -0.6px;
+  letter-spacing: 0;
   color: #263139;
   @include transition(300ms);
+  transition-timing-function: linear;
 
   &--active {
     color: $color-green;
@@ -58,32 +62,35 @@
   max-width: 890px;
   padding: 0;
   padding-right: 20px;
-  padding-top: 0px;
-  margin-top: 10px;
-  letter-spacing: -0.5px;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 0;
   line-height: 19px;
   font-size: 16px;
   color: $color-black;
   @include transition(300ms);
-  margin-top: 0;
+  transition-timing-function: linear;
   max-height: 0;
   opacity: 0;
-  transform: translate( 0 , -50% );
+  transform: translate( 0 , -20% );
 
   &--visually {
-
-
+    @include transition(300ms);
+    transition-timing-function: linear;
     position: relative;
     overflow: hidden;
-    max-height: 800px;
+    max-height: 300px;
     opacity: 1;
     transform: translate( 0 , 0 );
+    padding-top: 20px;
   }
   &--hidden {
+    @include transition(300ms);
+    transition-timing-function: linear;
     margin-top: 0;
     max-height: 0;
     opacity: 0;
-    transform: translate( 0 , -50% );
+    transform: translate( 0 , -20% );
   }
 }
 
@@ -104,8 +111,8 @@
 
   cursor: pointer;
 
-  @include hover;
   @include transition(300ms);
+  transition-timing-function: linear;
 
   &::before,
   &::after {
@@ -121,10 +128,12 @@
     background-color: $color-green;
     cursor: pointer;
     @include transition(300ms);
+    transition-timing-function: linear;
   }
   &::after {
     transform: rotate(90deg);
     @include transition(300ms);
+    transition-timing-function: linear;
   }
   &--opened {
     cursor: default;

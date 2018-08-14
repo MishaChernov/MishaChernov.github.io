@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MortgageBrokets</title>
   <link rel="stylesheet" href="css/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 </head>
 <body class="" id="top">
   <header class="header">
@@ -16,21 +20,9 @@
           <use xlink:href="img/sprite/sprite.svg#logo"></use>
         </svg>
       </a>
-      <!-- <div class="custom-select">
-        <select>
-          <option value="0">For brokers</option>
-          <option value="1">For borrowers</option>
-          <option value="2">BMW</option>
-          <option value="3">Citroen</option>
-        </select>
-        <div class="select-selected select-arrow-active">
-          For <span>Brokers</span>
-        </div>
-      </div> -->
 
       <div class="select">
-        <input type="checkbox" value="1" name="select" id="select">
-        <label for="select">For <span>Brokers</span></label>
+        <div class="select__btn">For <span>Brokkers</span></div>
 
         <ul class="select__list">
           <li><a class="select__link" href="borrowers.html">For borrowers</a></li>
@@ -44,12 +36,11 @@
       </svg>
     </a>
 
-    <input id ="burger" type="checkbox">
-    <label class="burger" for="burger">
+    <div class="burger">
       <span></span>
       <span></span>
       <span></span>
-    </label>
+    </div>
 
     <nav class="nav-menu">
       <div class="nav-menu__wrapper">

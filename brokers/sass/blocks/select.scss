@@ -1,6 +1,6 @@
 .select {
   position: relative;
-  margin-left: 22px;
+  margin-left: 19px;
   padding-top: 2px;
   height: 100%;
 
@@ -10,10 +10,10 @@
     padding: 12px 20px;
     padding-right: 12px;
     vertical-align: middle;
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.6px;
+    letter-spacing: 1px;
     color: $color-black;
     font-family: $primary-font-family;
     border-left: 1px solid #d1d2d4;
@@ -38,7 +38,7 @@
     &::after {
       content: "";
       position: absolute;
-      right: 0;
+      right: -4px;
       top: 15px;
       transform: rotate(-45deg);
       display: block;
@@ -51,14 +51,6 @@
   }
 }
 
-.page-request {
-  .select__list {
-    a {
-      background-color: $color-green;
-      color: $color-white;
-    }
-  }
-}
 
 .select__list {
   z-index: -1;
@@ -68,6 +60,7 @@
   min-width: 300px;
   margin: 0;
   padding: 0;
+  opacity: 0;
   display: block;
   list-style: none;
   @include transition(300ms);
@@ -79,7 +72,7 @@
     display: block;
     padding: 20px;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: $color-black;
@@ -101,14 +94,15 @@
 
 #select:checked ~ .select__list {
   display: block;
-  bottom: -62px;
-  @include transition(500ms);
+  bottom: -64px;
+  opacity: 1;
+  @include transition(300ms);
 }
 
 #select:checked ~ label {
   &::after {
     transform: rotate(135deg);
     top: 18px;
-    @include transition(500ms);
+    @include transition(300ms);
   }
 }

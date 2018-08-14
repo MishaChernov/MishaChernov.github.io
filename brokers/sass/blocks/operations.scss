@@ -18,7 +18,7 @@
   width: 100%;
   background-color: $color-white;
   height: 150px;
-  letter-spacing: -1px;
+  letter-spacing: 0;
   box-sizing: border-box;
   padding-top: 58px;
 }
@@ -33,21 +33,25 @@
     margin-bottom: 190px;
   }
   &:last-child {
-    margin-bottom: 84px;
+    margin-bottom: 82px;
 
     .operations__about {
       margin-top: 20px;
     }
+    .operations__name span {
+      margin-top: 36px;
+    }
   }
   &:nth-child(2) {
     margin-bottom: 148px;
+
     img {
       width: 347px;
       height: 350px;
       // margin-top: 25px;
     }
     .operations__about {
-      margin-top: 10px;
+      margin-top: 0px;
     }
     .operations__name span {
       margin-top: 48px;
@@ -65,14 +69,16 @@
     margin-top: 40px;
     font-size: 12px;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 800;
+    letter-spacing: 1px;
+
   }
   h4 {
     font-size: 40px;
     margin: 0;
     margin-top: 8px;
-    letter-spacing: -0.8px;
-    font-weight: bold;
+    letter-spacing: 0.4px;
+    font-weight: 800;
   }
 }
 
@@ -96,10 +102,10 @@
     font-size: 20px;
     color: #382c75;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 25px;
     text-align: center;
-    margin: 13px 0;
-    letter-spacing: -0.6px;
+    margin: 10px 0;
+    letter-spacing: 0;
   }
 }
 
@@ -125,14 +131,13 @@
     }
   }
   &:hover {
-    background-color: $color-white;
-    opacity: 1;
+    color: darken($color-white, 20%);
 
     span {
-      color: $color-green;
+      color: darken($color-white, 20%);
 
       &::after {
-        color: $color-green;
+        color: darken($color-white, 20%);
       }
     }
   }

@@ -4,24 +4,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Start Check Outside Clicks
 
-	var navMenu = document.getElementsByClassName('nav-menu');
-	var burgerBtn = document.getElementById('burger');
+		$(".burger").click(function(e) {
+			e.preventDefault();
+			$(".burger").toggleClass('burger--open');
+		  $(".nav-menu").toggleClass("nav-menu--open");
+		});
 
-	var selectBtn = document.getElementById('select');
-	var selectList = document.getElementsByClassName('select__list');
+		$(document).mouseup(function(e) {
+		  var $target = $(e.target);
+		  if ($target.closest(".nav-menu").length == 0 && $target.closest(".burger").length == 0) {
+		    $(".nav-menu").removeClass("nav-menu--open");
+				$(".burger").removeClass("burger--open");
+		  }
+		});
 
-	document.addEventListener('click', function(event) {
 
-		if(navMenu !== event.target && burgerBtn !== event.target && burgerBtn.checked != false) {
-			event.preventDefault();
-			burgerBtn.checked = false;
-		}
-		if(selectList !== event.target && selectBtn !== event.target && selectBtn.checked != false) {
-			event.preventDefault();
-			selectBtn.checked = false;
-		}
-	});
-	
+		$(".select__btn").click(function(e) {
+			e.preventDefault();
+			$(".select__btn").toggleClass('select__btn--open');
+		  $(".select__list").toggleClass("select__list--open");
+		});
+
+		$(document).mouseup(function(e) {
+		  var $target = $(e.target);
+		  if ($target.closest(".select__list").length == 0 && $target.closest(".select__btn").length == 0) {
+		    $(".select__btn").removeClass("select__btn--open");
+				$(".select__list").removeClass("select__list--open");
+		  }
+		});
+
 	// End Check Outside Clicks
 
 
