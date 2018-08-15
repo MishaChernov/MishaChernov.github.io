@@ -14,7 +14,7 @@
   background-color: #000000;
   color: #ffffff;
   font-size: 10px;
-  font-weight: 800;
+  font-weight: bold;
   text-transform: uppercase;
   font-family: "Campton", "Arial", sans-serif;
   line-height: 18px;
@@ -79,27 +79,33 @@
       b {
         color: $color-gray !important;
       }
-      a {
-        font-size: 14px !important;
-        color: $color-gray !important;
-        @include transition(300ms);
-
-        &::after {
-          display: none !important;
-        }
-        &:hover {
-          @include transition(300ms);
-          background-color: lighten($color-gray, 20%) !important;
-          opacity: 1 !important;
-
-          span {
-            color: $color-white !important;
-          }
-        }
-      }
     }
   }
 }
+
+
+.btn--off {
+  font-size: 14px !important;
+  color: $color-gray !important;
+  @include transition(300ms);
+
+  svg {
+    display: none !important;
+  }
+  span {
+    font-size: 14px !important;
+  }
+  &:hover {
+    @include transition(300ms);
+    background-color: lighten($color-gray, 20%) !important;
+    opacity: 1 !important;
+
+    span {
+      color: $color-white !important;
+    }
+  }
+}
+
 
 .deal-card__info {
   display: flex;
@@ -197,23 +203,16 @@
           letter-spacing: -0px;
           padding: 0;
 
-          &::after {
-            content: "\2192";
-            position: absolute;
-            display: block;
-            top: 50%;
-            right: 30px;
-            transform: translateY(-50%);
-            font-size: 18px;
-            color: $color-green;
-            font-weight: 400;
-          }
           span {
+            margin-bottom: 0;
             color: $color-green;
-            font-size: 14px;
-            letter-spacing: 0.5px;
+            font-size: 20px;
+            letter-spacing: 1px;
             &::after {
               display: none;
+            }
+            svg {
+              right: -75px;
             }
           }
           &:hover {
@@ -239,31 +238,33 @@
     span {
       font-family: $primary-font-family;
       font-size: 10px;
+      margin-bottom: 5px;
       color: $color-gray;
       text-transform: uppercase;
-      font-weight: 800;
-      letter-spacing: 0.3px;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
     b {
       display: block;
       font-family: $primary-font-family;
       font-size: 20px;
+      margin-top: 2px;
       color: #333132;
       font-weight: 300;
-      letter-spacing: 1px;
+      letter-spacing: 0;
     }
   }
 }
 
 .deal-card__borrower {
-  letter-spacing: -0.6px !important;
+  letter-spacing: -0 !important;
   color: $color-black !important;
-  font-weight: 800 !important;
+  font-weight: bold !important;
 }
 
 .deal-card__time {
   color: $color-purple !important;
-  font-weight: 800 !important;
+  font-weight: bold !important;
   margin-top: 6px;
 
   &--color {
@@ -284,7 +285,7 @@
     font-size: 10px;
     color: $color-gray;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: bold;
     letter-spacing: 0.3px;
   }
   p {

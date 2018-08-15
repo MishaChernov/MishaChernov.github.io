@@ -52,6 +52,9 @@
     }
     .operations__about {
       margin-top: 0px;
+      p {
+        color: #f2744d;
+      }
     }
     .operations__name span {
       margin-top: 48px;
@@ -69,7 +72,7 @@
     margin-top: 40px;
     font-size: 12px;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: bold;
     letter-spacing: 1px;
 
   }
@@ -77,8 +80,8 @@
     font-size: 40px;
     margin: 0;
     margin-top: 8px;
-    letter-spacing: 0.4px;
-    font-weight: 800;
+    letter-spacing: 0;
+    font-weight: bold;
   }
 }
 
@@ -109,6 +112,21 @@
   }
 }
 
+.operations__img {
+  &:nth-child(1) {
+    width: 339px;
+    height: 351px;
+  }
+  &:nth-child(2) {
+    width: 347px;
+    height: 350px;
+  }
+  &:nth-child(3) {
+    width: 351px;
+    height: 350px;
+  }
+}
+
 .operations__btn {
   display: flex;
   flex-direction: column;
@@ -125,20 +143,10 @@
 
   span {
     margin-right: 29px;
-    &::after {
-      font-size: 30px;
+    svg {
+      width: 20px;
+      height: 10px;
       right: -40px;
-    }
-  }
-  &:hover {
-    color: darken($color-white, 20%);
-
-    span {
-      color: darken($color-white, 20%);
-
-      &::after {
-        color: darken($color-white, 20%);
-      }
     }
   }
 }

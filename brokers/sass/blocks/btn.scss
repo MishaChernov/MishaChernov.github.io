@@ -10,31 +10,41 @@
   text-transform: uppercase;
   text-decoration: none;
   font-family: $primary-font-family;
-  font-weight: 800;
-  letter-spacing: 1.2px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
   @include transition(300ms);
 
-  &--arrow {
-    span {
-      position: relative;
-
-      &::after {
-        content: "\2192";
-        position: absolute;
-        top: 50%;
-        right: -20px;
-        transform: translateY(-50%);
-        font-size: 18px;
-        color: inherit;
-        font-weight: 400;
-      }
-    }
-    &:hover span::after {
-      color: darken($color-white, 50%);
-    }
-  }
   &:hover {
     @include transition(300ms);
-    color: darken($color-white, 20%);
+    background-color: lighten($color-black, 20%);
+  }
+
+  span {
+    position: relative;
+    display: inline-block;
+
+    svg {
+      display: block;
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--arrow-down {
+    fill: inherit;
+    svg.icon-arrow-down {
+      display: block;
+    }
+  }
+  &--arrow-right {
+    fill: inherit;
+    svg.icon-arrow-right {
+      width: 17px;
+      display: block;
+    }
   }
 }

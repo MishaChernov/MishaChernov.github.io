@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		$(".burger").click(function(e) {
 			e.preventDefault();
 			$(".burger").toggleClass('burger--open');
-		  $(".nav-menu").toggleClass("nav-menu--open");
+		  $(".nav-menu").toggleClass('nav-menu--open');
 		});
 
 		$(document).mouseup(function(e) {
@@ -94,7 +94,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// End Check Click Btn And Scroll
 
+	var languageBtn = document.getElementById('language__btn');
 
+	languageBtn.addEventListener('click', function(e) {
+		e.preventDefault();
+		$('.language__list').toggleClass('language__list--open');
+	})
 
 	var windowWidth = window.innerWidth;
 
@@ -105,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			slidesToScroll: 1,
 			adaptiveHeight: true,
 			arrows: false,
-			autoplay: false,
+			autoplay: true,
 			autoplaySpeed: 5000,
 			centerMode: true,
 			focusOnSelect: false,

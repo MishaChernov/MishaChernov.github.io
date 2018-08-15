@@ -39,7 +39,7 @@
   max-width: 300px;
   padding: 0 18px;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: bold;
   color: $color-black;
 }
 
@@ -51,12 +51,15 @@
   width: 210px;
   max-width: 240px;
   padding-right: 35px;
+  letter-spacing: 1.5px;
   box-sizing: border-box;
   background-color: $color-blue;
 
   span {
-    &::after {
-      right: -30px;
+    padding-left: 7px;
+    svg {
+      width: 17px;
+      right: -25px;
     }
   }
 }

@@ -13,34 +13,38 @@
 </head>
 <body class="page-request" id="top">
   <header class="header">
-    <div class="header__wrapper">
-      <a class="header__web-link" href="/">MortgageBrokers<span>.com</span></a>
-      <a class="logo  logo--hidden" href="index.html">
+    <div class="header__container">
+      <div class="header__wrapper">
+        <a class="header__web-link" href="/">MortgageBrokers<span>.com</span></a>
+        <a class="logo  logo--hidden" href="index.html">
+          <svg class="icon  icon-logo">
+            <use xlink:href="img/sprite/sprite.svg#logo"></use>
+          </svg>
+        </a>
+
+        <div class="select">
+          <div class="select__btn">For <span>Borrowers</span></div>
+        </div>
+      </div>
+
+
+      <a class="logo  logo--main" href="#">
         <svg class="icon  icon-logo">
           <use xlink:href="img/sprite/sprite.svg#logo"></use>
         </svg>
       </a>
 
-      <div class="select">
-        <div class="select__btn">For <span>Borrowers</span></div>
-
-        <ul class="select__list">
-          <li><a class="select__link" href="index.html">For brokkers</a></li>
-        </ul>
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
+      <div class="for-grid"></div>
     </div>
 
-    <a class="logo  logo--main" href="#">
-      <svg class="icon  icon-logo">
-        <use xlink:href="img/sprite/sprite.svg#logo"></use>
-      </svg>
-    </a>
-
-    <div class="burger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <ul class="select__list">
+      <li><a class="select__link" href="index.html">For brokkers</a></li>
+    </ul>
 
     <nav class="nav-menu">
       <div class="nav-menu__wrapper">
@@ -60,17 +64,39 @@
       <div class="intro__wrapper  container">
         <h1>Let Lenders Compete For Your Business.</h1>
         <ul class="intro__list">
-          <li class="intro__list-item">100% Borrower <br> Privacy</li>
-          <li class="intro__list-item">No Calls, <br> No Spam</li>
-          <li class="intro__list-item">No Credit <br> Score Impact</li>
-          <li class="intro__list-item">Completely <br> FREE</li>
+          <li class="intro__list-item">
+            <svg class="icon  icon-checkmark">
+              <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+            </svg>
+            100% Borrower <br> Privacy</li>
+          <li class="intro__list-item">
+            <svg class="icon  icon-checkmark">
+              <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+            </svg>
+            No Calls, <br> No Spam</li>
+          <li class="intro__list-item">
+            <svg class="icon  icon-checkmark">
+              <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+            </svg>
+            No Credit <br> Score Impact</li>
+          <li class="intro__list-item">
+            <svg class="icon  icon-checkmark">
+              <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+            </svg>
+            Completely <br> FREE</li>
         </ul>
-        <a class="intro__btn  btn" href="#">
-          <span>See how it works</span>
-        </a>
-        <a class="intro__btn  btn" href="#">
-          <span>Post a request</span>
-        </a>
+        <div class="intro__btn-wrapper">
+          <a class="intro__btn  btn  btn--arrow-down" href="#operations">
+            <span>See how it works
+              <svg class="icon  icon-arrow-down">
+                <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+              </svg>
+            </span>
+          </a>
+          <a class="intro__btn  btn" href="#">
+            <span>Post a request</span>
+          </a>
+        </div>
       </div>
 
       <div class="intro__card-list  container">
@@ -165,21 +191,33 @@
             </select>
           </label>
 
-          <label class="search__item  search__item--select">
+          <div class="search__item  search__item--select  language__wrapper">
             <span class="search__item-text">Languages</span>
-            <script>
-              function selectBackground() {
-                var selectItem = document.getElementsByClassName('search__input--languages');
-                selectItem[0].style.background = "none";
-              }
-            </script>
-            <select class="search__input  search__input--select  search__input--languages" size="1" name="Credit" onchange="selectBackground()">
-              <option value="lang-0" selected></option>
-              <option value="lang-2">German</option>
-              <option value="lang-3">United Kingdom</option>
-              <option value="lang-4">Poland</option>
-            </select>
-          </label>
+            <button class="language__btn" id="language__btn">Languages</button>
+
+            <div class="language__list">
+              <label class="language__item">
+                <input class="language__checkbox" type="checkbox" value="English" name="language">
+                <div class="language__name">English <span class="language__count">(759)</span></div>
+                <i class="flag-icon  flag-icon-gb"></i>
+              </label>
+              <label class="language__item">
+                <input class="language__checkbox" type="checkbox" value="Chinese" name="language">
+                <div class="language__name">Chinese <span class="language__count">(423)</span></div>
+                <i class="flag-icon  flag-icon-cn"></i>
+              </label>
+              <label class="language__item">
+                <input class="language__checkbox" type="checkbox" value="Polish" name="language">
+                <div class="language__name">Polish <span class="language__count">(235)</span></div>
+                <i class="flag-icon  flag-icon-pl"></i>
+              </label>
+              <label class="language__item">
+                <input class="language__checkbox" type="checkbox" value="German" name="language">
+                <div class="language__name">German <span class="language__count">(151)</span></div>
+                <i class="flag-icon  flag-icon-de"></i>
+              </label>
+            </div>
+          </div>
 
           <input class="search__submit" type="submit" name="submit" value="Show Brokers">
 
@@ -190,7 +228,13 @@
     <section class="limit  container">
       <div class="limit__wrapper">
         <h2 class="title  limit__title">Enjoy $50,000 of cash for as little as $139 a month!</h2>
-        <a class="btn  btn--arrow" href="#"><span>Apply now</span></a>
+        <a class="btn  btn--arrow" href="#">
+          <span>Apply now
+            <svg class="icon  icon-arrow-right">
+              <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+            </svg>
+          </span>
+        </a>
         <div class="stiсker">
           <span>Limited The Only</span>
         </div>
@@ -224,9 +268,9 @@
             <div class="featured-card__text">
               <span>I Speak:</span>
               <ul class="featured-card__language-list">
-                <li class="featured-card__language  language  language--german">german</li>
-                <li class="featured-card__language  language  language--kingdom">united kingdom</li>
-                <li class="featured-card__language  language  language--poland">poland</li>
+                <li class="featured-card__language  flag-icon  flag-icon-de">german</li>
+                <li class="featured-card__language  flag-icon  flag-icon-gb">united kingdom</li>
+                <li class="featured-card__language  flag-icon  flag-icon-pl">poland</li>
               </ul>
             </div>
             <p class="featured-card__text">
@@ -263,7 +307,7 @@
             <div class="featured-card__text">
               <span>I Speak:</span>
               <ul class="featured-card__language-list">
-                <li class="featured-card__language  language  language--kingdom">united kingdom</li>
+                <li class="featured-card__language  flag-icon  flag-icon-gb">united kingdom</li>
               </ul>
             </div>
             <p class="featured-card__text">
@@ -281,6 +325,7 @@
         <article class="featured-card">
           <header class="featured-card__wrapper  featured-card__wrapper--top">
             <img class="featured-card__img" src="img/users/user-icon-6.jpg" width="80px" height="80px" alt="Eva Edwards image">
+
             <h4 class="featured-card__name">Eva <br> <span>Edwards</span></h4>
 
             <p class="featured__reputation  featured__reputation--less">
@@ -300,8 +345,8 @@
             <div class="featured-card__text">
               <span>I Speak:</span>
               <ul class="featured-card__language-list">
-                <li class="featured-card__language  language  language--german">german</li>
-                <li class="featured-card__language  language  language--kingdom">united kingdom</li>
+                <li class="featured-card__language  flag-icon  flag-icon-de">german</li>
+                <li class="featured-card__language  flag-icon  flag-icon-gb">united kingdom</li>
               </ul>
             </div>
             <p class="featured-card__text">
@@ -338,7 +383,7 @@
             <div class="featured-card__text">
               <span>I Speak:</span>
               <ul class="featured-card__language-list">
-                <li class="featured-card__language  language  language--kingdom">united kingdom</li>
+                <li class="featured-card__language  flag-icon  flag-icon-gb">united kingdom</li>
               </ul>
             </div>
             <p class="featured-card__text">
@@ -375,7 +420,7 @@
             <div class="featured-card__text">
               <span>I Speak:</span>
               <ul class="featured-card__language-list">
-                <li class="featured-card__language  language  language--kingdom">united kingdom</li>
+                <li class="featured-card__language  flag-icon  flag-icon-gb">united kingdom</li>
               </ul>
             </div>
             <p class="featured-card__text">
@@ -412,9 +457,9 @@
             <div class="featured-card__text">
               <span>I Speak:</span>
               <ul class="featured-card__language-list">
-                <li class="featured-card__language  language  language--german">german</li>
-                <li class="featured-card__language  language  language--kingdom">united kingdom</li>
-                <li class="featured-card__language  language  language--poland">poland</li>
+                <li class="featured-card__language  flag-icon  flag-icon-de">german</li>
+                <li class="featured-card__language  flag-icon  flag-icon-gb">united kingdom</li>
+                <li class="featured-card__language  flag-icon  flag-icon-pl">poland</li>
               </ul>
             </div>
             <p class="featured-card__text">
@@ -451,7 +496,7 @@
             <div class="featured-card__text">
               <span>I Speak:</span>
               <ul class="featured-card__language-list">
-                <li class="featured-card__language  language  language--kingdom">united kingdom</li>
+                <li class="featured-card__language  flag-icon  flag-icon-gb">united kingdom</li>
               </ul>
             </div>
             <p class="featured-card__text">
@@ -488,8 +533,8 @@
             <div class="featured-card__text">
               <span>I Speak:</span>
               <ul class="featured-card__language-list">
-                <li class="featured-card__language  language  language--german">german</li>
-                <li class="featured-card__language  language  language--kingdom">united kingdom</li>
+                <li class="featured-card__language  flag-icon  flag-icon-de">german</li>
+                <li class="featured-card__language  flag-icon  flag-icon-gb">united kingdom</li>
               </ul>
             </div>
             <p class="featured-card__text">
@@ -506,13 +551,13 @@
       </div>
     </section>
 
-    <section class="operations">
+    <section class="operations" id="operations">
       <h2 class="title  operations__title">How it works:</h2>
 
       <div class="operations__list  container">
         <article class="operations__item">
           <div class="operations__name">
-            <img class="operations__img" src="img/operations-1.png" alt="">
+            <img class="operations__img" src="img/steps/step1.svg" alt="">
             <span>Step 1</span>
             <h4 class="operations__subtitle">Post a request</h4>
           </div>
@@ -524,7 +569,7 @@
 
         <article class="operations__item">
           <div class="operations__name">
-            <img class="operations__img" src="img/operations-2.png" alt="">
+            <img class="operations__img" src="img/steps/step2.svg" alt="">
             <span>Step 2</span>
             <h4 class="operations__subtitle">Receive tailored <br>offers</h4>
           </div>
@@ -536,7 +581,7 @@
 
         <article class="operations__item">
           <div class="operations__name">
-            <img class="operations__img" src="img/operations-3.png" alt="">
+            <img class="operations__img" src="img/steps/step3.svg" alt="">
             <span>Step 3</span>
             <h4 class="operations__subtitle">Choose the one!</h4>
           </div>
@@ -547,7 +592,13 @@
         </article>
       </div>
 
-      <a class="btn  btn--arrow  operations__btn" href="#"><span>Get Started</span></a>
+      <a class="btn  btn--arrow  operations__btn" href="#">
+        <span>Get started
+          <svg class="icon  icon-arrow-right">
+            <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+          </svg>
+        </span>
+      </a>
     </section>
 
   </main>

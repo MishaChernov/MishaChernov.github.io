@@ -13,34 +13,37 @@
 </head>
 <body class="">
   <header class="header">
-    <div class="header__wrapper">
-      <a class="header__web-link" href="/">MortgageBrokers<span>.com</span></a>
-      <a class="logo  logo--hidden" href="#">
+    <div class="header__container">
+      <div class="header__wrapper">
+        <a class="header__web-link" href="/">MortgageBrokers<span>.com</span></a>
+        <a class="logo  logo--hidden" href="#">
+          <svg class="icon  icon-logo">
+            <use xlink:href="img/sprite/sprite.svg#logo"></use>
+          </svg>
+        </a>
+
+        <div class="select">
+          <div class="select__btn">For <span>Brokkers</span></div>
+        </div>
+      </div>
+
+      <a class="logo  logo--main" href="#">
         <svg class="icon  icon-logo">
           <use xlink:href="img/sprite/sprite.svg#logo"></use>
         </svg>
       </a>
 
-      <div class="select">
-        <div class="select__btn">For <span>Brokkers</span></div>
-
-        <ul class="select__list">
-          <li><a class="select__link" href="borrowers.html">For borrowers</a></li>
-        </ul>
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
+      <div class="for-grid"></div>
     </div>
 
-    <a class="logo  logo--main" href="#">
-      <svg class="icon  icon-logo">
-        <use xlink:href="img/sprite/sprite.svg#logo"></use>
-      </svg>
-    </a>
-
-    <div class="burger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <ul class="select__list">
+      <li><a class="select__link" href="borrowers.html">For borrowers</a></li>
+    </ul>
 
     <nav class="nav-menu">
       <div class="nav-menu__wrapper">
@@ -60,16 +63,34 @@
         <div class="intro__wrapper  container">
           <h1>Get Access To  Thousands Of Lenders Across The World</h1>
           <ul class="intro__list">
-            <li class="intro__list-item">Secured</li>
-            <li class="intro__list-item">Low Risk</li>
-            <li class="intro__list-item">New Business Worlwide</li>
+            <li class="intro__list-item">Secured
+              <svg class="icon  icon-checkmark">
+                <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+              </svg>
+            </li>
+            <li class="intro__list-item">Low Risk
+              <svg class="icon  icon-checkmark">
+                <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+              </svg>
+            </li>
+            <li class="intro__list-item">New Business Worlwide
+              <svg class="icon  icon-checkmark">
+                <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+              </svg>
+            </li>
           </ul>
-          <a class="intro__btn  btn" href="#about">
-            <span>See how it works</span>
-          </a>
-          <a class="intro__btn  btn" href="#">
-            <span>Get started</span>
-          </a>
+          <div class="intro__btn-wrapper">
+            <a class="intro__btn  btn" href="#about">
+              <span>See how it works
+                <svg class="icon  icon-arrow-down">
+                  <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                </svg>
+              </span>
+            </a>
+            <a class="intro__btn  btn  btn--arrow-right" href="#">
+              <span>Get started</span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -123,8 +144,12 @@
           </ul>
         </div>
 
-        <a class="about__btn  btn  btn--arrow  btn--bg-purple" href="#">
-          <span>Get started</span>
+        <a class="about__btn  btn  btn--arrow-right  btn--bg-purple" href="#">
+          <span>Get started
+            <svg class="icon  icon-arrow-right">
+              <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+            </svg>
+          </span>
         </a>
       </div>
     </section>
@@ -136,8 +161,12 @@
           <p>
             At MortgageBrokers.com we believe that hands-on personal touch creates the opportunity to compete not only against large lenders but digital ones as well.
           </p>
-          <a class="relationships__btn  btn  btn--arrow" href="#">
-            <span>Get started</span>
+          <a class="relationships__btn  btn  btn--arrow-right" href="#">
+            <span>Get started
+              <svg class="icon  icon-arrow-right">
+                <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+              </svg>
+            </span>
           </a>
         </div>
       </div>

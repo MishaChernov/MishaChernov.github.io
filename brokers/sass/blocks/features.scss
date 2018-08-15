@@ -6,7 +6,7 @@
 .features__cards {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 80px;
+  margin-bottom: 85px;
 }
 
 .features__item {
@@ -19,13 +19,17 @@
   margin: 20px;
   text-align: center;
   padding-top: 81px;
-  padding-bottom: 40px;
+  padding-bottom: 34px;
+
+  svg {
+    filter: drop-shadow( -5px -5px 5px #000 );
+  }
 
   h3 {
     display: block;
     padding: 0 2px;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: bold;
     color: $color-blue;
     margin-bottom: 33px;
   }
@@ -42,13 +46,15 @@
     content: "";
     position: absolute;
     top: -47px;
-    left: 55px;
+    left: 50%;
+    transform: translateX(-50%);
     display: block;
     width: 135px;
     height: 160px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    filter: drop-shadow( -5px 5px 6px rgba(0, 0, 0, 0.3) );
   }
 
   &:first-child {
@@ -60,7 +66,10 @@
 
   &:nth-child(1) {
     &::before {
-      background-image: url('../img/features-icon-1.png');
+      left: 51%;
+      width: 101px;
+      height: 121px;
+      background-image: url('../img/features-icon-1.svg');
     }
   }
   &:nth-child(2) {
@@ -68,19 +77,26 @@
       padding: 0px;
     }
     &::before {
-      width: 145px;
-      height: 160px;
-      background-image: url('../img/features-icon-2.png');
+      left: 54%;
+      width: 112px;
+      height: 119px;
+      background-image: url('../img/features-icon-2.svg');
     }
   }
   &:nth-child(3) {
     &::before {
-      background-image: url('../img/features-icon-3.png');
+      left: 52%;
+      width: 100px;
+      height: 119px;
+      background-image: url('../img/features-icon-3.svg');
     }
   }
   &:nth-child(4) {
     &::before {
-      background-image: url('../img/features-icon-4.png');
+      left: 53%;
+      width: 99px;
+      height: 117px;
+      background-image: url('../img/features-icon-4.svg');
     }
   }
 }

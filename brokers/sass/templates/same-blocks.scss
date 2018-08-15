@@ -6,14 +6,14 @@
     color: $color-black;
     min-height: auto;
     max-height: 100%;
-    padding-bottom: 42px;
+    padding-bottom: 50px;
 
     h1 {
       display: block;
       padding-top: 184px;
       margin-top: 0;
       margin-bottom: 59px;
-      max-width: 850px;
+      max-width: 900px;
       line-height: 97px;
       font-size: 80px;
     }
@@ -43,10 +43,13 @@
 
   .search {
     margin-top: 0;
-    padding-top: 40px;
+    padding-top: 18px;
   }
   .search__form {
     display: flex !important;
+  }
+  .search__item {
+    margin-top: 30px;
   }
   .search__submit {
     width: 100%;
@@ -56,13 +59,8 @@
     height: 60px;
     flex-basis: calc(100%);
     max-width: calc(100%);
-    letter-spacing: 1.2px;
+    letter-spacing: 1.5px;
     padding-top: 24px;
-  }
-  .search__input--languages {
-    background-image: url("../img/input-lang.png");
-    background-position: center;
-    background-repeat: no-repeat;
   }
   .search__item--money {
     position: relative;

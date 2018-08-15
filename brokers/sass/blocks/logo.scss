@@ -7,6 +7,12 @@
   &--hidden {
     display: none;
   }
+  &--main {
+    background-color: #ffffff;
+    height: 57px;
+    box-sizing: border-box;
+    padding-top: 10px;
+  }
   svg {
     width: 70px;
     height: 40px;

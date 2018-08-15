@@ -2,10 +2,18 @@
   display: none;
 }
 
+.burger span:nth-of-type(3) {
+  transform: translateY(5px);
+}
+.burger span:nth-of-type(1) {
+  transform: translateY(-5px);
+}
+
+
 .burger {
   z-index: 999;
   position: absolute;
-  top: 5px;
+  top: 12px;
   right: 0px;
   display: flex;
   display: none;
@@ -21,6 +29,27 @@
   animation-duration: 1s;
   animation-delay: 0.5s;
   animation-fill-mode: both;
+
+  &--open {
+    transform: rotate(360deg);
+    transition: transform 250ms ease;
+    background-color: transparent;
+
+    span {
+      background-color: $color-green;
+      transition: transform 250ms ease;
+
+      &:nth-of-type(2) {
+        display: none;
+      }
+      &:nth-of-type(1) {
+        transform: translateY(1px) rotate(45deg);
+      }
+      &:nth-of-type(3) {
+        transform: translateY(-1px) rotate(-45deg);
+      }
+    }
+  }
 }
 
 .burger span {
@@ -34,44 +63,4 @@
   float: left;
   transform-origin: center center;
   transition: transform 250ms ease;
-}
-
-.burger span:nth-of-type(3) {
-  transform: translateY(5px);
-}
-.burger span:nth-of-type(1) {
-  transform: translateY(-5px);
-}
-
-#burger:checked ~ .burger {
-  transform: rotate(360deg);
-  transition: transform 250ms ease;
-  background-color: transparent;
-}
-
-#burger:checked ~ .burger span {
-  background-color: $color-green;
-  transition: transform 250ms ease;
-}
-
-#burger:checked ~ .burger span:nth-of-type(2) {
-  display: none;
-}
-
-#burger:checked ~ .burger span:nth-of-type(1) {
-    transform: translateY(1px) rotate(45deg);
-}
-
-#burger:checked ~ .burger span:nth-of-type(3) {
-    transform: translateY(-1px) rotate(-45deg);
-}
-
-#burger:checked ~ .nav-menu {
-  box-sizing: border-box;
-  bottom: -173px;
-  left: 0;
-  transition: 500ms ease;
-  z-index: 2;
-  transform:translateZ(1px);
-  -webkit-transform: translateZ(1px);
 }

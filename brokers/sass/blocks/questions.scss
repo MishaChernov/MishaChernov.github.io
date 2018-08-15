@@ -13,7 +13,7 @@
   cursor: pointer;
   border-bottom: 1px solid #d1d2d4;
 
-  @include transition(500ms);
+  @include transition(200ms);
   transition-timing-function: linear;
 
   &:hover {
@@ -21,7 +21,7 @@
     // animation-duration: 0.2s;
     h5 {
       color: $color-green;
-      @include transition(300ms);
+      @include transition(150ms);
       transition-timing-function: linear;
     }
   }
@@ -34,7 +34,7 @@
   letter-spacing: 0;
   font-size: 30px;
   margin-top: 0;
-  font-weight: 800;
+  font-weight: bold;
   margin-bottom: 40px;
 }
 
@@ -50,7 +50,7 @@
   margin: 0;
   letter-spacing: 0;
   color: #263139;
-  @include transition(300ms);
+  @include transition(150ms);
   transition-timing-function: linear;
 
   &--active {
@@ -68,14 +68,14 @@
   line-height: 19px;
   font-size: 16px;
   color: $color-black;
-  @include transition(300ms);
+  @include transition(150ms);
   transition-timing-function: linear;
   max-height: 0;
   opacity: 0;
   transform: translate( 0 , -20% );
 
   &--visually {
-    @include transition(300ms);
+    @include transition(150ms);
     transition-timing-function: linear;
     position: relative;
     overflow: hidden;
@@ -85,7 +85,7 @@
     padding-top: 20px;
   }
   &--hidden {
-    @include transition(300ms);
+    @include transition(150ms);
     transition-timing-function: linear;
     margin-top: 0;
     max-height: 0;

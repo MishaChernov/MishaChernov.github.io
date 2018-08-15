@@ -1,7 +1,7 @@
 .limit {
 
   .btn {
-    width: 216px;
+    width: 211px;
     max-width: 216px;
     box-sizing: border-box;
     margin-bottom: 40px;
@@ -13,7 +13,8 @@
       margin-right: 36px;
       letter-spacing: 0;
 
-      &::after {
+      svg {
+        width: 15px;
         right: -37px;
       }
     }
@@ -72,6 +73,6 @@
   margin-bottom: auto;
   color: #ffffff;
   font-size: 60px;
-  font-weight: 800;
+  font-weight: bold;
   line-height: 72px;
 }

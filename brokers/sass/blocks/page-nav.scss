@@ -42,16 +42,16 @@
       display: block;
       width: 29px;
       height: 29px;
-      padding-top: 7px;
+      padding-top: 8px;
       font-family: $primary-font-family;
-      font-weight: 800;
+      font-weight: bold;
       font-size: 10px;
       text-transform: uppercase;
       box-sizing: border-box;
       background: none;
       background-color: $color-white;
       color: $color-black;
-      border: 1px solid $color-gray;
+      border: 1px solid #d1d2d4;
       outline: none;
       cursor: pointer;
       @include transition(200ms);
@@ -83,7 +83,7 @@
 .page-nav__btn-top {
   font-size: 10px;
   color: $color-gray;
-  font-weight: 800;
+  font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.9px;

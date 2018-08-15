@@ -51,7 +51,7 @@ header.featured-card__wrapper {
         display: block;
         width: 15px;
         height: 16px;
-        background-image: url("../img/verified.png");
+        background-image: url("../img/verified.svg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -71,7 +71,7 @@ header.featured-card__wrapper {
   display: flex;
   align-items: center;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: bold;
   line-height: 17px;
   margin-top: 20px;
   margin-left: -3px;
@@ -106,7 +106,7 @@ header.featured-card__wrapper {
     font-size: 10px;
     color: $color-gray;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: bold;
   }
   b {
     letter-spacing: 0;
@@ -138,6 +138,11 @@ main.featured-card__wrapper {
   margin-bottom: 9px;
 
   li {
+    font-size: 0;
+    width: 24px;
+    height: 18px;
+    margin: 0 5px;
+
     &:first-child {
       margin-left: 0;
     }

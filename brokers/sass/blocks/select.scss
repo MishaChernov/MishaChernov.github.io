@@ -3,106 +3,101 @@
   margin-left: 19px;
   padding-top: 2px;
   height: 100%;
+}
 
-  label {
-    position: relative;
-    display: block;
-    padding: 12px 20px;
-    padding-right: 12px;
-    vertical-align: middle;
-    font-size: 12px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: $color-black;
-    font-family: $primary-font-family;
-    border-left: 1px solid #d1d2d4;
-    cursor: pointer;
-    user-select: none;
+.select__btn {
+  position: relative;
+  display: block;
+  padding: 12px 20px;
+  margin-top: 8px;
+  padding-right: 12px;
+  vertical-align: middle;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $color-black;
+  font-family: $primary-font-family;
+  border-left: 1px solid #d1d2d4;
+  cursor: pointer;
+  user-select: none;
+  @include transition(300ms);
+  span {
     @include transition(300ms);
+    color: $color-green;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    @include transition(300ms);
+
     span {
+      opacity: 1;
       @include transition(300ms);
-      color: $color-green;
     }
+  }
 
-    &:hover {
-      opacity: 0.8;
-      @include transition(300ms);
+  &::after {
+    content: "";
+    position: absolute;
+    right: -4px;
+    top: 13px;
+    transform: rotate(-45deg);
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-left: 2px solid $color-green;
+    border-bottom: 2px solid $color-green;
+    @include transition(300ms);
+  }
 
-      span {
-        opacity: 1;
-        @include transition(300ms);
-      }
-    }
 
+  &--open {
     &::after {
-      content: "";
-      position: absolute;
-      right: -4px;
-      top: 15px;
-      transform: rotate(-45deg);
-      display: block;
-      width: 5px;
-      height: 5px;
-      border-left: 2px solid $color-green;
-      border-bottom: 2px solid $color-green;
+      transform: rotate(135deg);
+      top: 17px;
       @include transition(300ms);
     }
   }
 }
 
-
 .select__list {
-  z-index: -1;
+  z-index: 2;
   position: absolute;
-  bottom: 300px;
-  left: 0;
+  bottom: 90px;
+  left: 218px;
   min-width: 300px;
   margin: 0;
   padding: 0;
-  opacity: 0;
   display: block;
   list-style: none;
-  @include transition(300ms);
+  @include transition(1s);
   background-color: $color-white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+
+  &--open {
+    bottom: -53px !important;
+    @include transition(300ms);
+  }
 
 
   a {
     display: block;
     padding: 20px;
     font-size: 12px;
-    font-weight: 800;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: $color-black;
     font-family: $primary-font-family;
     text-decoration: none;
     @include transition(200ms);
+    text-align: center;
 
     &:hover {
       color: $color-white;
       background-color: $color-green;
       @include transition(200ms);
     }
-  }
-}
-
-#select {
-  display: none;
-}
-
-#select:checked ~ .select__list {
-  display: block;
-  bottom: -64px;
-  opacity: 1;
-  @include transition(300ms);
-}
-
-#select:checked ~ label {
-  &::after {
-    transform: rotate(135deg);
-    top: 18px;
-    @include transition(300ms);
   }
 }

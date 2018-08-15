@@ -27,7 +27,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 78px;
+  margin-bottom: 74px;
   margin-top: 40px;
 
   li {
@@ -37,21 +37,21 @@
     margin-left: 10px;
     padding-left: 18px;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: bold;
 
     &:last-child {
       margin-right: 0;
     }
 
-    &::before {
-      content: "\2713";
+    svg {
+      content: "";
       position: absolute;
       left: -9px;
-      top: -2px;
+      top: 2px;
       display: block;
-      font-size: 22px;
-      font-weight: 800;
-      color: $color-green;
+      width: 17px;
+      height: 18px;
+      fill: $color-green;
     }
   }
 }
@@ -78,17 +78,6 @@
     span {
       position: relative;
       margin-right: 43px;
-
-      &::after {
-        content: "\2193";
-        position: absolute;
-        top: 50%;
-        right: -20px;
-        transform: translateY(-50%);
-        font-size: 16px;
-        color: $color-white;
-        font-weight: 400;
-      }
     }
     &:hover {
       @include transition(300ms);
@@ -104,6 +93,10 @@
     border: 1px solid $color-green;
     width: 152px;
     max-width: 300px;
+
+    &:hover {
+        border: 1px solid lighten($color-black, 20%) !important;
+    }
   }
 }
 
@@ -126,11 +119,12 @@
   &:hover {
     @include transition(300ms);
     transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   }
   h4 {
     font-family: $primary-font-family;
     font-size: 24px;
-    font-weight: 800;
+    font-weight: bold;
     color: $color-black;
     max-width: 60%;
     margin-top: 0;

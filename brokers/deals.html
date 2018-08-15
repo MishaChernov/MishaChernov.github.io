@@ -13,34 +13,37 @@
 </head>
 <body class="" id="top">
   <header class="header">
-    <div class="header__wrapper">
-      <a class="header__web-link" href="/">MortgageBrokers<span>.com</span></a>
-      <a class="logo  logo--hidden" href="index.html">
+    <div class="header__container">
+      <div class="header__wrapper">
+        <a class="header__web-link" href="/">MortgageBrokers<span>.com</span></a>
+        <a class="logo  logo--hidden" href="index.html">
+          <svg class="icon  icon-logo">
+            <use xlink:href="img/sprite/sprite.svg#logo"></use>
+          </svg>
+        </a>
+
+        <div class="select">
+          <div class="select__btn">For <span>Brokkers</span></div>
+        </div>
+      </div>
+
+      <a class="logo  logo--main" href="#">
         <svg class="icon  icon-logo">
           <use xlink:href="img/sprite/sprite.svg#logo"></use>
         </svg>
       </a>
 
-      <div class="select">
-        <div class="select__btn">For <span>Brokkers</span></div>
-
-        <ul class="select__list">
-          <li><a class="select__link" href="borrowers.html">For borrowers</a></li>
-        </ul>
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    </div>
 
-    <a class="logo  logo--main" href="#">
-      <svg class="icon  icon-logo">
-        <use xlink:href="img/sprite/sprite.svg#logo"></use>
-      </svg>
-    </a>
-
-    <div class="burger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <div class="for-grid"></div>
     </div>
+    <ul class="select__list">
+      <li><a class="select__link" href="borrowers.html">For borrowers</a></li>
+    </ul>
 
     <nav class="nav-menu">
       <div class="nav-menu__wrapper">
@@ -175,8 +178,12 @@
                 <b class="deal-card__time">3 Days</b>
               </p>
               <p>
-                <a class="btn  btn--arrow">
-                  <span>Bid Now</span>
+                <a class="btn  btn--arrow-right">
+                  <span>Bid Now
+                    <svg class="icon  icon-arrow-right">
+                      <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </span>
                 </a>
               </p>
             </div>
@@ -215,8 +222,12 @@
                 <b class="deal-card__time  deal-card__time--color">03 : 31 : 21</b>
               </p>
               <p>
-                <a class="btn  btn--arrow">
-                  <span>Bid Now</span>
+                <a class="btn  btn--arrow-right">
+                  <span>Bid Now
+                    <svg class="icon  icon-arrow-right">
+                      <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </span>
                 </a>
               </p>
             </div>
@@ -255,7 +266,7 @@
                 <b class="deal-card__time">00 : 00 : 00</b>
               </p>
               <p>
-                <a class="btn  btn--arrow">
+                <a class="btn  btn--arrow  btn--off">
                   <span>View deal</span>
                 </a>
               </p>
