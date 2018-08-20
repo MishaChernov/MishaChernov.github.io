@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   padding: 0 -20px;
   margin-left: -20px;
-  margin-right: -40px;
+  margin-right: -20px;
 }
 
 .featured-card {
@@ -113,6 +113,8 @@ header.featured-card__wrapper {
   }
   &:last-child {
     margin: 10px 0;
+    margin-top: 12px;
+    margin-bottom: 9px;
   }
 }
 

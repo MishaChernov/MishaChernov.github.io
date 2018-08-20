@@ -10,6 +10,7 @@
   margin-bottom: 36px;
 
   div {
+    text-align: left;
     flex: 1;
   }
   a {
@@ -91,5 +92,36 @@
   span {
     font-size: 12px;
     margin-left: 3px;
+  }
+}
+
+.page-nav__btn-help {
+  position: relative;
+  text-align: left;
+  padding-left: 1px;
+  font-size: 10px;
+  font-family: $primary-font-family;
+  color: $color-green;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  @include transition(300ms);
+
+  svg {
+    position: relative;
+    top: 4px;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+  }
+  span {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  &:hover {
+    @include transition(300ms);
+    color: darken($color-green, 20%);
   }
 }

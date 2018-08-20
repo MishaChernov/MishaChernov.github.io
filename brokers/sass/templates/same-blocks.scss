@@ -39,8 +39,10 @@
     }
   }
 
+}
 
-
+.page-request,
+.page-find-brokers {
   .search {
     margin-top: 0;
     padding-top: 18px;
@@ -77,5 +79,33 @@
   }
   .search__input--select {
     padding-left: 0;
+  }
+  option {
+    padding-left: 30px;
+  }
+}
+
+.page-find-brokers {
+  background-color: $color-white;
+  
+  .search {
+    margin-bottom: 7px;
+    h2 {
+      margin-top: 16px;
+    }
+  }
+  .page-nav {
+    margin-top: 14px;
+  }
+  header.featured-card__wrapper {
+    padding: 0px 22px;
+    padding-top: 16px;
+    padding-bottom: 5px;
+  }
+  main.featured-card__wrapper {
+    padding-left: 22px;
+  }
+  .featured-card {
+    margin: 21px 20px;
   }
 }

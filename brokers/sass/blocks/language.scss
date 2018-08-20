@@ -43,9 +43,9 @@
   box-sizing: border-box;
 
   i {
-    margin: 0 5px;
-    width: 20px;
-    height: 20px;
+    margin: 0 7px;
+    width: 23px;
+    height: 15px;
 
     @include transition(300ms);
   }
@@ -76,7 +76,7 @@
   display: flex;
   padding: 10.5px 8px;
   box-sizing: border-box;
-  height: 40px;
+  height: 39px;
   cursor: pointer;
 
   &:nth-child(odd) {
@@ -99,21 +99,25 @@
     }
   }
   i {
+    width: 23px;
+    height: 15px;
     margin-left: auto;
+    margin-right: 4px;
   }
 }
 
 .language__name {
   position: relative;
   padding-top: 3px;
-  padding-left: 40px;
-  font-size: 12px;
+  padding-left: 30px;
+  font-size: 10px;
+  letter-spacing: 1px;
   user-select: none;
 
   &::before {
     content: "";
     position: absolute;
-    left: 5px;
+    left: 3px;
     top: 50%;
     transform: translateY(-50%);
     display: block;
@@ -124,7 +128,7 @@
   &::after {
     content: "\2714";
     position: absolute;
-    left: 5px;
+    left: 4px;
     top: 10px;
     transform: translateY(-50%);
     display: none;

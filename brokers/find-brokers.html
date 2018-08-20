@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MortgageBrokets</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body class="page-find-brokers" id="top">
+  <header class="header">
+    <div class="header__container">
+      <div class="header__wrapper">
+        <a class="header__web-link" href="/">MortgageBrokers<span>.com</span></a>
+        <a class="logo  logo--hidden" href="index.html">
+          <svg class="icon  icon-logo">
+            <use xlink:href="img/sprite/sprite.svg#logo"></use>
+          </svg>
+        </a>
+
+        <div class="select">
+          <div class="select__btn">For <span>Borrower</span></div>
+        </div>
+      </div>
+
+      <a class="logo  logo--main" href="#">
+        <svg class="icon  icon-logo">
+          <use xlink:href="img/sprite/sprite.svg#logo"></use>
+        </svg>
+      </a>
+
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="for-grid"></div>
+    </div>
+    <ul class="select__list">
+      <li><a class="select__link" href="index.html">For Brokkers</a></li>
+    </ul>
+
+    <nav class="nav-menu">
+      <div class="nav-menu__wrapper">
+        <a class="nav-menu__link" href="deals.html">Find A broker</a>
+        <a class="nav-menu__link  nav-menu__link--active" href="#">Post a request</a>
+        <a class="nav-menu__link" href="#">  <!-- add this class to login  nav-menu__link--login -->
+          Log in
+          <img src="img/user.png" alt="User icon">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <section class="search">
+
+      <div class="search__wrapper  container  clearfix">
+        <h2 class="title  search__title">Find a Broker</h2>
+
+        <form class="search__form" action="/" method="get">
+
+          <label class="search__item  search__item--location">
+            <span class="search__item-text">What is your postal code?</span>
+            <input type="text" name="code" placeholder="M4X 1W7">
+          </label>
+
+          <label class="search__item  search__item--money">
+            <span class="search__item-text">How much do you need?</span>
+
+            <input type="text" name="money" placeholder="599,000">
+          </label>
+
+          <label class="search__item  search__item--select">
+            <span class="search__item-text">What type of morgage?</span>
+
+            <span class="search__select-wrapper">
+              <select class="search__input  search__input--select" size="1" name="morgage" onchange="handleChange(this)">
+                <option value="Private" selected>Private</option>
+                <option value="Type of morgage 2">Type of morgage 2</option>
+                <option value="Type of morgage 3">Type of morgage 3</option>
+                <option value="Type of morgage 4">Type of morgage 4</option>
+              </select>
+              <i class="search__textbox">Private</i>
+            </span>
+
+          </label>
+
+          <div class="search__item  search__item--select  language__wrapper">
+            <span class="search__item-text">Languages</span>
+            <div class="language__btn" id="language__btn">
+              Languages
+            </div>
+
+            <div class="language__list">
+              <label class="language__item">
+                <input class="language__checkbox" type="checkbox" value="English" name="language" data-lang="flag-icon-gb" checked>
+                <div class="language__name">English <span class="language__count">(759)</span></div>
+                <i class="flag-icon  flag-icon-gb"></i>
+              </label>
+              <label class="language__item">
+                <input class="language__checkbox" type="checkbox" value="Chinese" name="language" data-lang="flag-icon-cn">
+                <div class="language__name">Chinese <span class="language__count">(423)</span></div>
+                <i class="flag-icon  flag-icon-cn"></i>
+              </label>
+              <label class="language__item">
+                <input class="language__checkbox" type="checkbox" value="Polish" name="language" data-lang="flag-icon-pl" checked>
+                <div class="language__name">Polish <span class="language__count">(235)</span></div>
+                <i class="flag-icon  flag-icon-pl"></i>
+              </label>
+              <label class="language__item">
+                <input class="language__checkbox" type="checkbox" value="German" name="language" data-lang="flag-icon-de" checked>
+                <div class="language__name">German <span class="language__count">(151)</span></div>
+                <i class="flag-icon  flag-icon-de"></i>
+              </label>
+            </div>
+          </div>
+
+          <input class="search__submit" type="submit" name="submit" value="Show Brokers">
+
+        </form>
+      </div>
+    </section>
+
+    <section class="featured  container">
+      <div class="featured__cards">
+
+        <article class="featured-card  featured-card--verified">
+          <header class="featured-card__wrapper  featured-card__wrapper--top">
+            <img class="featured-card__img" src="img/users/user.png" width="80px" height="80px" alt="Alexandra Allen image">
+            <h4 class="featured-card__name">Alexandra <br> <span>Allen</span></h4>
+
+            <p class="featured__reputation">
+              <svg class="icon  icon-start">
+                <use xlink:href="img/sprite/sprite.svg#start"></use>
+              </svg>
+              <span class="featured__reputation-percent">96%</span>
+              <span class="featured__reputation-reviews">(127 Reviews)</span>
+            </p>
+          </header>
+
+          <main class="featured-card__wrapper  featured-card__wrapper--content">
+            <p class="featured-card__text">
+              <span>I am:</span>
+              <b>Mortgage Broker, Mortgage Agent, Mortgage Planner</b>
+            </p>
+            <div class="featured-card__text">
+              <span>I Speak:</span>
+              <ul class="featured-card__language-list">
+                <li class="featured-card__language  flag-icon  flag-icon-de">german</li>
+                <li class="featured-card__language  flag-icon  flag-icon-gb">united kingdom</li>
+                <li class="featured-card__language  flag-icon  flag-icon-pl">poland</li>
+              </ul>
+            </div>
+            <p class="featured-card__text">
+              <span>I Serve:</span>
+              <b>Waterloo, Brampton, Kitchener, London.</b>
+            </p>
+          </main>
+
+          <footer class="featured-card__wrapper  featured-card__wrapper--footer">
+            <a class="btn" href="#">View Profile</a>
+            <a class="btn" href="#">Invite to bid</a>
+          </footer>
+        </article>
+
+        <article class="featured-card  featured-card--verified">
+          <header class="featured-card__wrapper  featured-card__wrapper--top">
+            <img class="featured-card__img" src="img/users/user-icon-4.jpg" width="80px" height="80px" alt="Steven Dunn image">
+            <h4 class="featured-card__name">Steven <br> <span>Dunn</span></h4>
+
+            <p class="featured__reputation">
+              <svg class="icon  icon-start">
+                <use xlink:href="img/sprite/sprite.svg#start"></use>
+              </svg>
+              <span class="featured__reputation-percent">96%</span>
+              <span class="featured__reputation-reviews">(127 Reviews)</span>
+            </p>
+          </header>
+
+          <main class="featured-card__wrapper  featured-card__wrapper--content">
+            <p class="featured-card__text">
+              <span>I am:</span>
+              <b>Mortgage Broker, Mortgage Agent, Mortgage Planner</b>
+            </p>
+            <div class="featured-card__text">
+              <span>I Speak:</span>
+              <ul class="featured-card__language-list">
+                <li class="featured-card__language  flag-icon  flag-icon-gb">united kingdom</li>
+              </ul>
+            </div>
+            <p class="featured-card__text">
+              <span>I Serve:</span>
+              <b>Waterloo, Brampton, Kitchener, London, and 13 more.</b>
+            </p>
+          </main>
+
+          <footer class="featured-card__wrapper  featured-card__wrapper--footer">
+            <a class="btn" href="#">View Profile</a>
+            <a class="btn" href="#">Invite to bid</a>
+          </footer>
+        </article>
+
+        <article class="featured-card">
+          <header class="featured-card__wrapper  featured-card__wrapper--top">
+            <img class="featured-card__img" src="img/users/user-icon-6.jpg" width="80px" height="80px" alt="Eva Edwards image">
+
+            <h4 class="featured-card__name">Eva <br> <span>Edwards</span></h4>
+
+            <p class="featured__reputation  featured__reputation--less">
+              <svg class="icon  icon-start">
+                <use xlink:href="img/sprite/sprite.svg#start"></use>
+              </svg>
+              <span class="featured__reputation-percent">0%</span>
+              <span class="featured__reputation-reviews">(127 Reviews)</span>
+            </p>
+          </header>
+
+          <main class="featured-card__wrapper  featured-card__wrapper--content">
+            <p class="featured-card__text">
+              <span>I am:</span>
+              <b>Mortgage Broker, Mortgage Agent, Mortgage Planner</b>
+            </p>
+            <div class="featured-card__text">
+              <span>I Speak:</span>
+              <ul class="featured-card__language-list">
+                <li class="featured-card__language  flag-icon  flag-icon-de">german</li>
+                <li class="featured-card__language  flag-icon  flag-icon-gb">united kingdom</li>
+              </ul>
+            </div>
+            <p class="featured-card__text">
+              <span>I Serve:</span>
+              <b>Waterloo, Brampton, Kitchener, London, and 13 more.</b>
+            </p>
+          </main>
+
+          <footer class="featured-card__wrapper  featured-card__wrapper--footer">
+            <a class="btn" href="#">View Profile</a>
+            <a class="btn" href="#">Invite to bid</a>
+          </footer>
+        </article>
+
+        <article class="featured-card">
+          <header class="featured-card__wrapper  featured-card__wrapper--top">
+            <img class="featured-card__img" src="img/users/user-icon-5.jpg" width="80px" height="80px" alt="Janet Brown image">
+            <h4 class="featured-card__name">Janet <br> <span>Brown</span></h4>
+
+            <p class="featured__reputation">
+              <svg class="icon  icon-start">
+                <use xlink:href="img/sprite/sprite.svg#start"></use>
+              </svg>
+              <span class="featured__reputation-percent">96%</span>
+              <span class="featured__reputation-reviews">(127 Reviews)</span>
+            </p>
+          </header>
+
+          <main class="featured-card__wrapper  featured-card__wrapper--content">
+            <p class="featured-card__text">
+              <span>I am:</span>
+              <b>Mortgage Broker</b>
+            </p>
+            <div class="featured-card__text">
+              <span>I Speak:</span>
+              <ul class="featured-card__language-list">
+                <li class="featured-card__language  flag-icon  flag-icon-gb">united kingdom</li>
+              </ul>
+            </div>
+            <p class="featured-card__text">
+              <span>I Serve:</span>
+              <b>New York</b>
+            </p>
+          </main>
+
+          <footer class="featured-card__wrapper  featured-card__wrapper--footer">
+            <a class="btn" href="#">View Profile</a>
+            <a class="btn" href="#">Invite to bid</a>
+          </footer>
+        </article>
+
+        <article class="featured-card">
+          <header class="featured-card__wrapper  featured-card__wrapper--top">
+            <img class="featured-card__img" src="img/users/user-icon-5.jpg" width="80px" height="80px" alt="Janet Brown image">
+            <h4 class="featured-card__name">Janet <br> <span>Brown</span></h4>
+
+            <p class="featured__reputation">
+              <svg class="icon  icon-start">
+                <use xlink:href="img/sprite/sprite.svg#start"></use>
+              </svg>
+              <span class="featured__reputation-percent">96%</span>
+              <span class="featured__reputation-reviews">(127 Reviews)</span>
+            </p>
+          </header>
+
+          <main class="featured-card__wrapper  featured-card__wrapper--content">
+            <p class="featured-card__text">
+              <span>I am:</span>
+              <b>Mortgage Broker, Mortgage Agent, Mortgage Planner</b>
+            </p>
+            <div class="featured-card__text">
+              <span>I Speak:</span>
+              <ul class="featured-card__language-list">
+                <li class="featured-card__language  flag-icon  flag-icon-gb">united kingdom</li>
+              </ul>
+            </div>
+            <p class="featured-card__text">
+              <span>I Serve:</span>
+              <b>New York</b>
+            </p>
+          </main>
+
+          <footer class="featured-card__wrapper  featured-card__wrapper--footer">
+            <a class="btn" href="#">View Profile</a>
+            <a class="btn" href="#">Invite to bid</a>
+          </footer>
+        </article>
+
+        <article class="featured-card  featured-card--verified">
+          <header class="featured-card__wrapper  featured-card__wrapper--top">
+            <img class="featured-card__img" src="img/users/user.png" width="80px" height="80px" alt="Alexandra Allen image">
+            <h4 class="featured-card__name">Alexandra <br> <span>Allen</span></h4>
+
+            <p class="featured__reputation">
+              <svg class="icon  icon-start">
+                <use xlink:href="img/sprite/sprite.svg#start"></use>
+              </svg>
+              <span class="featured__reputation-percent">96%</span>
+              <span class="featured__reputation-reviews">(127 Reviews)</span>
+            </p>
+          </header>
+
+          <main class="featured-card__wrapper  featured-card__wrapper--content">
+            <p class="featured-card__text">
+              <span>I am:</span>
+              <b>Mortgage Broker, Mortgage Agent, Mortgage Planner</b>
+            </p>
+            <div class="featured-card__text">
+              <span>I Speak:</span>
+              <ul class="featured-card__language-list">
+                <li class="featured-card__language  flag-icon  flag-icon-de">german</li>
+                <li class="featured-card__language  flag-icon  flag-icon-gb">united kingdom</li>
+                <li class="featured-card__language  flag-icon  flag-icon-pl">poland</li>
+              </ul>
+            </div>
+            <p class="featured-card__text">
+              <span>I Serve:</span>
+              <b>Waterloo, Brampton, Kitchener, London, and 13 more.</b>
+            </p>
+          </main>
+
+          <footer class="featured-card__wrapper  featured-card__wrapper--footer">
+            <a class="btn" href="#">View Profile</a>
+            <a class="btn" href="#">Invite to bid</a>
+          </footer>
+        </article>
+
+        <article class="featured-card  featured-card--verified">
+          <header class="featured-card__wrapper  featured-card__wrapper--top">
+            <img class="featured-card__img" src="img/users/user-icon-4.jpg" width="80px" height="80px" alt="Steven Dunn image">
+            <h4 class="featured-card__name">Steven <br> <span>Dunn</span></h4>
+
+            <p class="featured__reputation">
+              <svg class="icon  icon-start">
+                <use xlink:href="img/sprite/sprite.svg#start"></use>
+              </svg>
+              <span class="featured__reputation-percent">96%</span>
+              <span class="featured__reputation-reviews">(127 Reviews)</span>
+            </p>
+          </header>
+
+          <main class="featured-card__wrapper  featured-card__wrapper--content">
+            <p class="featured-card__text">
+              <span>I am:</span>
+              <b>Mortgage Broker, Mortgage Agent, Mortgage Planner</b>
+            </p>
+            <div class="featured-card__text">
+              <span>I Speak:</span>
+              <ul class="featured-card__language-list">
+                <li class="featured-card__language  flag-icon  flag-icon-gb">united kingdom</li>
+              </ul>
+            </div>
+            <p class="featured-card__text">
+              <span>I Serve:</span>
+              <b>Waterloo, Brampton, Kitchener, London, and 13 more.</b>
+            </p>
+          </main>
+
+          <footer class="featured-card__wrapper  featured-card__wrapper--footer">
+            <a class="btn" href="#">View Profile</a>
+            <a class="btn" href="#">Invite to bid</a>
+          </footer>
+        </article>
+
+        <article class="featured-card">
+          <header class="featured-card__wrapper  featured-card__wrapper--top">
+            <img class="featured-card__img" src="img/users/user-icon-6.jpg" width="80px" height="80px" alt="Eva Edwards image">
+            <h4 class="featured-card__name">Eva <br> <span>Edwards</span></h4>
+
+            <p class="featured__reputation  featured__reputation--less">
+              <svg class="icon  icon-start">
+                <use xlink:href="img/sprite/sprite.svg#start"></use>
+              </svg>
+              <span class="featured__reputation-percent">0%</span>
+              <span class="featured__reputation-reviews">(127 Reviews)</span>
+            </p>
+          </header>
+
+          <main class="featured-card__wrapper  featured-card__wrapper--content">
+            <p class="featured-card__text">
+              <span>I am:</span>
+              <b>Mortgage Broker, Mortgage Agent, Mortgage Planner</b>
+            </p>
+            <div class="featured-card__text">
+              <span>I Speak:</span>
+              <ul class="featured-card__language-list">
+                <li class="featured-card__language  flag-icon  flag-icon-de">german</li>
+                <li class="featured-card__language  flag-icon  flag-icon-gb">united kingdom</li>
+              </ul>
+            </div>
+            <p class="featured-card__text">
+              <span>I Serve:</span>
+              <b>Waterloo, Brampton, Kitchener, London, and 13 more.</b>
+            </p>
+          </main>
+
+          <footer class="featured-card__wrapper  featured-card__wrapper--footer">
+            <a class="btn" href="#">View Profile</a>
+            <a class="btn" href="#">Invite to bid</a>
+          </footer>
+        </article>
+      </div>
+
+      <div class="page-nav">
+        <div>
+          <a class="page-nav__btn-help" href="#">
+            <svg class="icon  icon-post-request">
+              <use xlink:href="img/sprite/sprite.svg#post-request"></use>
+            </svg>
+            <span>Can’t find a broker?</span>
+          </a>
+        </div>
+
+        <div class="page-nav__list">
+
+          <span>
+            <input type="radio" value="page-1" name="page" id="deal-page-1" checked>
+            <label for="deal-page-1">1</label>
+          </span>
+
+          <span>
+            <input type="radio" value="page-2" name="page" id="deal-page-2">
+            <label for="deal-page-2">2</label>
+          </span>
+
+          <span>
+            <input type="radio" value="page-3" name="page" id="deal-page-3">
+            <label for="deal-page-3">3</label>
+          </span>
+
+          <span>
+            <input type="radio" value="page-4" name="page" id="deal-page-4">
+            <label for="deal-page-4">4</label>
+          </span>
+
+        </div>
+        <a class="page-nav__btn-top" href="#top">Back to top <span>&uarr;</span></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__nav">
+      <a class="footer__link" href="#">Calculators</a>
+      <a class="footer__link" href="#">Education</a>
+      <a class="footer__link" href="#">FAQ</a>
+      <a class="footer__link" href="#">Privacy</a>
+      <a class="footer__link" href="#">For brokers</a>
+    </div>
+    <a class="logo  logo--footer" href="index.html">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <p class="footer__copy">
+      &copy; 2018 mortgagebrokers.com. <br />
+        all rights recerved.
+    </p>
+  </footer>
+
+  <script>
+  function handleChange (el) {
+    el
+    .nextElementSibling
+    .innerHTML = el.value
+  }
+  </script>
+
+  <script src="js/svg4everybody-min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

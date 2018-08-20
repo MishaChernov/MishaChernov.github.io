@@ -148,6 +148,77 @@
     max-width: 100%;
     padding: 0 !important;
   }
+
+
+
+
+  .page-find-brokers {
+    .page-nav {
+      margin-top: 5px;
+    }
+    header.featured-card__wrapper {
+      padding: 0px 15px;
+      padding-top: 16px;
+      padding-bottom: 5px;
+      border-bottom: none;
+    }
+    main.featured-card__wrapper {
+      padding-left: 13px;
+    }
+    .featured-card footer {
+      border-top: none;
+    }
+    .search__submit {
+      margin-top: 31px;
+    }
+    .search__item {
+      margin-top: 31px;
+    }
+    .search__item-text {
+      margin-bottom: 5px;
+    }
+    .search {
+      padding-bottom: 27px;
+      margin-top: 18px;
+      padding-top: 1px;
+    }
+    .featured__cards {
+      justify-content: space-around;
+    }
+    .featured-card {
+      width: 242px !important;
+      margin: 10px;
+
+      &:nth-child(7),
+      &:nth-child(8) {
+        display: none;
+      }
+    }
+    .featured-card__wrapper {
+      .btn {
+        padding: 33px 20px;
+        letter-spacing: 1.5px;
+      }
+    }
+    footer.featured-card__wrapper .btn {
+
+      &:first-child {
+        border-right: none;
+      }
+      &:last-child {
+        background-color: $color-white;
+        color: $color-green;
+
+        &:hover {
+          background-color: $color-green;
+          color: $color-white;
+        }
+      }
+    }
+  }
+  .language__list {
+    top: 61px;
+  }
 }
 
 
@@ -1230,14 +1301,15 @@
     margin-top: 34px;
 
     &::before {
-      top: 9px;
-      right: 7px;
-      font-size: 27px;
+      top: 8px;
+      right: 2px;
+      font-size: 26px;
     }
     &::after {
-      top: 40px;
+      top: 37px;
       right: 0;
       font-size: 10px;
+      font-weight: bold;
     }
   }
   .page-request .intro__card-list {
@@ -1474,6 +1546,87 @@
     footer {
       position: absolute;
       bottom: 0;
+    }
+  }
+
+  .page-find-brokers {
+    .search {
+      margin-bottom: 10px;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+    .search__item {
+      margin-top: 29px;
+
+      &:first-child {
+        margin-top: 23px;
+      }
+    }
+    .search__submit {
+      width: 100%;
+      margin-top: 30px;
+      padding: 10px 0;
+      max-height: 40px;
+      height: 40px;
+      flex-basis: calc(100%);
+      max-width: calc(100%);
+      letter-spacing: 1.5px;
+      padding-top: 13px;
+    }
+    .featured-card {
+      width: 211px !important;
+      margin: 7px 5px;
+      min-height: 385px;
+      padding-bottom: 57px;
+      height: auto;
+
+      &:nth-child(5),
+      &:nth-child(6) {
+        display: none;
+      }
+    }
+    .featured-card__name {
+      font-size: 16px;
+      margin-left: 10px;
+    }
+    .featured__reputation {
+      margin-top: 10px;
+      margin-left: -1px;
+    }
+    main.featured-card__wrapper {
+      padding-top: 10px;
+      padding-left: 15px;
+    }
+    .featured-card__text {
+      &:last-child {
+        margin-top: 6px;
+      }
+    }
+    .featured-card__wrapper {
+      .btn {
+        height: 57px;
+        padding: 10px 20px;
+        letter-spacing: 1px;
+      }
+    }
+    .page-nav {
+      margin-top: 21px;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+
+      div {
+        order: 2;
+      }
+    }
+    .page-nav__list {
+      width: 100%;
+      flex: 1 auto;
+      order: 1 !important;
+      margin: 3px 0;
+      margin-bottom: 13px;
+    }
+    .page-nav__btn-top {
+      order: 3;
     }
   }
 }
@@ -1841,6 +1994,73 @@
         width: 190px;
         height: 190px;
       }
+    }
+  }
+  .intro__card-percent {
+    &::after {
+      top: 39px;
+      right: 4px;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  }
+  .page-find-brokers {
+    .page-nav div {
+      display: block;
+
+      &:first-child {
+        flex: 2;
+      }
+    }
+    .page-nav__btn-top {
+      width: auto !important;
+      flex: 1 !important;
+      text-align: right !important;
+      margin-top: 0 !important;
+      margin-bottom: 5px;
+    }
+
+    .featured-card {
+      width: 100% !important;
+      margin: 7px 1%;
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+    header.featured-card__wrapper {
+      padding: 0px 23px;
+      padding-top: 13px;
+      padding-bottom: 5px;
+    }
+    .featured__reputation {
+      width: 100%;
+    }
+    main.featured-card__wrapper {
+      padding-top: 10px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    footer.featured-card__wrapper .btn {
+      flex: 1;
+      width: 50%;
+      flex-basis: 50%;
+      box-sizing: border-box;
+      padding: 13px 48px;
+      padding-bottom: 0;
+    }
+    .featured-card__wrapper--footer {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .page-find-brokers {
+    .featured-card {
+      margin: 7px 5%;
     }
   }
 }
