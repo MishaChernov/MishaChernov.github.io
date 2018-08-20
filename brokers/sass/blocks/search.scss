@@ -60,6 +60,9 @@
   select {
     padding: 10.5px 8px;
     appearance: none;
+    border: 0;
+    width: 100%;
+    height: 100%;
   }
 
   &--location {
@@ -98,6 +101,8 @@
     div {
       position: relative;
       border: 1px solid rgb(169, 169, 169);
+      outline: 1px solid #ccc;
+      outline-offset: -1px;
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -140,6 +145,39 @@
     }
   }
 }
+.search__select-wrapper {
+  position: relative;
+  height: 40px;
+}
+.search__textbox {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  pointer-events: none;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  padding: 10px 8px;
+  padding-right: 15px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border: 1px solid darkgray;
+  cursor: pointer;
+  border-radius: 0px;
+  outline: 1px solid #ccc;
+  outline-offset: -1px;
+  font-style: normal;
+  font-weight: bold;
+  color: $color-gray;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: $primary-font-family;
+}
 .search__submit {
   flex-basis: calc(33.33% - 14px);
   max-width: 270px;
@@ -160,7 +198,7 @@
 
   &:hover {
     @include transition(300ms);
-    background-color: lighten($color-black, 20%);
+    background-color: darken($color-purple, 20%);
   }
 }
 

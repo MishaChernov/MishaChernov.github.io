@@ -99,6 +99,34 @@ document.addEventListener('DOMContentLoaded', function() {
 	languageBtn.addEventListener('click', function(e) {
 		e.preventDefault();
 		$('.language__list').toggleClass('language__list--open');
+	});
+
+	$('.language__checkbox').each(function() {
+		if($(this).is(":checked")) {
+
+			let langName = $(this).data('lang');
+			$('<i class="flag-icon"></i>').addClass(langName).attr('id', langName).hide().fadeIn('slow').appendTo(languageBtn);
+		} else {
+			let langName = $(this).data('lang');
+
+			let elem = document.getElementById(langName);
+			console.log(elem);
+			$(elem).fadeOut('slow').remove();
+		}
+	})
+
+	$('html').on('click', '.language__checkbox', function() {
+		if($(this).is(":checked")) {
+
+			let langName = $(this).data('lang');
+			$('<i class="flag-icon"></i>').addClass(langName).attr('id', langName).appendTo(languageBtn);
+		} else {
+			let langName = $(this).data('lang');
+
+			let elem = document.getElementById(langName);
+			console.log(elem);
+			$(elem).remove();
+		}
 	})
 
 	var windowWidth = window.innerWidth;

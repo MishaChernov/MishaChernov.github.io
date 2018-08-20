@@ -62,4 +62,8 @@
       right: -25px;
     }
   }
+  &:hover {
+    @include transition(300ms);
+    background-color: darken($color-blue, 20%);
+  }
 }

@@ -16,7 +16,7 @@
 
   &:hover {
     @include transition(300ms);
-    background-color: lighten($color-black, 20%);
+    background-color: darken($color-green, 20%);
   }
 
   span {

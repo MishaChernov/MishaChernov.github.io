@@ -89,34 +89,45 @@
           <label class="search__item  search__item--select">
             <span class="search__item-text">What type of propherty?</span>
 
-            <select class="search__input  search__input--select" size="1" name="propherty">
-              <option value="type-1" selected>Condominium</option>
-              <option value="type-2">Type 2</option>
-              <option value="type-3">Type 3</option>
-              <option value="type-4">Type 4</option>
-            </select>
+            <span class="search__select-wrapper">
+              <select class="search__input  search__input--select" size="1" name="propherty" onchange="handleChange(this)">
+                <option value="type-1" selected>Condominium</option>
+                <option value="type-2">Type 2</option>
+                <option value="type-3">Type 3</option>
+                <option value="type-4">Type 4</option>
+              </select>
+              <i class="search__textbox">Condominium</i>
+            </span>
+
           </label>
 
           <label class="search__item  search__item--select">
             <span class="search__item-text">What type of morgage?</span>
 
-            <select class="search__input  search__input--select" size="1" name="morgage">
-              <option value="type-1" selected>Private</option>
-              <option value="type-2">Type of morgage 2</option>
-              <option value="type-3">Type of morgage 3</option>
-              <option value="type-4">Type of morgage 4</option>
-            </select>
+            <span class="search__select-wrapper">
+              <select class="search__input  search__input--select" size="1" name="morgage" onchange="handleChange(this)">
+                <option value="Private" selected>Private</option>
+                <option value="Type of morgage 2">Type of morgage 2</option>
+                <option value="Type of morgage 3">Type of morgage 3</option>
+                <option value="Type of morgage 4">Type of morgage 4</option>
+              </select>
+              <i class="search__textbox">Private</i>
+            </span>
+
           </label>
 
           <label class="search__item  search__item--select">
             <span class="search__item-text">Credit Score</span>
 
-            <select class="search__input  search__input--select" size="1" name="Credit">
-              <option value="type-1" selected>Good and higher</option>
-              <option value="type-2">Credit 2</option>
-              <option value="type-3">Credit 3</option>
-              <option value="type-4">Credit 4</option>
-            </select>
+            <span class="search__select-wrapper">
+              <select class="search__input  search__input--select" size="1" name="Credit" onchange="handleChange(this)">
+                <option value="Good and higher" selected>Good and higher</option>
+                <option value="Credit 2">Credit 2</option>
+                <option value="Credit 3">Credit 3</option>
+                <option value="Credit 4">Credit 4</option>
+              </select>
+              <i class="search__textbox">Good and higher</i>
+            </span>
           </label>
 
           <div class="search__item  search__item--range">
@@ -131,12 +142,15 @@
           <label class="search__item  search__item--select">
             <span class="search__item-text">Security</span>
 
-            <select class="search__input  search__input--select" size="1" name="Security">
-              <option value="type-1" selected>1st mortgage</option>
-              <option value="type-2">Security 2</option>
-              <option value="type-3">Security 3</option>
-              <option value="type-4">Security 4</option>
-            </select>
+            <span class="search__select-wrapper">
+              <select class="search__input  search__input--select" size="1" name="Security" onchange="handleChange(this)">
+                <option value="1st mortgage" selected>1st mortgage</option>
+                <option value="Security 2">Security 2</option>
+                <option value="Security 3">Security 3</option>
+                <option value="Security 4">Security 4</option>
+              </select>
+              <i class="search__textbox">1st mortgage</i>
+            </span>
           </label>
 
           <input class="search__submit" type="submit" name="submit" value="Show Deals">
@@ -331,6 +345,14 @@
         all rights recerved.
     </p>
   </footer>
+
+  <script>
+  function handleChange (el) {
+    el
+    .nextElementSibling
+    .innerHTML = el.value
+  }
+  </script>
 
   <script src="js/svg4everybody-min.js"></script>
   <script src="js/index.js"></script>

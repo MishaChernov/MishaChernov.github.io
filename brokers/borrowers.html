@@ -164,6 +164,7 @@
     </section>
 
     <section class="search">
+
       <div class="search__wrapper  container  clearfix">
         <h2 class="title  search__title">Find a Broker</h2>
 
@@ -183,36 +184,42 @@
           <label class="search__item  search__item--select">
             <span class="search__item-text">What type of morgage?</span>
 
-            <select class="search__input  search__input--select" size="1" name="morgage">
-              <option value="morgage-1" selected>Private</option>
-              <option value="morgage-2">Type of morgage 2</option>
-              <option value="morgage-3">Type of morgage 3</option>
-              <option value="morgage-4">Type of morgage 4</option>
-            </select>
+            <span class="search__select-wrapper">
+              <select class="search__input  search__input--select" size="1" name="morgage" onchange="handleChange(this)">
+                <option value="Private" selected>Private</option>
+                <option value="Type of morgage 2">Type of morgage 2</option>
+                <option value="Type of morgage 3">Type of morgage 3</option>
+                <option value="Type of morgage 4">Type of morgage 4</option>
+              </select>
+              <i class="search__textbox">Private</i>
+            </span>
+
           </label>
 
           <div class="search__item  search__item--select  language__wrapper">
             <span class="search__item-text">Languages</span>
-            <button class="language__btn" id="language__btn">Languages</button>
+            <div class="language__btn" id="language__btn">
+              Languages
+            </div>
 
             <div class="language__list">
               <label class="language__item">
-                <input class="language__checkbox" type="checkbox" value="English" name="language">
+                <input class="language__checkbox" type="checkbox" value="English" name="language" data-lang="flag-icon-gb" checked>
                 <div class="language__name">English <span class="language__count">(759)</span></div>
                 <i class="flag-icon  flag-icon-gb"></i>
               </label>
               <label class="language__item">
-                <input class="language__checkbox" type="checkbox" value="Chinese" name="language">
+                <input class="language__checkbox" type="checkbox" value="Chinese" name="language" data-lang="flag-icon-cn">
                 <div class="language__name">Chinese <span class="language__count">(423)</span></div>
                 <i class="flag-icon  flag-icon-cn"></i>
               </label>
               <label class="language__item">
-                <input class="language__checkbox" type="checkbox" value="Polish" name="language">
+                <input class="language__checkbox" type="checkbox" value="Polish" name="language" data-lang="flag-icon-pl" checked>
                 <div class="language__name">Polish <span class="language__count">(235)</span></div>
                 <i class="flag-icon  flag-icon-pl"></i>
               </label>
               <label class="language__item">
-                <input class="language__checkbox" type="checkbox" value="German" name="language">
+                <input class="language__checkbox" type="checkbox" value="German" name="language" data-lang="flag-icon-de" checked>
                 <div class="language__name">German <span class="language__count">(151)</span></div>
                 <i class="flag-icon  flag-icon-de"></i>
               </label>
@@ -553,52 +560,54 @@
 
     <section class="operations" id="operations">
       <h2 class="title  operations__title">How it works:</h2>
+      <div class="operations__wrapper">
 
-      <div class="operations__list  container">
-        <article class="operations__item">
-          <div class="operations__name">
-            <img class="operations__img" src="img/steps/step1.svg" alt="">
-            <span>Step 1</span>
-            <h4 class="operations__subtitle">Post a request</h4>
-          </div>
-          <div class="operations__about">
-            <p>Give brokers a task of what you need through a simple wizard flow, so they would know better what you are looking for. </p>
-            <p>All your information will be private until you choose a broker you’d like to work with.</p>
-          </div>
-        </article>
+        <div class="operations__list  container">
+          <article class="operations__item">
+            <div class="operations__name">
+              <img class="operations__img" src="img/steps/step1.svg" alt="">
+              <span>Step 1</span>
+              <h4 class="operations__subtitle">Post a request</h4>
+            </div>
+            <div class="operations__about">
+              <p>Give brokers a task of what you need through a simple wizard flow, so they would know better what you are looking for. </p>
+              <p>All your information will be private until you choose a broker you’d like to work with.</p>
+            </div>
+          </article>
 
-        <article class="operations__item">
-          <div class="operations__name">
-            <img class="operations__img" src="img/steps/step2.svg" alt="">
-            <span>Step 2</span>
-            <h4 class="operations__subtitle">Receive tailored <br>offers</h4>
-          </div>
-          <div class="operations__about">
-            <p>Ones you have your request posted, dozens of brokers will start competing with each other to offer you the best deal.</p>
-            <p>You can also mark your request as “private” and invite only specific individuals one by one.</p>
-          </div>
-        </article>
+          <article class="operations__item">
+            <div class="operations__name">
+              <img class="operations__img" src="img/steps/step2.svg" alt="">
+              <span>Step 2</span>
+              <h4 class="operations__subtitle">Receive tailored <br>offers</h4>
+            </div>
+            <div class="operations__about">
+              <p>Ones you have your request posted, dozens of brokers will start competing with each other to offer you the best deal.</p>
+              <p>You can also mark your request as “private” and invite only specific individuals one by one.</p>
+            </div>
+          </article>
 
-        <article class="operations__item">
-          <div class="operations__name">
-            <img class="operations__img" src="img/steps/step3.svg" alt="">
-            <span>Step 3</span>
-            <h4 class="operations__subtitle">Choose the one!</h4>
-          </div>
-          <div class="operations__about">
-            <p>From the list of all the offers, you might choose the one who fits your needs the most, based on the rate, languages spoken, areas served and more.</p>
-            <p>Your information will be visible to the broker and you can start the deal.</p>
-          </div>
-        </article>
+          <article class="operations__item">
+            <div class="operations__name">
+              <img class="operations__img" src="img/steps/step3.svg" alt="">
+              <span>Step 3</span>
+              <h4 class="operations__subtitle">Choose the one!</h4>
+            </div>
+            <div class="operations__about">
+              <p>From the list of all the offers, you might choose the one who fits your needs the most, based on the rate, languages spoken, areas served and more.</p>
+              <p>Your information will be visible to the broker and you can start the deal.</p>
+            </div>
+          </article>
+        </div>
+
+        <a class="btn  btn--arrow  operations__btn" href="#">
+          <span>Get started
+            <svg class="icon  icon-arrow-right">
+              <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+            </svg>
+          </span>
+        </a>
       </div>
-
-      <a class="btn  btn--arrow  operations__btn" href="#">
-        <span>Get started
-          <svg class="icon  icon-arrow-right">
-            <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
-          </svg>
-        </span>
-      </a>
     </section>
 
   </main>
@@ -621,6 +630,14 @@
         all rights recerved.
     </p>
   </footer>
+
+  <script>
+  function handleChange (el) {
+    el
+    .nextElementSibling
+    .innerHTML = el.value
+  }
+  </script>
 
   <script src="js/slick.min.js"></script>
   <script src="js/svg4everybody-min.js"></script>

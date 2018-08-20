@@ -25,6 +25,11 @@ h1 {
   font-weight: 900 !important;
 }
 
+select {
+  text-align:-moz-center;
+  text-align:-webkit-center;
+}
+
 .clearfix::after {
   content: "";
   display: table;

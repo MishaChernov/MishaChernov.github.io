@@ -44,7 +44,10 @@
   }
   &:nth-child(2) {
     margin-bottom: 148px;
-
+    background-image: url("../img/operations-bg-middle.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     img {
       width: 347px;
       height: 350px;
