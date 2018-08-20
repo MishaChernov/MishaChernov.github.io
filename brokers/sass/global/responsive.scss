@@ -562,7 +562,7 @@
     // padding-right: 37px;
   }
 
-  .operations {
+  .operations__wrapper {
     background-size: cover;
     padding-bottom: 59px;
   }
@@ -632,8 +632,13 @@
   }
 
 
-  .operations {
+  .operations__wrapper {
+    padding-top: 1px;
     padding-bottom: 27px;
+    background-position: 42% bottom;
+  }
+  .operations__list {
+    margin-top: 62px;
   }
   .operations__item {
     &:first-child {
@@ -1358,8 +1363,10 @@
     padding-bottom: 8px;
   }
 
-  .operations {
+  .operations__wrapper {
     padding-bottom: 20px;
+    background-size: 250% 1646px;
+    background-position: top;
   }
   .operations__item {
     flex-wrap: wrap;

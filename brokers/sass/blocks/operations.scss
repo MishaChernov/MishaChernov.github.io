@@ -1,15 +1,18 @@
 .operations {
   margin-top: 20px;
-  padding-bottom: 40px;
+}
+
+.operations__wrapper {
+  padding-top: 90px;
+  padding-bottom: 42px;
   background-color: #f1f2f2;
-  background-image: url("../img/operations-bg.png");
+  background-image: url("../img/operations-bg-full.png");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .operations__list {
-  margin-top: 95px;
   padding-top: 10px;
 }
 
@@ -17,10 +20,11 @@
   margin-top: 0;
   width: 100%;
   background-color: $color-white;
-  height: 150px;
+  height: 155px;
   letter-spacing: 0;
   box-sizing: border-box;
-  padding-top: 58px;
+  padding-top: 61px;
+  margin-bottom: 0;
 }
 
 .operations__item {
@@ -44,10 +48,7 @@
   }
   &:nth-child(2) {
     margin-bottom: 148px;
-    background-image: url("../img/operations-bg-middle.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+
     img {
       width: 347px;
       height: 350px;
