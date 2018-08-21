@@ -82,6 +82,8 @@ header.featured-card__wrapper {
     fill: #faa61a;
     width: 17px;
     height: 17px;
+    position: relative;
+    top: -3px;
   }
   &--less {
     svg {
@@ -163,6 +165,7 @@ footer.featured-card__wrapper {
     box-sizing: border-box;
     padding: 35px 32px;
     letter-spacing: 1px;
+    flex: 1;
 
     &:first-child {
       background-color: transparent;

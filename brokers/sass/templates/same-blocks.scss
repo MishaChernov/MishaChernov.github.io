@@ -86,8 +86,7 @@
 }
 
 .page-find-brokers {
-  background-color: $color-white;
-  
+
   .search {
     margin-bottom: 7px;
     h2 {
@@ -104,6 +103,22 @@
   }
   main.featured-card__wrapper {
     padding-left: 22px;
+  }
+  footer.featured-card__wrapper {
+    .btn {
+      &:last-child {
+        background: none;
+        color: $color-green;
+
+        &:hover {
+          background-color: $color-green;
+          color: $color-white;
+        }
+      }
+    }
+  }
+  .featured__cards {
+    justify-content: space-between;
   }
   .featured-card {
     margin: 21px 20px;
