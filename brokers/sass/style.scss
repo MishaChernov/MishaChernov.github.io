@@ -8,6 +8,7 @@
 @import 'global/mixins.scss';
 @import 'global/retinization.scss';
 
+@import 'templates/flag-icon.scss';
 
 @import 'blocks/btn.scss';
 @import 'blocks/burger.scss';
@@ -21,10 +22,12 @@
 @import 'blocks/questions.scss';
 @import 'blocks/select.scss';
 @import 'blocks/intro.scss';
+@import 'blocks/language-list.scss';
 @import 'blocks/features.scss';
 @import 'blocks/about.scss';
 @import 'blocks/relationships.scss';
 @import 'blocks/search.scss';
+@import 'blocks/sticker.scss';
 @import 'blocks/deal-card.scss';
 @import 'blocks/page-nav.scss';
 @import 'blocks/limit.scss';
@@ -32,12 +35,13 @@
 @import 'blocks/featured-card.scss';
 @import 'blocks/operations.scss';
 
+@import 'blocks/profile.scss';
+
+
 @import 'templates/same-blocks.scss';
 @import 'global/responsive.scss';
 
 @import 'global/slick.scss';
-
-@import 'templates/flag-icon.scss';
 
 
 

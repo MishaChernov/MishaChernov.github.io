@@ -124,3 +124,39 @@
     margin: 21px 20px;
   }
 }
+
+
+.page-broker-profile {
+  background-color: $color-white;
+
+  .sticker {
+    display: none;
+  }
+  &--height {
+
+    .header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background-color: $color-white;
+      z-index: 5;
+    }
+    .profile-card {
+      position: fixed;
+    }
+    .main {
+      margin-top: 59px;
+    }
+
+    .page-nav__btn-help {
+      color: $color-orange;
+
+      &:hover {
+        color: $color-green;
+      }
+      svg {
+        margin-right: 2px;
+      }
+    }
+  }
+}

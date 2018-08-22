@@ -447,10 +447,11 @@
     }
   }
   .relationships__info {
-    padding-left: 12px;
-    padding-right: 10px;
+    padding-left: 0;
 
     p {
+      padding-left: 12px;
+      padding-right: 10px;
       margin-top: 34px;
       line-height: 25px;
       font-size: 20px;
@@ -459,6 +460,7 @@
   .relationships__btn {
     margin-top: 33px;
     margin-left: 5px;
+    margin-left: 12px;
   }
 
 
@@ -574,7 +576,7 @@
     margin-top: 18px;
     height: 305px;
   }
-  .limit .stiсker {
+  .limit .sticker {
     top: 10px;
     left: -10px;
     font-size: 10px;
@@ -817,7 +819,6 @@
     margin-top: 4px;
     padding-top: 3px;
     padding-bottom: 3px;
-    letter-spacing: 0.2px;
 
     &::after {
       top: 5px;
@@ -1300,7 +1301,7 @@
       font-size: 16px;
     }
   }
-  .intro__card .stiсker {
+  .intro__card .sticker {
     top: 72px;
     left: 0px;
 
@@ -1397,7 +1398,7 @@
     padding-left: 10px;
     margin-bottom: 5px;
   }
-  .limit .stiсker {
+  .limit .sticker {
     left: 10px;
     span {
       &::before {
@@ -1915,7 +1916,7 @@
   }
 
   .select {
-    width: 119px;
+    width: 135px;
   }
   .intro__list-item {
     margin-top: 9px;
@@ -1950,7 +1951,7 @@
   .about__btn {
     margin-top: 33px;
   }
-  .limit .stiсker {
+  .limit .sticker {
     left: 0;
   }
   .limit__wrapper {

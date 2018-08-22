@@ -1,0 +1,75 @@
+.sticker {
+  position: absolute;
+  top: 11px;
+  left: -10px;
+  display: none;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Campton", "Arial", sans-serif;
+  line-height: 18px;
+  padding: 0 10px;
+  letter-spacing: 0.2px;
+
+  span {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -13.7px;
+      left: -10px;
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 10px 10px 0;
+      border-color: transparent #a8a9a9 transparent transparent;
+    }
+  }
+}
+
+
+.sticker--pro {
+  width: 64px;
+  height: 31px;
+  padding-top: 7px;
+  box-sizing: border-box;
+  right: -10px;
+  left: auto;
+  color: $color-white;
+  display: flex;
+
+  span {
+    position: relative;
+    padding-left: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      display: block;
+      width: 15px;
+      height: 16px;
+      background-image: url('../img/icons/verified.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 44px;
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 10px 0 0;
+      border-color: $color-gray transparent transparent transparent;
+    }
+  }
+}

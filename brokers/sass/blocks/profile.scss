@@ -1,0 +1,9 @@
+.profile {
+  padding-top: 32px;
+  position: relative;
+}
+
+@import 'blocks/rating.scss';
+@import 'blocks/profile-card.scss';
+@import 'blocks/profile-about.scss';
+@import 'blocks/broker-feedback.scss';

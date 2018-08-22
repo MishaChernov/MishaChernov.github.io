@@ -1,12 +1,11 @@
 .select {
   position: relative;
   margin-left: 19px;
-  padding-top: 2px;
+  padding-top: 4px;
   height: 100%;
 }
 
 .select__btn {
-  position: relative;
   display: block;
   padding: 12px 20px;
   margin-top: 8px;
@@ -22,9 +21,25 @@
   cursor: pointer;
   user-select: none;
   @include transition(300ms);
+
   span {
+    position: relative;
     @include transition(300ms);
     color: $color-green;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -15px;
+      top: 3px;
+      transform: rotate(-45deg);
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-left: 2px solid $color-green;
+      border-bottom: 2px solid $color-green;
+      @include transition(300ms);
+    }
   }
 
   &:hover {
@@ -37,26 +52,14 @@
     }
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    right: -4px;
-    top: 13px;
-    transform: rotate(-45deg);
-    display: block;
-    width: 5px;
-    height: 5px;
-    border-left: 2px solid $color-green;
-    border-bottom: 2px solid $color-green;
-    @include transition(300ms);
-  }
-
 
   &--open {
-    &::after {
-      transform: rotate(135deg);
-      top: 17px;
-      @include transition(300ms);
+    span {
+      &::after {
+        transform: rotate(135deg);
+        top: 6px;
+        @include transition(300ms);
+      }
     }
   }
 }

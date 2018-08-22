@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MortgageBrokets</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body class="page-broker-profile" id="top">
+  <header class="header">
+    <div class="header__container">
+      <div class="header__wrapper">
+        <a class="header__web-link" href="/">MortgageBrokers<span>.com</span></a>
+        <a class="logo  logo--hidden" href="index.html">
+          <svg class="icon  icon-logo">
+            <use xlink:href="img/sprite/sprite.svg#logo"></use>
+          </svg>
+        </a>
+
+        <div class="select">
+          <div class="select__btn">For <span>Borrower</span></div>
+        </div>
+      </div>
+
+      <a class="logo  logo--main" href="#">
+        <svg class="icon  icon-logo">
+          <use xlink:href="img/sprite/sprite.svg#logo"></use>
+        </svg>
+      </a>
+
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="for-grid"></div>
+    </div>
+    <ul class="select__list">
+      <li><a class="select__link" href="index.html">For Brokers</a></li>
+    </ul>
+
+    <nav class="nav-menu">
+      <div class="nav-menu__wrapper">
+        <a class="nav-menu__link" href="deals.html">Find A broker</a>
+        <a class="nav-menu__link  nav-menu__link--active" href="#">Post a request</a>
+        <a class="nav-menu__link" href="#">  <!-- add this class to login  nav-menu__link--login -->
+          Log in
+          <img src="img/user.png" alt="User icon">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main  profile  profile--pro  container  clearfix">
+
+    <aside class="profile-card">
+
+      <h3 class="profile-card__name">
+        <span class="profile-card__name-first">Alexandra</span>
+        <span class="profile-card__name-second">Allen</span>
+      </h3>
+
+      <div class="profile-card__image-wrapper">
+        <img class="profile-card__image" src="img/users/user-icon-1-big.jpg" width="271px" height="271px" alt="Alexandra Allen image">
+
+        <div class="sticker  sticker--pro">
+          <span>Pro</span>
+        </div>
+
+        <span class="profile-card__without-picture"></span>
+      </div>
+
+      <address class="profile-info  profile-card__address">
+        <p class="parent---JS">
+          <span class="title---JS">Brokerage licence #</span>
+          <b class="profile-info__licence  feed---JS">127728</b>
+        </p>
+
+        <p class="parent---JS">
+          <span class="title---JS">I work for</span>
+          <b class="profile-info__work  feed---JS">CompayName.com</b>
+        </p>
+
+        <p class="parent---JS">
+          <span class="title---JS">Address</span>
+          <b class="profile-info__address  feed---JS">675 Cochrane Drive, North Tower, Markham, Ontario,
+                      <i><br>L3R 0B8</i></b>
+        </p>
+
+        <p class="parent---JS">
+          <span class="title---JS">Telephone</span>
+          <a class="profile-info__phone  feed---JS" href="tel:9059477200">C. (905) 947-7200</a>
+          <a class="profile-info__phone  feed---JS" href="tel:9059477244">F. (905) 947-7244</a>
+        </p>
+
+        <p class="profile-info__social-list">
+          <span>Social</span>
+
+          <a class="profile-info__social  profile-info__social--fb" href="#" title="Facebook">
+            Facebook
+            <svg class="icon  icon-social-facebook">
+              <use xlink:href="img/sprite/sprite.svg#social-facebook"></use>
+            </svg>
+          </a>
+
+          <a class="profile-info__social  profile-info__social--inst" href="#" title="Instagram">
+            Instagram
+            <svg class="icon  icon-social-instagram">
+              <use xlink:href="img/sprite/sprite.svg#social-instagram"></use>
+            </svg>
+          </a>
+
+          <a class="profile-info__social  profile-info__social--tw" href="#" title="Twitter">
+            Twitter
+            <svg class="icon  icon-social-twitter">
+              <use xlink:href="img/sprite/sprite.svg#social-twitter"></use>
+            </svg>
+          </a>
+
+          <a class="profile-info__social  profile-info__social--ln" href="#" title="Linkedin">
+            Linkedin
+            <svg class="icon  icon-social-linkedin">
+              <use xlink:href="img/sprite/sprite.svg#social-linkedin"></use>
+            </svg>
+          </a>
+
+          <a class="profile-info__social  profile-info__social--yt" href="#" title="YouTube">
+            YouTube
+            <svg class="icon  icon-social-youtube">
+              <use xlink:href="img/sprite/sprite.svg#social-youtube"></use>
+            </svg>
+          </a>
+        </p>
+      </address>
+
+      <a class="profile-info__btn  btn" href="#">Invite to bid</a>
+    </aside>
+
+    <section class="profile-about">
+      <header class="profile-header">
+        <div class="profile-header__wrapper">
+          <p>
+            <span>Title</span>
+            <b class="profile-header__title">Mortgage Broker, Mortgage Agent, Mortgage Planner</b>
+          </p>
+          <p>
+            <span>I serve</span>
+            <b class="profile-header__serve">Waterloo, Brampton, Kitchener, London</b>
+          </p>
+        </div>
+        <div class="profile-header__wrapper">
+          <p>
+            <span>Types of mortgages done</span>
+            <b class="profile-header__mortgages">Commerial, Residential</b>
+          </p>
+          <div>
+            <span>I speak</span>
+
+            <ul class="language-list">
+              <li class="language-list__item  flag-icon  flag-icon-de">german</li>
+              <li class="language-list__item  flag-icon  flag-icon-gb">united kingdom</li>
+              <li class="language-list__item  flag-icon  flag-icon-pl">poland</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="profile-info__description">
+          <h4>Description</h4>
+          <p class="profile-info__text">
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque nec purus id arcu finibus pharetra. Donec leo nisi, iaculis sed convallis in, porttitor vitae arcu. Pellentesque molestie tortor vitae purus ultrices porttitor. Duis nunc odio, lacinia eu enim quis, viverra accumsan diam. Mauris condimentum lorem enim, a accumsan nisl vulputate vel. Cras faucibus nisl et urna sodales tincidunt. Maecenas eu justo turpis. Cras tortor lectus, feugiat in malesuada a, fermentum imperdiet dolor. In a sodales est. Aenean vel mi id velit ullamcorper laoreet. Suspendisse sapien purus, eleifend sed mi vel, dapibus iaculis metus. Sed varius est sed ante gravida pharetra. In hendrerit massa ac sodales porta. Donec eget lacus ac turpis dictum finibus.
+            <br><br>
+            Nullam elit enim, maximus sed euismod eget, condimentum ut felis. Ut rutrum, metus nec commodo pellentesque, ligula neque dictum purus, eget convallis urna leo eu lorem. Pellentesque faucibus eu orci et dictum. Nullam eget facilisis felis, id luctus nunc. Phasellus eleifend est et luctus auctor. Sed in est malesuada, consectetur arcu id, porttitor nisi. Vivamus sollicitudin porttitor porttitor. Duis ac ultricies nulla, id iaculis urna. Vivamus lorem lectus, tincidunt a posuere eu, eleifend porttitor dui. Aliquam vulputate eros placerat neque iaculis lacinia. Ut varius posuere efficitur. Duis auctor nunc arcu, vehicula iaculis nunc porttitor et. Nulla id auctor leo, id ornare libero. Fusce pulvinar vestibulum sem non gravida. In a facilisis sapien, et vestibulum elit.
+          </p>
+        </section>
+
+        <section class="profile-info__options">
+
+          <div class="rating  profile-info__rating">
+            <div class="rating__count-wrapper">
+              <p>
+                <span class="rating__count">4.6</span>
+                <b class="rating__count-text">Rating out <br> of 5 stars</b>
+              </p>
+            </div>
+
+            <div class="rating__list">
+              <p class="rating__item">
+                <span class="rating__item-stars">5 star</span>
+                <span class="rating__line"><i class="rating__progress" data-percent="78"></i></span>
+                <span class="rating__percent">78%</span>
+              </p>
+
+              <p class="rating__item">
+                <span class="rating__item-stars">4 star</span>
+                <span class="rating__line"><i class="rating__progress" data-percent="11"></i></span>
+                <span class="rating__percent">11%</span>
+              </p>
+
+              <p class="rating__item">
+                <span class="rating__item-stars">3 star</span>
+                <span class="rating__line"><i class="rating__progress" data-percent="4"></i></span>
+                <span class="rating__percent">4%</span>
+              </p>
+
+              <p class="rating__item">
+                <span class="rating__item-stars">2 star</span>
+                <span class="rating__line"><i class="rating__progress" data-percent="3"></i></span>
+                <span class="rating__percent">3%</span>
+              </p>
+
+              <p class="rating__item">
+                <span class="rating__item-stars">1 star</span>
+                <span class="rating__line"><i class="rating__progress" data-percent="4"></i></span>
+                <span class="rating__percent">4%</span>
+              </p>
+            </div>
+
+          </div>
+
+          <div class="rating__custom-percent">
+            <p>
+               <span class="rating__custom-percent-number">92%</span>   <!--If here will be 0% then some text will be gray as the design-->
+              <span>Of customers would recommend</span>
+            </p>
+          </div>
+
+          <div class="profile-info__btn-wrapper">
+            <a class="rating__btn  btn" href="#">
+              <svg class="icon  icon-write-review">
+                <use xlink:href="img/sprite/sprite.svg#write-review"></use>
+              </svg>
+              <span>Write Review</span>
+            </a>
+          </div>
+
+        </section>
+
+        <section class="broker-feedback">
+          <div class="broker-feedback__list"><article class="broker-feedback__item">
+
+            <div class="broker-feedback__wrapper  clearfix">
+              <img class="broker-feedback__img  broker-img  broker-image--small" src="img/users/user-feedback-1.jpg" width="38px" height="38px" alt="Tobi Martinez Picture">
+              <h5 class="broker-feedback__name">Tobi Martinez</h5>
+              <span class="broker-feedback__date">March 2018</span>
+            </div>
+
+            <h3 class="broker-feedback__title">She answered all my questions and walked me through the process</h3>
+            <ul class="broker-feedback__stars  broker-feedback__stars--5">
+              <li>
+                <svg class="icon  icon-start">
+                  <use xlink:href="img/sprite/sprite.svg#start"></use>
+                </svg>
+              </li>
+              <li>
+                <svg class="icon  icon-start">
+                  <use xlink:href="img/sprite/sprite.svg#start"></use>
+                </svg>
+              </li>
+              <li>
+                <svg class="icon  icon-start">
+                  <use xlink:href="img/sprite/sprite.svg#start"></use>
+                </svg>
+              </li>
+              <li>
+                <svg class="icon  icon-start">
+                  <use xlink:href="img/sprite/sprite.svg#start"></use>
+                </svg>
+              </li>
+              <li>
+                <svg class="icon  icon-start">
+                  <use xlink:href="img/sprite/sprite.svg#start"></use>
+                </svg>
+              </li>
+            </ul>
+
+            <p class="broker-feedback__text">
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque nec purus id arcu finibus pharetra. Donec leo nisi, iaculis sed convallis in, porttitor vitae arcu. Pellentesque molestie tortor vitae purus ultrices porttitor. Duis nunc odio, lacinia eu enim quis, viverra accumsan diam. Mauris condimentum lorem enim, a accumsan nisl vulputate vel. Cras faucibus nisl et urna sodales tincidunt. Maecenas eu justo turpis.
+            </p>
+          </article>
+
+          <article class="broker-feedback__item">
+
+            <div class="broker-feedback__wrapper  clearfix">
+              <img class="broker-feedback__img  broker-img  broker-image--small" src="img/users/user-feedback-1.jpg" width="38px" height="38px" alt="Tobi Martinez Picture">
+              <h5 class="broker-feedback__name">Tobi Martinez</h5>
+              <span class="broker-feedback__date">March 2018</span>
+            </div>
+
+            <h3 class="broker-feedback__title">She answered all my questions and walked me through the process</h3>
+            <ul class="broker-feedback__stars  broker-feedback__stars--3">
+              <li>
+                <svg class="icon  icon-start">
+                  <use xlink:href="img/sprite/sprite.svg#start"></use>
+                </svg>
+              </li>
+              <li>
+                <svg class="icon  icon-start">
+                  <use xlink:href="img/sprite/sprite.svg#start"></use>
+                </svg>
+              </li>
+              <li>
+                <svg class="icon  icon-start">
+                  <use xlink:href="img/sprite/sprite.svg#start"></use>
+                </svg>
+              </li>
+              <li>
+                <svg class="icon  icon-start">
+                  <use xlink:href="img/sprite/sprite.svg#start"></use>
+                </svg>
+              </li>
+              <li>
+                <svg class="icon  icon-start">
+                  <use xlink:href="img/sprite/sprite.svg#start"></use>
+                </svg>
+              </li>
+            </ul>
+
+            <p class="broker-feedback__text">
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque nec purus id arcu finibus pharetra. Donec leo nisi, iaculis sed convallis in, porttitor vitae arcu. Pellentesque molestie tortor vitae purus ultrices porttitor. Duis nunc odio, lacinia eu enim quis, viverra accumsan diam. Mauris condimentum lorem enim, a accumsan nisl vulputate vel. Cras faucibus nisl et urna sodales tincidunt. Maecenas eu justo turpis.
+            </p>
+          </article></div>
+
+          <div class="broker-feedback__no-feedbacks">
+            <svg class="icon  icon-write-review">
+              <use xlink:href="img/sprite/sprite.svg#write-review"></use>
+            </svg>
+
+            <p>
+              <span>Alexandra</span>
+              doesn’t have any reviews yet. Be the first to write one.
+            </p>
+
+            <a class="btn" href="#">Write Review</a>
+          </div>
+        </section>
+
+      </main>
+
+      <footer>
+        <div class="page-nav">
+          <div>
+            <a class="page-nav__btn-help" href="#">
+              <svg class="icon  icon-write-review">
+                <use xlink:href="img/sprite/sprite.svg#write-review"></use>
+              </svg>
+              <span>Write Review</span>
+            </a>
+          </div>
+
+          <div class="page-nav__list">
+
+            <span>
+              <input type="radio" value="page-1" name="page" id="deal-page-1" checked>
+              <label for="deal-page-1">1</label>
+            </span>
+
+            <span>
+              <input type="radio" value="page-2" name="page" id="deal-page-2">
+              <label for="deal-page-2">2</label>
+            </span>
+
+            <span>
+              <input type="radio" value="page-3" name="page" id="deal-page-3">
+              <label for="deal-page-3">3</label>
+            </span>
+
+            <span>
+              <input type="radio" value="page-4" name="page" id="deal-page-4">
+              <label for="deal-page-4">4</label>
+            </span>
+
+          </div>
+          <a class="page-nav__btn-top" href="#top">Back to top <span>&uarr;</span></a>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__nav">
+      <a class="footer__link" href="#">Calculators</a>
+      <a class="footer__link" href="#">Education</a>
+      <a class="footer__link" href="#">FAQ</a>
+      <a class="footer__link" href="#">Privacy</a>
+      <a class="footer__link" href="#">For brokers</a>
+    </div>
+    <a class="logo  logo--footer" href="index.html">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <p class="footer__copy">
+      &copy; 2018 mortgagebrokers.com. <br />
+        all rights recerved.
+    </p>
+  </footer>
+
+
+  <script src="js/svg4everybody-min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+.profile-about {
+  margin-top: 35px;
+  margin-left: 271px;
+  padding-left: 40px;
+
+  footer {
+    margin-top: -7px;
+  }
+}
+
+.profile-header {
+  display: flex;
+
+  p {
+    margin-bottom: 23px;
+    span {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 10px;
+      font-weight: bold;
+      color: $color-gray;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    b {
+      font-size: 20px;
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #333132;
+    }
+  }
+}
+
+.profile-header__wrapper {
+  flex: 1;
+  flex-basis: 50%;
+  padding-right: 30px;
+  box-sizing: border-box;
+
+  &:first-of-type {
+    border-right: 1px solid #d1d2d4;
+  }
+  &:last-child {
+    padding-left: 40px;
+
+    span {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 10px;
+      font-weight: bold;
+      color: $color-gray;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .language-list {
+      margin-top: 11px;
+    }
+    .language-list__item {
+      width: 24px;
+      height: 17px;
+    }
+  }
+}
+
+.profile-info__description {
+  margin-top: -2px;
+  h4 {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 10px;
+    font-weight: bold;
+    color: $color-gray;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #333132;
+  }
+}
+
+.profile-info__options {
+  display: flex;
+  align-items: center;
+  align-content: stretch;
+  justify-content: space-between;
+  height: 115px;
+  box-sizing: border-box;
+  border-top: 1px solid #d1d2d4;
+  border-bottom: 1px solid #d1d2d4;
+  margin-top: 38px;
+  margin-bottom: 44px;
+}
+
+.profile-info__btn-wrapper {
+  height: 100%;
+  width: 282px;
+  box-sizing: border-box;
+  border-left: 1px solid #d1d2d4;
+}
+
+.profile-info__options--no-active {
+
+  .rating__custom-percent-number {
+    border: 2px solid $color-gray !important;
+  }
+  .rating__custom-percent {
+    p {
+      color: $color-gray !important;
+    }
+  }
+  .rating__count {
+    color: $color-gray !important;
+  }
+  .rating__item-stars {
+    color: $color-gray !important;
+  }
+}
