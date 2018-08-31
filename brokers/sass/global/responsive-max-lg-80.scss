@@ -1,0 +1,216 @@
+@media (max-width: $device-lg-width + 82px) {
+
+  .search {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 36px;
+  }
+  .search__popular {
+    display: block;
+  }
+  .search--deals {
+    .search__form {
+      margin-top: -382px;
+      opacity: 0;
+      top: -300px;
+      position: relative;
+    }
+  }
+  .search__button {
+    display: block;
+  }
+
+  .search__submit {
+    flex-basis: calc(50% - 14px);
+    max-width: calc(50% - 14px);
+  }
+  .search__item {
+    flex-basis: calc(50% - 14px);
+    max-width: calc(50% - 14px);
+
+    &--range {
+      flex-basis: 100%;
+      max-width: 100%;
+      width: 100%;
+
+      input {
+        width: 47%;
+      }
+    }
+  }
+
+
+  .deal-card__info {
+    flex-wrap: wrap;
+  }
+  .deal-card__wrapper {
+    width: auto;
+
+    &--controls {
+      border-top: 1px solid #f1f2f2;
+      margin-top: 14px;
+      flex-direction: row;
+      max-width: 100%;
+      width: 100%;
+
+      p {
+        border-bottom: none;
+        border-left: none;
+
+        &:first-of-type {
+          padding: 10px 0;
+
+          b {
+            font-size: 20px;
+          }
+        }
+        &:last-of-type {
+          border-right: none;
+        }
+
+        a {
+          &::after {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+  .deal-card__item {
+    margin: 10px 0;
+    margin-right: 0;
+    margin-left: 0px;
+
+    img {
+      margin-right: 0;
+      width: 104%;
+      max-width: 260px;
+    }
+  }
+  .deal-card__info {
+    width: auto;
+    flex-basis: auto;
+    padding-left: 0px;
+  }
+  .deal-card__wrapper  {
+
+    &--description {
+      margin-left: 20px;
+      padding-right: 11px;
+      p {
+        &:nth-of-type(2) {
+          width: 127px;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  .deal-card__description {
+    margin-top: 28px;
+  }
+  .deal-card__wrapper p b {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .deal-card__borrower {
+    font-size: 20px !important;
+  }
+  .deal-card__wrapper--controls p:last-child a {
+
+    svg {
+      display: none;
+    }
+  }
+
+
+  .page-nav {
+    margin-right: 30px;
+    margin-top: 13px;
+    margin-bottom: 16px;
+  }
+  .featured-card {
+    position:relative;
+    padding-bottom: 110px;
+    height: 466px;
+
+    footer {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  .intro__card {
+    margin: 0 10px;
+  }
+  .intro__card-list  {
+    max-width: 100%;
+    padding: 0 !important;
+  }
+
+
+
+
+  .page-find-brokers {
+    .page-nav {
+      margin-top: 5px;
+    }
+    header.featured-card__wrapper {
+      padding: 0px 15px;
+      padding-top: 16px;
+      padding-left: 22px;
+      padding-bottom: 5px;
+    }
+    main.featured-card__wrapper {
+      padding-left: 21px;
+      padding-right: 10px;
+    }
+    .featured-card footer {
+
+    }
+    .search__submit {
+      margin-top: 31px;
+    }
+    .search__item {
+      margin-top: 31px;
+    }
+    .search__item-text {
+      margin-bottom: 5px;
+    }
+    .search {
+      padding-bottom: 27px;
+      margin-top: 18px;
+      padding-top: 1px;
+    }
+    .featured__cards {
+      justify-content: space-around;
+    }
+    .featured-card {
+      width: 240px !important;
+      margin: 10px;
+      box-sizing: border-box;
+    }
+    .featured-card__wrapper {
+      .btn {
+        padding: 33px 20px;
+        letter-spacing: 1.5px;
+      }
+    }
+    footer.featured-card__wrapper .btn {
+
+      &:first-child {
+
+      }
+      &:last-child {
+        background-color: $color-white;
+        color: $color-green;
+
+        &:hover {
+          background-color: $color-green;
+          color: $color-white;
+        }
+      }
+    }
+  }
+  .language__list {
+    top: 61px;
+  }
+}

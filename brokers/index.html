@@ -11,7 +11,7 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 </head>
-<body class="">
+<body class="overlay">
   <header class="header">
     <div class="header__container">
       <div class="header__wrapper">
@@ -49,7 +49,7 @@
       <div class="nav-menu__wrapper">
         <a class="nav-menu__link  nav-menu__link--active" href="#">My deals</a>
         <a class="nav-menu__link" href="deals.html">Find a deal</a>
-        <a class="nav-menu__link" href="#">  <!-- add this class to login  nav-menu__link--login -->
+        <a class="nav-menu__link  login-link" href="#">  <!-- add this class to login  nav-menu__link--login -->
           Log in
           <img src="img/user.png" alt="User icon">
         </a>
@@ -247,6 +247,80 @@
         all rights recerved.
     </p>
   </footer>
+
+  <section class="modal-login  modal" id="modal-login">
+    <a class="logo  logo--modal" href="index.html">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <h4 class="modal-login__title">Please, login to continue...</h4>
+    <p class="modal-login__text">
+      <span>Don’t have an account?</span>
+      <a class="sign-up-link  modal-link" href="#">Sign Up</a>
+
+      <form class="modal-login__form" action="/">
+        <input class="modal-login__input  modal-login__input--email" type="email" value="" name="email" placeholder="email" required>
+
+        <div>
+          <input class="modal-login__input  modal-login__input--password" type="password" value="" name="password" placeholder="password" required>
+          <a href="#" class="modal-login__btn-forgot">Forgot?</a>
+        </div>
+
+        <input class="modal-login__btn  btn" type="submit" value="continue">
+      </form>
+    </p>
+  </section>
+
+  <section class="modal-sign  modal" id="modal-sign">
+    <a class="logo  logo--modal" href="index.html">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <h4 class="modal-sign__title">Sign Up</h4>
+    <p class="modal-sign__text">
+      <span>Do you have an account?</span>
+      <a class="login-link  modal-link" href="#">Log In</a>
+
+      <form class="modal-sign__form" action="/">
+        <span class="modal-sign-wrapper">
+          <select class="modal-sign__input  modal-sign__input--select" size="1" name="sign-in" onchange="handleChange(this)">
+            <option value="I'm, a broker" selected>I'm, a broker</option>
+            <option value="I'm, a borrower">I'm, a borrower</option>
+          </select>
+          <i class="modal-select__textbox">I'm, a broker</i>
+        </span>
+
+        <div class="modal-sign__wrapper">
+          <div>
+            <input class="modal-sign__input  modal-login__input--first-name" type="text" value="" name="first-name" placeholder="first name" required>
+            <input class="modal-sign__input  modal-login__input--last-name" type="text" value="" name="last-name" placeholder="last name" required>
+          </div>
+          <div>
+            <input class="modal-sign__input  modal-login__input--email" type="email" value="" name="email" placeholder="email" required>
+            <input class="modal-sign__input  modal-login__input--confirm-email" type="email" value="" name="confirm-email" placeholder="confirm email" required>
+          </div>
+          <div>
+            <input class="modal-sign__input  modal-login__input--password" type="password" value="" name="pasword" placeholder="pasword" required>
+            <input class="modal-sign__input  modal-login__input--confirm-password" type="password" value="" name="confirm-pasword" placeholder="confirm pasword" required>
+          </div>
+        </div>
+
+        <input class="modal-sign__btn  btn" type="submit" value="continue">
+
+      </form>
+
+      <p class="modal-sign__copy">By creating my account, I agree to the <a href="#">Terms & conditions</a> and <a href="#">Privacy Policy</a></p>
+  </section>
+
+  <script>
+    function handleChange (el) {
+      el
+      .nextElementSibling
+      .innerHTML = el.value
+    }
+  </script>
 
   <script src="js/svg4everybody-min.js"></script>
   <script src="js/index.js"></script>

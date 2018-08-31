@@ -1,0 +1,33 @@
+.preview {
+  padding: 40px 20px;
+  padding-bottom: 55px;
+  text-align: center;
+  background-color: $color-purple;
+  color: $color-white;
+}
+
+.preview__title {
+  margin: 9px auto;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.preview__text {
+  display: block;
+  margin: 0 auto;
+  width: 85%;
+  max-width: 930px;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: $color-white;
+}

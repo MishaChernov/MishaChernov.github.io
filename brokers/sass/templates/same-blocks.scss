@@ -147,16 +147,21 @@
     .main {
       margin-top: 59px;
     }
+  }
+  .page-nav__btn-help {
+    color: $color-orange;
 
-    .page-nav__btn-help {
-      color: $color-orange;
-
-      &:hover {
-        color: $color-green;
-      }
-      svg {
-        margin-right: 2px;
-      }
+    &:hover {
+      color: $color-green;
     }
+    svg {
+      margin-right: 2px;
+    }
+  }
+}
+
+.page-post-request {
+  main {
+    padding-bottom: 84px;
   }
 }

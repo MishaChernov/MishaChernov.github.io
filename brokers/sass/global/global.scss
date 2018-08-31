@@ -30,6 +30,47 @@ select {
   text-align:-webkit-center;
 }
 
+.parent---JS-remove {
+  display: none;
+}
+
+.btn-back {
+  display: none;
+  position: relative;
+  width: 70px;
+  font-family: $primary-font-family;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-gray;
+  cursor: pointer;
+  transition: 200ms;
+
+  svg {
+    position: relative;
+    margin-right: 8px;
+    top: 1px;
+    width: 12px;
+    height: 10px;
+    transform: rotate(180deg);
+  }
+  &:hover {
+    transition: 200ms;
+    color: $color-green;
+  }
+}
+
+.feed---JS:empty {
+  display: none;
+}
+
+
 .clearfix::after {
   content: "";
   display: table;

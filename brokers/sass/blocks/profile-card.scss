@@ -1,3 +1,29 @@
+.mobile-hide {
+  z-index: 1;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  box-sizing: border-box;
+  display: none;
+  background-color: $color-white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-hide__name {
+  margin: 0;
+  margin-top: 13px;
+  margin-bottom: 3px;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $color-purple;
+}
+
 .profile-card {
   position: relative;
   width: 271px;
@@ -44,7 +70,7 @@
   background-color: #f1f2f2;
   margin-top: -4px;
   width: 100%;
-  padding-top: 28px;
+  padding-top: 31px;
   padding-left: 21px;
   padding-right: 21px;
   padding-bottom: 1px;

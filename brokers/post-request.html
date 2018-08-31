@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MortgageBrokets</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</head>
+<body class="overlay  page-post-request" id="top">
+<header class="header">
+  <div class="header__container">
+    <div class="header__wrapper">
+      <a class="header__web-link" href="/">MortgageBrokers<span>.com</span></a>
+      <a class="logo  logo--hidden" href="index.html">
+        <svg class="icon  icon-logo">
+          <use xlink:href="img/sprite/sprite.svg#logo"></use>
+        </svg>
+      </a>
+
+      <div class="select">
+        <div class="select__btn">For <span>Brokers</span></div>
+      </div>
+    </div>
+
+    <a class="logo  logo--main" href="#">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="for-grid"></div>
+  </div>
+  <ul class="select__list">
+    <li><a class="select__link" href="borrowers.html">For borrowers</a></li>
+  </ul>
+
+  <nav class="nav-menu">
+    <div class="nav-menu__wrapper">
+      <a class="nav-menu__link" href="index.html">My deals</a>
+      <a class="nav-menu__link" href="deals.html">Find a deal</a>
+      <a class="nav-menu__link  login-link" href="#">  <!-- add this class to login  nav-menu__link--login -->
+        Log in
+        <img src="img/user.png" alt="User icon">
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main class="main">
+
+  <section class="preview">
+    <img class="preview__img" width="100px" height="100px" src="img/steps/step1.svg" alt="">
+    <h2 class="preview__title">Post a Request</h2>
+    <p class="preview__text">Let the brokers fight for your deal. Just simply answer a few questions so the brokers would know what exactly you are looking for to serve you better.</p>
+  </section>
+
+  <section class="request  container">
+    <form class="request__form" action="/" method="post">
+
+      <fieldset class="request__wrapper  request__wrapper--padding  disabled-elements-JS  question-type__text">
+        <h3 class="title  request__title">What is your location?</h3>
+
+        <div class="request__flex-wrapper  request__flex-wrapper--padding">
+          <label class="request__item  request__item--location">
+            <span class="request__item-text">What is the Country?</span>
+
+            <span class="request__select-wrapper">
+              <select class="request__input  request__input--select  input" size="1" name="country" onchange="handleChange(this)">
+                <option value=""></option>
+                <option value="USA">USA</option>
+                <option value="country-2">country 2</option>
+                <option value="country-3">country 3</option>
+                <option value="country-4">country 4</option>
+              </select>
+              <i class="request__textbox"></i>
+            </span>
+          </label>
+
+          <label class="request__item  request__item--province">
+            <span class="request__item-text">What is the Province?</span>
+
+            <span class="request__select-wrapper">
+              <select class="request__input  request__input--select  input" size="1" name="province" onchange="handleChange(this)">
+                <option value=""></option>
+                <option value="CA">CA</option>
+                <option value="province-2">province 2</option>
+                <option value="province-3">province 3</option>
+                <option value="province-4">province 4</option>
+              </select>
+              <i class="request__textbox  select-textbox"></i>
+            </span>
+          </label>
+
+          <label class="request__item  request__item--city">
+            <span class="request__item-text">What is the City?</span>
+            <input class="input" type="text" name="city" placeholder="Beverly Hills">
+          </label>
+
+          <label class="request__item  request__item--code">
+            <span class="request__item-text">What is the Zip Code?</span>
+            <input class="input" type="text" name="zip-code" placeholder="90210">
+          </label>
+        </div>
+
+        <label class="request__item  request__item--street  request__item--padding">
+          <span class="request__item-text">What is the Street Address?</span>
+          <input class="input" type="text" name="street" placeholder="241 N. Canon Drive">
+        </label>
+
+      </fieldset>
+
+      <fieldset class="request__wrapper  request__wrapper--mortgage  disabled-elements-preview-JS  question-type__radio">
+        <h3 class="title  request__title">What type of mortgage you are looking for?</h3>
+
+        <div class="request__flex-wrapper">
+          <label class="request__item  request__item--mortgage">
+            <input class="input" type="radio" name="mortage-type" value="residencial fixed">
+            <span class="request__item-text">
+              <i>residencial fixed</i>
+              <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+                <svg class="icon  icon-info-stroke">
+                  <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+                </svg>
+                <svg class="icon  icon-info-filled">
+                  <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
+                </svg>
+              </b>
+            </span>
+          </label>
+
+          <label class="request__item  request__item--mortgage">
+            <input class="input" type="radio" name="mortage-type" value="residencial arm">
+            <span class="request__item-text">
+              <i>residencial arm</i>
+              <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+                <svg class="icon  icon-info-stroke">
+                  <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+                </svg>
+                <svg class="icon  icon-info-filled">
+                  <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
+                </svg>
+              </b>
+            </span>
+          </label>
+
+          <label class="request__item  request__item--mortgage">
+            <input class="input" type="radio" name="mortage-type" value="commercial">
+            <span class="request__item-text">
+              <i>commercial</i>
+              <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+                <svg class="icon  icon-info-stroke">
+                  <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+                </svg>
+                <svg class="icon  icon-info-filled">
+                  <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
+                </svg>
+              </b>
+            </span>
+          </label>
+
+          <label class="request__item  request__item--mortgage">
+            <input class="input" type="radio" name="mortage-type" value="private">
+            <span class="request__item-text">
+              <i>private</i>
+              <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+                <svg class="icon  icon-info-stroke">
+                  <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+                </svg>
+                <svg class="icon  icon-info-filled">
+                  <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
+                </svg>
+              </b>
+            </span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="request__wrapper  request__wrapper--padding  disabled-elements-JS  disabled-elements-preview-JS  question-type__text">
+        <h3 class="title  request__title">Where is this property located?</h3>
+
+        <div class="request__flex-wrapper  request__flex-wrapper--padding">
+          <label class="request__item  request__item--location">
+            <span class="request__item-text">What is the Country?</span>
+
+            <span class="request__select-wrapper">
+            <select class="request__input  request__input--select  input" size="1" name="property-country" onchange="handleChange(this)">
+              <option value=""></option>
+              <option value="USA">USA</option>
+              <option value="country-2">country 2</option>
+              <option value="country-3">country 3</option>
+              <option value="country-4">country 4</option>
+            </select>
+            <i class="request__textbox  select-textbox"></i>
+          </span>
+          </label>
+
+          <label class="request__item  request__item--province">
+            <span class="request__item-text">What is the Province?</span>
+
+            <span class="request__select-wrapper">
+            <select class="request__input  request__input--select  input" size="1" name="property-province" onchange="handleChange(this)">
+              <option value=""></option>
+              <option value="CA">CA</option>
+              <option value="province-2">province 2</option>
+              <option value="province-3">province 3</option>
+              <option value="province-4">province 4</option>
+            </select>
+            <i class="request__textbox  select-textbox"></i>
+          </span>
+          </label>
+
+          <label class="request__item  request__item--city">
+            <span class="request__item-text">What is the City?</span>
+            <input class="input" type="text" name="property-city" placeholder="Beverly Hills">
+          </label>
+
+          <label class="request__item  request__item--code">
+            <span class="request__item-text">What is the Zip Code? <i>(Optional)</i></span>
+            <input class="input" type="text" name="property-zip-code" placeholder="90210">
+          </label>
+        </div>
+
+        <label class="request__item  request__item--street  request__item--padding">
+          <span class="request__item-text">What is the Street Address? <i>(Optional)</i></span>
+          <input class="input" type="text" name="property-street" placeholder="241 N. Canon Drive">
+        </label>
+      </fieldset>
+
+      <fieldset class="request__wrapper  request__wrapper--mortgage  disabled-elements-preview-JS  question-type__radio">
+        <h3 class="title  request__title">What is the property type?</h3>
+
+        <div class="request__flex-wrapper">
+          <label class="request__item  request__item--mortgage">
+            <input class="input" type="radio" name="property-type" value="single-family">
+            <span class="request__item-text">
+              <i>single-family</i>
+              <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+                <svg class="icon  icon-info-stroke">
+                  <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+                </svg>
+                <svg class="icon  icon-info-filled">
+                  <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
+                </svg>
+              </b>
+            </span>
+          </label>
+
+          <label class="request__item  request__item--mortgage">
+            <input class="input" type="radio" name="property-type" value="condo">
+            <span class="request__item-text">
+              <i>condo</i>
+              <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+                <svg class="icon  icon-info-stroke">
+                  <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+                </svg>
+                <svg class="icon  icon-info-filled">
+                  <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
+                </svg>
+              </b>
+            </span>
+          </label>
+
+          <label class="request__item  request__item--mortgage">
+            <input class="input" type="radio" name="property-type" value="multi-family">
+            <span class="request__item-text">
+              <i>multi-family</i>
+              <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+                <svg class="icon  icon-info-stroke">
+                  <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+                </svg>
+                <svg class="icon  icon-info-filled">
+                  <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
+                </svg>
+              </b>
+            </span>
+          </label>
+
+          <label class="request__item  request__item--mortgage">
+            <input class="input" type="radio" name="property-type" value="commercial">
+            <span class="request__item-text">
+              <i>commercial</i>
+              <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+                <svg class="icon  icon-info-stroke">
+                  <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+                </svg>
+                <svg class="icon  icon-info-filled">
+                  <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
+                </svg>
+              </b>
+            </span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="request__wrapper  request__wrapper--padding  disabled-elements-preview-JS  question-type__text">
+        <h3 class="title  request__title">What is the purchase price?</h3>
+        <label class="request__item  request__item--price">
+          <input class="input" type="text" name="street" placeholder="1,840,000">
+        </label>
+      </fieldset>
+
+      <fieldset class="request__wrapper  disabled-elements-preview-JS  question-type__range">
+        <h3 class="title  request__title  request__title--data">
+          <span>
+            What is your credit score?
+            <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+              <svg class="icon  icon-info-stroke">
+                <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+              </svg>
+              <svg class="icon  icon-info-filled">
+                  <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
+                </svg>
+            </b>
+          </span>
+        </h3>
+        <label class="request__item  request__item--range">
+          <span class="request__range-output" id="request__range-output">0</span>
+
+          <div class="request-range">
+            <input class="input" type="range" min="300" max="900" value="0" step="5" name="credit-score" id="request__range-input">
+
+            <ul class="request-range__wrapper">
+              <li class="request-range__item" data-min-count="300">Very Poor</li>
+              <li class="request-range__item" data-min-count="500">Poor</li>
+              <li class="request-range__item" data-min-count="575">Fair</li>
+              <li class="request-range__item" data-min-count="650">Good</li>
+              <li class="request-range__item" data-min-count="750">Excellent</li>
+            </ul>
+          </div>
+        </label>
+
+      </fieldset>
+
+      <fieldset class="request__wrapper  request__wrapper--mortgage  disabled-elements-preview-JS  question-type__text">
+        <h3 class="title  request__title">
+          <span>
+            What mortgage it is going to be (security)?
+          </span>
+        </h3>
+
+        <div class="request__flex-wrapper  request__flex-wrapper--mortgage   request__flex-wrapper--third">
+          <label class="request__item  request__item--mortgage">
+            <input class="input" type="radio" name="property-type" value="first mortgage" checked>
+            <span class="request__item-text  request__item-text--height">
+              <i>1<sup>ST</sup></i>
+              <br>
+              first mortgage
+            </span>
+          </label>
+
+          <label class="request__item  request__item--mortgage">
+            <input type="radio" name="property-type" value="second mortgage">
+            <span class="request__item-text  request__item-text--height">
+              <i>2<sup>ND</sup></i>
+              <br>
+              second mortgage
+            </span>
+          </label>
+
+          <label class="request__item  request__item--mortgage">
+            <input type="radio" name="property-type" value="third mortgage">
+            <span class="request__item-text  request__item-text--height">
+              <i>3<sup>RD</sup></i>
+              <br>
+              third mortgage
+            </span>
+          </label>
+        </div>
+
+      </fieldset>
+
+      <fieldset class="request__wrapper  request__wrapper--padding  disabled-elements-preview-JS  question-type__text">
+        <h3 class="title  request__title  request__title--data">
+          <span>
+            What is the lender on this mortgage?
+            <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+              <svg class="icon  icon-info-stroke">
+                <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+              </svg>
+              <svg class="icon  icon-info-filled">
+                  <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
+                </svg>
+            </b>
+          </span>
+        </h3>
+        <label class="request__item  request__mortgage-lender  request__item--single">
+          <input class="input" type="text" name="mortgage-lender">
+        </label>
+      </fieldset>
+
+      <fieldset class="request__wrapper  request__wrapper--padding  disabled-elements-preview-JS  question-type__text">
+        <h3 class="title  request__title  request__title--data">
+          <span>
+            What is the interest rate on this mortgage?
+            <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+              <svg class="icon  icon-info-stroke">
+                <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+              </svg>
+              <svg class="icon  icon-info-filled">
+                  <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
+                </svg>
+            </b>
+          </span>
+        </h3>
+        <label class="request__item  request__mortgage-interest-rate  request__item--single">
+          <input class="input" type="text" name="mortgage-interest-rate">
+        </label>
+      </fieldset>
+
+      <fieldset class="request__wrapper request__wrapper--padding  disabled-elements-preview-JS  question-type__text">
+        <h3 class="title  request__title">Add comments to your request</h3>
+        <label class="request__item  request__mortgage-interest-rate  request__item--textarea  request__item--padding">
+          <span class="request__item-text">What would you like brokers to know?</span>
+          <textarea class="input" id="request__textarea" name="request-comment" cols="30" rows="10"></textarea>
+          <i id="textarea-max" data-max="2000">2000</i>
+        </label>
+      </fieldset>
+
+      <div class="request__info-wrapper">
+        <div>
+          <svg class="icon  icon-info-stroke">
+            <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+          </svg>
+          <span>Good to know</span>
+        </div>
+        <p>Your request will be placed for 72 hours. This would be a deadline for brokers to place the bid and to propose the best conditions.</p>
+      </div>
+
+      <input class="btn  request__btn" type="submit" value="Publish now" disabled="disabled">
+      <button class="request__btn-save">Or save for later</button>
+    </form>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__nav">
+    <a class="footer__link" href="#">Calculators</a>
+    <a class="footer__link" href="#">Education</a>
+    <a class="footer__link" href="#">FAQ</a>
+    <a class="footer__link" href="#">Privacy</a>
+    <a class="footer__link" href="#">For brokers</a>
+  </div>
+  <a class="logo  logo--footer" href="index.html">
+    <svg class="icon  icon-logo">
+      <use xlink:href="img/sprite/sprite.svg#logo"></use>
+    </svg>
+  </a>
+  <p class="footer__copy">
+    &copy; 2018 mortgagebrokers.com. <br />
+    all rights recerved.
+  </p>
+</footer>
+<section class="modal-login  modal" id="modal-login">
+  <a class="logo  logo--modal" href="index.html">
+    <svg class="icon  icon-logo">
+      <use xlink:href="img/sprite/sprite.svg#logo"></use>
+    </svg>
+  </a>
+  <h4 class="modal-login__title">Please, login to continue...</h4>
+  <p class="modal-login__text">
+    <span>Don’t have an account?</span>
+    <a class="sign-up-link  modal-link" href="#">Sign Up</a>
+
+  <form class="modal-login__form" action="/">
+    <input class="modal-login__input  modal-login__input--email" type="email" value="" name="email" placeholder="email" required>
+
+    <div>
+      <input class="modal-login__input  modal-login__input--password" type="password" value="" name="password" placeholder="password" required>
+      <a href="#" class="modal-login__btn-forgot">Forgot?</a>
+    </div>
+
+    <input class="modal-login__btn  btn" type="submit" value="continue">
+  </form>
+  </p>
+</section>
+
+<section class="modal-sign  modal" id="modal-sign">
+  <a class="logo  logo--modal" href="index.html">
+    <svg class="icon  icon-logo">
+      <use xlink:href="img/sprite/sprite.svg#logo"></use>
+    </svg>
+  </a>
+  <h4 class="modal-sign__title">Sign Up</h4>
+  <p class="modal-sign__text">
+    <span>Do you have an account?</span>
+    <a class="login-link  modal-link" href="#">Log In</a>
+
+  <form class="modal-sign__form" action="/">
+        <span class="modal-sign-wrapper">
+          <select class="modal-sign__input  modal-sign__input--select" size="1" name="sign-in" onchange="handleChange(this)">
+            <option value="I'm, a borrower" selected>I'm, a borrower</option>
+            <option value="I'm, a broker">I'm, a broker</option>
+          </select>
+          <i class="modal-select__textbox">I'm, a borrower</i>
+        </span>
+
+    <div class="modal-sign__wrapper">
+      <div>
+        <input class="modal-sign__input  modal-sign__input--first-name" type="text" value="" name="first-name" placeholder="first name" required>
+        <input class="modal-sign__input  modal-sign__input--last-name" type="text" value="" name="last-name" placeholder="last name" required>
+      </div>
+      <div>
+        <input class="modal-sign__input  modal-sign__input--email" type="email" value="" name="email" placeholder="email" required>
+        <input class="modal-sign__input  modal-sign__input--confirm-email" type="email" value="" name="confirm-email" placeholder="confirm email" required>
+      </div>
+      <div>
+        <input class="modal-sign__input  modal-sign__input--password" type="password" value="" name="pasword" placeholder="pasword" required>
+        <input class="modal-sign__input  modal-sign__input--confirm-password" type="password" value="" name="confirm-pasword" placeholder="confirm pasword" required>
+      </div>
+    </div>
+
+    <input class="modal-sign__btn  btn" type="submit" value="continue">
+
+  </form>
+
+  <p class="modal-sign__copy">By creating my account, I agree to the <a href="#">Terms & conditions</a> and <a href="#">Privacy Policy</a></p>
+</section>
+
+<script>
+  function handleChange (el) {
+    el
+      .nextElementSibling
+      .innerHTML = el.value
+  }
+</script>
+
+<script src="js/svg4everybody-min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

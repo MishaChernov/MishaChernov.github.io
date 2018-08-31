@@ -1,0 +1,111 @@
+.overlay {
+  position: relative;
+  transition: 300ms;
+
+  &::after {
+    z-index: 8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 300ms;
+  }
+
+  &--visible {
+    &::after {
+      transition: 300ms;
+      display: block;
+    }
+  }
+}
+
+.modal-select__textbox {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  pointer-events: none;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border: 1px solid darkgray;
+  cursor: pointer;
+  padding: 19px;
+  border-radius: 0px;
+  outline: 1px solid #ccc;
+  outline-offset: -1px;
+  font-style: normal;
+  font-weight: bold;
+  color: $color-gray;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.6px;
+  text-align: center;
+  font-family: $primary-font-family;
+  color: $color-purple;
+}
+
+.modal {
+  z-index: 999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: none;
+  width: 100%;
+  height: auto;
+  margin: 10px;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: $color-white;
+  text-align: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+@import 'blocks/modal-login.scss';
+@import 'blocks/modal-sign.scss';
+@import 'blocks/modal-feedback.scss';
+@import 'blocks/modal-thanks-review.scss';
+
+.modal {
+  &--visible {
+    display: block;
+  }
+
+  select {
+    appearance: none;
+    cursor: pointer;
+  }
+  input,
+  select,
+  textarea {
+    height: 60px;
+    box-sizing: border-box;
+    border: 1px solid darkgray;
+    border-radius: 0px;
+    outline: 1px solid #ccc;
+    outline-offset: -1px;
+  }
+
+  input::placeholder {
+    color: $color-gray;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+}

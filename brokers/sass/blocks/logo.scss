@@ -4,6 +4,9 @@
   display: block;
   margin: 0 auto;
 
+  &--modal {
+    display: inline-block;
+  }
   &--hidden {
     display: none;
   }

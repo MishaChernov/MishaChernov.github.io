@@ -34,9 +34,12 @@
 @import 'blocks/language.scss';
 @import 'blocks/featured-card.scss';
 @import 'blocks/operations.scss';
+@import 'blocks/modals.scss';
+@import 'blocks/preview.scss';
+@import 'blocks/request.scss';
 
 @import 'blocks/profile.scss';
-
+@import 'global/disabled-elements-js.scss';
 
 @import 'templates/same-blocks.scss';
 @import 'global/responsive.scss';

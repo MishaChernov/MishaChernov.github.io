@@ -10,8 +10,10 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+  <script src="https://viralpatel.net/blogs/demo/jquery/jquery.shorten.1.0.js"></script>
+
 </head>
-<body class="page-broker-profile" id="top">
+<body class="page-broker-profile  overlay" id="top">
   <header class="header">
     <div class="header__container">
       <div class="header__wrapper">
@@ -49,17 +51,39 @@
       <div class="nav-menu__wrapper">
         <a class="nav-menu__link" href="deals.html">Find A broker</a>
         <a class="nav-menu__link  nav-menu__link--active" href="#">Post a request</a>
-        <a class="nav-menu__link" href="#">  <!-- add this class to login  nav-menu__link--login -->
+        <a class="nav-menu__link  login-link" href="#">  <!-- add this class to login  nav-menu__link--login -->
           Log in
           <img src="img/user.png" alt="User icon">
         </a>
       </div>
     </nav>
   </header>
+  <div class="mobile-hide">
+    <a class="btn-back" href="#">
+      <svg class="icon  icon-arrow-right">
+        <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+      </svg>
+      <span>Back</span>
+    </a>
+
+    <h3 class="mobile-hide__name">
+      <span class="mobile-hide__name-first"></span>
+      <span class="mobile-hide__name-second"></span>
+    </h3>
+
+    <a class="profile-info__btn  btn" href="#">Invite to bid</a>
+  </div>
 
   <main class="main  profile  profile--pro  container  clearfix">
 
     <aside class="profile-card">
+
+      <a class="btn-back" href="#">
+        <svg class="icon  icon-arrow-right">
+          <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+        </svg>
+        <span>Back</span>
+      </a>
 
       <h3 class="profile-card__name">
         <span class="profile-card__name-first">Alexandra</span>
@@ -174,11 +198,13 @@
       <main>
         <section class="profile-info__description">
           <h4>Description</h4>
-          <p class="profile-info__text">
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque nec purus id arcu finibus pharetra. Donec leo nisi, iaculis sed convallis in, porttitor vitae arcu. Pellentesque molestie tortor vitae purus ultrices porttitor. Duis nunc odio, lacinia eu enim quis, viverra accumsan diam. Mauris condimentum lorem enim, a accumsan nisl vulputate vel. Cras faucibus nisl et urna sodales tincidunt. Maecenas eu justo turpis. Cras tortor lectus, feugiat in malesuada a, fermentum imperdiet dolor. In a sodales est. Aenean vel mi id velit ullamcorper laoreet. Suspendisse sapien purus, eleifend sed mi vel, dapibus iaculis metus. Sed varius est sed ante gravida pharetra. In hendrerit massa ac sodales porta. Donec eget lacus ac turpis dictum finibus.
-            <br><br>
-            Nullam elit enim, maximus sed euismod eget, condimentum ut felis. Ut rutrum, metus nec commodo pellentesque, ligula neque dictum purus, eget convallis urna leo eu lorem. Pellentesque faucibus eu orci et dictum. Nullam eget facilisis felis, id luctus nunc. Phasellus eleifend est et luctus auctor. Sed in est malesuada, consectetur arcu id, porttitor nisi. Vivamus sollicitudin porttitor porttitor. Duis ac ultricies nulla, id iaculis urna. Vivamus lorem lectus, tincidunt a posuere eu, eleifend porttitor dui. Aliquam vulputate eros placerat neque iaculis lacinia. Ut varius posuere efficitur. Duis auctor nunc arcu, vehicula iaculis nunc porttitor et. Nulla id auctor leo, id ornare libero. Fusce pulvinar vestibulum sem non gravida. In a facilisis sapien, et vestibulum elit.
-          </p>
+          <div class="show-more-wrapper">
+            <p class="profile-info__text  readmore">
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque nec purus id arcu finibus pharetra. Donec leo nisi, iaculis sed convallis in, porttitor vitae arcu. Pellentesque molestie tortor vitae purus ultrices porttitor. Duis nunc odio, lacinia eu enim quis, viverra accumsan diam. Mauris condimentum lorem enim, a accumsan nisl vulputate vel. Cras faucibus nisl et urna sodales tincidunt. Maecenas eu justo turpis. Cras tortor lectus, feugiat in malesuada a, fermentum imperdiet dolor. In a sodales est. Aenean vel mi id velit ullamcorper laoreet. Suspendisse sapien purus, eleifend sed mi vel, dapibus iaculis metus. Sed varius est sed ante gravida pharetra. In hendrerit massa ac sodales porta. Donec eget lacus ac turpis dictum finibus.
+              <br><br>
+              Nullam elit enim, maximus sed euismod eget, condimentum ut felis. Ut rutrum, metus nec commodo pellentesque, ligula neque dictum purus, eget convallis urna leo eu lorem. Pellentesque faucibus eu orci et dictum. Nullam eget facilisis felis, id luctus nunc. Phasellus eleifend est et luctus auctor. Sed in est malesuada, consectetur arcu id, porttitor nisi. Vivamus sollicitudin porttitor porttitor. Duis ac ultricies nulla, id iaculis urna. Vivamus lorem lectus, tincidunt a posuere eu, eleifend porttitor dui. Aliquam vulputate eros placerat neque iaculis lacinia. Ut varius posuere efficitur. Duis auctor nunc arcu,vehicula iaculis nunc porttitor et. Nulla id auctor leo, id ornare libero. Fusce pulvinar vestibulum sem non gravida. In a facilisis sapien, et vestibulum elit.
+            </p>
+          </div>
         </section>
 
         <section class="profile-info__options">
@@ -233,7 +259,7 @@
           </div>
 
           <div class="profile-info__btn-wrapper">
-            <a class="rating__btn  btn" href="#">
+            <a class="rating__btn  btn  modal-feedback-btn" href="#">
               <svg class="icon  icon-write-review">
                 <use xlink:href="img/sprite/sprite.svg#write-review"></use>
               </svg>
@@ -246,8 +272,8 @@
         <section class="broker-feedback">
           <div class="broker-feedback__list"><article class="broker-feedback__item">
 
-            <div class="broker-feedback__wrapper  clearfix">
-              <img class="broker-feedback__img  broker-img  broker-image--small" src="img/users/user-feedback-1.jpg" width="38px" height="38px" alt="Tobi Martinez Picture">
+            <div class="broker-feedback__wrapper">
+              <img class="broker-feedback__img  broker-img  broker-image--small   clearfix" src="img/users/user-feedback-1.jpg" width="38px" height="38px" alt="Tobi Martinez Picture">
               <h5 class="broker-feedback__name">Tobi Martinez</h5>
               <span class="broker-feedback__date">March 2018</span>
             </div>
@@ -284,12 +310,10 @@
             <p class="broker-feedback__text">
               Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque nec purus id arcu finibus pharetra. Donec leo nisi, iaculis sed convallis in, porttitor vitae arcu. Pellentesque molestie tortor vitae purus ultrices porttitor. Duis nunc odio, lacinia eu enim quis, viverra accumsan diam. Mauris condimentum lorem enim, a accumsan nisl vulputate vel. Cras faucibus nisl et urna sodales tincidunt. Maecenas eu justo turpis.
             </p>
-          </article>
+          </article><article class="broker-feedback__item">
 
-          <article class="broker-feedback__item">
-
-            <div class="broker-feedback__wrapper  clearfix">
-              <img class="broker-feedback__img  broker-img  broker-image--small" src="img/users/user-feedback-1.jpg" width="38px" height="38px" alt="Tobi Martinez Picture">
+            <div class="broker-feedback__wrapper">
+              <img class="broker-feedback__img  broker-img  broker-image--small  clearfix" src="img/users/user-feedback-1.jpg" width="38px" height="38px" alt="Tobi Martinez Picture">
               <h5 class="broker-feedback__name">Tobi Martinez</h5>
               <span class="broker-feedback__date">March 2018</span>
             </div>
@@ -338,7 +362,7 @@
               doesn’t have any reviews yet. Be the first to write one.
             </p>
 
-            <a class="btn" href="#">Write Review</a>
+            <a class="btn  modal-feedback-btn" href="#">Write Review</a>
           </div>
         </section>
 
@@ -347,7 +371,7 @@
       <footer>
         <div class="page-nav">
           <div>
-            <a class="page-nav__btn-help" href="#">
+            <a class="page-nav__btn-help  modal-feedback-btn" href="#">
               <svg class="icon  icon-write-review">
                 <use xlink:href="img/sprite/sprite.svg#write-review"></use>
               </svg>
@@ -404,6 +428,160 @@
     </p>
   </footer>
 
+  <section class="modal-feedback  modal" id="modal-feedback">
+    <header>
+      <svg class="icon  icon-start">
+        <use xlink:href="img/sprite/sprite.svg#start"></use>
+      </svg>
+
+      <span>write a review</span>
+
+      <button class="modal-close"></button>
+    </header>
+
+    <main>
+      <img class="modal-feedback__img" src="img/users/user-icon-1-big.jpg" alt="">
+      <h4 class="modal-feedback__name">
+        <span class="modal-feedback__name-first">Alexandra</span>
+        <span class="modal-feedback__name-last">Allen</span>
+      </h4>
+
+      <form class="modal-feedback__form" action="/">
+
+        <div class="modal-feedback__stars">
+          <input id="rate1-star5" type="radio" name="rate1" value="5" />
+          <label for="rate1-star5" title="Excellent">
+            <svg class="icon  icon-start">
+              <use xlink:href="img/sprite/sprite.svg#start"></use>
+            </svg>
+          </label>
+
+          <input id="rate1-star4" type="radio" name="rate1" value="4" />
+          <label for="rate1-star4" title="Good">
+            <svg class="icon  icon-start">
+              <use xlink:href="img/sprite/sprite.svg#start"></use>
+            </svg>
+          </label>
+
+          <input id="rate1-star3" type="radio" name="rate1" value="3" />
+          <label for="rate1-star3" title="Satisfactory">
+            <svg class="icon  icon-start">
+              <use xlink:href="img/sprite/sprite.svg#start"></use>
+            </svg>
+          </label>
+
+          <input id="rate1-star2" type="radio" name="rate1" value="2" />
+          <label for="rate1-star2" title="Bad">
+            <svg class="icon  icon-start">
+              <use xlink:href="img/sprite/sprite.svg#start"></use>
+            </svg>
+          </label>
+
+          <input id="rate1-star1" type="radio" name="rate1" value="1" />
+          <label for="rate1-star1" title="Very bad">
+            <svg class="icon  icon-start">
+              <use xlink:href="img/sprite/sprite.svg#start"></use>
+            </svg>
+          </label>
+        </div>
+
+        <label class="modal-feedback__label">
+          <span>Your review’s title</span>
+          <input class="modal-feedback__input" name="reviews-title" type="text" data-max="150" required>
+          <i><span>0</span> / 150</i>
+        </label>
+
+        <label class="modal-feedback__label">
+          <span>Say something about Alexandra</span>
+          <textarea class="modal-feedback__input  modal-feedback__input--textarea" name="feedback-text" data-max="1500" required></textarea>
+          <i><span>0</span> / 1500</i>
+        </label>
+
+        <input class="modal-feedback__btn  btn" type="submit" value="Post your review">
+      </form>
+    </main>
+  </section>
+
+  <section class="modal-thanks-review  modal" id="modal-thanks-review">
+    <svg class="icon  icon-success">
+      <use xlink:href="img/sprite/sprite.svg#success"></use>
+    </svg>
+    <h4>Thank you for your review!</h4>
+  </section>
+
+  <section class="modal-login  modal" id="modal-login">
+    <a class="logo  logo--modal" href="index.html">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <h4 class="modal-login__title">Please, login to continue...</h4>
+    <p class="modal-login__text">
+      <span>Don’t have an account?</span>
+      <a class="sign-up-link  modal-link" href="#">Sign Up</a>
+
+      <form class="modal-login__form" action="/">
+        <input class="modal-login__input  modal-login__input--email" type="email" value="" name="email" placeholder="email" required>
+
+        <div>
+          <input class="modal-login__input  modal-login__input--password" type="password" value="" name="password" placeholder="password" required>
+          <a href="#" class="modal-login__btn-forgot">Forgot?</a>
+        </div>
+
+        <input class="modal-login__btn  btn" type="submit" value="continue">
+      </form>
+    </p>
+  </section>
+
+  <section class="modal-sign  modal" id="modal-sign">
+    <a class="logo  logo--modal" href="index.html">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <h4 class="modal-sign__title">Sign Up</h4>
+    <p class="modal-sign__text">
+      <span>Do you have an account?</span>
+      <a class="login-link  modal-link" href="#">Log In</a>
+
+      <form class="modal-sign__form" action="/">
+        <span class="modal-sign-wrapper">
+          <select class="modal-sign__input  modal-sign__input--select" size="1" name="sign-in" onchange="handleChange(this)">
+            <option value="I'm, a borrower" selected>I'm, a borrower</option>
+            <option value="I'm, a broker">I'm, a broker</option>
+          </select>
+          <i class="modal-select__textbox">I'm, a borrower</i>
+        </span>
+
+        <div class="modal-sign__wrapper">
+          <div>
+            <input class="modal-sign__input  modal-sign__input--first-name" type="text" value="" name="first-name" placeholder="first name" required>
+            <input class="modal-sign__input  modal-sign__input--last-name" type="text" value="" name="last-name" placeholder="last name" required>
+          </div>
+          <div>
+            <input class="modal-sign__input  modal-sign__input--email" type="email" value="" name="email" placeholder="email" required>
+            <input class="modal-sign__input  modal-sign__input--confirm-email" type="email" value="" name="confirm-email" placeholder="confirm email" required>
+          </div>
+          <div>
+            <input class="modal-sign__input  modal-sign__input--password" type="password" value="" name="pasword" placeholder="pasword" required>
+            <input class="modal-sign__input  modal-sign__input--confirm-password" type="password" value="" name="confirm-pasword" placeholder="confirm pasword" required>
+          </div>
+        </div>
+
+        <input class="modal-sign__btn  btn" type="submit" value="continue">
+
+      </form>
+
+      <p class="modal-sign__copy">By creating my account, I agree to the <a href="#">Terms & conditions</a> and <a href="#">Privacy Policy</a></p>
+  </section>
+
+  <script>
+    function handleChange (el) {
+      el
+      .nextElementSibling
+      .innerHTML = el.value
+    }
+  </script>
 
   <script src="js/svg4everybody-min.js"></script>
   <script src="js/index.js"></script>

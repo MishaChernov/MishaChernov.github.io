@@ -1,0 +1,25 @@
+.modal-thanks-review {
+  display: none;
+  box-sizing: border-box;
+  max-width: 580px;
+  max-height: 370px;
+  padding: 0;
+  padding-top: 70px;
+  padding-bottom: 50px;
+
+  svg {
+    width: 69px;
+    height: 72px;
+    fill: $color-green;
+  }
+  h4 {
+    margin-top: 28px;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+  }
+}
