@@ -10183,10 +10183,14 @@ footer.featured-card__wrapper {
     .my-request .deal-card__buttons--new .btn {
       font-size: 16px;
       font-weight: bold; }
-    .my-request .deal-card__buttons .btn {
-      font-size: 12px; }
-    .my-request .deal-card__buttons div .btn {
-      font-size: 12px; }
+    .my-request .deal-card__buttons {
+      overflow: hidden; }
+      .my-request .deal-card__buttons .btn {
+        font-size: 12px;
+        line-height: 63px;
+        border-top: none; }
+      .my-request .deal-card__buttons div .btn {
+        font-size: 12px; }
     .my-request .deal-card__item--draft .deal-card__buttons div .btn {
       font-size: 12px; }
     .my-request .deal-card__item--draft .deal-card__buttons .btn {
@@ -11256,7 +11260,9 @@ footer.featured-card__wrapper {
     .my-request .deal-card__wrapper-info p:last-child {
       max-width: none; }
   .my-request .deal-card__buttons .btn {
-    height: 60px; }
+    border-top: 1px solid #f1f2f2;
+    height: 60px;
+    line-height: 60px; }
   .my-request .deal-card__item--draft .deal-card__buttons div {
     flex-basis: 20%; }
   .my-request .deal-card__buttons--ended-bids {
@@ -11645,7 +11651,8 @@ footer.featured-card__wrapper {
     min-width: 60%;
     display: block; }
   .my-request .deal-card__buttons .btn {
-    height: 64px; }
+    height: 64px;
+    line-height: 60px; }
   .my-request .deal-card__buttons--ended-bids .btn:nth-child(3) {
     font-size: 16px;
     font-weight: bold;

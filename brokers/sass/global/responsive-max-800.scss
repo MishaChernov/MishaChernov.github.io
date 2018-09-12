@@ -1404,7 +1404,6 @@
   }
   .tabs-controls div {
     flex: 2;
-    margin: 1px;
   }
   .tabs-controls__label {
     height: 38px;
@@ -1477,8 +1476,11 @@
       }
       p:first-child {
         padding: 0;
-        max-width: 100%;
+        max-width: none;
         box-sizing: border-box;
+      }
+      p:last-child {
+        max-width: none;
       }
     }
     .deal-card__buttons {
@@ -1487,7 +1489,7 @@
       }
     }
     .deal-card__item--draft .deal-card__buttons div {
-      flex-basis: 16%;
+      flex-basis: 20%;
     }
     .deal-card__buttons--ended-bids {
       flex-wrap: wrap;
@@ -1505,7 +1507,7 @@
     }
     .deal-card__item--draft .deal-card__buttons--draft {
       .btn--color-purple {
-        padding: 0 20px;
+        padding: 0 17px;
         min-height: 60px;
       }
     }
