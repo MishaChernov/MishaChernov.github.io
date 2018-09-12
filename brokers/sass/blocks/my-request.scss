@@ -72,6 +72,10 @@
 
     .deal-card__buttons--new {
       display: flex;
+
+      .btn {
+        font-size: 16px;
+      }
     }
     .deal-card__time {
       color: $color-red !important;
@@ -95,15 +99,14 @@
         flex: 2;
         display: flex;
         position: relative;
-        height: 50%;
 
         .btn {
           height: 100%;
         }
       }
-      .btn {
+      .btn.btn--color-purple {
         flex: 1;
-        height: 50%;
+        font-size: 16px;
       }
     }
     .deal-card__buttons--draft {
@@ -304,7 +307,12 @@
   }
 
   .deal-card__wrapper--controls {
-    max-width: 240px;
+    min-width: 242px;
+
+    p {
+      width: auto;
+      max-width: 242px;
+    }
   }
   .deal-card__wrapper--description {
     padding-top: 3px;

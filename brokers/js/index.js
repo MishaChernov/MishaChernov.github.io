@@ -6,9 +6,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if($('.deal-card__bids').length > 0) {
     $('.deal-card__bids').each(function() {
-      var bid = $(this);
+      let bid = $(this);
 
       if(+bid.text() >= 1) {
+        bid.css('color', '#0cb175');
+      }
+    })
+    $('.tabs-controls__label--active').each(function() {
+      let bid = $(this).find('.tabs-controls__count');
+      let count = bid.text().replace('(', '').replace(')', '');
+
+      if(+count >= 1) {
         bid.css('color', '#0cb175');
       }
     })

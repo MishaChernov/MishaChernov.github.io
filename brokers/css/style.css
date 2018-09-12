@@ -4832,7 +4832,7 @@ select {
   overflow: hidden; }
   .nav-menu--open {
     box-sizing: border-box;
-    bottom: -171px !important;
+    bottom: -169px !important;
     left: 0;
     transition: 300ms ease;
     z-index: 2;
@@ -8356,9 +8356,6 @@ footer.featured-card__wrapper {
 .tabs-controls__count {
   margin-left: 3px; }
 
-.tabs-controls__label--active .tabs-controls__count {
-  color: #0cb175; }
-
 .tabs-controls__label--drafts .tabs-controls__count {
   color: #000000; }
 
@@ -8371,17 +8368,13 @@ footer.featured-card__wrapper {
   justify-content: space-between; }
   .tabs-controls input[type="radio"] {
     display: none; }
-  .tabs-controls input:checked ~ .tabs-controls__label {
-    box-shadow: 0 0 0 1px #382c75;
-    cursor: default; }
 
 .tabs-controls__label {
-  box-shadow: 1px 1px 0 #f1f2f2, 1px -1px 0 #f1f2f2;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  min-width: 222px;
+  width: 100%;
   height: 60px;
   box-sizing: border-box;
   text-align: center;
@@ -8396,25 +8389,23 @@ footer.featured-card__wrapper {
   color: #382c75;
   text-transform: uppercase;
   transition: 150ms; }
-  .tabs-controls__label:hover {
-    box-shadow: none;
-    transition: 150ms;
-    box-shadow: 0 0 0 1px #382c75; }
 
 .tabs-controls {
   margin-right: 30px; }
   .tabs-controls div {
-    margin: 0 1px; }
-    .tabs-controls div:first-child .tabs-controls__label {
-      box-shadow: 0 0 0 1px #f1f2f2; }
-      .tabs-controls div:first-child .tabs-controls__label:hover {
-        box-shadow: none;
-        transition: 150ms;
-        box-shadow: 0 0 0 1px #382c75; }
+    border: 1px solid #d1d2d4;
+    flex: 1;
+    width: auto;
+    margin: 0;
+    margin-right: -1px; }
+    .tabs-controls div:hover {
+      z-index: 1;
+      transition: 150ms;
+      border: 1px solid #382c75; }
   .tabs-controls input:checked ~ .tabs-controls__label {
-    box-shadow: none;
-    box-shadow: 0 0 0 1px #382c75;
-    cursor: default; }
+    border: 1px solid #382c75;
+    cursor: default;
+    z-index: 2; }
 
 .profile {
   padding-top: 32px;
@@ -10127,9 +10118,6 @@ footer.featured-card__wrapper {
       padding-bottom: 44px; }
   .page-post-request main {
     padding-bottom: 34px; }
-  .tabs-controls div {
-    flex: 1;
-    margin: 1px; }
   .request-tabs {
     padding-top: 34px;
     padding-bottom: 21px; }
@@ -11211,8 +11199,7 @@ footer.featured-card__wrapper {
   .tabs-controls {
     flex-wrap: wrap; }
   .tabs-controls div {
-    flex: 2;
-    margin: 1px; }
+    flex: 2; }
   .tabs-controls__label {
     height: 38px;
     font-size: 10px;
@@ -11264,12 +11251,14 @@ footer.featured-card__wrapper {
       flex: 1; }
     .my-request .deal-card__wrapper-info p:first-child {
       padding: 0;
-      max-width: 100%;
+      max-width: none;
       box-sizing: border-box; }
+    .my-request .deal-card__wrapper-info p:last-child {
+      max-width: none; }
   .my-request .deal-card__buttons .btn {
     height: 60px; }
   .my-request .deal-card__item--draft .deal-card__buttons div {
-    flex-basis: 16%; }
+    flex-basis: 20%; }
   .my-request .deal-card__buttons--ended-bids {
     flex-wrap: wrap; }
     .my-request .deal-card__buttons--ended-bids .btn:nth-child(3) {
@@ -11279,7 +11268,7 @@ footer.featured-card__wrapper {
         background-color: #0cb175;
         color: #ffffff; }
   .my-request .deal-card__item--draft .deal-card__buttons--draft .btn--color-purple {
-    padding: 0 20px;
+    padding: 0 17px;
     min-height: 60px; }
   .my-request .my-request__new-button {
     height: 100px;
@@ -11642,8 +11631,7 @@ footer.featured-card__wrapper {
     box-sizing: border-box;
     padding-top: 12px; }
   .tabs-controls div {
-    flex: 2;
-    margin: 1px; }
+    flex: 2; }
   .tabs-controls__label {
     min-width: 145px; }
   .request-tabs__submit {

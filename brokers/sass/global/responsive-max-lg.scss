@@ -987,7 +987,10 @@
     padding-bottom: 34px;
   }
 
-
+  .tabs-controls div {
+    flex: 1;
+    margin: 1px;
+  }
   .request-tabs {
     padding-top: 34px;
     padding-bottom: 21px
@@ -1003,6 +1006,7 @@
     width: 100%;
     max-width: 100%;
     height: 58px;
+    line-height: 58px;
     margin-bottom: 21px;
   }
   .tabs-controls__label {
