@@ -1485,7 +1485,9 @@
     }
     .deal-card__buttons {
       .btn {
+        border-top: 1px solid #f1f2f2;
         height: 60px;
+        line-height: 60px;
       }
     }
     .deal-card__item--draft .deal-card__buttons div {

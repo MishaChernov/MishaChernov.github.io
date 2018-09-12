@@ -9420,6 +9420,15 @@ footer.featured-card__wrapper {
       display: none; }
     .my-request .deal-card__tab-wrapper {
       padding-top: 10px; }
+    .my-request .deal-card__buttons {
+      overflow: hidden; }
+      .my-request .deal-card__buttons .btn {
+        font-size: 12px;
+        line-height: 63px;
+        border-top: none;
+        padding: 0; }
+      .my-request .deal-card__buttons div .btn {
+        font-size: 12px; }
     .my-request .deal-card__buttons--new .btn {
       font-size: 16px;
       font-weight: bold; }
@@ -10188,7 +10197,8 @@ footer.featured-card__wrapper {
       .my-request .deal-card__buttons .btn {
         font-size: 12px;
         line-height: 63px;
-        border-top: none; }
+        border-top: none;
+        padding: 0; }
       .my-request .deal-card__buttons div .btn {
         font-size: 12px; }
     .my-request .deal-card__item--draft .deal-card__buttons div .btn {

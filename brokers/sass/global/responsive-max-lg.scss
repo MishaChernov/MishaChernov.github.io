@@ -1087,8 +1087,11 @@
       font-weight: bold;
     }
     .deal-card__buttons {
+      overflow: hidden;
       .btn {
         font-size: 12px;
+        line-height: 63px;
+        border-top: none;
       }
       div .btn {
         font-size: 12px;
