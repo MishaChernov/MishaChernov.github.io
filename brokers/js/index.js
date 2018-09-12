@@ -2,6 +2,38 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+  // Start Check If Bids More Than One Then Change His color
+
+  if($('.deal-card__bids').length > 0) {
+    $('.deal-card__bids').each(function() {
+      var bid = $(this);
+
+      if(+bid.text() >= 1) {
+        bid.css('color', '#0cb175');
+      }
+    })
+  }
+
+  // End Check If Bids More Than One Then Change His color
+
+  // Start Check If Bids More Than One In Ended Requests
+
+  if($('.deal-card__item--ended').length > 0) {
+    $('.deal-card__item--ended').each(function() {
+      var buttons = $(this).find('.deal-card__buttons');
+      var buttonsBids = $(this).find('.deal-card__buttons--ended-bids');
+      var bid = $(this).find('.deal-card__bids');
+
+      if(+bid.text() >= 1) {
+        buttons.removeClass('deal-card__buttons--ended');
+        buttonsBids.css('display', 'flex');
+        bid.css('color', '#0cb175');
+      }
+    })
+  }
+
+  // End Check If Bids More Than One In Ended Requests
+
   // Start Check Tabs On My-Request page
 
   if($('.deal-card__tab-wrapper').length > 0) {
@@ -267,16 +299,18 @@ document.addEventListener('DOMContentLoaded', function() {
 		linkLogin.each(function() {
 
 			this.addEventListener('click', function(e) {
-				e.preventDefault();
+				if(!(this.classList.contains('nav-menu__link--login'))) {
+          e.preventDefault();
 
-				modal.each(function() {
-					this.classList.remove('modal--visible');
-					$(this).fadeOut(0);
-				})
+  				modal.each(function() {
+  					this.classList.remove('modal--visible');
+  					$(this).fadeOut(0);
+  				})
 
-				modalLogin.fadeIn('fast');
-				modalLogin[0].classList.add('modal--visible');
-				overlay[0].classList.add('overlay--visible');
+  				modalLogin.fadeIn('fast');
+  				modalLogin[0].classList.add('modal--visible');
+  				overlay[0].classList.add('overlay--visible');
+        }
 			});
 
 		});

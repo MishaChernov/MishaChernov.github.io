@@ -51,7 +51,9 @@
         <a class="nav-menu__link  nav-menu__link--active" href="find-brokers.html">Find a broker</a>
         <a class="nav-menu__link  nav-menu__link--login  nav-menu__link--new-bids  login-link" href="#">  <!-- add this class to login  nav-menu__link--login -->
           Log in
-          <img src="img/user.png" alt="User icon">
+          <div>
+            <img src="img/user.png" alt="User icon">
+          </div>
         </a>
       </div>
     </nav>
@@ -60,7 +62,7 @@
   <main class="main">
 
     <section class="request-tabs  search--deals">
-      <div class="request-tabs  container  clearfix">
+      <div class="container  clearfix">
         <h2 class="title  request-tabs__title  search__title">My Requests</h2>
 
 
@@ -155,6 +157,18 @@
                     </a>
                     <a class="btn">
                       <span>Delete</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--ended-bids">
+                    <a class="btn">
+                      <span>Start Over</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                    <a class="btn">
+                      <span>Choose a broker</span>
                     </a>
                   </div>
 
@@ -255,6 +269,18 @@
                     </a>
                     <a class="btn">
                       <span>Delete</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--ended-bids">
+                    <a class="btn">
+                      <span>Start Over</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                    <a class="btn">
+                      <span>Choose a broker</span>
                     </a>
                   </div>
 
@@ -455,6 +481,18 @@
                     </a>
                     <a class="btn">
                       <span>Delete</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--ended-bids">
+                    <a class="btn">
+                      <span>Start Over</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                    <a class="btn">
+                      <span>Choose a broker</span>
                     </a>
                   </div>
 
@@ -562,6 +600,18 @@
                     </a>
                   </div>
 
+                  <div class="deal-card__buttons  deal-card__buttons--ended-bids">
+                    <a class="btn">
+                      <span>Start Over</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                    <a class="btn">
+                      <span>Choose a broker</span>
+                    </a>
+                  </div>
+
                   <div class="deal-card__buttons  deal-card__buttons--new">
                     <a class="btn">
                       <span>Choose a broker</span>
@@ -659,6 +709,18 @@
                     </a>
                     <a class="btn">
                       <span>Delete</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--ended-bids">
+                    <a class="btn">
+                      <span>Start Over</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                    <a class="btn">
+                      <span>Choose a broker</span>
                     </a>
                   </div>
 
@@ -766,6 +828,18 @@
                     </a>
                   </div>
 
+                  <div class="deal-card__buttons  deal-card__buttons--ended-bids">
+                    <a class="btn">
+                      <span>Start Over</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                    <a class="btn">
+                      <span>Choose a broker</span>
+                    </a>
+                  </div>
+
                   <div class="deal-card__buttons  deal-card__buttons--new">
                     <a class="btn">
                       <span>Choose a broker</span>
@@ -794,6 +868,7 @@
                       <span>Delete</span>
                     </a>
                   </div>
+
 
                 </div>
               </div>
@@ -867,6 +942,18 @@
                     </a>
                     <a class="btn">
                       <span>Delete</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--ended-bids">
+                    <a class="btn">
+                      <span>Start Over</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                    <a class="btn">
+                      <span>Choose a broker</span>
                     </a>
                   </div>
 
@@ -1042,6 +1129,21 @@
 
       <p class="modal-sign__copy">By creating my account, I agree to the <a href="#">Terms & conditions</a> and <a href="#">Privacy Policy</a></p>
   </section>
+
+  <section class="modal-thanks-review  modal-request-saved  modal" id="modal-request-saved">
+    <svg class="icon  icon-success">
+      <use xlink:href="img/sprite/sprite.svg#success"></use>
+    </svg>
+    <h4>Your request has been saved as draft</h4>
+  </section>
+
+  <section class="modal-thanks-review  modal-request-published  modal" id="modal-request-published">
+    <svg class="icon  icon-success">
+      <use xlink:href="img/sprite/sprite.svg#success"></use>
+    </svg>
+    <h4>Your request has been published</h4>
+  </section>
+
 
   <script>
     function handleChange (el) {

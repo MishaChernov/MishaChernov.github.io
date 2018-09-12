@@ -63,6 +63,7 @@
     display: none;
   }
   &--login {
+    position: relative;
     font-size: 0;
     text-align: center;
     padding: 7px 18px;
@@ -71,6 +72,32 @@
       display: block;
       margin: 0 auto;
       border-radius: 50%;
+    }
+  }
+
+  div {
+    position: relative;
+    width: auto;
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      right: -1px;
+      display: block;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background-color: $color-green;
+    }
+  }
+  &--new-bids {
+    div {
+      &::before {
+        background-color: $color-red;
+      }
     }
   }
 }

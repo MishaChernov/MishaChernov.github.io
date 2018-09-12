@@ -1,12 +1,12 @@
 .request-tabs {
   background-color: $color-white;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding-top: 33px;
+  padding-bottom: 20px;
 }
 
 .request-tabs__title {
   color: $color-purple;
-  margin-bottom: 40px;
+  margin-bottom: 34px;
   margin-top: 0;
 }
 
@@ -22,7 +22,7 @@
 
 .request-tabs__submit {
   flex: 1;
-  min-width: 270px;
+  max-width: 270px;
   box-shadow: 0 0 0 1px $color-green;
   background: none;
   outline: none;

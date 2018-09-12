@@ -3150,6 +3150,9 @@ template {
             transform: translateY(0px); } }
 
 body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -4875,21 +4878,26 @@ select {
     font-size: 0;
     text-align: center;
     padding: 7px 18px; }
-    .nav-menu__link--login::before {
+    .nav-menu__link--login img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%; }
+  .nav-menu__link div {
+    position: relative;
+    width: auto;
+    display: inline-block;
+    position: relative; }
+    .nav-menu__link div::before {
       content: "";
       position: absolute;
-      top: 8px;
-      right: 20px;
+      top: 4px;
+      right: -1px;
       display: block;
       width: 11px;
       height: 11px;
       border-radius: 50%;
       background-color: #0cb175; }
-    .nav-menu__link--login img {
-      display: block;
-      margin: 0 auto;
-      border-radius: 50%; }
-  .nav-menu__link--new-bids::before {
+  .nav-menu__link--new-bids div::before {
     background-color: #f2744d; }
 
 .logo {
@@ -4921,6 +4929,8 @@ select {
 
 .footer {
   position: relative;
+  bottom: 0;
+  margin-top: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -8127,8 +8137,6 @@ footer.featured-card__wrapper {
       display: block !important; }
   .my-request .deal-card__item--new .deal-card__buttons--new {
     display: flex; }
-  .my-request .deal-card__item--new .deal-card__bids {
-    color: #0cb175; }
   .my-request .deal-card__item--new .deal-card__time {
     color: #f2744d !important; }
   .my-request .deal-card__item--draft {
@@ -8155,6 +8163,12 @@ footer.featured-card__wrapper {
       color: #8a8c8f; }
     .my-request .deal-card__item--draft .deal-card__time {
       color: #8a8c8f !important; }
+  .my-request .deal-card__buttons--ended-bids .btn:nth-child(3) {
+    color: #0cb175;
+    min-width: 122px; }
+    .my-request .deal-card__buttons--ended-bids .btn:nth-child(3):hover {
+      background-color: #0cb175;
+      color: #ffffff; }
   .my-request .deal-card__wrapper-info {
     display: flex;
     flex-wrap: nowrap;
@@ -8270,7 +8284,9 @@ footer.featured-card__wrapper {
     max-width: 180px; }
   .my-request .deal-card__finished {
     position: absolute;
-    bottom: 7px;
+    bottom: 0px;
+    padding: 10px 0;
+    box-shadow: inset 0 -25px 20px rgba(0, 0, 0, 0.4);
     width: 100%;
     text-align: center;
     font-size: 10px;
@@ -8285,12 +8301,17 @@ footer.featured-card__wrapper {
   .my-request .deal-card__wrapper--controls {
     max-width: 240px; }
   .my-request .deal-card__wrapper--description {
-    padding-top: 3px; }
+    padding-top: 3px;
+    padding-right: 31px; }
+    .my-request .deal-card__wrapper--description p:nth-child(3) {
+      padding-right: 40px; }
+    .my-request .deal-card__wrapper--description p:nth-child(1) {
+      margin-right: 60px; }
 
 .request-tabs {
   background-color: #ffffff;
-  padding-top: 17px;
-  padding-bottom: 20px; }
+  padding-top: 33px;
+  padding-bottom: 39px; }
 
 .request-tabs__title {
   color: #382c75;
@@ -9358,7 +9379,60 @@ footer.featured-card__wrapper {
       background-color: #0cb175;
       color: #ffffff; }
   .language__list {
-    top: 61px; } }
+    top: 61px; }
+  .my-request {
+    margin-top: -10px; }
+    .my-request .deal-card__img-wrapper {
+      min-width: auto;
+      max-width: 257px;
+      width: 100%; }
+    .my-request .deal-card__img-wrapper {
+      margin-right: 0; }
+    .my-request .deal-card__wrapper--controls {
+      max-width: 100%;
+      height: 63px;
+      margin-top: auto;
+      flex-wrap: nowrap; }
+      .my-request .deal-card__wrapper--controls p {
+        width: auto; }
+        .my-request .deal-card__wrapper--controls p:first-child {
+          width: auto;
+          padding: 0 25px;
+          max-width: 100px;
+          box-sizing: border-box; }
+      .my-request .deal-card__wrapper--controls .deal-card__time {
+        font-size: 20px; }
+    .my-request .deal-card__wrapper-info {
+      height: 100%;
+      width: 230px; }
+      .my-request .deal-card__wrapper-info p:first-child {
+        border-right: 1px solid #f1f2f2; }
+    .my-request .deal-card__buttons {
+      flex-direction: row;
+      flex-wrap: nowrap; }
+    .my-request .deal-card__item {
+      margin: 19px 0; }
+    .my-request .deal-card__item--draft .deal-card__buttons div {
+      height: 100%; }
+    .my-request .deal-card__item--draft .deal-card__buttons .btn {
+      height: 100%; }
+    .my-request .deal-card__description {
+      margin-top: 42px; }
+    .my-request .deal-card__description p br {
+      display: none; }
+    .my-request .deal-card__tab-wrapper {
+      padding-top: 10px; }
+    .my-request .deal-card__buttons--new .btn {
+      font-size: 16px;
+      font-weight: bold; }
+    .my-request .deal-card__item--draft .deal-card__buttons .btn {
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.8px;
+      text-align: center; } }
 
 @media (max-width: 1200px) {
   .container {
@@ -10045,7 +10119,99 @@ footer.featured-card__wrapper {
       padding-right: 20px;
       padding-bottom: 44px; }
   .page-post-request main {
-    padding-bottom: 34px; } }
+    padding-bottom: 34px; }
+  .request-tabs {
+    padding-top: 34px;
+    padding-bottom: 21px; }
+  .request-tabs__title {
+    margin-bottom: 17px; }
+  .request-tabs__form {
+    flex-direction: column; }
+  .request-tabs__submit {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    height: 58px;
+    margin-bottom: 21px; }
+  .tabs-controls__label {
+    min-width: 185px; }
+  .tabs-controls {
+    margin-right: 0; }
+  .request-tabs__controls {
+    order: 2; }
+  .my-request {
+    margin-top: -10px; }
+    .my-request .deal-card__img-wrapper {
+      min-width: auto;
+      max-width: 257px;
+      width: 100%; }
+    .my-request .deal-card__img-wrapper {
+      margin-right: 0; }
+    .my-request .deal-card__wrapper--controls {
+      max-width: 100%;
+      height: 63px;
+      margin-top: auto;
+      flex-wrap: nowrap; }
+      .my-request .deal-card__wrapper--controls p {
+        width: auto; }
+        .my-request .deal-card__wrapper--controls p:first-child {
+          width: auto;
+          padding: 0 25px;
+          max-width: 100px;
+          box-sizing: border-box; }
+      .my-request .deal-card__wrapper--controls .deal-card__time {
+        font-size: 20px; }
+    .my-request .deal-card__wrapper-info {
+      height: 100%;
+      width: 230px; }
+      .my-request .deal-card__wrapper-info p:first-child {
+        border-right: 1px solid #f1f2f2; }
+    .my-request .deal-card__buttons {
+      flex-direction: row;
+      flex-wrap: nowrap; }
+    .my-request .deal-card__item {
+      margin: 19px 0; }
+    .my-request .deal-card__item--draft .deal-card__buttons div {
+      height: 100%; }
+    .my-request .deal-card__item--draft .deal-card__buttons .btn {
+      height: 100%; }
+    .my-request .deal-card__description {
+      margin-top: 42px; }
+    .my-request .deal-card__description p br {
+      display: none; }
+    .my-request .deal-card__tab-wrapper {
+      padding-top: 10px; }
+    .my-request .deal-card__buttons--new .btn {
+      font-size: 16px;
+      font-weight: bold; }
+    .my-request .deal-card__buttons .btn {
+      font-size: 12px; }
+    .my-request .deal-card__buttons div .btn {
+      font-size: 12px; }
+    .my-request .deal-card__item--draft .deal-card__buttons div .btn {
+      font-size: 12px; }
+    .my-request .deal-card__item--draft .deal-card__buttons .btn {
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.8px;
+      text-align: center; }
+    .my-request .deal-card__wrapper--description p {
+      margin-top: 18px; }
+    .my-request .deal-card__wrapper--description p:nth-child(3) {
+      padding-right: 23px; }
+    .my-request .deal-card__wrapper--description p:nth-of-type(2) {
+      margin-left: 0; }
+    .my-request .deal-card__wrapper--description p:nth-child(1) {
+      margin-right: 22px; }
+    .my-request .deal-card__description p {
+      margin-top: 0px; }
+    .my-request .my-request__new-button {
+      margin-bottom: 3px; }
+    .my-request .page-nav {
+      margin-right: 0; } }
 
 @media (max-width: 800px) {
   .intro__btn-wrapper {
@@ -11016,7 +11182,103 @@ footer.featured-card__wrapper {
     font-size: 14px;
     letter-spacing: 1.4px; }
   .page-post-request main {
-    padding-bottom: 25px; } }
+    padding-bottom: 25px; }
+  .request-tabs__title {
+    font-size: 20px;
+    margin-bottom: 18px; }
+  .request-tabs {
+    padding-top: 15px; }
+  .request-tabs__submit {
+    height: 38px;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    margin-bottom: 12px; }
+  .tabs-controls {
+    flex-wrap: wrap; }
+  .tabs-controls div {
+    flex: 2;
+    margin: 1px; }
+  .tabs-controls__label {
+    height: 38px;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    box-shadow: none;
+    box-shadow: 0 0 0 1px #f1f2f2; }
+  input:checked ~ .tabs-controls__label {
+    box-shadow: none;
+    border: 1px solid #382c75;
+    cursor: default; }
+  .request-tabs {
+    padding-bottom: 8px; }
+  .my-request .deal-card__item {
+    margin: 11px 0; }
+  .my-request .deal-card__img-wrapper {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    max-height: 215px; }
+  .my-request .deal-card__img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 100%; }
+  .my-request .deal-card__wrapper--description {
+    padding: 0; }
+  .my-request .deal-card__wrapper--description p {
+    margin: 0;
+    margin-top: 15px; }
+  .my-request .deal-card__wrapper--description p:nth-child(1) {
+    margin-right: 85px; }
+  .my-request .deal-card__description {
+    margin-top: 5px; }
+    .my-request .deal-card__description p {
+      margin-top: 0; }
+  .my-request .deal-card__wrapper--controls {
+    flex-direction: column;
+    height: auto;
+    margin-top: 15px; }
+  .my-request .deal-card__wrapper-info {
+    height: 60px;
+    width: 100%; }
+    .my-request .deal-card__wrapper-info p {
+      flex: 1; }
+    .my-request .deal-card__wrapper-info p:first-child {
+      padding: 0;
+      max-width: 100%;
+      box-sizing: border-box; }
+  .my-request .deal-card__buttons .btn {
+    height: 60px; }
+  .my-request .deal-card__item--draft .deal-card__buttons div {
+    flex-basis: 16%; }
+  .my-request .deal-card__buttons--ended-bids {
+    flex-wrap: wrap; }
+    .my-request .deal-card__buttons--ended-bids .btn:nth-child(3) {
+      color: #0cb175;
+      min-width: 100%; }
+      .my-request .deal-card__buttons--ended-bids .btn:nth-child(3):hover {
+        background-color: #0cb175;
+        color: #ffffff; }
+  .my-request .deal-card__item--draft .deal-card__buttons--draft .btn--color-purple {
+    padding: 0 20px;
+    min-height: 60px; }
+  .my-request .my-request__new-button {
+    height: 100px;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.6px;
+    text-align: center; } }
 
 @media (max-width: 550px) {
   .modal-login {
@@ -11196,7 +11458,7 @@ footer.featured-card__wrapper {
     display: block;
     width: 100% !important;
     flex: none !important;
-    text-align: center !important;
+    text-align: right !important;
     margin-top: 10px !important; }
   .page-nav {
     flex-wrap: wrap; }
@@ -11367,4 +11629,29 @@ footer.featured-card__wrapper {
     line-height: normal;
     letter-spacing: 1.4px;
     box-sizing: border-box;
-    padding-top: 12px; } }
+    padding-top: 12px; }
+  .tabs-controls div {
+    flex: 2;
+    margin: 1px; }
+  .tabs-controls__label {
+    min-width: 145px; }
+  .request-tabs__submit {
+    margin-bottom: 9px; }
+  .my-request .deal-card__item {
+    margin: 12px 0; }
+  .my-request .deal-card__img-wrapper {
+    max-height: 150px; }
+  .my-request .deal-card__wrapper--description p:nth-child(3) {
+    margin-top: 6px;
+    min-width: 60%;
+    display: block; }
+  .my-request .deal-card__buttons .btn {
+    height: 64px; }
+  .my-request .deal-card__buttons--ended-bids .btn:nth-child(3) {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-align: center; } }

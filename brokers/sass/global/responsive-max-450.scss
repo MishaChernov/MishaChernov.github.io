@@ -225,7 +225,7 @@
     display: block;
     width: 100% !important;
     flex: none !important;
-    text-align: center !important;
+    text-align: right !important;
     margin-top: 10px !important;
   }
   .page-nav {
@@ -496,5 +496,42 @@
     letter-spacing: 1.4px;
     box-sizing: border-box;
     padding-top: 12px;
+  }
+
+  .tabs-controls div {
+    flex: 2;
+    margin: 1px;
+  }
+  .tabs-controls__label {
+    min-width: 145px;
+  }
+  .request-tabs__submit {
+    margin-bottom: 9px;
+  }
+  .my-request {
+
+    .deal-card__item {
+      margin: 12px 0;
+    }
+    .deal-card__img-wrapper {
+      max-height: 150px;
+    }
+    .deal-card__wrapper--description p:nth-child(3) {
+      margin-top: 6px;
+      min-width: 60%;
+      display: block;
+    }
+    .deal-card__buttons .btn {
+      height: 64px;
+    }
+    .deal-card__buttons--ended-bids .btn:nth-child(3) {
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.8px;
+      text-align: center;
+    }
   }
 }
