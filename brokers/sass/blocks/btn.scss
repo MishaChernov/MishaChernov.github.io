@@ -47,4 +47,13 @@
       display: block;
     }
   }
+
+  &--color-purple {
+    color: $color-purple !important;
+
+    &:hover {
+      color: $color-white !important;
+      background-color: $color-purple !important;
+    }
+  }
 }

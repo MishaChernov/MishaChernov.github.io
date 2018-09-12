@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MortgageBrokets</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body class="page-my-request  overlay" id="top">
+  <header class="header">
+    <div class="header__container">
+      <div class="header__wrapper">
+        <a class="header__web-link" href="/">MortgageBrokers<span>.com</span></a>
+        <a class="logo  logo--hidden" href="index.html">
+          <svg class="icon  icon-logo">
+            <use xlink:href="img/sprite/sprite.svg#logo"></use>
+          </svg>
+        </a>
+
+        <div class="select">
+          <div class="select__btn">For <span>Brokers</span></div>
+        </div>
+      </div>
+
+      <a class="logo  logo--main" href="#">
+        <svg class="icon  icon-logo">
+          <use xlink:href="img/sprite/sprite.svg#logo"></use>
+        </svg>
+      </a>
+
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="for-grid"></div>
+    </div>
+    <ul class="select__list">
+      <li><a class="select__link" href="borrowers.html">For borrowers</a></li>
+    </ul>
+
+    <nav class="nav-menu">
+      <div class="nav-menu__wrapper">
+        <a class="nav-menu__link" href="#">My Requests</a>
+        <a class="nav-menu__link  nav-menu__link--active" href="find-brokers.html">Find a broker</a>
+        <a class="nav-menu__link  nav-menu__link--login  nav-menu__link--new-bids  login-link" href="#">  <!-- add this class to login  nav-menu__link--login -->
+          Log in
+          <img src="img/user.png" alt="User icon">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <section class="request-tabs  search--deals">
+      <div class="request-tabs  container  clearfix">
+        <h2 class="title  request-tabs__title  search__title">My Requests</h2>
+
+
+        <form class="request-tabs__form" action="/" method="get">
+
+          <div class="request-tabs__controls  tabs-controls">
+            <div>
+              <input type="radio" id="tab1" name="my-request-tab" checked>
+              <label class="tabs-controls__label  tabs-controls__label--all" for="tab1">
+                All <span class="tabs-controls__count"> (4)</span>
+              </label>
+            </div>
+
+            <div>
+              <input type="radio" id="tab2" name="my-request-tab">
+              <label class="tabs-controls__label  tabs-controls__label--active" for="tab2">
+                Active <span class="tabs-controls__count"> (2)</span>
+              </label>
+            </div>
+
+            <div>
+              <input type="radio" id="tab3" name="my-request-tab">
+              <label class="tabs-controls__label  tabs-controls__label--drafts" for="tab3">
+                Drafts <span class="tabs-controls__count"> (1)</span>
+              </label>
+            </div>
+
+            <div>
+              <input type="radio" id="tab4" name="my-request-tab">
+              <label class="tabs-controls__label  tabs-controls__label--ended" for="tab4">
+                Ended <span class="tabs-controls__count"> (1)</span>
+              </label>
+            </div>
+          </div>
+
+          <input class="request-tabs__submit" type="submit" name="submit" value="Create New Request">
+
+        </form>
+      </div>
+    </section>
+
+    <section class="deal-card  my-request">
+      <div class="deal-card__wrapper  container  clearfix">
+
+        <div class="deal-card__tab-wrapper  deal-card__tab-wrapper--all">
+
+          <article class="deal-card__item  deal-card__item--ended">
+            <div class="deal-card__img-wrapper">
+              <img class="deal-card__img" src="img/cards/card-1.jpg" alt="Borrower Emma A. Property value $23,600,000">
+              <span class="deal-card__finished">Finished 20 min ago</span>
+            </div>
+
+            <div class="deal-card__info">
+              <div class="deal-card__wrapper  deal-card__wrapper--description">
+                <p>
+                  <span>Posted</span>
+                  <b class="deal-card__date">41 Min Ago</b>
+                </p>
+                <p>
+                  <span>Due date:</span>
+                  <b class="deal-card__date">15 Mar, 2018</b>
+                </p>
+                <p>
+                  <span>Property value</span>
+                  <b class="deal-card__value">$1,800,000</b>
+                </p>
+                <div class="deal-card__description">
+                  <span>Request summary</span>
+                  <p>
+                    Commercial Townhome <br> In Beverly Hills, 90201, CA, USA, 241 N. Canon Drive
+                  </p>
+                </div>
+              </div>
+
+              <div class="deal-card__wrapper  deal-card__wrapper--controls">
+                <div class="deal-card__wrapper-info">
+                  <p>
+                    <span>Bids</span>
+                    <b class="deal-card__bids">0</b>
+                  </p>
+                  <p>
+                    <span>Time Left</span>
+                    <b class="deal-card__time">0 : 00 : 00</b>
+                  </p>
+                </div>
+
+                <div class="deal-card__wrapper-buttons">
+
+                  <div class="deal-card__buttons  deal-card__buttons--ended">
+                    <a class="btn">
+                      <span>Start Over</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--new">
+                    <a class="btn">
+                      <span>Choose a broker</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--draft">
+                    <div>
+                      <a class="btn">
+                        <span>Edit</span>
+                      </a>
+                      <a class="btn">
+                        <span>Delete</span>
+                      </a>
+                    </div>
+                    <a class="btn  btn--color-purple">
+                      <span>Publish Now</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--active">
+                    <a class="btn">
+                      <span>Cancel</span>
+                    </a>``
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="sticker">
+              <span>Broker Chosen</span>
+            </div>
+            <div class="sticker  sticker--ended">
+              <span>Ended</span>
+            </div>
+            <div class="sticker  sticker--new">
+              <span>New Offers</span>
+            </div>
+            <div class="sticker  sticker--draft">
+              <span>Draft</span>
+            </div>
+            <div class="sticker  sticker--active">
+              <span>Active</span>
+            </div>
+          </article>
+
+          <article class="deal-card__item  deal-card__item--new">
+            <div class="deal-card__img-wrapper">
+              <img class="deal-card__img" src="img/cards/card-1.jpg" alt="Borrower Emma A. Property value $23,600,000">
+              <span class="deal-card__finished">Finished 20 min ago</span>
+            </div>
+
+            <div class="deal-card__info">
+              <div class="deal-card__wrapper  deal-card__wrapper--description">
+                <p>
+                  <span>Posted</span>
+                  <b class="deal-card__date">8 Hours Ago</b>
+                </p>
+                <p>
+                  <span>Due date:</span>
+                  <b class="deal-card__date">15 Mar, 2018</b>
+                </p>
+                <p>
+                  <span>Property value</span>
+                  <b class="deal-card__value">$600,000</b>
+                </p>
+                <div class="deal-card__description">
+                  <span>Request summary</span>
+                  <p>
+                    Commercial Townhome <br> In Beverly Hills, 90201, CA, USA, 241 N. Canon Drive
+                  </p>
+                </div>
+              </div>
+
+              <div class="deal-card__wrapper  deal-card__wrapper--controls">
+                <div class="deal-card__wrapper-info">
+                  <p>
+                    <span>Bids</span>
+                    <b class="deal-card__bids">25</b>
+                  </p>
+                  <p>
+                    <span>Time Left</span>
+                    <b class="deal-card__time">0 : 40 : 51</b>
+                  </p>
+                </div>
+
+                <div class="deal-card__wrapper-buttons">
+
+                  <div class="deal-card__buttons  deal-card__buttons--ended">
+                    <a class="btn">
+                      <span>Start Over</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--new">
+                    <a class="btn">
+                      <span>Choose a broker</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--draft">
+                    <div>
+                      <a class="btn">
+                        <span>Edit</span>
+                      </a>
+                      <a class="btn">
+                        <span>Delete</span>
+                      </a>
+                    </div>
+                    <a class="btn  btn--color-purple">
+                      <span>Publish Now</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--active">
+                    <a class="btn">
+                      <span>Cancel</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="sticker">
+              <span>Broker Chosen</span>
+            </div>
+            <div class="sticker  sticker--ended">
+              <span>Ended</span>
+            </div>
+            <div class="sticker  sticker--new">
+              <span>New Offers</span>
+            </div>
+            <div class="sticker  sticker--draft">
+              <span>Draft</span>
+            </div>
+            <div class="sticker  sticker--active">
+              <span>Active</span>
+            </div>
+          </article>
+
+          <article class="deal-card__item  deal-card__item--draft">
+            <div class="deal-card__img-wrapper">
+              <img class="deal-card__img" src="img/cards/card-1.jpg" alt="Borrower Emma A. Property value $23,600,000">
+              <span class="deal-card__finished">Finished 20 min ago</span>
+            </div>
+
+            <div class="deal-card__info">
+              <div class="deal-card__wrapper  deal-card__wrapper--description">
+                <p>
+                  <span>Posted</span>
+                  <b class="deal-card__date">8 Hours Ago</b>
+                </p>
+                <p>
+                  <span>Due date:</span>
+                  <b class="deal-card__date">15 Mar, 2018</b>
+                </p>
+                <p>
+                  <span>Property value</span>
+                  <b class="deal-card__value">$600,000</b>
+                </p>
+                <div class="deal-card__description">
+                  <span>Request summary</span>
+                  <p>
+                    Commercial Townhome <br> In Beverly Hills, 90201, CA, USA, 241 N. Canon Drive
+                  </p>
+                </div>
+              </div>
+
+              <div class="deal-card__wrapper  deal-card__wrapper--controls">
+                <div class="deal-card__wrapper-info">
+                  <p>
+                    <span>Bids</span>
+                    <b class="deal-card__bids">0</b>
+                  </p>
+                  <p>
+                    <span>Time Left</span>
+                    <b class="deal-card__time">0 : 00 : 00</b>
+                  </p>
+                </div>
+
+                <div class="deal-card__wrapper-buttons">
+
+                  <div class="deal-card__buttons  deal-card__buttons--ended">
+                    <a class="btn">
+                      <span>Start Over</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--new">
+                    <a class="btn">
+                      <span>Choose a broker</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--draft">
+                    <div>
+                      <a class="btn">
+                        <span>Edit</span>
+                      </a>
+                      <a class="btn">
+                        <span>Delete</span>
+                      </a>
+                    </div>
+                    <a class="btn  btn--color-purple">
+                      <span>Publish Now</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--active">
+                    <a class="btn">
+                      <span>Cancel</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="sticker">
+              <span>Broker Chosen</span>
+            </div>
+            <div class="sticker  sticker--ended">
+              <span>Ended</span>
+            </div>
+            <div class="sticker  sticker--new">
+              <span>New Offers</span>
+            </div>
+            <div class="sticker  sticker--draft">
+              <span>Draft</span>
+            </div>
+            <div class="sticker  sticker--active">
+              <span>Active</span>
+            </div>
+          </article>
+
+          <article class="deal-card__item  deal-card__item--active">
+            <div class="deal-card__img-wrapper">
+              <img class="deal-card__img" src="img/cards/card-1.jpg" alt="Borrower Emma A. Property value $23,600,000">
+              <span class="deal-card__finished">Finished 20 min ago</span>
+            </div>
+
+            <div class="deal-card__info">
+              <div class="deal-card__wrapper  deal-card__wrapper--description">
+                <p>
+                  <span>Posted</span>
+                  <b class="deal-card__date">41 Min Ago</b>
+                </p>
+                <p>
+                  <span>Due date:</span>
+                  <b class="deal-card__date">15 Mar, 2018</b>
+                </p>
+                <p>
+                  <span>Property value</span>
+                  <b class="deal-card__value">$1,800,000</b>
+                </p>
+                <div class="deal-card__description">
+                  <span>Request summary</span>
+                  <p>
+                    Commercial Townhome <br> In Beverly Hills, 90201, CA, USA, 241 N. Canon Drive
+                  </p>
+                </div>
+              </div>
+
+              <div class="deal-card__wrapper  deal-card__wrapper--controls">
+                <div class="deal-card__wrapper-info">
+                  <p>
+                    <span>Bids</span>
+                    <b class="deal-card__bids">0</b>
+                  </p>
+                  <p>
+                    <span>Time Left</span>
+                    <b class="deal-card__time">3 Days</b>
+                  </p>
+                </div>
+
+                <div class="deal-card__wrapper-buttons">
+
+                  <div class="deal-card__buttons  deal-card__buttons--ended">
+                    <a class="btn">
+                      <span>Start Over</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--new">
+                    <a class="btn">
+                      <span>Choose a broker</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--draft">
+                    <div>
+                      <a class="btn">
+                        <span>Edit</span>
+                      </a>
+                      <a class="btn">
+                        <span>Delete</span>
+                      </a>
+                    </div>
+                    <a class="btn  btn--color-purple">
+                      <span>Publish Now</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--active">
+                    <a class="btn">
+                      <span>Cancel</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="sticker">
+              <span>Broker Chosen</span>
+            </div>
+            <div class="sticker  sticker--ended">
+              <span>Ended</span>
+            </div>
+            <div class="sticker  sticker--new">
+              <span>New Offers</span>
+            </div>
+            <div class="sticker  sticker--draft">
+              <span>Draft</span>
+            </div>
+            <div class="sticker  sticker--active">
+              <span>Active</span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="deal-card__tab-wrapper  deal-card__tab-wrapper--active">
+
+          <article class="deal-card__item  deal-card__item--new">
+            <div class="deal-card__img-wrapper">
+              <img class="deal-card__img" src="img/cards/card-1.jpg" alt="Borrower Emma A. Property value $23,600,000">
+              <span class="deal-card__finished">Finished 20 min ago</span>
+            </div>
+
+            <div class="deal-card__info">
+              <div class="deal-card__wrapper  deal-card__wrapper--description">
+                <p>
+                  <span>Posted</span>
+                  <b class="deal-card__date">8 Hours Ago</b>
+                </p>
+                <p>
+                  <span>Due date:</span>
+                  <b class="deal-card__date">15 Mar, 2018</b>
+                </p>
+                <p>
+                  <span>Property value</span>
+                  <b class="deal-card__value">$600,000</b>
+                </p>
+                <div class="deal-card__description">
+                  <span>Request summary</span>
+                  <p>
+                    Commercial Townhome <br> In Beverly Hills, 90201, CA, USA, 241 N. Canon Drive
+                  </p>
+                </div>
+              </div>
+
+              <div class="deal-card__wrapper  deal-card__wrapper--controls">
+                <div class="deal-card__wrapper-info">
+                  <p>
+                    <span>Bids</span>
+                    <b class="deal-card__bids">25</b>
+                  </p>
+                  <p>
+                    <span>Time Left</span>
+                    <b class="deal-card__time">0 : 40 : 51</b>
+                  </p>
+                </div>
+
+                <div class="deal-card__wrapper-buttons">
+
+                  <div class="deal-card__buttons  deal-card__buttons--ended">
+                    <a class="btn">
+                      <span>Start Over</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--new">
+                    <a class="btn">
+                      <span>Choose a broker</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--draft">
+                    <div>
+                      <a class="btn">
+                        <span>Edit</span>
+                      </a>
+                      <a class="btn">
+                        <span>Delete</span>
+                      </a>
+                    </div>
+                    <a class="btn  btn--color-purple">
+                      <span>Publish Now</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--active">
+                    <a class="btn">
+                      <span>Cancel</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="sticker">
+              <span>Broker Chosen</span>
+            </div>
+            <div class="sticker  sticker--ended">
+              <span>Ended</span>
+            </div>
+            <div class="sticker  sticker--new">
+              <span>New Offers</span>
+            </div>
+            <div class="sticker  sticker--draft">
+              <span>Draft</span>
+            </div>
+            <div class="sticker  sticker--active">
+              <span>Active</span>
+            </div>
+          </article>
+
+          <article class="deal-card__item  deal-card__item--active">
+            <div class="deal-card__img-wrapper">
+              <img class="deal-card__img" src="img/cards/card-1.jpg" alt="Borrower Emma A. Property value $23,600,000">
+              <span class="deal-card__finished">Finished 20 min ago</span>
+            </div>
+
+            <div class="deal-card__info">
+              <div class="deal-card__wrapper  deal-card__wrapper--description">
+                <p>
+                  <span>Posted</span>
+                  <b class="deal-card__date">41 Min Ago</b>
+                </p>
+                <p>
+                  <span>Due date:</span>
+                  <b class="deal-card__date">15 Mar, 2018</b>
+                </p>
+                <p>
+                  <span>Property value</span>
+                  <b class="deal-card__value">$1,800,000</b>
+                </p>
+                <div class="deal-card__description">
+                  <span>Request summary</span>
+                  <p>
+                    Commercial Townhome <br> In Beverly Hills, 90201, CA, USA, 241 N. Canon Drive
+                  </p>
+                </div>
+              </div>
+
+              <div class="deal-card__wrapper  deal-card__wrapper--controls">
+                <div class="deal-card__wrapper-info">
+                  <p>
+                    <span>Bids</span>
+                    <b class="deal-card__bids">0</b>
+                  </p>
+                  <p>
+                    <span>Time Left</span>
+                    <b class="deal-card__time">3 Days</b>
+                  </p>
+                </div>
+
+                <div class="deal-card__wrapper-buttons">
+
+                  <div class="deal-card__buttons  deal-card__buttons--ended">
+                    <a class="btn">
+                      <span>Start Over</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--new">
+                    <a class="btn">
+                      <span>Choose a broker</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--draft">
+                    <div>
+                      <a class="btn">
+                        <span>Edit</span>
+                      </a>
+                      <a class="btn">
+                        <span>Delete</span>
+                      </a>
+                    </div>
+                    <a class="btn  btn--color-purple">
+                      <span>Publish Now</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--active">
+                    <a class="btn">
+                      <span>Cancel</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="sticker">
+              <span>Broker Chosen</span>
+            </div>
+            <div class="sticker  sticker--ended">
+              <span>Ended</span>
+            </div>
+            <div class="sticker  sticker--new">
+              <span>New Offers</span>
+            </div>
+            <div class="sticker  sticker--draft">
+              <span>Draft</span>
+            </div>
+            <div class="sticker  sticker--active">
+              <span>Active</span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="deal-card__tab-wrapper  deal-card__tab-wrapper--drafts">
+
+          <article class="deal-card__item  deal-card__item--draft">
+            <div class="deal-card__img-wrapper">
+              <img class="deal-card__img" src="img/cards/card-1.jpg" alt="Borrower Emma A. Property value $23,600,000">
+              <span class="deal-card__finished">Finished 20 min ago</span>
+            </div>
+
+            <div class="deal-card__info">
+              <div class="deal-card__wrapper  deal-card__wrapper--description">
+                <p>
+                  <span>Posted</span>
+                  <b class="deal-card__date">8 Hours Ago</b>
+                </p>
+                <p>
+                  <span>Due date:</span>
+                  <b class="deal-card__date">15 Mar, 2018</b>
+                </p>
+                <p>
+                  <span>Property value</span>
+                  <b class="deal-card__value">$600,000</b>
+                </p>
+                <div class="deal-card__description">
+                  <span>Request summary</span>
+                  <p>
+                    Commercial Townhome <br> In Beverly Hills, 90201, CA, USA, 241 N. Canon Drive
+                  </p>
+                </div>
+              </div>
+
+              <div class="deal-card__wrapper  deal-card__wrapper--controls">
+                <div class="deal-card__wrapper-info">
+                  <p>
+                    <span>Bids</span>
+                    <b class="deal-card__bids">0</b>
+                  </p>
+                  <p>
+                    <span>Time Left</span>
+                    <b class="deal-card__time">0 : 00 : 00</b>
+                  </p>
+                </div>
+
+                <div class="deal-card__wrapper-buttons">
+
+                  <div class="deal-card__buttons  deal-card__buttons--ended">
+                    <a class="btn">
+                      <span>Start Over</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--new">
+                    <a class="btn">
+                      <span>Choose a broker</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--draft">
+                    <div>
+                      <a class="btn">
+                        <span>Edit</span>
+                      </a>
+                      <a class="btn">
+                        <span>Delete</span>
+                      </a>
+                    </div>
+                    <a class="btn  btn--color-purple">
+                      <span>Publish Now</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--active">
+                    <a class="btn">
+                      <span>Cancel</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="sticker">
+              <span>Broker Chosen</span>
+            </div>
+            <div class="sticker  sticker--ended">
+              <span>Ended</span>
+            </div>
+            <div class="sticker  sticker--new">
+              <span>New Offers</span>
+            </div>
+            <div class="sticker  sticker--draft">
+              <span>Draft</span>
+            </div>
+            <div class="sticker  sticker--active">
+              <span>Active</span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="deal-card__tab-wrapper  deal-card__tab-wrapper--ended">
+
+          <article class="deal-card__item  deal-card__item--ended">
+            <div class="deal-card__img-wrapper">
+              <img class="deal-card__img" src="img/cards/card-1.jpg" alt="Borrower Emma A. Property value $23,600,000">
+              <span class="deal-card__finished">Finished 20 min ago</span>
+            </div>
+
+            <div class="deal-card__info">
+              <div class="deal-card__wrapper  deal-card__wrapper--description">
+                <p>
+                  <span>Posted</span>
+                  <b class="deal-card__date">41 Min Ago</b>
+                </p>
+                <p>
+                  <span>Due date:</span>
+                  <b class="deal-card__date">15 Mar, 2018</b>
+                </p>
+                <p>
+                  <span>Property value</span>
+                  <b class="deal-card__value">$1,800,000</b>
+                </p>
+                <div class="deal-card__description">
+                  <span>Request summary</span>
+                  <p>
+                    Commercial Townhome <br> In Beverly Hills, 90201, CA, USA, 241 N. Canon Drive
+                  </p>
+                </div>
+              </div>
+
+              <div class="deal-card__wrapper  deal-card__wrapper--controls">
+                <div class="deal-card__wrapper-info">
+                  <p>
+                    <span>Bids</span>
+                    <b class="deal-card__bids">0</b>
+                  </p>
+                  <p>
+                    <span>Time Left</span>
+                    <b class="deal-card__time">0 : 00 : 00</b>
+                  </p>
+                </div>
+
+                <div class="deal-card__wrapper-buttons">
+
+                  <div class="deal-card__buttons  deal-card__buttons--ended">
+                    <a class="btn">
+                      <span>Start Over</span>
+                    </a>
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--new">
+                    <a class="btn">
+                      <span>Choose a broker</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--draft">
+                    <div>
+                      <a class="btn">
+                        <span>Edit</span>
+                      </a>
+                      <a class="btn">
+                        <span>Delete</span>
+                      </a>
+                    </div>
+                    <a class="btn  btn--color-purple">
+                      <span>Publish Now</span>
+                    </a>
+                  </div>
+
+                  <div class="deal-card__buttons  deal-card__buttons--active">
+                    <a class="btn">
+                      <span>Cancel</span>
+                    </a>``
+                    <a class="btn">
+                      <span>Delete</span>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="sticker">
+              <span>Broker Chosen</span>
+            </div>
+            <div class="sticker  sticker--ended">
+              <span>Ended</span>
+            </div>
+            <div class="sticker  sticker--new">
+              <span>New Offers</span>
+            </div>
+            <div class="sticker  sticker--draft">
+              <span>Draft</span>
+            </div>
+            <div class="sticker  sticker--active">
+              <span>Active</span>
+            </div>
+          </article>
+
+        </div>
+
+
+        <button class="my-request__new-button">
+          Create New Request
+        </button>
+        <div class="page-nav">
+          <div></div>
+
+          <div class="page-nav__list">
+
+            <span>
+              <input type="radio" value="page-1" name="page" id="deal-page-1" checked>
+              <label for="deal-page-1">1</label>
+            </span>
+
+            <span>
+              <input type="radio" value="page-2" name="page" id="deal-page-2">
+              <label for="deal-page-2">2</label>
+            </span>
+
+            <span>
+              <input type="radio" value="page-3" name="page" id="deal-page-3">
+              <label for="deal-page-3">3</label>
+            </span>
+
+            <span>
+              <input type="radio" value="page-4" name="page" id="deal-page-4">
+              <label for="deal-page-4">4</label>
+            </span>
+
+          </div>
+          <a class="page-nav__btn-top" href="#top">Back to top <span>&uarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__nav">
+      <a class="footer__link" href="#">Calculators</a>
+      <a class="footer__link" href="#">Education</a>
+      <a class="footer__link" href="#">FAQ</a>
+      <a class="footer__link" href="#">Privacy</a>
+      <a class="footer__link" href="#">For brokers</a>
+    </div>
+    <a class="logo  logo--footer" href="index.html">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <p class="footer__copy">
+      &copy; 2018 mortgagebrokers.com. <br />
+        all rights recerved.
+    </p>
+  </footer>
+  <section class="modal-login  modal" id="modal-login">
+    <a class="logo  logo--modal" href="index.html">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <h4 class="modal-login__title">Please, login to continue...</h4>
+    <p class="modal-login__text">
+      <span>Don’t have an account?</span>
+      <a class="sign-up-link  modal-link" href="#">Sign Up</a>
+
+      <form class="modal-login__form" action="/">
+        <input class="modal-login__input  modal-login__input--email" type="email" value="" name="email" placeholder="email" required>
+
+        <div>
+          <input class="modal-login__input  modal-login__input--password" type="password" value="" name="password" placeholder="password" required>
+          <a href="#" class="modal-login__btn-forgot">Forgot?</a>
+        </div>
+
+        <input class="modal-login__btn  btn" type="submit" value="continue">
+      </form>
+    </p>
+  </section>
+
+  <section class="modal-sign  modal" id="modal-sign">
+    <a class="logo  logo--modal" href="index.html">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <h4 class="modal-sign__title">Sign Up</h4>
+    <p class="modal-sign__text">
+      <span>Do you have an account?</span>
+      <a class="login-link  modal-link" href="#">Log In</a>
+
+      <form class="modal-sign__form" action="/">
+        <span class="modal-sign-wrapper">
+          <select class="modal-sign__input  modal-sign__input--select" size="1" name="sign-in" onchange="handleChange(this)">
+            <option value="I'm, a borrower" selected>I'm, a borrower</option>
+            <option value="I'm, a broker">I'm, a broker</option>
+          </select>
+          <i class="modal-select__textbox">I'm, a borrower</i>
+        </span>
+
+        <div class="modal-sign__wrapper">
+          <div>
+            <input class="modal-sign__input  modal-sign__input--first-name" type="text" value="" name="first-name" placeholder="first name" required>
+            <input class="modal-sign__input  modal-sign__input--last-name" type="text" value="" name="last-name" placeholder="last name" required>
+          </div>
+          <div>
+            <input class="modal-sign__input  modal-sign__input--email" type="email" value="" name="email" placeholder="email" required>
+            <input class="modal-sign__input  modal-sign__input--confirm-email" type="email" value="" name="confirm-email" placeholder="confirm email" required>
+          </div>
+          <div>
+            <input class="modal-sign__input  modal-sign__input--password" type="password" value="" name="pasword" placeholder="pasword" required>
+            <input class="modal-sign__input  modal-sign__input--confirm-password" type="password" value="" name="confirm-pasword" placeholder="confirm pasword" required>
+          </div>
+        </div>
+
+        <input class="modal-sign__btn  btn" type="submit" value="continue">
+
+      </form>
+
+      <p class="modal-sign__copy">By creating my account, I agree to the <a href="#">Terms & conditions</a> and <a href="#">Privacy Policy</a></p>
+  </section>
+
+  <script>
+    function handleChange (el) {
+      el
+      .nextElementSibling
+      .innerHTML = el.value
+    }
+  </script>
+
+  <script src="js/svg4everybody-min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

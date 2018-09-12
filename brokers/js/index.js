@@ -2,6 +2,33 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+  // Start Check Tabs On My-Request page
+
+  if($('.deal-card__tab-wrapper').length > 0) {
+
+    $('[name=my-request-tab]').each(function(i,d){
+      var p = $(this).prop('checked');
+
+      if(p){
+        $('.deal-card__tab-wrapper').fadeOut('fast');
+        $('.deal-card__tab-wrapper').eq(i).fadeIn('fast');
+      }
+    });
+
+    $('[name=my-request-tab]').on('change', function(){
+      var p = $(this).prop('checked');
+
+      // $(type).index(this) == nth-of-type
+      var i = $('[name=my-request-tab]').index(this);
+
+      $('.deal-card__tab-wrapper').fadeOut('fast');
+      $('.deal-card__tab-wrapper').eq(i).fadeIn('fast');
+    });
+
+  }
+
+  // End Check Tabs On My-Request page
+
 
   // Start Find Disabled Questions
 

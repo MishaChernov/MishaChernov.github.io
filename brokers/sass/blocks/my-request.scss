@@ -1,0 +1,169 @@
+.my-request {
+
+  .deal-card__item {
+    position: relative;
+
+    .deal-card__buttons {
+      display: none;
+    }
+  }
+
+  .deal-card__item--active {
+    .sticker {
+      display: none;
+
+      &--active {
+        color: $color-white;
+        background-color: $color-green;
+        display: block !important;
+      }
+    }
+
+    .deal-card__buttons--active {
+      display: block;
+    }
+  }
+
+  .deal-card__item--ended {
+    .sticker {
+      display: none;
+
+      &--ended {
+        display: block !important;
+      }
+    }
+
+    .deal-card__buttons--ended {
+      display: block;
+    }
+  }
+
+  .deal-card__item--new {
+    .sticker {
+      display: none;
+
+      &--new {
+        color: $color-white;
+        background-color: $color-green;
+        display: block !important;
+      }
+    }
+
+    .deal-card__buttons--new {
+      display: block;
+    }
+  }
+
+  .deal-card__item--draft {
+    background-color: $color-bg-card-off;
+    .sticker {
+      display: none;
+
+      &--draft {
+        color: $color-white;
+        background-color: $color-gray;
+        display: block !important;
+      }
+    }
+
+    .deal-card__buttons--draft {
+      display: block;
+    }
+  }
+
+
+  .deal-card__wrapper-info {
+    display: flex;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    height: 80px;
+
+    p {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      border-bottom: 0;
+      border-right: none;
+    }
+  }
+}
+
+.deal-card__wrapper-buttons {
+  height: auto;
+  flex: 1;
+
+  .btn {
+    cursor: pointer;
+    max-width: 100%;
+    background-color: transparent;
+    color: $color-gray;
+    border-top: 1px solid #f1f2f2;
+    border-left: 1px solid #f1f2f2;
+
+    &:hover {
+      background-color: $color-gray;
+      color: $color-white;
+    }
+  }
+}
+
+.deal-card__buttons--new {
+  height: 100%;
+  box-sizing: border-box;
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+    color: $color-green;
+
+    &:hover {
+      background-color: $color-green;
+      color: $color-white;
+    }
+  }
+}
+
+.deal-card__buttons {
+  div {
+    display: flex;
+
+    .btn {
+      flex: 1;
+    }
+  }
+}
+
+.my-request__new-button {
+  display: block;
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 180px;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-align: center;
+  color: $color-purple;
+  text-transform: uppercase;
+  border: 2px dashed $color-purple;
+  cursor: pointer;
+  transition: 200ms;
+
+  &:hover {
+    transition: 200ms;
+    color: $color-white;
+    border: 2px dashed $color-white;
+    background-color: $color-purple;
+  }
+}

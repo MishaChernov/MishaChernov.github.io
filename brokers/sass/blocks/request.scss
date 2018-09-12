@@ -468,9 +468,15 @@
   line-height: normal;
   letter-spacing: 2px;
   text-align: center;
+  transition: 300ms;
+  filter: blur(0);
 
   &:hover {
     background-color: darken($color-purple, 20%);
+  }
+  &:disabled {
+    transition: 300ms;
+    filter: blur(3px);
   }
 }
 

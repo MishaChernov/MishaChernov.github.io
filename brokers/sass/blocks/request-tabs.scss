@@ -1,0 +1,72 @@
+.request-tabs {
+  background-color: $color-white;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.request-tabs__title {
+  color: $color-purple;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.request-tabs__controls {
+
+}
+
+.request-tabs__form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.request-tabs__submit {
+  flex: 1;
+  min-width: 270px;
+  box-shadow: 0 0 0 1px $color-green;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  text-align: center;
+  color: $color-green;
+  transition: 150ms;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    transition: 150ms;
+    background-color: $color-green;
+    color: $color-white;
+  }
+
+}
+
+.tabs-controls__count {
+  margin-left: 3px;
+}
+
+.tabs-controls__label--active {
+  .tabs-controls__count {
+    color: $color-green;
+  }
+}
+
+.tabs-controls__label--drafts {
+  .tabs-controls__count {
+    color: $color-black;
+  }
+}
+
+.tabs-controls__label--ended {
+  .tabs-controls__count {
+    color: $color-black;
+  }
+}
+
+@import "blocks/tabs-controls.scss";
