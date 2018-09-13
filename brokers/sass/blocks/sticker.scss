@@ -14,6 +14,22 @@
   letter-spacing: 0.2px;
 
 
+  &--active {
+    color: #ffffff;
+    background-color: #0cb175;
+  }
+  &--new {
+    color: #ffffff;
+    background-color: #0cb175;
+  }
+  &--draft {
+    color: #ffffff;
+    background-color: $color-gray;
+  }
+  &--ended {
+    color: #ffffff;
+    background-color: $color-black;
+  }
 
   span {
     position: relative;

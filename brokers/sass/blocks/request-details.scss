@@ -1,6 +1,27 @@
 .request-details {
   padding-top: 32px;
   position: relative;
+
+  &--active {
+    .sticker--active {
+      display: block;
+    }
+  }
+  &--new {
+    .sticker--new {
+      display: block;
+    }
+  }
+  &--draft {
+    .sticker--draft {
+      display: block;
+    }
+  }
+  &--ended {
+    .sticker--ended {
+      display: block;
+    }
+  }
 }
 
 .request-details__name {

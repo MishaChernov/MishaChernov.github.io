@@ -178,6 +178,8 @@
   font-family: $primary-font-family;
 }
 .search__submit {
+  text-decoration: none;
+  text-align: center;
   flex-basis: calc(33.33% - 14px);
   max-width: 270px;
   height: 40px;
