@@ -1,0 +1,21 @@
+.request-about {
+  padding: 0;
+  margin-left: 0;
+  width: 100%;
+  clear: both;
+}
+.request-header {
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 5px;
+
+  p {
+    margin-bottom: 16px;
+  }
+}
+.request-header__wrapper {
+  border: none !important;
+}
+.request-header__wrapper:last-child {
+  padding: 0;
+}

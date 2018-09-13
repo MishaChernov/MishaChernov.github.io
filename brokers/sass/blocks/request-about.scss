@@ -1,4 +1,4 @@
-.profile-about {
+.request-about {
   margin-top: 35px;
   margin-left: 271px;
   padding-left: 40px;
@@ -8,7 +8,7 @@
   }
 }
 
-.profile-header {
+.request-header {
   display: flex;
 
   p {
@@ -36,7 +36,7 @@
   }
 }
 
-.profile-header__wrapper {
+.request-header__wrapper {
   flex: 1;
   flex-basis: 50%;
   padding-right: 30px;
@@ -106,8 +106,7 @@
 
 .profile-info__btn-wrapper {
   height: 100%;
-  width: 100%;
-  max-width: 282px;
+  width: 282px;
   box-sizing: border-box;
   border-left: 1px solid #d1d2d4;
 }

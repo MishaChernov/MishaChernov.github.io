@@ -534,4 +534,28 @@
       text-align: center;
     }
   }
+
+
+
+  .request-card {
+    margin-top: 20px;
+  }
+  .request-card__name {
+    display: none;
+  }
+
+  .request-card {
+    .btn-back {
+      display: none;
+    }
+    .request-info__btn {
+    display: none;
+    }
+  }
+  .request-header p {
+    margin-bottom: 18px;
+    &:first-child {
+      margin-top: 10px;
+    }
+  }
 }

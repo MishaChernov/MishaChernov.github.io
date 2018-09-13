@@ -535,6 +535,7 @@
 
   .profile-card {
     width: 176px;
+    margin-top: 38px;
   }
   .profile-card__name {
     font-size: 24px;
@@ -606,7 +607,7 @@
   .rating {
     width: 277px;
     border-right: none;
-    justify-content: center;
+    justify-content: left;
   }
   .rating__list {
     margin-right: 0px;
@@ -617,7 +618,7 @@
   }
   .rating__custom-percent {
     padding-top: 1px;
-    margin-left: 36px;
+    margin-left: 14px;
     margin-right: 23px;
     p {
       flex-wrap: wrap;
@@ -636,6 +637,12 @@
     width: 100%;
     margin-top: 0px;
     text-align: center;
+  }
+  .profile-info__btn-wrapper {
+    width: 100%;
+    max-width: 282px;
+    min-width: 115px;
+    box-sizing: border-box;
   }
   .rating__btn {
     display: flex;
@@ -1136,4 +1143,81 @@
       margin-right: 0;
     }
   }
+
+
+
+  .request-card {
+    width: 176px;
+    margin-top: 38px;
+  }
+  .request-card__name {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  .request-card__image-wrapper {
+    width: 176px;
+    height: 177px;
+  }
+  .request-card__image {
+    width: 100%;
+    height: 100%;
+  }
+  .request-info {
+    padding-top: 15px;
+    padding-left: 9px;
+    padding-right: 10px;
+
+    br {
+      display: none;
+    }
+  }
+
+  .request-info__description p {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 17px;
+    letter-spacing: normal;
+    padding-right: 10px;
+  }
+  .request-info__options {
+    margin-top: 14px;
+    margin-bottom: 15px;
+  }
+
+  .reques-about {
+    margin-left: 154px;
+    padding-top: 25px;
+  }
+  .request-header {
+    margin-bottom: 36px;
+  }
+  .request-header p b {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  .request-header p {
+    margin-bottom: 35px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  .request-header__wrapper {
+    padding-right: 10px;
+
+    &:last-child {
+      padding-left: 20px;
+    }
+  }
+
 }
