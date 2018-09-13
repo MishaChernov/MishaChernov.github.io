@@ -283,6 +283,18 @@
     .deal-card__tab-wrapper {
       padding-top: 10px;
     }
+    .deal-card__buttons {
+      overflow: hidden;
+      .btn {
+        font-size: 12px;
+        line-height: 63px;
+        border-top: none;
+        padding: 0;
+      }
+      div .btn {
+        font-size: 12px;
+      }
+    }
     .deal-card__buttons--new .btn {
       font-size: 16px;
       font-weight: bold;
