@@ -126,12 +126,11 @@
           <span class="title---JS">Due date</span>
           <b class="request-info__due-date  feed---JS">15 Sep, 2017</b>
         </p>
-
-        <p class="request-info__timer">
-          <span>time left</span>
-          <b>0 : 23 : 31</b>
-        </p>
       </address>
+      <p class="request-info__timer  request-info__timer--less-hour">  <!-- Add class if timer less than a HOUR request-info__timer--less-hour -->
+        <span>time left</span>
+        <b>0 : 23 : 31</b>
+      </p>
     </aside>
 
     <section class="request-about">
@@ -148,38 +147,34 @@
             </span>
           </div>
         </div>
-        <div class="request-header__wrapper">
-          <p>
-            <span>Location</span>
-            <b class="request-header__location">Location</b>
-          </p>
-          <p>
-            <span>Cretid score</span>
-            <b class="request-header__credit-score">Good</b>
-          </p>
-          <p>
-            <span>1st mortgage lender</span>
-            <b class="request-header__lender-1">BMO</b>
-          </p>
-          <p>
-            <span>2nd mortgage lender</span>
-            <b class="request-header__lender-2">BMO</b>
-          </p>
-        </div>
-        <div class="request-header__wrapper">
-          <p>
-            <span>Security</span>
-            <b class="request-header__security">3rd Mortgage</b>
-          </p>
-          <p>
-            <span>1st mortgage rate</span>
-            <b class="request-header__mortgage-rate-1">3%</b>
-          </p>
-          <p>
-            <span>2nd mortgage rate</span>
-            <b class="request-header__mortgage-rate-2">3%</b>
-          </p>
-        </div>
+        <p class="parent---js  request-header__location-wrapper">
+          <span class="title---JS">Location</span>
+          <b class="request-header__location  feed---JS">Location</b>
+        </p>
+        <p class="parent---js">
+          <span class="title---JS">Credit score</span>
+          <b class="request-header__credit-score  feed---JS">Good</b>
+        </p>
+        <p class="parent---js">
+          <span class="title---JS">1st mortgage lender</span>
+          <b class="request-header__lender-1  feed---JS">BMO</b>
+        </p>
+        <p class="parent---js">
+          <span class="title---JS">2nd mortgage lender</span>
+          <b class="request-header__lender-2  feed---JS">BMO</b>
+        </p>
+        <p class="parent---js">
+          <span class="title---JS">Security</span>
+          <b class="request-header__security  feed---JS">3rd Mortgage</b>
+        </p>
+        <p class="parent---js">
+          <span class="title---JS">1st mortgage rate</span>
+          <b class="request-header__mortgage-rate-1  feed---JS">3%</b>
+        </p>
+        <p class="parent---js">
+          <span class="title---JS">2nd mortgage rate</span>
+          <b class="request-header__mortgage-rate-2  feed---JS">3%</b>
+        </p>
       </header>
 
       <main>
@@ -198,7 +193,7 @@
             <svg class="icon  icon-success">
               <use xlink:href="img/sprite/sprite.svg#success"></use>
             </svg>
-            <h4>Thank you for your review!</h4>
+            <h4><span>Your request is live!</span> See who are interested (2 Bids):</h4>
           </div>
 
           <div class="request__info-wrapper  good-to-know">
