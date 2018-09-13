@@ -5763,6 +5763,8 @@ select {
   font-family: "Gilroy", "Arial", sans-serif; }
 
 .search__submit {
+  text-decoration: none;
+  text-align: center;
   flex-basis: calc(33.33% - 14px);
   max-width: 270px;
   height: 40px;
@@ -5965,6 +5967,18 @@ select {
   line-height: 18px;
   padding: 0 10px;
   letter-spacing: 0.2px; }
+  .sticker--active {
+    color: #ffffff;
+    background-color: #0cb175; }
+  .sticker--new {
+    color: #ffffff;
+    background-color: #0cb175; }
+  .sticker--draft {
+    color: #ffffff;
+    background-color: #8a8c8f; }
+  .sticker--ended {
+    color: #ffffff;
+    background-color: #000000; }
   .sticker span {
     position: relative;
     width: 100%;
@@ -6340,20 +6354,28 @@ select {
       color: #000000; }
 
 .limit .sticker {
-  top: 22px;
+  top: 20px;
   left: -20px;
   font-size: 14px;
-  padding: 10px;
+  height: 60px;
   letter-spacing: 1px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 0;
+  box-sizing: border-box;
   display: block;
-  background-color: #f2744d; }
-  .limit .sticker span::before {
-    content: "";
-    bottom: -29.7px;
-    left: -20px;
-    border-width: 0 20px 20px 0; }
+  background: none; }
+  .limit .sticker span {
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f2744d; }
+    .limit .sticker span::before {
+      content: "";
+      bottom: -0px;
+      left: 0px;
+      border-width: 0 20px 20px 0; }
 
 .limit__wrapper {
   position: relative;
@@ -8407,6 +8429,42 @@ footer.featured-card__wrapper {
     cursor: default;
     z-index: 2; }
 
+.request-details {
+  padding-top: 32px;
+  position: relative; }
+  .request-details--active .sticker--active {
+    display: block; }
+  .request-details--new .sticker--new {
+    display: block; }
+  .request-details--draft .sticker--draft {
+    display: block; }
+  .request-details--ended .sticker--ended {
+    display: block; }
+
+.request-details__name {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #382c75; }
+
+.request-details__posted {
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #8a8c8f;
+  text-transform: uppercase; }
+  .request-details__posted b {
+    color: #382c75; }
+
 .mobile-hide {
   z-index: 1;
   width: 100%;
@@ -8569,6 +8627,108 @@ footer.featured-card__wrapper {
   box-sizing: border-box;
   height: 106px;
   padding-top: 45px; }
+
+.request-about {
+  margin-top: 35px;
+  margin-left: 271px;
+  padding-left: 40px; }
+  .request-about footer {
+    margin-top: -7px; }
+
+.request-header {
+  display: flex; }
+  .request-header p {
+    margin-bottom: 23px; }
+    .request-header p span {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 10px;
+      font-weight: bold;
+      color: #8a8c8f;
+      text-transform: uppercase;
+      letter-spacing: 1px; }
+    .request-header p b {
+      font-size: 20px;
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #333132; }
+
+.request-header__wrapper {
+  flex: 1;
+  flex-basis: 50%;
+  padding-right: 30px;
+  box-sizing: border-box; }
+  .request-header__wrapper:first-of-type {
+    border-right: 1px solid #d1d2d4; }
+  .request-header__wrapper:last-child {
+    padding-left: 40px; }
+    .request-header__wrapper:last-child span {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 10px;
+      font-weight: bold;
+      color: #8a8c8f;
+      text-transform: uppercase;
+      letter-spacing: 1px; }
+    .request-header__wrapper:last-child .language-list {
+      margin-top: 11px; }
+    .request-header__wrapper:last-child .language-list__item {
+      width: 24px;
+      height: 17px; }
+
+.profile-info__description {
+  margin-top: -2px; }
+  .profile-info__description h4 {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #8a8c8f;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .profile-info__description p {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #333132; }
+
+.profile-info__options {
+  display: flex;
+  align-items: center;
+  align-content: stretch;
+  justify-content: space-between;
+  height: 115px;
+  box-sizing: border-box;
+  border-top: 1px solid #d1d2d4;
+  border-bottom: 1px solid #d1d2d4;
+  margin-top: 38px;
+  margin-bottom: 44px; }
+
+.profile-info__btn-wrapper {
+  height: 100%;
+  width: 282px;
+  box-sizing: border-box;
+  border-left: 1px solid #d1d2d4; }
+
+.profile-info__options--no-active .rating__custom-percent-number {
+  border: 2px solid #8a8c8f !important; }
+
+.profile-info__options--no-active .rating__custom-percent p {
+  color: #8a8c8f !important; }
+
+.profile-info__options--no-active .rating__count {
+  color: #8a8c8f !important; }
+
+.profile-info__options--no-active .rating__item-stars {
+  color: #8a8c8f !important; }
 
 .profile {
   padding-top: 32px;
@@ -9324,6 +9484,9 @@ footer.featured-card__wrapper {
 .page-post-request main {
   padding-bottom: 84px; }
 
+.page-request-details {
+  background-color: #ffffff; }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -9851,17 +10014,20 @@ footer.featured-card__wrapper {
     margin-top: 18px;
     height: 305px; }
   .limit .sticker {
+    height: 30px;
     top: 10px;
     left: -10px;
     font-size: 10px;
-    padding: 1px;
-    letter-spacing: 0.6px;
-    padding-right: 10px;
-    padding-left: 10px; }
-    .limit .sticker span::before {
-      bottom: -13px;
-      left: -10px;
-      border-width: 0 10px 10px 0; }
+    letter-spacing: 0.6px; }
+    .limit .sticker span {
+      padding-top: 1px;
+      height: 20px;
+      padding-right: 10px;
+      padding-left: 10px; }
+      .limit .sticker span::before {
+        bottom: 0;
+        left: 0px;
+        border-width: 0 10px 10px 0; }
   .limit__title {
     margin-top: 57px;
     font-size: 40px;

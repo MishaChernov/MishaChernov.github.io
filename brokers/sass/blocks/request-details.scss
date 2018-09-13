@@ -2,3 +2,34 @@
   padding-top: 32px;
   position: relative;
 }
+
+.request-details__name {
+  font-family: $primary-font-family;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: $color-purple;
+}
+
+.request-details__posted {
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: left;
+  color: $color-gray;
+  text-transform: uppercase;
+
+  b {
+    color: $color-purple;
+  }
+}
+
+@import "blocks/request-card";
+@import "blocks/request-about";

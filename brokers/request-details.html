@@ -76,11 +76,11 @@
     <a class="request-info__btn  btn" href="#">Invite to bid</a>
   </div>
 
-  <main class="main  request-details  container  clearfix">
+  <main class="main  request-details  request-details--active  container  clearfix">
 
-    <h3 class="request-card__name">
-      <span class="request-card__name-first">Beverly Hills, 90210, CA, USA</span>
-      <span class="request-card__name-first"></span>
+    <h3 class="request-details__name-wrapper">
+      <span class="request-details__name">Beverly Hills, 90210, CA, USA</span><br>
+      <span class="request-details__posted">posted <b>14 hours ago</b></span>
     </h3>
 
     <aside class="request-card">
@@ -93,10 +93,19 @@
       </a>
 
       <div class="request-card__image-wrapper">
-        <img class="request-card__image" src="img/users/user-icon-1-big.jpg" width="271px" height="271px" alt="Alexandra Allen image">
+        <img class="request-card__image" src="img/request-details-1.jpg" width="271px" height="271px" alt="Beverly Hills, 90210, CA, USA">
 
-        <div class="sticker  sticker--pro">
-          <span>Pro</span>
+        <div class="sticker  sticker--ended">
+          <span>Ended</span>
+        </div>
+        <div class="sticker  sticker--new">
+          <span>New Offers</span>
+        </div>
+        <div class="sticker  sticker--draft">
+          <span>Draft</span>
+        </div>
+        <div class="sticker  sticker--active">
+          <span>Active</span>
         </div>
 
         <span class="request-card__without-picture"></span>
@@ -104,96 +113,72 @@
 
       <address class="request-info  request-card__address">
         <p class="parent---JS">
-          <span class="title---JS">Brokerage licence #</span>
-          <b class="request-info__licence  feed---JS">127728</b>
+          <span class="title---JS">Purchase price</span>
+          <b class="request-info__price  feed---JS">$10,000,000</b>
         </p>
 
         <p class="parent---JS">
-          <span class="title---JS">I work for</span>
-          <b class="request-info__work  feed---JS">CompayName.com</b>
+          <span class="title---JS">Type of mortgage</span>
+          <b class="request-info__mortgage  feed---JS">Residential ARM</b>
         </p>
 
         <p class="parent---JS">
-          <span class="title---JS">Address</span>
-          <b class="request-info__address  feed---JS">675 Cochrane Drive, North Tower, Markham, Ontario,
-                      <i><br>L3R 0B8</i></b>
+          <span class="title---JS">Due date</span>
+          <b class="request-info__due-date  feed---JS">15 Sep, 2017</b>
         </p>
 
-        <p class="parent---JS">
-          <span class="title---JS">Telephone</span>
-          <a class="request-info__phone  feed---JS" href="tel:9059477200">C. (905) 947-7200</a>
-          <a class="request-info__phone  feed---JS" href="tel:9059477244">F. (905) 947-7244</a>
-        </p>
-
-        <p class="request-info__social-list">
-          <span>Social</span>
-
-          <a class="request-info__social  request-info__social--fb" href="#" title="Facebook">
-            Facebook
-            <svg class="icon  icon-social-facebook">
-              <use xlink:href="img/sprite/sprite.svg#social-facebook"></use>
-            </svg>
-          </a>
-
-          <a class="request-info__social  request-info__social--inst" href="#" title="Instagram">
-            Instagram
-            <svg class="icon  icon-social-instagram">
-              <use xlink:href="img/sprite/sprite.svg#social-instagram"></use>
-            </svg>
-          </a>
-
-          <a class="request-info__social  request-info__social--tw" href="#" title="Twitter">
-            Twitter
-            <svg class="icon  icon-social-twitter">
-              <use xlink:href="img/sprite/sprite.svg#social-twitter"></use>
-            </svg>
-          </a>
-
-          <a class="request-info__social  request-info__social--ln" href="#" title="Linkedin">
-            Linkedin
-            <svg class="icon  icon-social-linkedin">
-              <use xlink:href="img/sprite/sprite.svg#social-linkedin"></use>
-            </svg>
-          </a>
-
-          <a class="request-info__social  request-info__social--yt" href="#" title="YouTube">
-            YouTube
-            <svg class="icon  icon-social-youtube">
-              <use xlink:href="img/sprite/sprite.svg#social-youtube"></use>
-            </svg>
-          </a>
+        <p class="request-info__timer">
+          <span>time left</span>
+          <b>0 : 23 : 31</b>
         </p>
       </address>
-
-      <a class="request-info__btn  btn" href="#">Invite to bid</a>
     </aside>
 
     <section class="request-about">
       <header class="request-header">
         <div class="request-header__wrapper">
+          <span class="request-header__title">Borrower</span>
+
+          <div class="request-header__profile-wrapper">
+            <img class="request-header__img  broker-img  broker-image--small   clearfix" src="img/users/user-feedback-1.jpg" width="38px" height="38px" alt="Tobi Martinez Picture">
+            <h5 class="request-header__name">Jack Jameson</h5>
+            <span class="request-header__hint">
+              Your full name, address and photo will not be visible for brokers until you select one.
+              <a href="#">OK</a>
+            </span>
+          </div>
+        </div>
+        <div class="request-header__wrapper">
           <p>
-            <span>Title</span>
-            <b class="request-header__title">Mortgage Broker, Mortgage Agent, Mortgage Planner</b>
+            <span>Location</span>
+            <b class="request-header__location">Location</b>
           </p>
           <p>
-            <span>I serve</span>
-            <b class="request-header__serve">Waterloo, Brampton, Kitchener, London</b>
+            <span>Cretid score</span>
+            <b class="request-header__credit-score">Good</b>
+          </p>
+          <p>
+            <span>1st mortgage lender</span>
+            <b class="request-header__lender-1">BMO</b>
+          </p>
+          <p>
+            <span>2nd mortgage lender</span>
+            <b class="request-header__lender-2">BMO</b>
           </p>
         </div>
         <div class="request-header__wrapper">
           <p>
-            <span>Types of mortgages done</span>
-            <b class="request-header__mortgages">Commerial, Residential</b>
+            <span>Security</span>
+            <b class="request-header__security">3rd Mortgage</b>
           </p>
-          <div>
-            <span>I speak</span>
-
-            <ul class="language-list">
-              <li class="language-list__item  flag-icon  flag-icon-de">german</li>
-              <li class="language-list__item  flag-icon  flag-icon-gb">united kingdom</li>
-              <li class="language-list__item  flag-icon  flag-icon-pl">poland</li>
-            </ul>
-          </div>
+          <p>
+            <span>1st mortgage rate</span>
+            <b class="request-header__mortgage-rate-1">3%</b>
+          </p>
+          <p>
+            <span>2nd mortgage rate</span>
+            <b class="request-header__mortgage-rate-2">3%</b>
+          </p>
         </div>
       </header>
 
@@ -203,169 +188,86 @@
           <div class="show-more-wrapper">
             <p class="request-info__text  readmore">
               Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque nec purus id arcu finibus pharetra. Donec leo nisi, iaculis sed convallis in, porttitor vitae arcu. Pellentesque molestie tortor vitae purus ultrices porttitor. Duis nunc odio, lacinia eu enim quis, viverra accumsan diam. Mauris condimentum lorem enim, a accumsan nisl vulputate vel. Cras faucibus nisl et urna sodales tincidunt. Maecenas eu justo turpis. Cras tortor lectus, feugiat in malesuada a, fermentum imperdiet dolor. In a sodales est. Aenean vel mi id velit ullamcorper laoreet. Suspendisse sapien purus, eleifend sed mi vel, dapibus iaculis metus. Sed varius est sed ante gravida pharetra. In hendrerit massa ac sodales porta. Donec eget lacus ac turpis dictum finibus.
-              <br><br>
-              Nullam elit enim, maximus sed euismod eget, condimentum ut felis. Ut rutrum, metus nec commodo pellentesque, ligula neque dictum purus, eget convallis urna leo eu lorem. Pellentesque faucibus eu orci et dictum. Nullam eget facilisis felis, id luctus nunc. Phasellus eleifend est et luctus auctor. Sed in est malesuada, consectetur arcu id, porttitor nisi. Vivamus sollicitudin porttitor porttitor. Duis ac ultricies nulla, id iaculis urna. Vivamus lorem lectus, tincidunt a posuere eu, eleifend porttitor dui. Aliquam vulputate eros placerat neque iaculis lacinia. Ut varius posuere efficitur. Duis auctor nunc arcu,vehicula iaculis nunc porttitor et. Nulla id auctor leo, id ornare libero. Fusce pulvinar vestibulum sem non gravida. In a facilisis sapien, et vestibulum elit.
             </p>
           </div>
         </section>
 
-        <section class="request-info__options">
+        <section class="request-info__interested-bids  request-hint">
 
-          <div class="rating  request-info__rating">
-            <div class="rating__count-wrapper">
-              <p>
-                <span class="rating__count">4.6</span>
-                <b class="rating__count-text">Rating out <br> of 5 stars</b>
-              </p>
-            </div>
-
-            <div class="rating__list">
-              <p class="rating__item">
-                <span class="rating__item-stars">5 star</span>
-                <span class="rating__line"><i class="rating__progress" data-percent="78"></i></span>
-                <span class="rating__percent">78%</span>
-              </p>
-
-              <p class="rating__item">
-                <span class="rating__item-stars">4 star</span>
-                <span class="rating__line"><i class="rating__progress" data-percent="11"></i></span>
-                <span class="rating__percent">11%</span>
-              </p>
-
-              <p class="rating__item">
-                <span class="rating__item-stars">3 star</span>
-                <span class="rating__line"><i class="rating__progress" data-percent="4"></i></span>
-                <span class="rating__percent">4%</span>
-              </p>
-
-              <p class="rating__item">
-                <span class="rating__item-stars">2 star</span>
-                <span class="rating__line"><i class="rating__progress" data-percent="3"></i></span>
-                <span class="rating__percent">3%</span>
-              </p>
-
-              <p class="rating__item">
-                <span class="rating__item-stars">1 star</span>
-                <span class="rating__line"><i class="rating__progress" data-percent="4"></i></span>
-                <span class="rating__percent">4%</span>
-              </p>
-            </div>
-
-          </div>
-
-          <div class="rating__custom-percent">
-            <p>
-               <span class="rating__custom-percent-number">92%</span>   <!--If here will be 0% then some text will be gray as the design-->
-              <span>Of customers would recommend</span>
-            </p>
-          </div>
-
-          <div class="request-info__btn-wrapper">
-            <a class="rating__btn  btn  modal-feedback-btn" href="#">
-              <svg class="icon  icon-write-review">
-                <use xlink:href="img/sprite/sprite.svg#write-review"></use>
-              </svg>
-              <span>Write Review</span>
-            </a>
-          </div>
-
-        </section>
-
-        <section class="broker-feedback">
-          <div class="broker-feedback__list"><article class="broker-feedback__item">
-
-            <div class="broker-feedback__wrapper">
-              <img class="broker-feedback__img  broker-img  broker-image--small   clearfix" src="img/users/user-feedback-1.jpg" width="38px" height="38px" alt="Tobi Martinez Picture">
-              <h5 class="broker-feedback__name">Tobi Martinez</h5>
-              <span class="broker-feedback__date">March 2018</span>
-            </div>
-
-            <h3 class="broker-feedback__title">She answered all my questions and walked me through the process</h3>
-            <ul class="broker-feedback__stars  broker-feedback__stars--5">
-              <li>
-                <svg class="icon  icon-start">
-                  <use xlink:href="img/sprite/sprite.svg#start"></use>
-                </svg>
-              </li>
-              <li>
-                <svg class="icon  icon-start">
-                  <use xlink:href="img/sprite/sprite.svg#start"></use>
-                </svg>
-              </li>
-              <li>
-                <svg class="icon  icon-start">
-                  <use xlink:href="img/sprite/sprite.svg#start"></use>
-                </svg>
-              </li>
-              <li>
-                <svg class="icon  icon-start">
-                  <use xlink:href="img/sprite/sprite.svg#start"></use>
-                </svg>
-              </li>
-              <li>
-                <svg class="icon  icon-start">
-                  <use xlink:href="img/sprite/sprite.svg#start"></use>
-                </svg>
-              </li>
-            </ul>
-
-            <p class="broker-feedback__text">
-              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque nec purus id arcu finibus pharetra. Donec leo nisi, iaculis sed convallis in, porttitor vitae arcu. Pellentesque molestie tortor vitae purus ultrices porttitor. Duis nunc odio, lacinia eu enim quis, viverra accumsan diam. Mauris condimentum lorem enim, a accumsan nisl vulputate vel. Cras faucibus nisl et urna sodales tincidunt. Maecenas eu justo turpis.
-            </p>
-          </article><article class="broker-feedback__item">
-
-            <div class="broker-feedback__wrapper">
-              <img class="broker-feedback__img  broker-img  broker-image--small  clearfix" src="img/users/user-feedback-1.jpg" width="38px" height="38px" alt="Tobi Martinez Picture">
-              <h5 class="broker-feedback__name">Tobi Martinez</h5>
-              <span class="broker-feedback__date">March 2018</span>
-            </div>
-
-            <h3 class="broker-feedback__title">She answered all my questions and walked me through the process</h3>
-            <ul class="broker-feedback__stars  broker-feedback__stars--3">
-              <li>
-                <svg class="icon  icon-start">
-                  <use xlink:href="img/sprite/sprite.svg#start"></use>
-                </svg>
-              </li>
-              <li>
-                <svg class="icon  icon-start">
-                  <use xlink:href="img/sprite/sprite.svg#start"></use>
-                </svg>
-              </li>
-              <li>
-                <svg class="icon  icon-start">
-                  <use xlink:href="img/sprite/sprite.svg#start"></use>
-                </svg>
-              </li>
-              <li>
-                <svg class="icon  icon-start">
-                  <use xlink:href="img/sprite/sprite.svg#start"></use>
-                </svg>
-              </li>
-              <li>
-                <svg class="icon  icon-start">
-                  <use xlink:href="img/sprite/sprite.svg#start"></use>
-                </svg>
-              </li>
-            </ul>
-
-            <p class="broker-feedback__text">
-              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque nec purus id arcu finibus pharetra. Donec leo nisi, iaculis sed convallis in, porttitor vitae arcu. Pellentesque molestie tortor vitae purus ultrices porttitor. Duis nunc odio, lacinia eu enim quis, viverra accumsan diam. Mauris condimentum lorem enim, a accumsan nisl vulputate vel. Cras faucibus nisl et urna sodales tincidunt. Maecenas eu justo turpis.
-            </p>
-          </article></div>
-
-          <div class="broker-feedback__no-feedbacks">
-            <svg class="icon  icon-write-review">
-              <use xlink:href="img/sprite/sprite.svg#write-review"></use>
+          <div class="request-hint__wrapper">
+            <svg class="icon  icon-success">
+              <use xlink:href="img/sprite/sprite.svg#success"></use>
             </svg>
-
-            <p>
-              <span>Alexandra</span>
-              doesn’t have any reviews yet. Be the first to write one.
-            </p>
-
-            <a class="btn  modal-feedback-btn" href="#">Write Review</a>
+            <h4>Thank you for your review!</h4>
           </div>
+
+          <div class="request__info-wrapper  good-to-know">
+            <div>
+              <svg class="icon  icon-info-stroke">
+                <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+              </svg>
+              <span>Good you know</span>
+            </div>
+            <p>Once you have a broker selected, your private and contact information will be revealed to this person. Since then she or he may contact you to finalize the deal.</p>
+          </div>
+
+          <div class="request-hint__brokers-list">
+
+            <article class="request-hint__broker  choose-broker">
+
+              <div class="choose-broker__img-wrapper">
+                <img class="choose-broker__img  broker-img  broker-image--small   clearfix" src="img/users/user-feedback-1.jpg" width="38px" height="38px" alt="Tobi Martinez Picture">
+                <h5 class="choose-broker__name">Jack Jameson</h5>
+                <span class="choose-broker__online">
+                  New york, Ny / 25 minutes ago
+                </span>
+              </div>
+
+              <p class="choose-broker__star">
+                <span>
+                  <svg class="icon  icon-start">
+                    <use xlink:href="img/sprite/sprite.svg#start"></use>
+                  </svg>
+                  <b>0%</b>
+                </span>
+
+                <span>0 reviews yet</span>
+              </p>
+
+              <a class="choose-broker__btn  btn" href="broker-profile-1.html">View Profile</a>
+
+              <a class="choose-broker__btn  btn" href="#">Choose Broker</a>
+
+              <p>
+                <span>Rate</span>
+                <b class="choose-broker__rate">2%</b>
+              </p>
+              <p>
+                <span>Type</span>
+                <b class="choose-broker__type">ARM</b>
+              </p>
+              <p>
+                <span>Term</span>
+                <b class="choose-broker__term">—</b>
+              </p>
+              <p>
+                <span>Lender Fee</span>
+                <b class="choose-broker__lender">—</b>
+              </p>
+              <p>
+                <span>Broker Fee</span>
+                <b class="choose-broker__lender">2.00%</b>
+              </p>
+
+              <div class="choose-broker__comments">
+                <span>Comments</span>
+                <p>Hi Jack, how are you? Pellentesque sed metus ac metus porttitor maximus vel vitae neque. Cras pellentesque erat odio, et interdum dui imperdiet vel.</p>
+              </div>
+
+            </article>
+
+          </div>
+
         </section>
 
       </main>
