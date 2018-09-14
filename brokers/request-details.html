@@ -78,19 +78,19 @@
 
   <main class="main  request-details  request-details--active  container  clearfix">
 
+    <a class="btn-back" href="#">
+      <svg class="icon  icon-arrow-right">
+        <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+      </svg>
+      <span>Back</span>
+    </a>
+
     <h3 class="request-details__name-wrapper">
       <span class="request-details__name">Beverly Hills, 90210, CA, USA</span><br>
       <span class="request-details__posted">posted <b>14 hours ago</b></span>
     </h3>
 
     <aside class="request-card">
-
-      <a class="btn-back" href="#">
-        <svg class="icon  icon-arrow-right">
-          <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
-        </svg>
-        <span>Back</span>
-      </a>
 
       <div class="request-card__image-wrapper">
         <img class="request-card__image" src="img/request-details-1.jpg" width="271px" height="271px" alt="Beverly Hills, 90210, CA, USA">
@@ -143,7 +143,7 @@
             <h5 class="request-header__name">Jack Jameson</h5>
             <span class="request-header__hint">
               Your full name, address and photo will not be visible for brokers until you select one.
-              <a href="#">OK</a>
+              <a href="#" class="btn-ok">OK</a>
             </span>
           </div>
         </div>
@@ -177,6 +177,20 @@
         </p>
       </header>
 
+      <div class="mobile-hide">
+        <a class="btn-back" href="#">
+          <svg class="icon  icon-arrow-right">
+            <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+          </svg>
+          <span>Back</span>
+        </a>
+
+        <h3 class="mobile-hide__name">
+          <span class="mobile-hide__name-first"></span>
+          <span class="mobile-hide__name-second"></span>
+        </h3>
+      </div>
+
       <main>
         <section class="request-info__description">
           <h4>Description</h4>
@@ -208,14 +222,71 @@
 
           <div class="request-hint__brokers-list">
 
-            <article class="request-hint__broker  choose-broker">
+            <article class="request-hint__broker  choose-broker--verified  choose-broker">
 
               <div class="choose-broker__img-wrapper">
                 <img class="choose-broker__img  broker-img  broker-image--small   clearfix" src="img/users/user-feedback-1.jpg" width="38px" height="38px" alt="Tobi Martinez Picture">
-                <h5 class="choose-broker__name">Jack Jameson</h5>
-                <span class="choose-broker__online">
-                  New york, Ny / 25 minutes ago
+                <div>
+                  <h4 class="choose-broker__name">Alexandra <span>Allen</span></h4>
+                  <span class="choose-broker__online">
+                    New york, Ny <b>/</b><br> 25 minutes ago
+                  </span>
+                </div>
+              </div>
+
+              <p class="choose-broker__star">
+                <span>
+                  <svg class="icon  icon-start">
+                    <use xlink:href="img/sprite/sprite.svg#start"></use>
+                  </svg>
+                  <b>96%</b>
                 </span>
+
+                <span>127 reviews yet</span>
+              </p>
+
+              <a class="choose-broker__btn  btn" href="broker-profile-1.html">View <br> Profile</a>
+
+              <a class="choose-broker__btn  btn" href="#">Choose <br> Broker</a>
+
+              <p class="choose-broker__info">
+                <span>Rate</span>
+                <b class="choose-broker__rate">2.00%</b>
+              </p>
+              <p  class="choose-broker__info">
+                <span>Type</span>
+                <b class="choose-broker__type">ARM</b>
+              </p>
+              <p  class="choose-broker__info">
+                <span>Term</span>
+                <b class="choose-broker__term">5 Years</b>
+              </p>
+              <p  class="choose-broker__info">
+                <span>Lender Fee</span>
+                <b class="choose-broker__lender">2.00%</b>
+              </p>
+              <p  class="choose-broker__info">
+                <span>Broker Fee</span>
+                <b class="choose-broker__lender">2.00%</b>
+              </p>
+
+              <div class="choose-broker__comments">
+                <span>Comments</span>
+                <p>Hi Jack, how are you? Pellentesque sed metus ac metus porttitor maximus vel vitae neque. Cras pellentesque erat odio, et interdum dui imperdiet vel.</p>
+              </div>
+
+            </article>
+
+            <article class="request-hint__broker  choose-broker--verified  choose-broker">
+
+              <div class="choose-broker__img-wrapper">
+                <img class="choose-broker__img  broker-img  broker-image--small   clearfix" src="img/users/user-feedback-1.jpg" width="38px" height="38px" alt="Tobi Martinez Picture">
+                <div>
+                  <h4 class="choose-broker__name">Alexandra <span>Allen</span></h4>
+                  <span class="choose-broker__online">
+                    New york, Ny <b>/</b><br> 25 minutes ago
+                  </span>
+                </div>
               </div>
 
               <p class="choose-broker__star">
@@ -229,27 +300,27 @@
                 <span>0 reviews yet</span>
               </p>
 
-              <a class="choose-broker__btn  btn" href="broker-profile-1.html">View Profile</a>
+              <a class="choose-broker__btn  btn" href="broker-profile-1.html">View <br> Profile</a>
 
-              <a class="choose-broker__btn  btn" href="#">Choose Broker</a>
+              <a class="choose-broker__btn  btn" href="#">Choose <br> Broker</a>
 
-              <p>
+              <p class="choose-broker__info">
                 <span>Rate</span>
-                <b class="choose-broker__rate">2%</b>
+                <b class="choose-broker__rate">2.00%</b>
               </p>
-              <p>
+              <p  class="choose-broker__info">
                 <span>Type</span>
                 <b class="choose-broker__type">ARM</b>
               </p>
-              <p>
+              <p  class="choose-broker__info">
                 <span>Term</span>
                 <b class="choose-broker__term">—</b>
               </p>
-              <p>
+              <p  class="choose-broker__info">
                 <span>Lender Fee</span>
                 <b class="choose-broker__lender">—</b>
               </p>
-              <p>
+              <p  class="choose-broker__info">
                 <span>Broker Fee</span>
                 <b class="choose-broker__lender">2.00%</b>
               </p>
@@ -261,49 +332,12 @@
 
             </article>
 
+
           </div>
 
         </section>
 
       </main>
-
-      <footer>
-        <div class="page-nav">
-          <div>
-            <a class="page-nav__btn-help  modal-feedback-btn" href="#">
-              <svg class="icon  icon-write-review">
-                <use xlink:href="img/sprite/sprite.svg#write-review"></use>
-              </svg>
-              <span>Write Review</span>
-            </a>
-          </div>
-
-          <div class="page-nav__list">
-
-            <span>
-              <input type="radio" value="page-1" name="page" id="deal-page-1" checked>
-              <label for="deal-page-1">1</label>
-            </span>
-
-            <span>
-              <input type="radio" value="page-2" name="page" id="deal-page-2">
-              <label for="deal-page-2">2</label>
-            </span>
-
-            <span>
-              <input type="radio" value="page-3" name="page" id="deal-page-3">
-              <label for="deal-page-3">3</label>
-            </span>
-
-            <span>
-              <input type="radio" value="page-4" name="page" id="deal-page-4">
-              <label for="deal-page-4">4</label>
-            </span>
-
-          </div>
-          <a class="page-nav__btn-top" href="#top">Back to top <span>&uarr;</span></a>
-        </div>
-      </footer>
     </section>
 
   </main>

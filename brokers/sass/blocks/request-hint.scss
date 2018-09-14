@@ -1,0 +1,68 @@
+.request-hint {
+  background-color: $color-light-gray;
+  padding-top: 42px;
+}
+
+.request-hint__wrapper {
+  text-align: center;
+
+  svg {
+    width: 33px;
+    height: 34px;
+    fill: $color-green;
+  }
+  h4 {
+    margin-top: 10px;
+    margin-bottom: 35px;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+
+    span {
+      color: $color-green;
+    }
+  }
+}
+
+.request__info-wrapper {
+  margin: 0 40px;
+  border: 1px solid $color-purple;
+
+  div {
+    svg {
+      fill: $color-purple;
+    }
+    span {
+      color: $color-purple;
+      font-size: 11px;
+      font-weight: 800;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.6px;
+      text-align: left;
+      text-transform: uppercase;
+    }
+  }
+
+  p {
+    padding: 65px 20px;
+    padding-bottom: 37px;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+  }
+}
+
+.request-hint__brokers-list {
+  margin-top: 40px;
+  padding: 0 40px;
+}

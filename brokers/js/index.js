@@ -2,6 +2,46 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+  // Start Check Request Details Page Aside Position Fixed
+
+  if($('.request-card').length > 0) {
+
+    var header = $('.request-card');
+    var card = $('.request-card');
+    var headerHeight = header[0].offsetTop;
+
+    $(window).on('load', function() {
+      $(window).scroll(function() {
+        let windowHeight = $(window).height() - 135;
+        let windowWidth = $(window).width();
+        let asideHeight = $('.request-card').height();
+
+        if( window.scrollY > headerHeight && (((windowHeight - asideHeight) >= 20) &&  windowWidth > 800)) {
+          card.css('position', 'fixed');
+          card.css('top', '53px');
+        } else {
+          card.css('position', 'relative');
+          card.css('top', 0);
+        }
+      });
+    });
+  }
+
+  // End Check Request Details Page Aside Position Fixed
+
+
+  // Start Find Btn-OK And Check Click After Hide Parent block
+
+  if($('.btn-ok').length > 0) {
+    $('.btn-ok').each(function() {
+      $(this).click(function() {
+        $(this).parents('.request-header__hint').fadeOut('fast');
+      })
+    })
+  }
+
+  // End Find Btn-OK And Check Click After Hide Parent block
+
   // Start Check If Bids More Than One Then Change His color
 
   if($('.deal-card__bids').length > 0) {
@@ -376,8 +416,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		let header = $(".header");
 
-		$('.mobile-hide__name-first')[0].innerHTML = $('.profile-card__name-first')[0].innerHTML;
-		$('.mobile-hide__name-second')[0].innerHTML = $('.profile-card__name-second')[0].innerHTML;
+    if(document.getElementsByClassName('.profile-card__name-first').length > 0) {
+      $('.mobile-hide__name-first')[0].innerHTML = $('.profile-card__name-first')[0].innerHTML;
+      $('.mobile-hide__name-second')[0].innerHTML = $('.profile-card__name-second')[0].innerHTML;
+    } 
+
+
+
 
 	  $(window).scroll(function() {
 
@@ -395,7 +440,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	      mobileHide.css('top', 0);
 				profileCard.css('margin-top', '20px');
 	    }
-
 
 	  });
 	}
@@ -685,9 +729,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		})
 	}
-
-
-
 
 
 

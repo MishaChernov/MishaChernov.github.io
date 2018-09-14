@@ -43,6 +43,8 @@
 
   &:last-child {
     color: $color-gray;
+    font-size: 10px ;
+    line-height: 13.8px;
   }
   &:hover {
     color: $color-green;
@@ -64,7 +66,8 @@
   }
   &--login {
     position: relative;
-    font-size: 0;
+    font-size: 0 !important;
+    line-height: 0 !important;
     text-align: center;
     padding: 7px 18px;
 

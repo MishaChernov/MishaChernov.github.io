@@ -1,0 +1,40 @@
+.good-to-know {
+  margin-bottom: 39px;
+  position: relative;
+  text-align: center;
+  border: 1px solid $color-green;
+  background-color: $color-light-gray;
+  color: #000000;
+
+  div {
+    position: absolute;
+    left: 40px;
+    top: 26px;
+    padding-left: 15px;
+    color: #0cb175;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: -20px;
+      width: 24px;
+      height: 32px;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      fill: #0cb175;
+    }
+  }
+  p {
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #333132;
+    max-width: 875px;
+    margin: 0 auto;
+    padding: 65px 0;
+  }
+}

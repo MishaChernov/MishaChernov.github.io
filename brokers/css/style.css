@@ -4689,6 +4689,9 @@ select {
     margin: 0 auto;
     padding: 65px 0; }
 
+.readmore a {
+  color: #0cb175; }
+
 .btn {
   position: relative;
   display: block;
@@ -8777,7 +8780,9 @@ footer.featured-card__wrapper {
 
 .request-hint {
   background-color: #f1f2f2;
-  padding-top: 42px; }
+  padding-top: 42px;
+  padding-bottom: 1px;
+  margin-bottom: 40px; }
 
 .request-hint__wrapper {
   text-align: center; }
@@ -8828,8 +8833,201 @@ footer.featured-card__wrapper {
   margin-top: 40px;
   padding: 0 40px; }
 
+.request-hint__broker {
+  margin: 40px 0; }
+
 .choose-broker {
-  background-color: #ffffff; }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  background-color: #ffffff;
+  align-items: center;
+  padding-bottom: 15px; }
+
+.choose-broker__img-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 20px;
+  margin-right: auto; }
+
+.choose-broker__name {
+  width: 100%;
+  margin: 0;
+  font-size: 20px;
+  color: #382c75; }
+  .choose-broker__name span {
+    position: relative; }
+
+.choose-broker--verified .choose-broker__name span::after {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  right: -23px;
+  display: block;
+  width: 15px;
+  height: 16px;
+  background-image: url(../img/icons/verified.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.choose-broker__img {
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  width: 59px;
+  height: 60px;
+  margin-right: 5px; }
+
+.choose-broker__online {
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #8a8c8f; }
+  .choose-broker__online br {
+    display: none; }
+
+.choose-broker__info {
+  margin: 0;
+  border-top: 1px solid #f1f2f2;
+  height: 70px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  flex-basis: 20%;
+  padding-left: 20px; }
+  .choose-broker__info:nth-of-type(3) {
+    padding-left: 25px; }
+  .choose-broker__info:nth-of-type(4) {
+    padding-left: 36px; }
+  .choose-broker__info:nth-of-type(5) {
+    padding-left: 43px; }
+  .choose-broker__info:nth-of-type(6) {
+    padding-left: 51px; }
+  .choose-broker__info span {
+    margin-bottom: 7px;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #8a8c8f;
+    text-transform: uppercase; }
+  .choose-broker__info b {
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.85;
+    letter-spacing: normal;
+    text-align: left; }
+
+.choose-broker__comments {
+  margin-top: 6px;
+  padding: 0 20px; }
+  .choose-broker__comments span {
+    font-size: 10px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #8a8c8f;
+    text-transform: uppercase; }
+  .choose-broker__comments p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left; }
+
+.choose-broker__img-wrapper {
+  flex-shrink: 3;
+  min-width: 200px;
+  max-width: 360px;
+  width: 100%;
+  min-height: 100px;
+  box-sizing: border-box; }
+
+.choose-broker__star {
+  max-width: 130px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-shrink: 1;
+  margin-left: auto;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 130px;
+  margin: 0;
+  min-height: 100px;
+  box-sizing: border-box;
+  border-right: 1px solid #f1f2f2;
+  border-left: 1px solid #f1f2f2; }
+  .choose-broker__star svg {
+    fill: #faa61a;
+    width: 17px;
+    height: 17px; }
+  .choose-broker__star b {
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000; }
+  .choose-broker__star span {
+    font-size: 10px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #8a8c8f;
+    text-transform: uppercase; }
+
+.choose-broker__btn {
+  flex-shrink: 1;
+  box-sizing: border-box;
+  max-width: none;
+  min-height: 100px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: none;
+  color: #0cb175;
+  max-width: 169px;
+  width: 100%; }
+  .choose-broker__btn:first-of-type {
+    max-width: 150px;
+    width: 100%;
+    color: #8a8c8f;
+    border-right: 1px solid #f1f2f2; }
+    .choose-broker__btn:first-of-type:hover {
+      background-color: #8a8c8f;
+      color: #ffffff; }
+  .choose-broker__btn:hover {
+    background-color: #0cb175;
+    color: #ffffff; }
 
 .profile {
   padding-top: 32px;
@@ -9891,7 +10089,186 @@ footer.featured-card__wrapper {
       font-stretch: normal;
       line-height: normal;
       letter-spacing: 0.8px;
-      text-align: center; } }
+      text-align: center; }
+  .request-card {
+    width: 260px; }
+  .request-card__name {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal; }
+  .request-card__image-wrapper {
+    width: 260px;
+    height: 260px; }
+  .request-card__image {
+    width: 100%;
+    height: 100%; }
+  .request-info {
+    padding-top: 22px;
+    padding-left: 20px;
+    padding-right: 10px; }
+    .request-info p {
+      margin-bottom: 22px; }
+      .request-info p:last-child {
+        margin-bottom: 5px; }
+      .request-info p b {
+        font-size: 16px; }
+    .request-info br {
+      display: none; }
+  .request-info__description p {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 17px;
+    letter-spacing: normal;
+    padding-right: 10px; }
+  .request-info__options {
+    margin-top: 14px;
+    margin-bottom: 15px; }
+  .request-about {
+    padding-left: 7px; }
+  .request-header {
+    margin-bottom: 20px; }
+  .request-header p b {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal; }
+  .request-header p {
+    margin-bottom: 4px; }
+    .request-header p:last-child {
+      margin-bottom: 0px; }
+  .request-header__wrapper {
+    padding-right: 10px; }
+    .request-header__wrapper:last-child {
+      padding-left: 20px; }
+  .request-details__name-wrapper {
+    margin-top: 32px;
+    margin-bottom: 11px; }
+    .request-details__name-wrapper b {
+      font-size: 10px; }
+  .request-details__name {
+    font-size: 24px;
+    display: block;
+    margin-bottom: -39px; }
+  .request-header__title {
+    margin-bottom: 11px;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.4px; }
+  .request-header__name {
+    font-size: 16px;
+    margin-right: 15px; }
+  .request-info__description {
+    margin-bottom: 37px; }
+  .request-hint {
+    padding-top: 21px; }
+  .request-hint__wrapper h4 {
+    font-size: 20px;
+    margin-bottom: 15px; }
+    .request-hint__wrapper h4 span {
+      display: block; }
+  .request__info-wrapper {
+    margin: 0 20px; }
+  .good-to-know p {
+    padding-bottom: 25px;
+    font-size: 14px; }
+  .request-hint__brokers-list {
+    padding: 0 20px;
+    margin-top: 20px; }
+  .request-hint__broker {
+    margin: 20px 0; }
+  .choose-broker {
+    padding-bottom: 0; }
+  .choose-broker__name {
+    font-size: 16px; }
+  .choose-broker__img {
+    margin-right: 9px; }
+  .choose-broker--verified .choose-broker__name span::after {
+    right: -19px; }
+  .choose-broker__online {
+    display: block;
+    margin-top: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 10px;
+    letter-spacing: 1px; }
+    .choose-broker__online br {
+      display: block; }
+    .choose-broker__online b {
+      display: none; }
+  .choose-broker__img-wrapper {
+    max-width: 310px; }
+  .choose-broker__img-wrapper {
+    order: 1;
+    max-width: none;
+    flex-basis: 75%; }
+  .choose-broker__star {
+    order: 2;
+    flex-basis: 25%; }
+  .choose-broker__info:nth-of-type(2) {
+    order: 3;
+    border-top: 1px solid #f1f2f2;
+    padding-top: 5px; }
+  .choose-broker__info:nth-of-type(3) {
+    order: 4;
+    border-top: 1px solid #f1f2f2;
+    padding-top: 5px; }
+  .choose-broker__info:nth-of-type(4) {
+    order: 5;
+    border-top: 1px solid #f1f2f2;
+    padding-top: 5px; }
+  .choose-broker__info:nth-of-type(5) {
+    order: 6; }
+  .choose-broker__info:nth-of-type(6) {
+    order: 7; }
+  .choose-broker__comments {
+    order: 8; }
+  .choose-broker__btn:nth-of-type(1) {
+    order: 9; }
+  .choose-broker__btn:nth-of-type(2) {
+    order: 10; }
+  .choose-broker__info {
+    border-top: none;
+    align-items: left;
+    padding-left: 20px !important;
+    flex-basis: 33.3%;
+    align-content: flex-start; }
+    .choose-broker__info:last-of-type {
+      margin-right: auto; }
+  .choose-broker__info {
+    height: 58px; }
+    .choose-broker__info b {
+      font-size: 16px; }
+  .choose-broker__comments {
+    margin-top: 10px; }
+    .choose-broker__comments p {
+      font-size: 16px; }
+  .choose-broker__btn {
+    margin-top: 17px;
+    border-top: 1px solid #f1f2f2;
+    flex-basis: 50%;
+    height: 60px;
+    padding: 0;
+    min-height: 60px;
+    box-sizing: border-box;
+    max-width: none !important;
+    width: 100%; }
+    .choose-broker__btn br {
+      display: none; }
+  .request-hint {
+    margin-bottom: 20px; } }
 
 @media (max-width: 1200px) {
   .container {
@@ -10685,61 +11062,7 @@ footer.featured-card__wrapper {
     .my-request .my-request__new-button {
       margin-bottom: 3px; }
     .my-request .page-nav {
-      margin-right: 0; }
-  .request-card {
-    width: 176px;
-    margin-top: 38px; }
-  .request-card__name {
-    font-size: 24px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal; }
-  .request-card__image-wrapper {
-    width: 176px;
-    height: 177px; }
-  .request-card__image {
-    width: 100%;
-    height: 100%; }
-  .request-info {
-    padding-top: 15px;
-    padding-left: 9px;
-    padding-right: 10px; }
-    .request-info br {
-      display: none; }
-  .request-info__description p {
-    margin-top: 5px;
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 17px;
-    letter-spacing: normal;
-    padding-right: 10px; }
-  .request-info__options {
-    margin-top: 14px;
-    margin-bottom: 15px; }
-  .reques-about {
-    margin-left: 154px;
-    padding-top: 25px; }
-  .request-header {
-    margin-bottom: 36px; }
-  .request-header p b {
-    font-size: 16px;
-    font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal; }
-  .request-header p {
-    margin-bottom: 35px; }
-    .request-header p:last-child {
-      margin-bottom: 0px; }
-  .request-header__wrapper {
-    padding-right: 10px; }
-    .request-header__wrapper:last-child {
-      padding-left: 20px; } }
+      margin-right: 0; } }
 
 @media (max-width: 800px) {
   .intro__btn-wrapper {
@@ -11817,7 +12140,7 @@ footer.featured-card__wrapper {
     width: 100%;
     position: relative;
     margin-top: 13px;
-    margin-bottom: 5px; }
+    margin-bottom: 17px; }
   .request-card__image-wrapper {
     max-height: 521px;
     width: 100%;
@@ -11827,14 +12150,20 @@ footer.featured-card__wrapper {
   .request-card__image {
     width: 100%;
     height: 100%;
-    max-height: 430px; }
+    max-height: 350px;
+    max-height: 215px; }
   .request-card__name {
     margin-bottom: 5px;
     margin-top: 12px; }
   .request-info {
-    padding-top: 20px; }
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding-top: 16px;
+    padding-left: 10px; }
     .request-info p {
-      margin-bottom: 14px; }
+      margin: 0; }
   .request-info__btn {
     height: 41px;
     font-size: 14px;
@@ -11852,14 +12181,116 @@ footer.featured-card__wrapper {
     clear: both; }
   .request-header {
     flex-wrap: wrap;
-    flex-direction: column;
     margin-bottom: 5px; }
-    .request-header p {
-      margin-bottom: 16px; }
   .request-header__wrapper {
-    border: none !important; }
+    border: none !important;
+    padding-right: 0; }
   .request-header__wrapper:last-child {
-    padding: 0; } }
+    padding: 0; }
+  .page-request-details .btn-back {
+    margin-top: 18px; }
+  .request-details__name-wrapper {
+    margin-top: 12px;
+    font-size: 20px; }
+  .request-details__name {
+    font-size: 20px; }
+  .request-details__name-wrapper {
+    margin-bottom: 3px; }
+  .request-card {
+    margin-top: 0; }
+  .request-info__timer {
+    height: 75px; }
+    .request-info__timer b {
+      font-size: 24px; }
+  .request-header__hint {
+    max-width: 255px; }
+  .request-header__name {
+    margin-right: 14px; }
+  .request-header {
+    flex-direction: row; }
+    .request-header p {
+      margin-bottom: 3px;
+      flex-basis: 50%;
+      width: auto; }
+      .request-header p:nth-of-type(1) {
+        order: 1;
+        flex-basis: 100%; }
+      .request-header p:nth-of-type(2) {
+        order: 2;
+        flex-basis: 100%; }
+      .request-header p:nth-of-type(3) {
+        order: 4;
+        flex-basis: 50%; }
+      .request-header p:nth-of-type(4) {
+        order: 5;
+        flex-basis: 50%; }
+      .request-header p:nth-of-type(5) {
+        order: 3;
+        flex-basis: 100%; }
+      .request-header p:nth-of-type(6) {
+        order: 6; }
+      .request-header p:nth-of-type(7) {
+        order: 7; }
+  .request-info__description {
+    margin-top: 24px;
+    margin-bottom: 0px; }
+  .request-info__description h4 {
+    margin-bottom: 0; }
+  .request-hint__wrapper h4 {
+    font-size: 16px;
+    margin-top: 6px;
+    margin-bottom: 15px; }
+  .request__info-wrapper {
+    margin: 0 2px; }
+  .good-to-know p {
+    font-size: 12px;
+    padding-top: 33px;
+    padding-left: 12px;
+    padding-right: 14px;
+    padding-bottom: 15px; }
+  .request__info-wrapper div {
+    top: 8px; }
+  .good-to-know div {
+    padding-left: 2px; }
+  .good-to-know div svg {
+    width: 12px;
+    height: 16px;
+    left: -19px; }
+  .request-hint__brokers-list {
+    padding: 0; }
+  .request-hint__broker {
+    margin: 11px 0; }
+  .request-hint__brokers-list {
+    margin-top: 5px; }
+  .choose-broker__img-wrapper {
+    padding-left: 12px;
+    min-height: 80px; }
+  .choose-broker__star {
+    min-height: 80px;
+    border: none;
+    align-items: flex-end;
+    padding-top: 26px;
+    padding-right: 10px; }
+    .choose-broker__star b {
+      font-size: 16px; }
+    .choose-broker__star span:last-child {
+      display: none; }
+    .choose-broker__star svg {
+      width: 17px;
+      height: 17px; }
+  .choose-broker__info {
+    height: 61px; }
+  .choose-broker__comments {
+    margin-top: 11px; }
+    .choose-broker__comments p {
+      font-size: 14px; }
+  .choose-broker__btn {
+    height: 40px;
+    min-height: 40px;
+    font-size: 12px;
+    letter-spacing: 1.2px; }
+  .request-hint {
+    margin-bottom: 0px; } }
 
 @media (max-width: 550px) {
   .modal-login {
@@ -12247,4 +12678,27 @@ footer.featured-card__wrapper {
   .request-header p {
     margin-bottom: 18px; }
     .request-header p:first-child {
-      margin-top: 10px; } }
+      margin-top: 10px; }
+  .request-info {
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .request-info p {
+      margin: 6px 0px !important; }
+  .request-header__hint {
+    max-width: 126px; }
+    .request-header__hint::after {
+      bottom: 70%;
+      -webkit-transform: translateY(0) rotate(45deg);
+              transform: translateY(0) rotate(45deg); }
+  .request-header__name {
+    vertical-align: top; }
+  .request-header__img {
+    vertical-align: top; }
+  .request-header p {
+    margin-bottom: 4px; }
+  .request-header p:nth-of-type(1) {
+    margin-top: -27px; }
+  .choose-broker__info {
+    padding-left: 10px !important; }
+  .choose-broker__comments {
+    padding: 0 10px; } }
