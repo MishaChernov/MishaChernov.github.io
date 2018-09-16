@@ -291,14 +291,15 @@
     justify-content: center;
   }
   .about__btn {
-    width: 95%;
-    max-width: 450px;
+    width: 105%;
+    max-width: 105%;
     margin: 0 auto;
     margin-top: 25px;
     padding: 10px 0;
     padding-left: 20px;
     padding-right: 50px;
     box-sizing: border-box;
+    margin-left: -10px;
 
     &::after {
       right: 35%;
@@ -1534,7 +1535,7 @@
     width: 100%;
     position: relative;
     margin-top: 13px;
-    margin-bottom: 5px;
+    margin-bottom: 17px;
   }
   .request-card__image-wrapper {
     max-height: 521px;
@@ -1546,17 +1547,23 @@
   .request-card__image {
     width: 100%;
     height: 100%;
-    max-height: 430px;
+    max-height: 350px;
+    max-height: 215px;
   }
   .request-card__name {
     margin-bottom: 5px;
     margin-top: 12px;
   }
   .request-info {
-    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding-top: 16px;
+    padding-left: 10px;
 
     p {
-      margin-bottom: 14px;
+      margin: 0;
     }
   }
   .request-info__btn {
@@ -1579,18 +1586,163 @@
   }
   .request-header {
     flex-wrap: wrap;
-    flex-direction: column;
     margin-bottom: 5px;
-
-    p {
-      margin-bottom: 16px;
-    }
   }
   .request-header__wrapper {
     border: none !important;
+    padding-right: 0;
   }
   .request-header__wrapper:last-child {
     padding: 0;
+  }
+
+  .page-request-details {
+    .btn-back {
+      margin-top: 18px;
+    }
+  }
+  .request-details__name-wrapper {
+    margin-top: 12px;
+    font-size: 20px;
+  }
+  .request-details__name {
+    font-size: 20px;
+  }
+  .request-details__name-wrapper {
+    margin-bottom: 3px;
+  }
+  .request-card {
+    margin-top: 0;
+  }
+  .request-info__timer {
+    height: 75px;
+
+    b {
+      font-size: 24px;
+    }
+  }
+  .request-header__hint {
+    max-width: 255px;
+  }
+  .request-header__name {
+    margin-right: 14px;
+  }
+  .request-header {
+    flex-direction: row;
+    p {
+      margin-bottom: 3px;
+      flex-basis: 50%;
+      width: auto;
+
+      &:nth-of-type(1) {
+        order: 1;
+        flex-basis: 100%;
+      }
+      &:nth-of-type(2) {
+        order: 2;
+        flex-basis: 100%;
+      }
+      &:nth-of-type(3) {
+        order: 4;
+        flex-basis: 50%;
+      }
+      &:nth-of-type(4) {
+        order: 5;
+        flex-basis: 50%;
+      }
+      &:nth-of-type(5) {
+        order: 3;
+        flex-basis: 100%;
+      }
+      &:nth-of-type(6) {
+        order: 6;
+      }
+      &:nth-of-type(7) {
+        order: 7;
+      }
+    }
+  }
+  .request-info__description {
+    margin-top: 24px;
+    margin-bottom: 0px;
+  }
+  .request-info__description h4 {
+    margin-bottom: 0;
+  }
+  .request-hint__wrapper h4 {
+    font-size: 16px;
+    margin-top: 6px;
+    margin-bottom: 15px
+  }
+  .request__info-wrapper {
+    margin: 0 2px;
+  }
+  .good-to-know p {
+    font-size: 12px;
+    padding-top: 33px;
+    padding-left: 12px;
+    padding-right: 14px;
+    padding-bottom: 15px;
+  }
+  .request__info-wrapper div {
+    top: 8px;
+  }
+  .good-to-know div {
+    padding-left: 2px;
+  }
+  .good-to-know div svg {
+    width: 12px;
+    height: 16px;
+    left: -19px;
+  }
+  .request-hint__brokers-list {
+    padding: 0;
+  }
+  .request-hint__broker {
+    margin: 11px 0;
+  }
+  .request-hint__brokers-list {
+    margin-top: 5px;
+  }
+  .choose-broker__img-wrapper {
+    padding-left: 12px;
+    min-height: 80px;
+  }
+  .choose-broker__star {
+    min-height: 80px;
+    border: none;
+    align-items: flex-end;
+    padding-top: 26px;
+    padding-right: 10px;
+    b {
+      font-size: 16px;
+    }
+    span:last-child {
+      display: none;
+    }
+    svg {
+      width: 17px;
+      height: 17px;
+    }
+  }
+  .choose-broker__info {
+    height: 61px;
+  }
+  .choose-broker__comments {
+    margin-top: 11px;
+
+    p {
+      font-size: 14px;
+    }
+  }
+  .choose-broker__btn {
+    height: 40px;
+    min-height: 40px;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+  .request-hint {
+    margin-bottom: 0px;
   }
 
 }

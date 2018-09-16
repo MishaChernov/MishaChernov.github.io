@@ -115,6 +115,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if($('.disabled-elements-preview-JS').length > 0) {
 
     $('.request__wrapper').each(function(index) {
+      var elementHeight = $(this).find('.request__wrapper-show').height();
+      var element = $(this).find('.request__wrapper-show');
 
       $(this).bind("keyup change input", function() {
 
@@ -132,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
           if(valueAll == false) {
             let question = document.getElementsByClassName('request__wrapper')[questionOrder + 1];
             question.classList.add('disabled-elements-preview-JS--hidden');
+
           } else {
             let question = document.getElementsByClassName('request__wrapper')[questionOrder + 1];
             question.classList.remove('disabled-elements-preview-JS--hidden');
@@ -275,6 +278,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		let modalLogin = $('#modal-login');
 		let modalFeedback = $('#modal-feedback');
 		let modalSign = $('#modal-sign');
+    let modalRegistered = $('#modal-registered');
 		let linkLogin = $('.login-link');
 		let linkSignUp = $('.sign-up-link');
 		let linkFeedback = $('.modal-feedback-btn');
@@ -333,14 +337,26 @@ document.addEventListener('DOMContentLoaded', function() {
 			this.addEventListener('click', function(e) {
 				e.preventDefault();
 
-				modal.each(function() {
-					this.classList.remove('modal--visible');
-					$(this).fadeOut(0);
-				})
+        if($('body').hasClass('log-in--true')) {
+          modal.each(function() {
+  					this.classList.remove('modal--visible');
+  					$(this).fadeOut(0);
+  				})
 
-				modalFeedback.fadeIn('fast');
-				modalFeedback[0].classList.add('modal--visible');
-				overlay[0].classList.add('overlay--visible');
+  				modalFeedback.fadeIn('fast');
+  				modalFeedback[0].classList.add('modal--visible');
+  				overlay[0].classList.add('overlay--visible');
+        } else {
+          modal.each(function() {
+  					this.classList.remove('modal--visible');
+  					$(this).fadeOut(0);
+  				})
+
+  				modalRegistered.fadeIn('fast');
+  				modalRegistered[0].classList.add('modal--visible');
+  				overlay[0].classList.add('overlay--visible');
+        }
+
 			});
 		})
 
@@ -419,7 +435,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if(document.getElementsByClassName('.profile-card__name-first').length > 0) {
       $('.mobile-hide__name-first')[0].innerHTML = $('.profile-card__name-first')[0].innerHTML;
       $('.mobile-hide__name-second')[0].innerHTML = $('.profile-card__name-second')[0].innerHTML;
-    } 
+    }
 
 
 

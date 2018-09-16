@@ -115,7 +115,7 @@
     transform: translateY(0);
   }
   100% {
-    display: block;
+    visibility: visible;
   }
 }
 
@@ -125,11 +125,11 @@
     transform: translateY(0);
   }
   99% {
-    opacity: 0.5;
+    opacity: 0;
     transform: translateY(-10px);
   }
   100% {
-    display: none;
+    visibility: hidden;
   }
 }
 

@@ -3083,7 +3083,7 @@ template {
     -webkit-transform: translateY(0);
             transform: translateY(0); }
   100% {
-    display: block; } }
+    visibility: visible; } }
 
 @keyframes questionsOpen {
   0% {
@@ -3095,7 +3095,7 @@ template {
     -webkit-transform: translateY(0);
             transform: translateY(0); }
   100% {
-    display: block; } }
+    visibility: visible; } }
 
 @-webkit-keyframes questionsClose {
   0% {
@@ -3103,11 +3103,11 @@ template {
     -webkit-transform: translateY(0);
             transform: translateY(0); }
   99% {
-    opacity: 0.5;
+    opacity: 0;
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px); }
   100% {
-    display: none; } }
+    visibility: hidden; } }
 
 @keyframes questionsClose {
   0% {
@@ -3115,11 +3115,11 @@ template {
     -webkit-transform: translateY(0);
             transform: translateY(0); }
   99% {
-    opacity: 0.5;
+    opacity: 0;
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px); }
   100% {
-    display: none; } }
+    visibility: hidden; } }
 
 @-webkit-keyframes questionsHover {
   0% {
@@ -3148,6 +3148,42 @@ template {
   100% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px); } }
+
+@-webkit-keyframes disabled-elements-JS {
+  0% {
+    overflow: hidden; }
+  100% {
+    overflow: visible; } }
+
+@keyframes disabled-elements-JS {
+  0% {
+    overflow: hidden; }
+  100% {
+    overflow: visible; } }
+
+@-webkit-keyframes disabled-elements-JS-index-1 {
+  0% {
+    z-index: 2; }
+  100% {
+    z-index: 0; } }
+
+@keyframes disabled-elements-JS-index-1 {
+  0% {
+    z-index: 2; }
+  100% {
+    z-index: 0; } }
+
+@-webkit-keyframes disabled-elements-JS-index-2 {
+  0% {
+    z-index: 1; }
+  100% {
+    z-index: 0; } }
+
+@keyframes disabled-elements-JS-index-2 {
+  0% {
+    z-index: 1; }
+  100% {
+    z-index: 0; } }
 
 body {
   position: relative;
@@ -4661,6 +4697,15 @@ select {
   border: 1px solid #0cb175;
   background-color: #f1f2f2;
   color: #000000; }
+  .good-to-know span {
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-align: left;
+    text-transform: uppercase; }
   .good-to-know div {
     position: absolute;
     left: 40px;
@@ -4694,7 +4739,9 @@ select {
 
 .btn {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #ffffff;
   padding: 20px;
   background-color: #0cb175;
@@ -4839,7 +4886,7 @@ select {
   text-decoration: none;
   letter-spacing: 0.5px;
   font-size: 16px;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
   line-height: 35px;
   font-weight: bold;
   transition: 500ms ease;
@@ -4888,6 +4935,7 @@ select {
   display: block;
   vertical-align: middle;
   padding: 22px 18px;
+  padding-top: 24px;
   margin: 0;
   color: #000000;
   text-decoration: none;
@@ -4904,6 +4952,12 @@ select {
   .nav-menu__link:hover {
     color: #0cb175;
     transition: 300ms ease; }
+  .nav-menu__link:nth-child(2) {
+    color: #ffffff;
+    background-color: #0cb175;
+    transition: 300ms ease; }
+    .nav-menu__link:nth-child(2):hover {
+      background-color: #065136; }
   .nav-menu__link--active {
     color: #ffffff;
     background-color: #0cb175;
@@ -4918,7 +4972,8 @@ select {
     font-size: 0 !important;
     line-height: 0 !important;
     text-align: center;
-    padding: 7px 18px; }
+    padding: 7px 18px;
+    padding-top: 9px; }
     .nav-menu__link--login div {
       position: relative;
       width: auto;
@@ -4982,7 +5037,6 @@ select {
 
 .footer__nav {
   flex: 1;
-  margin-left: 5px;
   margin-top: -4px; }
 
 .footer__link {
@@ -5053,12 +5107,12 @@ select {
   padding-bottom: 26px;
   cursor: pointer;
   border-bottom: 1px solid #d1d2d4;
-  transition: 200ms ease;
-  transition-timing-function: linear; }
+  transition: 120ms ease;
+  transition-timing-function: ease-out; }
   .questions__item:hover h5 {
     color: #0cb175;
-    transition: 150ms ease;
-    transition-timing-function: linear; }
+    transition: 100ms ease;
+    transition-timing-function: ease-out; }
   .questions__item:last-child {
     border-bottom: none; }
 
@@ -5085,7 +5139,7 @@ select {
   letter-spacing: 0;
   color: #263139;
   transition: 150ms ease;
-  transition-timing-function: linear; }
+  transition-timing-function: ease-in-out; }
   .questions__subtitle--active {
     color: #0cb175; }
 
@@ -5100,14 +5154,14 @@ select {
   font-size: 16px;
   color: #000000;
   transition: 150ms ease;
-  transition-timing-function: linear;
+  transition-timing-function: ease-out;
   max-height: 0;
   opacity: 0;
-  -webkit-transform: translate(0, -20%);
-          transform: translate(0, -20%); }
+  -webkit-transform: translate(0, -10%);
+          transform: translate(0, -10%); }
   .questions__text--visually {
     transition: 150ms ease;
-    transition-timing-function: linear;
+    transition-timing-function: ease-out;
     position: relative;
     overflow: hidden;
     max-height: 300px;
@@ -5117,12 +5171,12 @@ select {
     padding-top: 20px; }
   .questions__text--hidden {
     transition: 150ms ease;
-    transition-timing-function: linear;
+    transition-timing-function: ease-out;
     margin-top: 0;
     max-height: 0;
     opacity: 0;
-    -webkit-transform: translate(0, -20%);
-            transform: translate(0, -20%); }
+    -webkit-transform: translate(0, -10%);
+            transform: translate(0, -10%); }
 
 .questions__btn {
   position: absolute;
@@ -5136,8 +5190,8 @@ select {
   border: none;
   outline: none;
   cursor: pointer;
-  transition: 300ms ease;
-  transition-timing-function: linear; }
+  transition: 150ms ease;
+  transition-timing-function: ease-in-out; }
   .questions__btn::before, .questions__btn::after {
     content: "";
     position: absolute;
@@ -5148,13 +5202,13 @@ select {
     height: 2px;
     background-color: #0cb175;
     cursor: pointer;
-    transition: 300ms ease;
-    transition-timing-function: linear; }
+    transition: 150ms ease;
+    transition-timing-function: ease-in-out; }
   .questions__btn::after {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
-    transition: 300ms ease;
-    transition-timing-function: linear; }
+    transition: 150ms ease;
+    transition-timing-function: ease-in-out; }
   .questions__btn--opened {
     cursor: default; }
     .questions__btn--opened::before {
@@ -5165,7 +5219,7 @@ select {
 .select {
   position: relative;
   margin-left: 19px;
-  padding-top: 4px;
+  padding-top: 7px;
   height: 100%; }
 
 .select__btn {
@@ -5195,7 +5249,7 @@ select {
       content: "";
       position: absolute;
       right: -15px;
-      top: 34%;
+      top: 33%;
       -webkit-transform: rotate(-45deg) translateY(-50%);
               transform: rotate(-45deg) translateY(-50%);
       display: block;
@@ -5399,7 +5453,7 @@ select {
     font-weight: 400;
     content: "\0025"; }
   .intro__card-percent::after {
-    top: 58px;
+    top: 56px;
     right: 54px;
     font-size: 10px;
     line-height: 10px;
@@ -5656,6 +5710,8 @@ select {
     margin-top: 20px;
     color: #382c75;
     margin-bottom: 0; }
+  .search--deals {
+    padding-top: 11px; }
 
 #search__button {
   display: none; }
@@ -5786,7 +5842,7 @@ select {
   left: 0;
   bottom: 0;
   height: 100%;
-  padding: 10px 8px;
+  padding: 11px 8px;
   padding-right: 15px;
   box-sizing: border-box;
   outline: none;
@@ -5809,10 +5865,11 @@ select {
   flex-basis: calc(33.33% - 14px);
   max-width: 270px;
   height: 40px;
+  padding: 0;
+  line-height: 40px;
   margin-top: auto;
   background-color: #382c75;
   border: none;
-  padding: 10.4px;
   letter-spacing: 0.6px;
   box-sizing: border-box;
   color: #ffffff;
@@ -6214,7 +6271,6 @@ select {
   .deal-card__wrapper p span {
     font-family: "Gilroy", "Arial", sans-serif;
     font-size: 10px;
-    margin-bottom: 5px;
     color: #8a8c8f;
     text-transform: uppercase;
     font-weight: bold;
@@ -6223,7 +6279,7 @@ select {
     display: block;
     font-family: "Gilroy", "Arial", sans-serif;
     font-size: 20px;
-    margin-top: 2px;
+    line-height: 28px;
     color: #333132;
     font-weight: 300;
     letter-spacing: 0; }
@@ -6235,11 +6291,8 @@ select {
 
 .deal-card__time {
   color: #382c75 !important;
-  font-weight: bold !important;
-  margin-top: 6px; }
+  font-weight: bold !important; }
   .deal-card__time--color {
-    margin-top: 6px;
-    margin-bottom: 6px;
     color: #f2744d !important; }
 
 .deal-card__description {
@@ -6506,6 +6559,7 @@ select {
 .language__item {
   display: flex;
   padding: 10.5px 8px;
+  align-items: center;
   box-sizing: border-box;
   height: 39px;
   cursor: pointer; }
@@ -6518,8 +6572,8 @@ select {
     display: none; }
   .language__item .language__checkbox:checked ~ .language__name {
     color: #000000; }
-    .language__item .language__checkbox:checked ~ .language__name::after {
-      display: block; }
+  .language__item .language__checkbox:checked ~ .language__checkmark svg {
+    display: block; }
   .language__item i {
     width: 23px;
     height: 15px;
@@ -6529,36 +6583,26 @@ select {
 .language__name {
   position: relative;
   padding-top: 3px;
-  padding-left: 30px;
+  padding-left: 0px;
+  margin-left: 10px;
   font-size: 10px;
   letter-spacing: 1px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
-  .language__name::before {
-    content: "";
-    position: absolute;
-    left: 3px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    display: block;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #8a8c8f; }
-  .language__name::after {
-    content: "\2714";
-    position: absolute;
-    left: 4px;
-    top: 10px;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+
+.language__checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #8a8c8f; }
+  .language__checkmark svg {
     display: none;
-    width: 15px;
-    height: 15px;
-    font-size: 10px;
-    color: #8a8c8f; }
+    width: 70%;
+    height: 70%; }
 
 .featured__cards {
   display: flex;
@@ -6578,8 +6622,8 @@ select {
 
 .featured-card__img {
   border-radius: 50%;
-  border: 1px solid #ffffff;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); }
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
 
 .featured-card__wrapper {
   display: flex;
@@ -6645,10 +6689,15 @@ header.featured-card__wrapper {
     width: 100%;
     margin-bottom: 5px;
     font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: bold;
     color: #8a8c8f;
     text-transform: uppercase;
     font-weight: bold; }
   .featured-card__text b {
+    font-weight: 500;
+    letter-spacing: normal;
+    font-size: 14px;
     letter-spacing: 0; }
   .featured-card__text:last-child {
     margin: 10px 0;
@@ -7083,7 +7132,7 @@ footer.featured-card__wrapper {
 .modal-sign__btn {
   width: 100%;
   max-width: 100%;
-  padding: 17px;
+  padding: 0;
   margin-top: 10px;
   box-sizing: border-box;
   outline: none;
@@ -7303,7 +7352,9 @@ footer.featured-card__wrapper {
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
-  letter-spacing: 1.4px; }
+  letter-spacing: 1.4px;
+  padding: 0;
+  line-height: 60px; }
   .modal-feedback__btn:focus {
     outline: none;
     border: none; }
@@ -7334,6 +7385,31 @@ footer.featured-card__wrapper {
     line-height: normal;
     letter-spacing: normal;
     text-align: center; }
+
+.modal-registered {
+  box-sizing: border-box;
+  max-width: 580px;
+  max-height: 430px;
+  width: 90%;
+  padding: 0 10px;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .modal-registered svg {
+    width: 69px;
+    height: 72px;
+    fill: #0cb175; }
+  .modal-registered h4 {
+    margin-top: 28px;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center; }
+  .modal-registered .modal__btn {
+    max-width: 350px;
+    margin: 10px auto; }
 
 .modal--visible {
   display: block; }
@@ -7414,14 +7490,19 @@ footer.featured-card__wrapper {
   color: #ffffff; }
 
 .request__wrapper {
+  position: relative;
   border: none;
   display: flex;
   flex-direction: column;
   margin: 40px 0;
+  min-height: 81px;
   padding: 0;
   background-color: #ffffff; }
-  .request__wrapper--padding {
-    padding-bottom: 20px; }
+  .request__wrapper--padding .request__wrapper-show {
+    padding-bottom: 22px; }
+
+.request__wrapper-show {
+  margin-top: 19px; }
 
 .request__form {
   width: 100%;
@@ -7548,6 +7629,8 @@ footer.featured-card__wrapper {
   color: #000000;
   cursor: pointer; }
   .request__item-text i {
+    display: inline-block;
+    vertical-align: middle;
     font-style: normal;
     color: #8a8c8f; }
 
@@ -7598,23 +7681,35 @@ footer.featured-card__wrapper {
   font-family: "Gilroy", "Arial", sans-serif; }
 
 .request__title {
-  display: block;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
   width: 100%;
-  margin-top: 30px;
-  margin-bottom: 19px;
-  padding-bottom: 26px;
+  height: 80px;
+  line-height: 80px;
+  background-color: #ffffff;
+  margin-bottom: 0;
   font-size: 20px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
   letter-spacing: normal;
   text-align: center;
   color: #382c75;
   border-bottom: 1px solid #e7e7e8; }
+  .request__title span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px; }
 
 .request__wrapper--mortgage .request__title {
   margin-bottom: 0; }
+
+.request__wrapper--mortgage .request__wrapper-show {
+  margin-top: 0; }
 
 .request__item--mortgage {
   width: auto;
@@ -8002,15 +8097,9 @@ footer.featured-card__wrapper {
   line-height: normal;
   letter-spacing: 2px;
   text-align: center;
-  transition: 300ms;
-  -webkit-filter: blur(0);
-          filter: blur(0); }
+  transition: 300ms; }
   .request__btn:hover {
     background-color: #15102b; }
-  .request__btn:disabled {
-    transition: 300ms;
-    -webkit-filter: blur(3px);
-            filter: blur(3px); }
 
 .request__btn-save {
   margin: 0 auto;
@@ -8038,7 +8127,7 @@ footer.featured-card__wrapper {
   cursor: pointer;
   position: relative;
   display: inline-block;
-  top: 3px;
+  vertical-align: middle;
   right: -4px;
   width: 12px;
   height: 16px; }
@@ -8114,6 +8203,9 @@ footer.featured-card__wrapper {
 
 .request__input--select option:first-child {
   display: none; }
+
+.request__hint-wrapper {
+  background-color: #e5efec; }
 
 .my-request {
   padding-top: 00px; }
@@ -9127,30 +9219,32 @@ footer.featured-card__wrapper {
   color: #faa61a; }
 
 .rating__btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   height: 100%;
   width: 100%;
   margin-right: 0;
   max-width: 100%;
   background-color: inherit;
   color: #faa61a;
-  padding-top: 32px;
   box-sizing: border-box;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
+  padding: 0;
   letter-spacing: 1.4px;
   text-align: center; }
   .rating__btn:hover {
     background-color: #faa61a;
     color: #ffffff; }
   .rating__btn span {
-    margin-right: 24px; }
+    margin-right: 30px; }
   .rating__btn svg {
     position: relative;
-    top: 9px;
-    left: -6px;
+    margin-right: 10px;
     width: 32px;
     height: 32px; }
 
@@ -9370,7 +9464,8 @@ footer.featured-card__wrapper {
   max-width: 100%;
   box-sizing: border-box;
   height: 106px;
-  padding-top: 45px; }
+  padding: 0;
+  line-height: 106px; }
 
 .profile-about {
   margin-top: 35px;
@@ -9629,30 +9724,58 @@ footer.featured-card__wrapper {
   cursor: default; }
 
 .disabled-elements-preview-JS {
-  position: relative;
-  z-index: 1;
-  transition: 300ms;
-  -webkit-filter: blur(3px);
-          filter: blur(3px); }
-  .disabled-elements-preview-JS--hidden {
+  overflow: hidden; }
+  .disabled-elements-preview-JS .request__data-info {
+    display: none; }
+  .disabled-elements-preview-JS .request__wrapper-show {
+    z-index: 1;
     transition: 300ms;
-    -webkit-filter: blur(0) !important;
-            filter: blur(0) !important; }
-    .disabled-elements-preview-JS--hidden::after {
-      display: none !important; }
-  .disabled-elements-preview-JS::after {
-    z-index: 2;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
     width: 100%;
-    height: 100%;
-    background-color: transparent;
-    cursor: default; }
+    transition-timing-function: ease-out;
+    margin-top: -335px; }
+  .disabled-elements-preview-JS--hidden {
+    -webkit-animation-name: disabled-elements-JS;
+            animation-name: disabled-elements-JS;
+    -webkit-animation-duration: 0.1s;
+            animation-duration: 0.1s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-delay: 350ms;
+            animation-delay: 350ms; }
+    .disabled-elements-preview-JS--hidden .request__title {
+      -webkit-animation-name: disabled-elements-JS-index-1;
+              animation-name: disabled-elements-JS-index-1;
+      -webkit-animation-duration: 0.1s;
+              animation-duration: 0.1s;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both;
+      -webkit-animation-delay: 350ms;
+              animation-delay: 350ms; }
+    .disabled-elements-preview-JS--hidden .request__data-info {
+      display: inline-block;
+      vertical-align: middle;
+      z-index: 3; }
+      .disabled-elements-preview-JS--hidden .request__data-info::before {
+        z-index: 5; }
+    .disabled-elements-preview-JS--hidden .request__wrapper-show {
+      top: 0;
+      transition: 300ms;
+      transition-timing-function: ease-in;
+      margin-top: 19px;
+      -webkit-animation-name: disabled-elements-JS-index-2;
+              animation-name: disabled-elements-JS-index-2;
+      -webkit-animation-duration: 0.1s;
+              animation-duration: 0.1s;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both;
+      -webkit-animation-delay: 350ms;
+              animation-delay: 350ms; }
+
+.disabled-elements-preview-JS--hidden.request__wrapper--mortgage .request__wrapper-show {
+  top: 0;
+  transition: 300ms;
+  transition-timing-function: ease-in;
+  margin-top: 0; }
 
 .page-request .intro {
   background-color: #ececec;
@@ -9704,10 +9827,11 @@ footer.featured-card__wrapper {
   padding: 20px 0;
   max-height: 60px;
   height: 60px;
+  padding: 0;
+  line-height: 60px;
   flex-basis: calc(100%);
   max-width: calc(100%);
-  letter-spacing: 1.5px;
-  padding-top: 24px; }
+  letter-spacing: 1.5px; }
 
 .page-request .search__item--money,
 .page-find-brokers .search__item--money {
@@ -9716,7 +9840,7 @@ footer.featured-card__wrapper {
   .page-find-brokers .search__item--money::before {
     content: "$";
     position: absolute;
-    top: 37px;
+    top: 39px;
     left: 10px;
     font-size: 11px;
     font-weight: 800;
@@ -9906,6 +10030,10 @@ footer.featured-card__wrapper {
     position: relative;
     padding-top: 15px;
     padding-bottom: 36px; }
+    .search--deals {
+      padding-bottom: 30px; }
+    .search .search__title {
+      margin-top: 20px; }
   .search__popular {
     display: block; }
   .search--deals .search__form {
@@ -10009,7 +10137,6 @@ footer.featured-card__wrapper {
     margin-bottom: 5px; }
   .page-find-brokers .search {
     padding-bottom: 27px;
-    margin-top: 18px;
     padding-top: 1px; }
   .page-find-brokers .featured__cards {
     justify-content: space-around; }
@@ -10179,9 +10306,16 @@ footer.featured-card__wrapper {
       display: block; }
   .request__info-wrapper {
     margin: 0 20px; }
+  .request__item--mortgage .request__item-text--height {
+    height: 250px; }
   .good-to-know p {
     padding-bottom: 25px;
     font-size: 14px; }
+  .request__hint-wrapper {
+    padding-bottom: 21px;
+    margin-bottom: 20px; }
+    .request__hint-wrapper p {
+      font-size: 20px; }
   .request-hint__brokers-list {
     padding: 0 20px;
     margin-top: 20px; }
@@ -10268,7 +10402,10 @@ footer.featured-card__wrapper {
     .choose-broker__btn br {
       display: none; }
   .request-hint {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  .page-request .search__item--money::before,
+  .page-find-brokers .search__item--money::before {
+    top: 36px; } }
 
 @media (max-width: 1200px) {
   .container {
@@ -10479,6 +10616,8 @@ footer.featured-card__wrapper {
   .page-request .search {
     padding-top: 34px;
     padding-bottom: 20px; }
+    .page-request .search--deals {
+      padding-top: 0; }
   .page-request .search__item {
     margin-top: 24px;
     flex-basis: calc(50% - 10px);
@@ -10702,11 +10841,8 @@ footer.featured-card__wrapper {
     .rating__btn span {
       margin-right: 0; }
     .rating__btn svg {
-      top: 0;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      margin-right: 0; }
   .broker-feedback__item {
     margin: 26px 0;
     padding-bottom: 5px; }
@@ -10792,7 +10928,8 @@ footer.featured-card__wrapper {
   .modal-feedback__form {
     margin-top: 15px; }
   .modal-feedback__btn {
-    padding-top: 10px; }
+    padding: 0;
+    line-height: 40px; }
   .preview {
     padding: 21px 20px;
     padding-bottom: 36px; }
@@ -10817,18 +10954,20 @@ footer.featured-card__wrapper {
   .request__flex-wrapper {
     flex-wrap: wrap; }
   .request__wrapper {
-    margin: 20px 0; }
-    .request__wrapper--padding {
-      padding-bottom: 5px; }
+    margin: 20px 0;
+    min-height: 60px; }
+  .request__wrapper-show {
+    margin-top: 11px;
+    padding-bottom: 0px; }
+  .request__wrapper--padding .request__wrapper-show {
+    padding-bottom: 2px; }
   .request__title {
-    margin-top: 20px;
-    margin-bottom: 12px;
-    padding-bottom: 20px;
+    height: 60px;
+    line-height: 60px;
     font-size: 16px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    line-height: normal;
     letter-spacing: normal;
     text-align: center; }
   .request__item {
@@ -10844,7 +10983,6 @@ footer.featured-card__wrapper {
       .request__wrapper--mortgage span i {
         flex: 2; }
   .request__data-info {
-    top: 0px;
     right: -8px; }
   .request__wrapper--mortgage .request__item {
     width: 50% !important;
@@ -10903,8 +11041,9 @@ footer.featured-card__wrapper {
     position: absolute;
     right: 20px;
     left: auto;
-    -webkit-transform: translateX(0);
-            transform: translateX(0); }
+    top: 50%;
+    -webkit-transform: translateX(0) translateY(-50%);
+            transform: translateX(0) translateY(-50%); }
   .request__range-output {
     font-size: 100px;
     letter-spacing: 10px; }
@@ -11265,14 +11404,15 @@ footer.featured-card__wrapper {
     display: flex;
     justify-content: center; }
   .about__btn {
-    width: 95%;
-    max-width: 450px;
+    width: 105%;
+    max-width: 105%;
     margin: 0 auto;
     margin-top: 25px;
     padding: 10px 0;
     padding-left: 20px;
     padding-right: 50px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    margin-left: -10px; }
     .about__btn::after {
       right: 35%; }
   .about__wrapper {
@@ -11375,7 +11515,7 @@ footer.featured-card__wrapper {
     margin-top: 24px; }
     .search__item--select::after {
       right: 13px;
-      top: 37px; }
+      top: 40px; }
   .search__item--range input {
     width: 33%; }
   .search__item--range input:nth-of-type(2) {
@@ -11491,8 +11631,9 @@ footer.featured-card__wrapper {
     max-width: calc(100%);
     width: calc(100%); }
   .page-request .search__submit {
-    padding: 11px 0;
-    max-height: 37px; }
+    padding: 0;
+    max-height: 37px;
+    line-height: 37px; }
   .page-request .search__form {
     flex-wrap: wrap;
     flex-direction: column; }
@@ -11631,13 +11772,12 @@ footer.featured-card__wrapper {
   .page-find-brokers .search__submit {
     width: 100%;
     margin-top: 30px;
-    padding: 10px 0;
+    line-height: 40px;
     max-height: 40px;
     height: 40px;
     flex-basis: calc(100%);
     max-width: calc(100%);
-    letter-spacing: 1.5px;
-    padding-top: 13px; }
+    letter-spacing: 1.5px; }
   .page-find-brokers .featured__cards {
     margin-left: -10px;
     margin-right: -10px; }
@@ -11734,8 +11874,7 @@ footer.featured-card__wrapper {
     font-stretch: normal;
     line-height: normal;
     letter-spacing: 1.4px;
-    box-sizing: border-box;
-    padding-top: 13px; }
+    box-sizing: border-box; }
   .profile-about {
     padding: 0;
     margin-left: 0;
@@ -11890,6 +12029,29 @@ footer.featured-card__wrapper {
       line-height: normal;
       letter-spacing: normal;
       text-align: center; }
+  .modal-registered {
+    max-height: 340px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 90%;
+    margin-left: 0; }
+    .modal-registered .modal__btn {
+      font-size: 14px;
+      height: 40px;
+      box-sizing: border-box; }
+    .modal-registered svg {
+      width: 50px;
+      height: 61px;
+      fill: #0cb175; }
+    .modal-registered h4 {
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center; }
   .preview {
     padding: 10px 10px; }
   .preview__title {
@@ -11901,17 +12063,23 @@ footer.featured-card__wrapper {
     font-size: 14px;
     margin-bottom: 10px; }
   .request__wrapper {
-    margin: 11px 0; }
+    margin: 10px 0; }
+  .request__wrapper-show {
+    margin-top: 0; }
+  .request__select-wrapper::after {
+    right: 11px; }
   .request__wrapper--padding {
     padding-bottom: 4px; }
   .request__wrapper--mortgage .request__title {
-    padding: 0 28px;
-    padding-bottom: 11px;
     box-sizing: border-box; }
   .request__title {
+    padding: 10px 10px;
+    padding-right: 15px;
     font-size: 16px;
-    margin-top: 8px;
-    padding-bottom: 11px; }
+    min-height: 40px;
+    height: auto;
+    line-height: normal;
+    box-sizing: border-box; }
   .request__flex-wrapper--padding {
     padding: 0 10px; }
   .request__wrapper--mortgage .request__flex-wrapper {
@@ -11962,8 +12130,7 @@ footer.featured-card__wrapper {
       .request__item--price input[type="text"]::placeholder {
         font-size: 24px; }
   .request__title--data .request__data-info {
-    right: 10px;
-    top: 0; }
+    right: -5px; }
   .request__data-info::before {
     min-width: 312px; }
   .request__range-output {
@@ -12004,9 +12171,6 @@ footer.featured-card__wrapper {
     box-sizing: border-box; }
   .request__wrapper--mortgage .request__item:nth-child(1), .request__wrapper--mortgage .request__item:nth-child(2), .request__wrapper--mortgage .request__item:nth-child(3) {
     box-shadow: 0 1px 0 #f1f2f2; }
-  .request__wrapper--mortgage .request__title {
-    padding: 0 10px;
-    padding-bottom: 11px; }
   .request__item--single {
     margin: 9px 0; }
   .request__item--textarea textarea {
@@ -12290,7 +12454,59 @@ footer.featured-card__wrapper {
     font-size: 12px;
     letter-spacing: 1.2px; }
   .request-hint {
-    margin-bottom: 0px; } }
+    margin-bottom: 0px; }
+  .request__hint-wrapper p {
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 50px;
+    padding-left: 12px;
+    padding-right: 14px;
+    padding-bottom: 4px; }
+  .request__hint-wrapper {
+    margin-bottom: 10px; }
+    .request__hint-wrapper div {
+      left: 27px;
+      top: 12px; }
+      .request__hint-wrapper div span {
+        margin-left: 12px; }
+    .request__hint-wrapper div svg {
+      width: 24px;
+      height: 32px;
+      margin-right: 10px; }
+  .disabled-elements-preview-JS .request__wrapper-show {
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    transition: 300ms;
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+    -webkit-animation: none;
+            animation: none; }
+    .disabled-elements-preview-JS .request__wrapper-show::after {
+      z-index: 2;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      cursor: default; }
+  .disabled-elements-preview-JS--hidden {
+    margin-top: 0; }
+    .disabled-elements-preview-JS--hidden .request__wrapper-show {
+      position: relative;
+      display: block;
+      transition: 300ms;
+      -webkit-filter: blur(0) !important;
+              filter: blur(0) !important;
+      -webkit-animation: none;
+              animation: none; }
+      .disabled-elements-preview-JS--hidden .request__wrapper-show::after {
+        display: none !important; } }
 
 @media (max-width: 550px) {
   .modal-login {
@@ -12590,8 +12806,7 @@ footer.featured-card__wrapper {
     width: 50%;
     flex-basis: 50%;
     box-sizing: border-box;
-    padding: 27px 14%;
-    padding-bottom: 0; }
+    padding: 27px 14%; }
     .page-find-brokers footer.featured-card__wrapper .btn:last-child {
       padding: 27px 15.5%; }
   .page-find-brokers .featured-card__wrapper--footer {
@@ -12641,7 +12856,8 @@ footer.featured-card__wrapper {
     line-height: normal;
     letter-spacing: 1.4px;
     box-sizing: border-box;
-    padding-top: 12px; }
+    line-height: 40px;
+    padding: 0; }
   .tabs-controls div {
     flex: 2; }
   .tabs-controls__label {

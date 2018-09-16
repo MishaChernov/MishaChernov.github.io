@@ -549,7 +549,7 @@
       display: none;
     }
     .request-info__btn {
-    display: none;
+      display: none;
     }
   }
   .request-header p {
@@ -557,5 +557,39 @@
     &:first-child {
       margin-top: 10px;
     }
+  }
+  .request-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    p {
+      margin: 6px 0px !important;
+    }
+  }
+  .request-header__hint {
+    max-width: 126px;
+
+    &::after {
+      bottom: 70%;
+      transform: translateY(0) rotate(45deg);
+    }
+  }
+  .request-header__name {
+    vertical-align: top;
+  }
+  .request-header__img {
+    vertical-align: top;
+  }
+  .request-header p {
+    margin-bottom: 4px;
+  }
+  .request-header p:nth-of-type(1) {
+    margin-top: -27px;
+  }
+  .choose-broker__info {
+    padding-left: 10px !important;
+  }
+  .choose-broker__comments {
+    padding: 0 10px;
   }
 }

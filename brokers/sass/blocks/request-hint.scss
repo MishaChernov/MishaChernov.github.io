@@ -1,6 +1,8 @@
 .request-hint {
   background-color: $color-light-gray;
   padding-top: 42px;
+  padding-bottom: 1px;
+  margin-bottom: 40px;
 }
 
 .request-hint__wrapper {
@@ -65,4 +67,8 @@
 .request-hint__brokers-list {
   margin-top: 40px;
   padding: 0 40px;
+}
+
+.request-hint__broker {
+  margin: 40px 0;
 }

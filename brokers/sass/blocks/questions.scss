@@ -13,16 +13,16 @@
   cursor: pointer;
   border-bottom: 1px solid #d1d2d4;
 
-  @include transition(200ms);
-  transition-timing-function: linear;
+  @include transition(120ms);
+  transition-timing-function: ease-in-out;
 
   &:hover {
     // animation-name: questionsHover;
     // animation-duration: 0.2s;
     h5 {
       color: $color-green;
-      @include transition(150ms);
-      transition-timing-function: linear;
+      @include transition(100ms);
+      transition-timing-function: ease-in-out;
     }
   }
   &:last-child {
@@ -51,7 +51,7 @@
   letter-spacing: 0;
   color: #263139;
   @include transition(150ms);
-  transition-timing-function: linear;
+  transition-timing-function: ease-in-out;
 
   &--active {
     color: $color-green;
@@ -69,14 +69,14 @@
   font-size: 16px;
   color: $color-black;
   @include transition(150ms);
-  transition-timing-function: linear;
+  transition-timing-function: ease-in-out;
   max-height: 0;
   opacity: 0;
-  transform: translate( 0 , -20% );
+  transform: translate( 0 , -10% );
 
   &--visually {
     @include transition(150ms);
-    transition-timing-function: linear;
+    transition-timing-function: ease-in-out;
     position: relative;
     overflow: hidden;
     max-height: 300px;
@@ -86,11 +86,11 @@
   }
   &--hidden {
     @include transition(150ms);
-    transition-timing-function: linear;
+    transition-timing-function: ease-in-out;
     margin-top: 0;
     max-height: 0;
     opacity: 0;
-    transform: translate( 0 , -20% );
+    transform: translate( 0 , -10% );
   }
 }
 
@@ -111,8 +111,8 @@
 
   cursor: pointer;
 
-  @include transition(300ms);
-  transition-timing-function: linear;
+  @include transition(150ms);
+  transition-timing-function: ease-in-out;
 
   &::before,
   &::after {
@@ -127,13 +127,13 @@
 
     background-color: $color-green;
     cursor: pointer;
-    @include transition(300ms);
-    transition-timing-function: linear;
+    @include transition(150ms);
+    transition-timing-function: ease-in-out;
   }
   &::after {
     transform: rotate(90deg);
-    @include transition(300ms);
-    transition-timing-function: linear;
+    @include transition(150ms);
+    transition-timing-function: ease-in-out;
   }
   &--opened {
     cursor: default;

@@ -13,7 +13,8 @@
   <script src="https://viralpatel.net/blogs/demo/jquery/jquery.shorten.1.0.js"></script>
 
 </head>
-<body class="page-broker-profile  overlay" id="top">
+<body class="page-broker-profile  overlay  log-in--false" id="top">  <!--  "log-in--true"  Add this class if user is authorized
+                                                                          "log-in--false" This is user is not authorized -->
   <header class="header">
     <div class="header__container">
       <div class="header__wrapper">
@@ -509,6 +510,19 @@
       <use xlink:href="img/sprite/sprite.svg#success"></use>
     </svg>
     <h4>Thank you for your review!</h4>
+  </section>
+
+  <section class="modal-registered  modal" id="modal-registered">
+    <svg class="icon  icon-write-review">
+      <use xlink:href="img/sprite/sprite.svg#write-review"></use>
+    </svg>
+    <h4>If you like to write a review log-in now!</h4>
+    <a class="modal__btn  btn  login-link" href="#">
+      <span>Log in</span>
+    </a>
+    <a class="modal__btn  btn  signup-link" href="#">
+      <span>Sign up</span>
+    </a>
   </section>
 
   <section class="modal-login  modal" id="modal-login">

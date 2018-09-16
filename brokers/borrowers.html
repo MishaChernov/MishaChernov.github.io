@@ -48,7 +48,7 @@
 
     <nav class="nav-menu">
       <div class="nav-menu__wrapper">
-        <a class="nav-menu__link" href="deals.html">Find A Broker</a>
+        <a class="nav-menu__link" href="find-brokers.html">Find A Broker</a>
         <a class="nav-menu__link" href="post-request.html">Post A Request</a>
         <a class="nav-menu__link  login-link" href="#">  <!-- add this class to login  nav-menu__link--login -->
           Log in
@@ -174,13 +174,13 @@
 
           <label class="search__item  search__item--location">
             <span class="search__item-text">What is your postal code?</span>
-            <input type="text" name="code" placeholder="M4X 1W7">
+            <input type="text" name="code">
           </label>
 
           <label class="search__item  search__item--money">
             <span class="search__item-text">How much do you need?</span>
 
-            <input type="text" name="money" placeholder="599,000">
+            <input type="text" name="money">
           </label>
 
           <label class="search__item  search__item--select">
@@ -207,21 +207,43 @@
             <div class="language__list">
               <label class="language__item">
                 <input class="language__checkbox" type="checkbox" value="English" name="language" data-lang="flag-icon-gb" checked>
+                <div class="language__checkmark">
+                  <svg class="icon  icon-checkmark">
+                    <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+                  </svg>
+                </div>
                 <div class="language__name">English <span class="language__count">(759)</span></div>
                 <i class="flag-icon  flag-icon-gb"></i>
               </label>
               <label class="language__item">
                 <input class="language__checkbox" type="checkbox" value="Chinese" name="language" data-lang="flag-icon-cn">
+                <div class="language__checkmark">
+                  <svg class="icon  icon-checkmark">
+                    <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+                  </svg>
+                </div>
                 <div class="language__name">Chinese <span class="language__count">(423)</span></div>
                 <i class="flag-icon  flag-icon-cn"></i>
               </label>
               <label class="language__item">
                 <input class="language__checkbox" type="checkbox" value="Polish" name="language" data-lang="flag-icon-pl" checked>
-                <div class="language__name">Polish <span class="language__count">(235)</span></div>
+                <div class="language__checkmark">
+                  <svg class="icon  icon-checkmark">
+                    <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+                  </svg>
+                </div>
+                <div class="language__name">
+                  Polish <span class="language__count">(235)</span>
+                </div>
                 <i class="flag-icon  flag-icon-pl"></i>
               </label>
               <label class="language__item">
                 <input class="language__checkbox" type="checkbox" value="German" name="language" data-lang="flag-icon-de" checked>
+                <div class="language__checkmark">
+                  <svg class="icon  icon-checkmark">
+                    <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+                  </svg>
+                </div>
                 <div class="language__name">German <span class="language__count">(151)</span></div>
                 <i class="flag-icon  flag-icon-de"></i>
               </label>

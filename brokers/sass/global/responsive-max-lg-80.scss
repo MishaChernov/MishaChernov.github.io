@@ -309,4 +309,260 @@
       text-align: center;
     }
   }
+
+
+  .request-card {
+    width: 260px;
+  }
+  .request-card__name {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  .request-card__image-wrapper {
+    width: 260px;
+    height: 260px;
+  }
+  .request-card__image {
+    width: 100%;
+    height: 100%;
+  }
+  .request-info {
+    padding-top: 22px;
+    padding-left: 20px;
+    padding-right: 10px;
+
+    p {
+      margin-bottom: 22px;
+
+      &:last-child {
+        margin-bottom: 5px;
+      }
+      b {
+        font-size: 16px;
+      }
+    }
+    br {
+      display: none;
+    }
+  }
+
+  .request-info__description p {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 17px;
+    letter-spacing: normal;
+    padding-right: 10px;
+  }
+  .request-info__options {
+    margin-top: 14px;
+    margin-bottom: 15px;
+  }
+
+  .request-about {
+    padding-left: 7px;
+  }
+  .request-header {
+    margin-bottom: 20px;
+  }
+  .request-header p b {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  .request-header p {
+    margin-bottom: 4px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  .request-header__wrapper {
+    padding-right: 10px;
+
+    &:last-child {
+      padding-left: 20px;
+    }
+  }
+
+  .request-details__name-wrapper {
+    margin-top: 32px;
+    margin-bottom: 11px;
+
+    b {
+      font-size: 10px;
+    }
+  }
+  .request-details__name {
+    font-size: 24px;
+    display: block;
+    margin-bottom: -39px;
+  }
+  .request-header__title {
+    margin-bottom: 11px;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.4px;
+  }
+  .request-header__name {
+    font-size: 16px;
+    margin-right: 15px;
+  }
+  .request-info__description {
+    margin-bottom: 37px;
+  }
+
+  .request-hint {
+    padding-top: 21px;
+  }
+  .request-hint__wrapper h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    span {
+      display: block;
+    }
+  }
+
+  .request__info-wrapper {
+    margin: 0 20px;
+  }
+  .good-to-know {
+    p {
+      padding-bottom: 25px;
+      font-size: 14px;
+    }
+  }
+
+  .request-hint__brokers-list {
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+  .request-hint__broker {
+    margin: 20px 0;
+  }
+
+  .choose-broker {
+    padding-bottom: 0;
+  }
+  .choose-broker__name {
+    font-size: 16px;
+  }
+  .choose-broker__img {
+    margin-right: 9px;
+  }
+  .choose-broker--verified .choose-broker__name span::after {
+    right: -19px;
+  }
+  .choose-broker__online {
+    display: block;
+    margin-top: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 10px;
+    letter-spacing: 1px;
+
+    br {
+      display: block;
+    }
+    b {
+      display: none;
+    }
+  }
+  .choose-broker__img-wrapper {
+    max-width: 310px;
+
+  }
+  .choose-broker__img-wrapper {
+    order: 1;
+    max-width: none;
+    flex-basis: 75%;
+  }
+  .choose-broker__star {
+    order: 2;
+    flex-basis: 25%;
+  }
+  .choose-broker__info:nth-of-type(2) {
+    order: 3;
+    border-top: 1px solid #f1f2f2;
+    padding-top: 5px;
+  }
+  .choose-broker__info:nth-of-type(3) {
+    order: 4;
+    border-top: 1px solid #f1f2f2;
+    padding-top: 5px;
+  }
+  .choose-broker__info:nth-of-type(4) {
+    order: 5;
+    border-top: 1px solid #f1f2f2;
+    padding-top: 5px;
+  }
+  .choose-broker__info:nth-of-type(5) {
+    order: 6;
+  }
+  .choose-broker__info:nth-of-type(6) {
+    order: 7;
+  }
+  .choose-broker__comments {
+    order: 8;
+  }
+  .choose-broker__btn:nth-of-type(1) {
+    order: 9;
+  }
+  .choose-broker__btn:nth-of-type(2) {
+    order: 10;
+  }
+  .choose-broker__info {
+    border-top: none;
+    align-items: left;
+    padding-left: 20px !important;
+    flex-basis: 33.3%;
+    align-content: flex-start;
+
+    &:last-of-type {
+      margin-right: auto;
+    }
+  }
+  .choose-broker__info {
+    height: 58px;
+    b {
+      font-size: 16px;
+    }
+  }
+  .choose-broker__comments {
+    margin-top: 10px;
+    p {
+      font-size: 16px;
+    }
+  }
+  .choose-broker__btn {
+    margin-top: 17px;
+    border-top: 1px solid #f1f2f2;
+    flex-basis: 50%;
+    height: 60px;
+    padding: 0;
+    min-height: 60px;
+    box-sizing: border-box;
+    max-width: none !important;
+    width: 100%;
+
+    br {
+      display: none;
+    }
+  }
+  .request-hint {
+    margin-bottom: 20px;
+  }
 }

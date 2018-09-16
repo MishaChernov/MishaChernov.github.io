@@ -31,6 +31,7 @@
   display: block;
   vertical-align: middle;
   padding: 22px 18px;
+  padding-top: 24px;
   margin: 0;
   color: $color-black;
   text-decoration: none;
@@ -49,6 +50,15 @@
   &:hover {
     color: $color-green;
     @include transition(300ms);
+  }
+  &:nth-child(2) {
+    color: $color-white;
+    background-color: $color-green;
+    @include transition(300ms);
+
+    &:hover {
+      background-color: darken($color-green, 20%);
+    }
   }
   &--active {
     color: $color-white;
@@ -70,6 +80,7 @@
     line-height: 0 !important;
     text-align: center;
     padding: 7px 18px;
+    padding-top: 9px;
 
     div {
       position: relative;
