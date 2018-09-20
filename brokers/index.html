@@ -253,6 +253,20 @@
     </p>
   </footer>
 
+  <section class="modal-registered  modal" id="modal-registered">
+    <svg class="icon  icon-write-review">
+      <use xlink:href="img/sprite/sprite.svg#write-review"></use>
+    </svg>
+    <h4>If you like to write a review log-in now!</h4>
+    <a class="modal__btn  btn  login-link" href="#">
+      <span>Log in</span>
+    </a>
+    <a class="modal__btn  btn  signup-link" href="#">
+      <span>Sign up</span>
+    </a>
+    <button class="modal-close"></button>
+  </section>
+
   <section class="modal-login  modal" id="modal-login">
     <a class="logo  logo--modal" href="index.html">
       <svg class="icon  icon-logo">
@@ -275,6 +289,7 @@
         <input class="modal-login__btn  btn" type="submit" value="continue">
       </form>
     </p>
+    <button class="modal-close"></button>
   </section>
 
   <section class="modal-sign  modal" id="modal-sign">
@@ -291,24 +306,24 @@
       <form class="modal-sign__form" action="/">
         <span class="modal-sign-wrapper">
           <select class="modal-sign__input  modal-sign__input--select" size="1" name="sign-in" onchange="handleChange(this)">
-            <option value="I'm, a broker" selected>I'm, a broker</option>
-            <option value="I'm, a borrower">I'm, a borrower</option>
+            <option value="I'm, a borrower" selected>I'm, a borrower</option>
+            <option value="I'm, a broker">I'm, a broker</option>
           </select>
-          <i class="modal-select__textbox">I'm, a broker</i>
+          <i class="modal-select__textbox">I'm, a borrower</i>
         </span>
 
         <div class="modal-sign__wrapper">
           <div>
-            <input class="modal-sign__input  modal-login__input--first-name" type="text" value="" name="first-name" placeholder="first name" required>
-            <input class="modal-sign__input  modal-login__input--last-name" type="text" value="" name="last-name" placeholder="last name" required>
+            <input class="modal-sign__input  modal-sign__input--first-name" type="text" value="" name="first-name" placeholder="first name" required>
+            <input class="modal-sign__input  modal-sign__input--last-name" type="text" value="" name="last-name" placeholder="last name" required>
           </div>
           <div>
-            <input class="modal-sign__input  modal-login__input--email" type="email" value="" name="email" placeholder="email" required>
-            <input class="modal-sign__input  modal-login__input--confirm-email" type="email" value="" name="confirm-email" placeholder="confirm email" required>
+            <input class="modal-sign__input  modal-sign__input--email" type="email" value="" name="email" placeholder="email" required>
+            <input class="modal-sign__input  modal-sign__input--confirm-email" type="email" value="" name="confirm-email" placeholder="confirm email" required>
           </div>
           <div>
-            <input class="modal-sign__input  modal-login__input--password" type="password" value="" name="pasword" placeholder="pasword" required>
-            <input class="modal-sign__input  modal-login__input--confirm-password" type="password" value="" name="confirm-pasword" placeholder="confirm pasword" required>
+            <input class="modal-sign__input  modal-sign__input--password" type="password" value="" name="pasword" placeholder="pasword" required>
+            <input class="modal-sign__input  modal-sign__input--confirm-password" type="password" value="" name="confirm-pasword" placeholder="confirm pasword" required>
           </div>
         </div>
 
@@ -317,6 +332,7 @@
       </form>
 
       <p class="modal-sign__copy">By creating my account, I agree to the <a href="#">Terms & conditions</a> and <a href="#">Privacy Policy</a></p>
+      <button class="modal-close"></button>
   </section>
 
   <script>

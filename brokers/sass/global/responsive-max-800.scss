@@ -1815,6 +1815,18 @@
   }
   .request-hint {
     margin-bottom: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+  .request-hint__wrapper {
+    margin: 0 auto;
   }
   .request__hint-wrapper p {
     font-size: 16px;

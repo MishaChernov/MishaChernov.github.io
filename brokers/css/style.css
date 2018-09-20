@@ -7014,6 +7014,41 @@ footer.featured-card__wrapper {
   text-align: center;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); }
 
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  outline: none;
+  width: 17px;
+  height: 17px;
+  cursor: pointer; }
+  .modal-close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+            transform: translateY(-50%) rotate(45deg);
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #000000; }
+  .modal-close::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+            transform: translateY(-50%) rotate(-45deg);
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #000000; }
+
 .modal-login {
   z-index: 999;
   position: fixed;
@@ -7270,6 +7305,8 @@ footer.featured-card__wrapper {
       outline: none;
       width: 17px;
       height: 17px;
+      top: auto;
+      right: auto;
       cursor: pointer; }
       .modal-feedback header button::after {
         content: "";
@@ -9769,12 +9806,12 @@ footer.featured-card__wrapper {
     width: 171px;
     height: 41px;
     box-sizing: border-box;
-    padding-top: 11px;
+    height: 40px;
+    line-height: 40px;
     font-size: 14px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    line-height: normal;
     letter-spacing: 1.4px;
     text-align: center;
     background-color: #faa61a; }
@@ -11994,6 +12031,9 @@ footer.featured-card__wrapper {
     box-sizing: border-box; }
     .profile-info__btn--hide {
       display: flex; }
+  .profile {
+    width: 100%;
+    box-sizing: border-box; }
   .profile-about {
     padding: 0;
     margin-left: 0;
@@ -12573,7 +12613,15 @@ footer.featured-card__wrapper {
     font-size: 12px;
     letter-spacing: 1.2px; }
   .request-hint {
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: -10px;
+    margin-left: -10px; }
+  .request-hint__wrapper {
+    margin: 0 auto; }
   .request__hint-wrapper p {
     font-size: 16px;
     font-weight: 600;
