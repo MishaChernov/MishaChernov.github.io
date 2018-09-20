@@ -10,7 +10,6 @@
 
   &--open {
     box-sizing: border-box;
-    bottom: -169px !important;
     left: 0;
     transition: 300ms ease;
     z-index: 2;
@@ -30,12 +29,14 @@
 .nav-menu__link {
   display: block;
   vertical-align: middle;
-  padding: 22px 18px;
-  padding-top: 24px;
+  padding: 0 18px;
+  height: 58px;
+  line-height: 60px;
   margin: 0;
   color: $color-black;
   text-decoration: none;
   text-transform: uppercase;
+  box-sizing: border-box;
   letter-spacing: 1px;
   text-align: center;
   font-weight: bold;
@@ -43,15 +44,13 @@
   @include transition(300ms);
 
   &:last-child {
-    color: $color-gray;
-    font-size: 10px ;
-    line-height: 13.8px;
+    border-bottom: none;
   }
   &:hover {
     color: $color-green;
     @include transition(300ms);
   }
-  &:nth-child(2) {
+  &--second {
     color: $color-white;
     background-color: $color-green;
     @include transition(300ms);
@@ -70,43 +69,37 @@
       color: $color-white;
     }
   }
+}
+
+.nav-menu__login-img {
+  font-size: 0 !important;
+  text-align: center;
+
+  div {
+    position: relative;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      right: -1px;
+      display: block;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background-color: $color-green;
+    }
+  }
 
   img {
-    display: none;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
   }
-  &--login {
-    position: relative;
-    font-size: 0 !important;
-    line-height: 0 !important;
-    text-align: center;
-    padding: 7px 18px;
-    padding-top: 9px;
 
-    div {
-      position: relative;
-      width: auto;
-      display: inline-block;
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 4px;
-        right: -1px;
-        display: block;
-        width: 11px;
-        height: 11px;
-        border-radius: 50%;
-        background-color: $color-green;
-      }
-    }
-
-    img {
-      display: block;
-      margin: 0 auto;
-      border-radius: 50%;
-    }
-  }
   &--new-bids {
     div {
       &::before {
@@ -115,3 +108,15 @@
     }
   }
 }
+
+.nav-menu__login,
+.nav-menu__logout {
+  color: $color-gray !important;
+  font-size: 10px;
+}
+
+.nav-menu__login-img {order: 5;}
+.nav-menu__link--first {order: 1;}
+.nav-menu__link--second {order: 2;}
+.nav-menu__login {order: 3;}
+.nav-menu__logout {order: 4;}

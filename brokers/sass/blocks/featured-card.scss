@@ -18,8 +18,8 @@
 
 .featured-card__img {
   border-radius: 50%;
-  border: 1px solid $color-white;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  border: 2px solid $color-white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .featured-card__wrapper {
@@ -104,11 +104,16 @@ header.featured-card__wrapper {
     width: 100%;
     margin-bottom: 5px;
     font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: bold;
     color: $color-gray;
     text-transform: uppercase;
     font-weight: bold;
   }
   b {
+    font-weight: 500;
+    letter-spacing: normal;
+    font-size: 14px;
     letter-spacing: 0;
   }
   &:last-child {
@@ -133,7 +138,7 @@ main.featured-card__wrapper {
 }
 
 .featured-card__language {
-  
+
 }
 
 footer.featured-card__wrapper {

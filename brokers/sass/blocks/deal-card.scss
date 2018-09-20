@@ -204,7 +204,6 @@
     span {
       font-family: $primary-font-family;
       font-size: 10px;
-      margin-bottom: 5px;
       color: $color-gray;
       text-transform: uppercase;
       font-weight: bold;
@@ -214,7 +213,7 @@
       display: block;
       font-family: $primary-font-family;
       font-size: 20px;
-      margin-top: 2px;
+      line-height: 28px;
       color: #333132;
       font-weight: 300;
       letter-spacing: 0;
@@ -231,11 +230,8 @@
 .deal-card__time {
   color: $color-purple !important;
   font-weight: bold !important;
-  margin-top: 6px;
 
   &--color {
-    margin-top: 6px;
-    margin-bottom: 6px;
     color: #f2744d !important;
   }
 }

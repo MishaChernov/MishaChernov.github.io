@@ -398,15 +398,50 @@
     width: 100%;
     box-sizing: border-box;
     text-align: center;
+    height: 50px;
+    line-height: 50px;
     background-color: $color-white;
-    color: $color-green;
+    border-bottom: 2px solid #f1f2f2;
 
     &--active {
       color: #ffffff;
       background-color: #0cb175;
       transition: 500ms ease;
     }
+    &--second {
+      color: $color-white;
+      background-color: $color-green;
+      @include transition(300ms);
+
+      &:hover {
+        color: $color-white;
+        background-color: darken($color-green, 20%);
+      }
+    }
   }
+  .nav-menu__login-img {order: 1;}
+  .nav-menu__link--first {order: 2;}
+  .nav-menu__link--second {order: 3;}
+  .nav-menu__login {order: 4;}
+  .nav-menu__logout {order: 5;}
+  .log-in--true {
+    .nav-menu__login-img {
+      display: block;
+    }
+    .nav-menu__login {
+      display: none;
+    }
+    .nav-menu__logout {
+      display: block;
+      &:hover {
+        color: $color-green !important;
+      }
+    }
+    .nav-menu--open {
+      bottom: -200px !important;
+    }
+  }
+
   .select {
     position: inherit;
   }
@@ -429,6 +464,8 @@
     padding-bottom: 29px;
   }
   .search--deals {
+    // padding-top: 0;
+
     .search__form {
       position: relative;
       margin-top: -600px;
@@ -450,7 +487,7 @@
     &--select {
       &::after {
         right: 13px;
-        top: 37px;
+        top: 40px;
       }
     }
   }
@@ -620,8 +657,9 @@
       width: calc(100%);
     }
     .search__submit {
-      padding: 11px 0;
+      padding: 0;
       max-height: 37px;
+      line-height: 37px;
     }
     .search__form {
       flex-wrap: wrap;
@@ -829,13 +867,12 @@
     .search__submit {
       width: 100%;
       margin-top: 30px;
-      padding: 10px 0;
+      line-height: 40px;
       max-height: 40px;
       height: 40px;
       flex-basis: calc(100%);
       max-width: calc(100%);
       letter-spacing: 1.5px;
-      padding-top: 13px;
     }
 
     .featured__cards {
@@ -970,7 +1007,10 @@
     line-height: normal;
     letter-spacing: 1.4px;
     box-sizing: border-box;
-    padding-top: 13px;
+
+    &--hide {
+      display: flex;
+    }
   }
   .profile-about {
     padding: 0;
@@ -1178,6 +1218,35 @@
       text-align: center;
     }
   }
+  .modal-registered {
+    max-height: 340px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 90%;
+    margin-left: 0;
+
+    .modal__btn {
+      font-size: 14px;
+      height: 40px;
+      box-sizing: border-box;
+
+    }
+    svg {
+      width: 50px;
+      height: 61px;
+      fill: $color-green;
+    }
+    h4 {
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+    }
+  }
 
   .preview {
     padding: 10px 10px;
@@ -1193,20 +1262,28 @@
     margin-bottom: 10px;
   }
   .request__wrapper {
-    margin: 11px 0;
+    margin: 10px 0;
+  }
+  .request__wrapper-show {
+    margin-top: 0;
+  }
+  .request__select-wrapper::after {
+    right: 11px;
   }
   .request__wrapper--padding {
     padding-bottom: 4px;
     }
   .request__wrapper--mortgage .request__title {
-    padding: 0 28px;
-    padding-bottom: 11px;
     box-sizing: border-box;
   }
   .request__title {
+    padding: 10px 10px;
+    padding-right: 15px;
     font-size: 16px;
-    margin-top: 8px;
-    padding-bottom: 11px;
+    min-height: 40px;
+    height: auto;
+    line-height: normal;
+    box-sizing: border-box;
   }
   .request__flex-wrapper {
     &--padding {
@@ -1272,8 +1349,7 @@
    }
   }
   .request__title--data .request__data-info {
-    right: 10px;
-    top: 0;
+    right: -5px;
   }
   .request__data-info {
     &::before {
@@ -1336,10 +1412,6 @@
     &:nth-child(3) {
       box-shadow: 0 1px 0 #f1f2f2;
     }
-  }
-  .request__wrapper--mortgage .request__title {
-    padding: 0 10px;
-    padding-bottom: 11px;
   }
   .request__item--single {
     margin: 9px 0;
@@ -1744,5 +1816,73 @@
   .request-hint {
     margin-bottom: 0px;
   }
+  .request__hint-wrapper p {
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 50px;
+    padding-left: 12px;
+    padding-right: 14px;
+    padding-bottom: 4px;
+  }
+  .request__hint-wrapper {
+    margin-bottom: 10px;
 
+    div {
+      left: 27px;
+      top: 12px;
+
+      span {
+        margin-left: 12px;
+      }
+    }
+    div svg {
+      width: 24px;
+      height: 32px;
+      margin-right: 10px;
+    }
+  }
+
+
+
+  .disabled-elements-preview-JS {
+    .request__wrapper-show {
+      position: relative;
+      z-index: 1;
+      margin-top: 0;
+      transition: 300ms;
+      filter: blur(3px);
+      animation: none;
+
+      &::after {
+        z-index: 2;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+
+        cursor: default;
+      }
+    }
+
+    &--hidden {
+      margin-top: 0;
+      .request__wrapper-show {
+        position: relative;
+        display: block;
+        transition: 300ms;
+        filter: blur(0)  !important;
+        animation: none;
+
+        &::after {
+          display: none !important;
+        }
+      }
+    }
+  }
 }

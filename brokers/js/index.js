@@ -2,6 +2,21 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+  // Start Check Click On Log Out link
+
+  if($('body').hasClass('log-in--true')) {
+
+    $('.logout-link').click(function(e) {
+      e.preventDefault();
+      $('body').removeClass('log-in--true');
+      $('body').addClass('log-in--false');
+      $('.nav-menu__submenu').removeClass('nav-menu__submenu--open');
+    });
+
+  }
+
+  // End Check Click On Log Out link
+
   // Start Check Request Details Page Aside Position Fixed
 
   if($('.request-card').length > 0) {
@@ -650,6 +665,21 @@ document.addEventListener('DOMContentLoaded', function() {
 				$(".select__list").removeClass("select__list--open");
 		  }
 		});
+
+    if(window.innerWidth >= 800 && $('body').hasClass('log-in--true')) {
+
+      $(".nav-menu__login-img").click(function(e) {
+        e.preventDefault();
+        $(".nav-menu__submenu").toggleClass("nav-menu__submenu--open");
+      });
+
+      $(document).mouseup(function(e) {
+  		  var $target = $(e.target);
+  		  if ($target.closest(".nav-menu__submenu").length == 0 && $target.closest(".nav-menu__login-img").length == 0) {
+  				$(".nav-menu__submenu").removeClass("nav-menu__submenu--open");
+  		  }
+  		});
+    }
 
 	// End Check Outside Clicks
 

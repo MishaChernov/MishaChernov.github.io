@@ -147,3 +147,30 @@
     transform: translateY(0px);
   }
 }
+
+@keyframes disabled-elements-JS {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+  }
+}
+
+@keyframes disabled-elements-JS-index-1 {
+  0% {
+    z-index: 2;
+  }
+  100% {
+    z-index: 0;
+  }
+}
+
+@keyframes disabled-elements-JS-index-2 {
+  0% {
+    z-index: 1;
+  }
+  100% {
+    z-index: 0;
+  }
+}

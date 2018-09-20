@@ -3,7 +3,8 @@
   transition: 300ms;
 
   &::after {
-    z-index: 8;
+    content: "";
+    z-index: 998;
     position: absolute;
     top: 0;
     left: 0;
@@ -15,7 +16,7 @@
     background-color: rgba(0, 0, 0, 0.8);
     transition: 300ms;
   }
-
+;
   &--visible {
     &::after {
       transition: 300ms;
@@ -80,6 +81,7 @@
 @import 'blocks/modal-sign.scss';
 @import 'blocks/modal-feedback.scss';
 @import 'blocks/modal-thanks-review.scss';
+@import 'blocks/modal-registered.scss';
 
 .modal {
   &--visible {

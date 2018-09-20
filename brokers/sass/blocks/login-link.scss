@@ -1,3 +1,38 @@
 .login-link {
+}
 
+.log-in--true {
+  .nav-menu__login-img {
+    display: block;
+  }
+  .nav-menu__login {
+    display: none;
+  }
+  .nav-menu__logout {
+    display: none;
+    &:hover {
+      color: $color-green !important;
+    }
+  }
+  .nav-menu--open {
+    bottom: -200px !important;
+  }
+}
+
+.log-in--false {
+  .nav-menu__login-img {
+    display: none;
+  }
+  .nav-menu__login {
+    display: block;
+    &:hover {
+      color: $color-green !important;
+    }
+  }
+  .nav-menu__logout {
+    display: none;
+  }
+  .nav-menu--open {
+    bottom: -150px !important;
+  }
 }

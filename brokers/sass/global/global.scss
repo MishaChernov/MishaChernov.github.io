@@ -92,22 +92,6 @@ select {
   transition: transform 500ms ease;
 }
 
-.overlay {
-  &::after {
-    content: "";
-    z-index: 998;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    width: 150vh;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    transition: 500ms ease;
-  }
-}
 
 .slick-slide {
 

@@ -75,6 +75,7 @@
 .language__item {
   display: flex;
   padding: 10.5px 8px;
+  align-items: center;
   box-sizing: border-box;
   height: 39px;
   cursor: pointer;
@@ -94,9 +95,9 @@
   }
   .language__checkbox:checked ~ .language__name {
     color: $color-black;
-    &::after {
-      display: block;
-    }
+  }
+  .language__checkbox:checked ~ .language__checkmark svg {
+    display: block;
   }
   i {
     width: 23px;
@@ -109,32 +110,24 @@
 .language__name {
   position: relative;
   padding-top: 3px;
-  padding-left: 30px;
+  padding-left: 0px;
+  margin-left: 10px;
   font-size: 10px;
   letter-spacing: 1px;
   user-select: none;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: 3px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-    width: 15px;
-    height: 15px;
-    border: 1px solid $color-gray;
-  }
-  &::after {
-    content: "\2714";
-    position: absolute;
-    left: 4px;
-    top: 10px;
-    transform: translateY(-50%);
+.language__checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-gray;
+
+  svg {
     display: none;
-    width: 15px;
-    height: 15px;
-    font-size: 10px;
-    color: $color-gray;
+    width: 70%;
+    height: 70%;
   }
 }

@@ -3,16 +3,24 @@
 }
 
 .request__wrapper {
+  position: relative;
   border: none;
   display: flex;
   flex-direction: column;
   margin: 40px 0;
+  min-height: 81px;
   padding: 0;
   background-color: $color-white;
 
   &--padding {
-    padding-bottom: 20px;
+    .request__wrapper-show {
+      padding-bottom: 22px;
+    }
   }
+}
+
+.request__wrapper-show {
+  margin-top: 19px;
 }
 
 .request__form {
@@ -120,6 +128,8 @@
   cursor: pointer;
 
   i {
+    display: inline-block;
+    vertical-align: middle;
     font-style: normal;
     color: $color-gray;
   }
@@ -175,20 +185,31 @@
 }
 
 .request__title {
-  display: block;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
   width: 100%;
-  margin-top: 30px;
-  margin-bottom: 19px;
-  padding-bottom: 26px;
+  height: 80px;
+  line-height: 80px;
+  background-color: $color-white;
+  margin-bottom: 0;
   font-size: 20px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
   letter-spacing: normal;
   text-align: center;
   color: $color-purple;
   border-bottom: 1px solid #e7e7e8;
+
+  span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
 }
 
 
@@ -196,6 +217,9 @@
 .request__wrapper--mortgage {
   .request__title {
     margin-bottom: 0;
+  }
+  .request__wrapper-show {
+    margin-top: 0;
   }
 }
 
@@ -417,14 +441,9 @@
   letter-spacing: 2px;
   text-align: center;
   transition: 300ms;
-  filter: blur(0);
 
   &:hover {
     background-color: darken($color-purple, 20%);
-  }
-  &:disabled {
-    transition: 300ms;
-    filter: blur(3px);
   }
 }
 
@@ -457,7 +476,7 @@
   cursor: pointer;
   position: relative;
   display: inline-block;
-  top: 3px;
+  vertical-align: middle;
   right: -4px;
   width: 12px;
   height: 16px;
@@ -547,4 +566,8 @@
   option:first-child {
     display: none;
   }
+}
+
+.request__hint-wrapper {
+  background-color: $color-bg-hint;
 }

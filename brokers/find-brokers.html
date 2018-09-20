@@ -11,7 +11,7 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 </head>
-<body class="page-find-brokers  overlay" id="top">
+<body class="page-find-brokers  overlay  log-in--false" id="top">
   <header class="header">
     <div class="header__container">
       <div class="header__wrapper">
@@ -47,16 +47,19 @@
 
     <nav class="nav-menu">
       <div class="nav-menu__wrapper">
-        <a class="nav-menu__link" href="#">Find A broker</a>
-        <a class="nav-menu__link" href="post-request.html">Post a request</a>
-        <a class="nav-menu__link  login-link" href="#">  <!-- add this class to login  nav-menu__link--login -->
-          Log in
-          <div>
-            <img src="img/user.png" alt="User icon">
-          </div>
+        <a class="nav-menu__link  nav-menu__login-img  nav-menu__link--new-bids" href="#">
+          <div><img src="img/user.png" alt="User icon"></div>
         </a>
+        <a class="nav-menu__link  nav-menu__link--first" href="#">Find A broker</a>
+        <a class="nav-menu__link  nav-menu__link--second" href="post-request.html">Post a request</a>
+        <a class="nav-menu__link  login-link  nav-menu__login" href="#">Log in</a>
+        <a class="nav-menu__link  nav-menu__logout  logout-link" href="#">Log out</a>
       </div>
     </nav>
+    <div class="nav-menu__submenu">
+      <a class="nav-menu__submenu-link" href="#">My Profile</a>
+      <a class="nav-menu__submenu-link  logout-link" href="#">Log out</a>
+    </div>
   </header>
 
   <main class="main">
@@ -103,21 +106,43 @@
             <div class="language__list">
               <label class="language__item">
                 <input class="language__checkbox" type="checkbox" value="English" name="language" data-lang="flag-icon-gb" checked>
+                <div class="language__checkmark">
+                  <svg class="icon  icon-checkmark">
+                    <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+                  </svg>
+                </div>
                 <div class="language__name">English <span class="language__count">(759)</span></div>
                 <i class="flag-icon  flag-icon-gb"></i>
               </label>
               <label class="language__item">
                 <input class="language__checkbox" type="checkbox" value="Chinese" name="language" data-lang="flag-icon-cn">
+                <div class="language__checkmark">
+                  <svg class="icon  icon-checkmark">
+                    <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+                  </svg>
+                </div>
                 <div class="language__name">Chinese <span class="language__count">(423)</span></div>
                 <i class="flag-icon  flag-icon-cn"></i>
               </label>
               <label class="language__item">
                 <input class="language__checkbox" type="checkbox" value="Polish" name="language" data-lang="flag-icon-pl" checked>
-                <div class="language__name">Polish <span class="language__count">(235)</span></div>
+                <div class="language__checkmark">
+                  <svg class="icon  icon-checkmark">
+                    <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+                  </svg>
+                </div>
+                <div class="language__name">
+                  Polish <span class="language__count">(235)</span>
+                </div>
                 <i class="flag-icon  flag-icon-pl"></i>
               </label>
               <label class="language__item">
                 <input class="language__checkbox" type="checkbox" value="German" name="language" data-lang="flag-icon-de" checked>
+                <div class="language__checkmark">
+                  <svg class="icon  icon-checkmark">
+                    <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+                  </svg>
+                </div>
                 <div class="language__name">German <span class="language__count">(151)</span></div>
                 <i class="flag-icon  flag-icon-de"></i>
               </label>

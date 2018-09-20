@@ -11,7 +11,7 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 </head>
-<body class="overlay">
+<body class="overlay  log-in--false">
   <header class="header">
     <div class="header__container">
       <div class="header__wrapper">
@@ -47,16 +47,19 @@
 
     <nav class="nav-menu">
       <div class="nav-menu__wrapper">
-        <a class="nav-menu__link" href="my-request.html">My deals</a>
-        <a class="nav-menu__link" href="deals.html">Find a deal</a>
-        <a class="nav-menu__link  login-link" href="#">  <!-- add this class to login  nav-menu__link--login -->
-          Log in
-          <div>
-            <img src="img/user.png" alt="User icon">
-          </div>
+        <a class="nav-menu__link  nav-menu__login-img  nav-menu__link--new-bids" href="#">
+          <div><img src="img/user.png" alt="User icon"></div>
         </a>
+        <a class="nav-menu__link  nav-menu__link--first" href="my-request.html">My deals</a>
+        <a class="nav-menu__link  nav-menu__link--second" href="deals.html">Find a deal</a>
+        <a class="nav-menu__link  login-link  nav-menu__login" href="#">Log in</a>
+        <a class="nav-menu__link  nav-menu__logout  logout-link" href="#">Log out</a>
       </div>
     </nav>
+    <div class="nav-menu__submenu">
+      <a class="nav-menu__submenu-link" href="#">My Profile</a>
+      <a class="nav-menu__submenu-link  logout-link" href="#">Log out</a>
+    </div>
   </header>
 
   <main class="main">

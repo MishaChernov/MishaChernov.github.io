@@ -335,6 +335,10 @@
     .search {
       padding-top: 34px;
       padding-bottom: 20px;
+
+      &--deals {
+        padding-top: 0;
+      }
     }
     .search__item {
       margin-top: 24px;
@@ -659,10 +663,8 @@
       margin-right: 0;
     }
     svg {
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
       margin-bottom: 15px;
+      margin-right: 0;
     }
   }
   .broker-feedback__item {
@@ -788,7 +790,8 @@
     margin-top: 15px;
   }
   .modal-feedback__btn {
-    padding-top: 10px;
+    padding: 0;
+    line-height: 40px;
   }
 
 
@@ -822,20 +825,26 @@
   }
   .request__wrapper {
     margin: 20px 0;
+    min-height: 60px;
 
     &--padding {
-      padding-bottom: 5px;
+
     }
   }
+  .request__wrapper-show {
+    margin-top: 11px;
+    padding-bottom: 0px;
+  }
+  .request__wrapper--padding .request__wrapper-show {
+    padding-bottom: 2px;
+  }
   .request__title {
-    margin-top: 20px;
-    margin-bottom: 12px;
-    padding-bottom: 20px;
+    height: 60px;
+    line-height: 60px;
     font-size: 16px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    line-height: normal;
     letter-spacing: normal;
     text-align: center;
   }
@@ -858,7 +867,6 @@
     }
   }
   .request__data-info {
-    top: 0px;
     right: -8px;
   }
   .request__wrapper--mortgage .request__item {
@@ -907,7 +915,8 @@
       position: absolute;
       right: 20px;
       left: auto;
-      transform: translateX(0);
+      top: 50%;
+      transform: translateX(0) translateY(-50%);
     }
   }
   .request__range-output {

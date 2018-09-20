@@ -4,6 +4,13 @@
     position: relative;
     padding-top: 15px;
     padding-bottom: 36px;
+
+    &--deals {
+      padding-bottom: 30px;
+    }
+    .search__title {
+      margin-top: 20px;
+    }
   }
   .search__popular {
     display: block;
@@ -177,7 +184,6 @@
     }
     .search {
       padding-bottom: 27px;
-      margin-top: 18px;
       padding-top: 1px;
     }
     .featured__cards {
@@ -437,10 +443,20 @@
   .request__info-wrapper {
     margin: 0 20px;
   }
+  .request__item--mortgage .request__item-text--height {
+    height: 250px;
+  }
   .good-to-know {
     p {
       padding-bottom: 25px;
       font-size: 14px;
+    }
+  }
+  .request__hint-wrapper {
+    padding-bottom: 21px;
+    margin-bottom: 20px;
+    p {
+      font-size: 20px;
     }
   }
 
@@ -564,5 +580,9 @@
   }
   .request-hint {
     margin-bottom: 20px;
+  }
+
+  .page-request .search__item--money::before, .page-find-brokers .search__item--money::before {
+    top: 36px;
   }
 }

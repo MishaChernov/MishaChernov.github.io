@@ -13,7 +13,7 @@
   <script src="https://viralpatel.net/blogs/demo/jquery/jquery.shorten.1.0.js"></script>
 
 </head>
-<body class="page-request-details  overlay" id="top">
+<body class="page-request-details  overlay  log-in--false" id="top">
   <header class="header">
     <div class="header__container">
       <div class="header__wrapper">
@@ -47,18 +47,22 @@
       <li><a class="select__link" href="index.html">For Brokers</a></li>
     </ul>
 
+
     <nav class="nav-menu">
       <div class="nav-menu__wrapper">
-        <a class="nav-menu__link" href="deals.html">Find A broker</a>
-        <a class="nav-menu__link" href="#">Post a request</a>
-        <a class="nav-menu__link  login-link" href="#">  <!-- add this class to login  nav-menu__link--login -->
-          Log in
-          <div>
-            <img src="img/user.png" alt="User icon">
-          </div>
+        <a class="nav-menu__link  nav-menu__login-img  nav-menu__link--new-bids" href="#">
+          <div><img src="img/user.png" alt="User icon"></div>
         </a>
+        <a class="nav-menu__link  nav-menu__link--first" href="find-brokers.html">Find A broker</a>
+        <a class="nav-menu__link  nav-menu__link--second" href="post-request.html">Post a request</a>
+        <a class="nav-menu__link  login-link  nav-menu__login" href="#">Log in</a>
+        <a class="nav-menu__link  nav-menu__logout  logout-link" href="#">Log out</a>
       </div>
     </nav>
+    <div class="nav-menu__submenu">
+      <a class="nav-menu__submenu-link" href="#">My Profile</a>
+      <a class="nav-menu__submenu-link  logout-link" href="#">Log out</a>
+    </div>
   </header>
   <div class="mobile-hide">
     <a class="btn-back" href="#">

@@ -50,16 +50,19 @@
 
     <nav class="nav-menu">
       <div class="nav-menu__wrapper">
-        <a class="nav-menu__link" href="find-brokers.html">Find A broker</a>
-        <a class="nav-menu__link" href="post-request.html">Post a request</a>
-        <a class="nav-menu__link  login-link" href="#">  <!-- add this class to login  nav-menu__link--login -->
-          Log in
-          <div>
-            <img src="img/user.png" alt="User icon">
-          </div>
+        <a class="nav-menu__link  nav-menu__login-img  nav-menu__link--new-bids" href="#">
+          <div><img src="img/user.png" alt="User icon"></div>
         </a>
+        <a class="nav-menu__link  nav-menu__link--first" href="find-brokers.html">Find A broker</a>
+        <a class="nav-menu__link  nav-menu__link--second" href="post-request.html">Post a request</a>
+        <a class="nav-menu__link  login-link  nav-menu__login" href="#">Log in</a>
+        <a class="nav-menu__link  nav-menu__logout  logout-link" href="#">Log out</a>
       </div>
     </nav>
+    <div class="nav-menu__submenu">
+      <a class="nav-menu__submenu-link" href="#">My Profile</a>
+      <a class="nav-menu__submenu-link  logout-link" href="#">Log out</a>
+    </div>
   </header>
   <div class="mobile-hide">
     <a class="btn-back" href="#">
@@ -74,7 +77,7 @@
       <span class="mobile-hide__name-second"></span>
     </h3>
 
-    <a class="profile-info__btn  btn" href="#">Invite to bid</a>
+    <a class="profile-info__btn  btn  modal-feedback-btn" href="#">Write a review</a>
   </div>
 
   <main class="main  profile  profile--pro  container  clearfix">
@@ -166,7 +169,8 @@
         </p>
       </address>
 
-      <a class="profile-info__btn  btn" href="#">Invite to bid</a>
+      <!-- <a class="profile-info__btn  btn" href="#">Invite to bid</a> -->
+      <a class="profile-info__btn  profile-info__btn--hide  btn  modal-feedback-btn" href="#">Write a review</a>
     </aside>
 
     <section class="profile-about">

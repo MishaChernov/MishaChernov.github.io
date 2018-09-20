@@ -229,5 +229,14 @@
   max-width: 100%;
   box-sizing: border-box;
   height: 106px;
-  padding-top: 45px;
+  padding: 0;
+  line-height: 106px;
+  background-color: $color-orange;
+
+  &:hover {
+    background-color: darken($color-orange, 20%);
+  }
+  &--hide {
+    display: none;
+  }
 }
