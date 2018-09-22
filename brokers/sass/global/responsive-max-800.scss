@@ -1012,6 +1012,10 @@
       display: flex;
     }
   }
+  .profile {
+    width: 100%;
+    box-sizing: border-box;
+  }
   .profile-about {
     padding: 0;
     margin-left: 0;
@@ -1896,5 +1900,84 @@
         }
       }
     }
+  }
+
+  .page-profile {
+    .profile-card {
+      margin-top: 18px;
+      margin-bottom: 9px;
+    }
+    .profile-card__title {
+      margin-top: 13px;
+      margin-bottom: 4px;
+    }
+    .profile-card__image-wrapper {
+      height: 430px;
+    }
+    .profile-card__label svg {
+      width: 16px;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      margin-right: 8px;
+    }
+    .profile-card__btn-wrapper {
+      margin-top: 10px;
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    .profile-card__btn {
+      margin-top: 0;
+      padding: 0 8px;
+      height: 39px;
+    }
+    .good-to-know {
+      p {
+        font-size: 14px;
+        padding: 60px 12px;
+        padding-bottom: 5px;
+        line-height: 16px;
+      }
+      div {
+        top: 17px;
+      }
+    }
+    .profile-form__label {
+      margin-bottom: 27px;
+    }
+    .profile-form__label--half {
+      flex-basis: 100%;
+    }
+    .profile-form__textarea {
+      min-height: 100px;
+    }
+    .profile-form__label--checkbox {
+      flex-basis: auto;
+    }
+    .profile-form__btn-wrapper {
+      flex-basis: 100%;
+      margin-bottom: 10px;
+
+      label {
+        height: 40px;
+      }
+    }
+    .profile-form__btn {
+      height: 100%;
+    }
+  }
+
+  .modal-password {
+    box-sizing: border-box;
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 0;
+  }
+  .modal-password__title {
+    margin-bottom: 15px;
+    margin-top: 15px;
   }
 }

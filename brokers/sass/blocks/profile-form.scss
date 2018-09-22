@@ -1,0 +1,242 @@
+.profile-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.profile-form__label {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 37px;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+
+  &--half {
+    flex-basis: 48%;
+  }
+}
+
+.profile-form__label-name {
+  display: block;
+  flex-basis: 50%;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: $color-gray;
+}
+
+.profile-form__label-link {
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: $color-gray;
+}
+
+.profile-form__select-wrapper {
+  width: 100%;
+  position: relative;
+  height: 40px;
+  cursor: pointer;
+  margin-top: 7px;
+
+  &::before {
+    z-index: 2;
+    content: "";
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-left: 2px solid #8a8c8f;
+    border-bottom: 2px solid #8a8c8f;
+    transition: 500ms ease;
+  }
+}
+
+.profile-form__textbox {
+  cursor: pointer;
+  background: #fff;
+  border: solid 1px $color-input-border;
+  pointer-events: none;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  padding: 0 8px;
+  line-height: 40px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border: 1px solid darkgray;
+  border-radius: 0px;
+  outline: 1px solid #ccc;
+  outline-offset: -1px;
+  font-style: normal;
+  font-weight: bold;
+  color: #8a8c8f;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Gilroy", "Arial", sans-serif;
+}
+
+.profile-form__input {
+  display: block;
+  margin-top: 7px;
+  flex-basis: 100%;
+  padding-left: 10px;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: $color-gray;
+  border: solid 1px $color-input-border;
+
+  &--saved {
+    background-color: $color-light-gray;
+  }
+
+  &--select {
+    cursor: pointer;
+    margin-top: 0;
+
+    option:first-child {
+      display: none;
+    }
+  }
+}
+
+.profile-form__textarea {
+  height: auto;
+  min-height: 200px;
+  resize: none;
+}
+
+.profile-form__label--checkbox {
+  justify-content: flex-start;
+  flex-basis: 50%;
+  align-self: baseline;
+  margin-top: 4px;
+
+  span {order: 2; flex-basis: auto;   cursor: pointer;}
+  input {order: 3;}
+  div {order: 1; flex-basis: auto; margin-right: 10px; cursor: pointer;}
+}
+
+.profile-form__btn-wrapper {
+  text-align: right;
+  flex-basis: 50%;
+  max-width: 360px;
+  margin-bottom: 40px;
+  margin-top: 5px;
+
+  label {
+    display: inline-block;
+    width: 175px;
+
+    &:first-of-type {
+      .profile-form__btn {
+        background: none;
+        color: $color-gray;
+        padding: 0;
+        width: 140px;
+
+          &:hover {
+            color: $color-green;
+          }
+        }
+      }
+  }
+}
+
+.profile-form__btn {
+  display: inline-block;
+  padding: 0;
+  outline: none;
+  border: none;
+  height: 60px;
+  width: 170px;
+  margin: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.profile-form__save-btn {
+  position: relative;
+  transition: 150ms;
+
+  .profile-form__btn {
+    background-color: $color-gray;
+    cursor: default;
+
+    &--saved {
+      display: none;
+    }
+  }
+
+  svg {
+    position: absolute;
+    z-index: 2;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    width: 17px;
+    height: 17px;
+    fill: $color-white;
+  }
+
+  &--saved {
+    margin-right: 0;
+
+    .profile-form__btn {
+      background-color: $color-purple !important;
+
+      &--saved {
+        display: block;
+        padding-left: 20px;
+        margin-right: 0;
+        width: 175px;
+      }
+      &--save {
+        display: none;
+      }
+    }
+    svg {
+      display: block;
+    }
+  }
+
+  &--active {
+    .profile-form__btn {
+      cursor: pointer;
+      background-color: $color-green;
+
+      &:hover {
+        background-color: darken($color-green, 20%);
+      }
+    }
+  }
+}

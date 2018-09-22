@@ -1158,6 +1158,72 @@
   }
 
 
+  .page-profile {
+    .profile {
+      padding-top: 0;
+    }
+    .good-to-know {
+      margin-bottom: 26px;
+      p {
+        font-size: 16px;
+        padding-bottom: 4px;
+      }
+    }
+    .profile-about {
+      margin-top: 53px;
+    }
+    .profile-form__label {
+      margin-bottom: 27px;
 
+      &--textarea {
+        margin-bottom: 17px;
+      }
+    }
+    .profile-form__label-name--textarea {
+      flex-basis: 100%;
+    }
+    .profile-form__btn-wrapper {
+      flex-wrap: nowrap;
+      display: flex;
+      justify-content: flex-end;
+      max-width: 100%;
+      label {
+        width: auto;
+      }
+    }
+    .profile-form__save-btn {
+      width: auto;
+      min-width: 176px;
+      .profile-form__btn {
+        width: 100%;
+      }
+    }
+    .profile-form__label--checkbox {
+      flex-basis: 30%;
+    }
+    .profile-card__label svg {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 8px;
+    }
+  }
+  
+  .modal-password__title {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  .modal-password__form label {
+    margin: 7px 0;
+  }
+  .modal-password__form .modal-password__btn {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+
+    &:first-of-type {
+      margin-top: 10px;
+    }
+  }
 
 }

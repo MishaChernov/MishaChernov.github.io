@@ -17,6 +17,53 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // End Check Click On Log Out link
 
+
+  // Start Check profile-form Fields And Change Button
+
+  if($('.profile-form').length > 0) {
+    var btn = $('.profile-form__save-btn');
+
+    // $('.profile-form__btn--disabled').click(function(event) {
+    //   event.preventDefault();
+    // })
+
+    $('.profile-form').submit(function( event ) {
+      event.preventDefault();
+      btn.addClass('profile-form__save-btn--saved');
+    });
+
+    $('.profile-form__btn--cancel').click(function() {
+      btn.removeClass('profile-form__save-btn--active');
+      btn.removeClass('profile-form__save-btn--saved');
+    });
+
+    $('.profile-form__label').each(function(index) {
+
+      $(this).bind("change input", function() {
+        let questionOrder = index;
+        let input = $(this).find('.profile-form__input');
+        let valueAll = false;
+        console.log($(this).val());
+
+        if(input.val().length > 0) {
+          valueAll = true;
+
+          btn.addClass('profile-form__save-btn--active');
+        } else {
+          btn.removeClass('profile-form__save-btn--active');
+          btn.removeClass('profile-form__save-btn--saved');
+        }
+      })
+
+    })
+
+  }
+
+
+  // End Check profile-form Fields And Change Button
+
+
+
   // Start Check Request Details Page Aside Position Fixed
 
   if($('.request-card').length > 0) {
@@ -294,12 +341,16 @@ document.addEventListener('DOMContentLoaded', function() {
 		let modalFeedback = $('#modal-feedback');
 		let modalSign = $('#modal-sign');
     let modalRegistered = $('#modal-registered');
+    let modalPassword = $('#modal-password');
 		let linkLogin = $('.login-link');
 		let linkSignUp = $('.sign-up-link');
+    let linkPassword = $('.change-password-link');
+    let linkPasswordThanks = $('.modal-password__form');
 		let linkFeedback = $('.modal-feedback-btn');
 		let overlay = $('.overlay');
 		let formFeedback = $('.modal-feedback__form');
 		let modalThanksReview = $('#modal-thanks-review');
+    let modalThanksPassword = $('#modal-thanks-password');
 
 
 		if(document.getElementsByClassName('profile--pro').length > 0) {
@@ -391,6 +442,40 @@ document.addEventListener('DOMContentLoaded', function() {
   				overlay[0].classList.add('overlay--visible');
         }
 			});
+
+		});
+
+    linkPassword.each(function() {
+
+			this.addEventListener('click', function(e) {
+        e.preventDefault();
+
+         modal.each(function() {
+           this.classList.remove('modal--visible');
+           $(this).fadeOut(0);
+         })
+
+         modalPassword.fadeIn('fast');
+         modalPassword[0].classList.add('modal--visible');
+         overlay[0].classList.add('overlay--visible');
+  			});
+
+		});
+
+    linkPasswordThanks.each(function() {
+
+			this.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+         modal.each(function() {
+           this.classList.remove('modal--visible');
+           $(this).fadeOut(0);
+         })
+
+         modalThanksPassword.fadeIn('fast');
+         modalThanksPassword[0].classList.add('modal--visible');
+         overlay[0].classList.add('overlay--visible');
+  			});
 
 		});
 

@@ -594,4 +594,32 @@
   .choose-broker__comments {
     padding: 0 10px;
   }
+
+  .page-profile {
+    .profile-card .btn-back {
+      display: block;
+      text-align: left;
+      margin-right: 5px;
+    }
+    .profile-card__image-wrapper {
+      height: 300px;
+    }
+    .profile-form__label-name {
+      flex-basis: 100%;
+    }
+    .profile-form__label--email {
+      .profile-form__label-name {
+        flex-basis: 30%;
+      }
+    }
+    .profile-form__label--textarea {
+      margin-bottom: 15px;
+    }
+    .profile-form__label--checkbox {
+      margin-bottom: 15px;
+      .profile-form__label-name {
+        flex-basis: 50%;
+      }
+    }
+  }
 }

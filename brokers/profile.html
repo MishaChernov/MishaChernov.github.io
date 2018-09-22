@@ -13,7 +13,7 @@
   <script src="https://viralpatel.net/blogs/demo/jquery/jquery.shorten.1.0.js"></script>
 
 </head>
-<body class="page-broker-profile  overlay  log-in--false" id="top">
+<body class="page-profile  overlay  log-in--true" id="top">
   <header class="header">
     <div class="header__container">
       <div class="header__wrapper">
@@ -49,7 +49,7 @@
 
     <nav class="nav-menu">
       <div class="nav-menu__wrapper">
-        <a class="nav-menu__link  nav-menu__login-img  nav-menu__link--new-bids" href="profile.html">
+        <a class="nav-menu__link  nav-menu__login-img  nav-menu__link--new-bids" href="#">
           <div><img src="img/user.png" alt="User icon"></div>
         </a>
         <a class="nav-menu__link  nav-menu__link--first" href="find-brokers.html">Find A broker</a>
@@ -59,7 +59,7 @@
       </div>
     </nav>
     <div class="nav-menu__submenu">
-      <a class="nav-menu__submenu-link" href="profile.html">My Profile</a>
+      <a class="nav-menu__submenu-link" href="#">My Profile</a>
       <a class="nav-menu__submenu-link  logout-link" href="#">Log out</a>
     </div>
   </header>
@@ -90,246 +90,160 @@
         <span>Back</span>
       </a>
 
-      <h3 class="profile-card__name">
+      <h3 class="profile-card__title">Edit Profile</h3>
+
+      <h4 class="profile-card__name">
         <span class="profile-card__name-first">Steven</span>
         <span class="profile-card__name-second">Dunn</span>
-      </h3>
+      </h4>
 
       <div class="profile-card__image-wrapper">
         <img class="profile-card__image" src="" width="271px" height="271px" alt="Steven Dunn image">
 
-        <div class="sticker  sticker--pro">
+        <!-- <div class="sticker  sticker--pro">
           <span>Pro</span>
-        </div>
+        </div> -->
 
         <span class="profile-card__without-picture"></span>
+
+        <form class="profile-card__capture" action="/">
+          <label class="profile-card__label">
+            <div>
+              <svg class="icon  icon-photo">
+                <use xlink:href="img/sprite/sprite.svg#photo"></use>
+              </svg>
+              <span>Upload profile picture</span>
+            </div>
+            <input type="file" name="picture" value="Upload profile picture">
+          </label>
+        </form>
       </div>
 
-      <address class="profile-info  profile-card__address">
-        <p class="parent---JS">
-          <span class="title---JS">Brokerage licence #</span>
-          <b class="profile-info__licence  feed---JS">127728</b>
-        </p>
-
-        <p class="parent---JS">
-          <span class="title---JS">I work for</span>
-          <b class="profile-info__work  feed---JS"></b>
-        </p>
-
-        <p class="parent---JS">
-          <span class="title---JS">Address</span>
-          <b class="profile-info__address  feed---JS"></b>
-        </p>
-
-        <p class="parent---JS">
-          <span class="title---JS">Telephone</span>
-          <a class="profile-info__phone  feed---JS" href="tel:9059477200">C. (905) 947-7200</a>
-          <a class="profile-info__phone  feed---JS" href="tel:9059477244">F. (905) 947-7244</a>
-        </p>
-
-        <p class="profile-info__social-list">
-          <span>Social</span>
-
-          <a class="profile-info__social  profile-info__social--fb" href="#" title="Facebook">
-            Facebook
-            <svg class="icon  icon-social-facebook">
-              <use xlink:href="img/sprite/sprite.svg#social-facebook"></use>
-            </svg>
-          </a>
-
-          <a class="profile-info__social  profile-info__social--inst" href="#" title="Instagram">
-            Instagram
-            <svg class="icon  icon-social-instagram">
-              <use xlink:href="img/sprite/sprite.svg#social-instagram"></use>
-            </svg>
-          </a>
-
-          <a class="profile-info__social  profile-info__social--tw" href="#" title="Twitter">
-            Twitter
-            <svg class="icon  icon-social-twitter">
-              <use xlink:href="img/sprite/sprite.svg#social-twitter"></use>
-            </svg>
-          </a>
-
-          <a class="profile-info__social  profile-info__social--ln" href="#" title="Linkedin">
-            Linkedin
-            <svg class="icon  icon-social-linkedin">
-              <use xlink:href="img/sprite/sprite.svg#social-linkedin"></use>
-            </svg>
-          </a>
-
-          <a class="profile-info__social  profile-info__social--yt" href="#" title="YouTube">
-            YouTube
-            <svg class="icon  icon-social-youtube">
-              <use xlink:href="img/sprite/sprite.svg#social-youtube"></use>
-            </svg>
-          </a>
-        </p>
-      </address>
-
-      <!-- <a class="profile-info__btn  btn" href="#">Invite to bid</a> -->
-      <a class="profile-info__btn  profile-info__btn--hide  btn  modal-feedback-btn" href="#">Write a review</a>
+      <div class="profile-card__btn-wrapper">
+        <a class="profile-card__btn  change-password-link" href="#">Change password</a>
+        <a class="profile-card__btn" href="index.html">Log out</a> <!--Add Class logout-link -->
+      </div>
     </aside>
 
     <section class="profile-about">
-      <header class="profile-header">
-        <div class="profile-header__wrapper">
-          <p>
-            <span>Title</span>
-            <b class="profile-header__title">Mortgage Broker, Mortgage Agent, Mortgage Planner</b>
-          </p>
-          <p>
-            <span>I serve</span>
-            <b class="profile-header__serve">Waterloo, Brampton, Kitchener, London</b>
-          </p>
+      <div class="request__hint-wrapper   good-to-know">
+        <div>
+          <svg class="icon  icon-info-stroke">
+            <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+          </svg>
+          <span>Good to know</span>
         </div>
-        <div class="profile-header__wrapper">
-          <p>
-            <span>Types of mortgages done</span>
-            <b class="profile-header__mortgages">Commerial, Residential</b>
-          </p>
-          <div>
-            <span>I speak</span>
+        <p>All your private information, except your first name won’t be revealed to any broker until you accept their bid. Though, make sure your info is correct so a chosen broker is able to contact you.</p>
+      </div>
 
-            <ul class="language-list">
-              <li class="language-list__item  flag-icon  flag-icon-de">german</li>
-              <li class="language-list__item  flag-icon  flag-icon-gb">united kingdom</li>
-              <li class="language-list__item  flag-icon  flag-icon-pl">poland</li>
-            </ul>
-          </div>
-        </div>
-      </header>
+      <form class="profile-about__form  profile-form" action="/" method="post">
 
-      <main>
-        <section class="profile-info__description">
-          <h4>Description</h4>
-          <div class="show-more-wrapper">
-            <p class="profile-info__text  readmore">
-              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque nec purus id arcu finibus pharetra. Donec leo nisi, iaculis sed convallis in, porttitor vitae arcu. Pellentesque molestie tortor vitae purus ultrices porttitor. Duis nunc odio, lacinia eu enim quis, viverra accumsan diam. Mauris condimentum lorem enim, a accumsan nisl vulputate vel. Cras faucibus nisl et urna sodales tincidunt. Maecenas eu justo turpis. Cras tortor lectus, feugiat in malesuada a, fermentum imperdiet dolor. In a sodales est. Aenean vel mi id velit ullamcorper laoreet. Suspendisse sapien purus, eleifend sed mi vel, dapibus iaculis metus. Sed varius est sed ante gravida pharetra. In hendrerit massa ac sodales porta. Donec eget lacus ac turpis dictum finibus.
-              <br><br>
-              Nullam elit enim, maximus sed euismod eget, condimentum ut felis. Ut rutrum, metus nec commodo pellentesque, ligula neque dictum purus, eget convallis urna leo eu lorem. Pellentesque faucibus eu orci et dictum. Nullam eget facilisis felis, id luctus nunc. Phasellus eleifend est et luctus auctor. Sed in est malesuada, consectetur arcu id, porttitor nisi. Vivamus sollicitudin porttitor porttitor. Duis ac ultricies nulla, id iaculis urna. Vivamus lorem lectus, tincidunt a posuere eu, eleifend porttitor dui. Aliquam vulputate eros placerat neque iaculis lacinia. Ut varius posuere efficitur. Duis auctor nunc arcu,vehicula iaculis nunc porttitor et. Nulla id auctor leo, id ornare libero. Fusce pulvinar vestibulum sem non gravida. In a facilisis sapien, et vestibulum elit.
-            </p>
-          </div>
-        </section>
+        <label class="profile-form__label">
+          <span class="profile-form__label-name">My name</span>
+          <input class="profile-form__input" type="text" name="name" value="">
+        </label>
 
-        <section class="profile-info__options">
+        <label class="profile-form__label  profile-form__label--email">
+          <span class="profile-form__label-name">Email</span>
+          <a class="profile-form__label-link" href="#">Do you want to change it?</a>
+          <input class="profile-form__input  profile-form__input--saved" type="email" name="email" value="">
+        </label>
 
-          <div class="rating  profile-info__rating">
-            <div class="rating__count-wrapper">
-              <p>
-                <span class="rating__count">0</span>
-                <b class="rating__count-text">Rating out <br> of 5 stars</b>
-              </p>
-            </div>
+        <label class="profile-form__label  profile-form__label--half">
+          <span class="profile-form__label-name">Country</span>
 
-            <div class="rating__list">
-              <p class="rating__item">
-                <span class="rating__item-stars">5 star</span>
-                <span class="rating__line"><i class="rating__progress" data-percent="0"></i></span>
-                <span class="rating__percent">0%</span>
-              </p>
+          <span class="profile-form__select-wrapper">
+            <select class="profile-form__input  profile-form__input--select  input" size="1" name="country" onchange="handleChange(this)">
+              <option value=""></option>
+              <option value="USA">USA</option>
+              <option value="country-2">country 2</option>
+              <option value="country-3">country 3</option>
+              <option value="country-4">country 4</option>
+            </select>
+            <i class="profile-form__textbox"></i>
+          </span>
+        </label>
 
-              <p class="rating__item">
-                <span class="rating__item-stars">4 star</span>
-                <span class="rating__line"><i class="rating__progress" data-percent="0"></i></span>
-                <span class="rating__percent">0%</span>
-              </p>
+        <label class="profile-form__label  profile-form__label--half">
+          <span class="profile-form__label-name">State / Province</span>
 
-              <p class="rating__item">
-                <span class="rating__item-stars">3 star</span>
-                <span class="rating__line"><i class="rating__progress" data-percent="0"></i></span>
-                <span class="rating__percent">0%</span>
-              </p>
+          <span class="profile-form__select-wrapper">
+            <select class="profile-form__input  profile-form__input--select  input" size="1" name="state" onchange="handleChange(this)">
+              <option value=""></option>
+              <option value="USA">USA</option>
+              <option value="country-2">country 2</option>
+              <option value="country-3">country 3</option>
+              <option value="country-4">country 4</option>
+            </select>
+            <i class="profile-form__textbox"></i>
+          </span>
+        </label>
 
-              <p class="rating__item">
-                <span class="rating__item-stars">2 star</span>
-                <span class="rating__line"><i class="rating__progress" data-percent="0"></i></span>
-                <span class="rating__percent">0%</span>
-              </p>
+        <label class="profile-form__label  profile-form__label--half">
+          <span class="profile-form__label-name">City</span>
+          <input class="profile-form__input" type="text" name="city" value="">
+        </label>
 
-              <p class="rating__item">
-                <span class="rating__item-stars">1 star</span>
-                <span class="rating__line"><i class="rating__progress" data-percent="0"></i></span>
-                <span class="rating__percent">0%</span>
-              </p>
-            </div>
+        <label class="profile-form__label  profile-form__label--half">
+          <span class="profile-form__label-name">Zip / Postal Code</span>
+          <input class="profile-form__input" type="text" name="postal-code" value="">
+        </label>
 
-          </div>
+        <label class="profile-form__label">
+          <span class="profile-form__label-name">Street Address</span>
+          <input class="profile-form__input" type="text" name="street" value="">
+        </label>
 
-          <div class="rating__custom-percent">
-            <p>
-               <span class="rating__custom-percent-number">0%</span>   <!--If here will be 0% then some text will be gray as the design-->
-              <span>Of customers would recommend</span>
-            </p>
-          </div>
+        <label class="profile-form__label  profile-form__label--half">
+          <span class="profile-form__label-name">Cellphone</span>
+          <input class="profile-form__input" type="text" name="cellphone" value="">
+        </label>
 
-          <div class="profile-info__btn-wrapper">
-            <a class="rating__btn  btn  modal-feedback-btn" href="#">
-              <svg class="icon  icon-write-review">
-                <use xlink:href="img/sprite/sprite.svg#write-review"></use>
-              </svg>
-              <span>Write Review</span>
-            </a>
-          </div>
 
-        </section>
+        <label class="profile-form__label  profile-form__label--half">
+          <span class="profile-form__label-name">Website (Optional)</span>
+          <input class="profile-form__input" type="text" name="website" value="">
+        </label>
 
-        <section class="broker-feedback">
-          <div class="broker-feedback__list"></div>
+        <label class="profile-form__label  profile-form__label--half">
+          <span class="profile-form__label-name">Facebook (Optional)</span>
+          <input class="profile-form__input" type="text" name="facebook" value="">
+        </label>
 
-          <div class="broker-feedback__no-feedbacks">
-            <svg class="icon  icon-write-review">
-              <use xlink:href="img/sprite/sprite.svg#write-review"></use>
+        <label class="profile-form__label  profile-form__label--half">
+          <span class="profile-form__label-name">LinkedIn (Optional)</span>
+          <input class="profile-form__input" type="text" name="linkedIn" value="">
+        </label>
+
+        <label class="profile-form__label  profile-form__label--textarea">
+          <span class="profile-form__label-name  profile-form__label-name--textarea">Tell about yourself so the brokers might give you tailred offers</span>
+          <textarea class="profile-form__input  profile-form__textarea" name="about"></textarea>
+        </label>
+
+        <label class="profile-form__label  profile-form__label--checkbox  checkmark-wrapper">
+          <span class="profile-form__label-name">Receive notifications</span>
+          <input class="profile-form__input" type="checkbox" name="notifications" value="">
+          <div class="profile-form__checkmark  checkmark">
+            <svg class="icon  icon-checkmark">
+              <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
             </svg>
-
-            <p>
-              <span>Alexandra</span>
-              doesn’t have any reviews yet. Be the first to write one.
-            </p>
-
-            <a class="btn  modal-feedback-btn" href="#">Write Review</a>
           </div>
-        </section>
+        </label>
 
-      </main>
-
-      <footer>
-        <div class="page-nav">
-          <div>
-            <a class="page-nav__btn-help  modal-feedback-btn" href="#">
-              <svg class="icon  icon-write-review">
-                <use xlink:href="img/sprite/sprite.svg#write-review"></use>
-              </svg>
-              <span>Write Review</span>
-            </a>
-          </div>
-
-          <div class="page-nav__list">
-
-            <span>
-              <input type="radio" value="page-1" name="page" id="deal-page-1" checked>
-              <label for="deal-page-1">1</label>
-            </span>
-
-            <span>
-              <input type="radio" value="page-2" name="page" id="deal-page-2">
-              <label for="deal-page-2">2</label>
-            </span>
-
-            <span>
-              <input type="radio" value="page-3" name="page" id="deal-page-3">
-              <label for="deal-page-3">3</label>
-            </span>
-
-            <span>
-              <input type="radio" value="page-4" name="page" id="deal-page-4">
-              <label for="deal-page-4">4</label>
-            </span>
-
-          </div>
-          <a class="page-nav__btn-top" href="#top">Back to top <span>&uarr;</span></a>
+        <div class="profile-form__btn-wrapper">
+          <label>
+            <input class="profile-form__btn  profile-form__btn--cancel  btn" type="reset" name="cancel" value="cancel">
+          </label>
+          <label class="profile-form__save-btn">
+            <svg class="icon  icon-checkmark">
+              <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+            </svg>
+            <input class="profile-form__btn  profile-form__btn--disabled  profile-form__btn--save  btn" type="submit" name="save" value="save">
+            <input class="profile-form__btn  profile-form__btn--disabled  profile-form__btn--saved  btn" type="submit" name="saved" value="saved">
+          </label>
         </div>
-      </footer>
+
+      </form>
     </section>
 
   </main>
@@ -515,6 +429,40 @@
 
       <p class="modal-sign__copy">By creating my account, I agree to the <a href="#">Terms & conditions</a> and <a href="#">Privacy Policy</a></p>
       <button class="modal-close"></button>
+  </section>
+
+  <section class="modal-password  modal" id="modal-password">
+    <svg class="icon  icon-password">
+      <use xlink:href="img/sprite/sprite.svg#password"></use>
+    </svg>
+    <h4 class="modal-password__title">Change Your Password</h4>
+
+    <form class="modal-password__form" action="/">
+      <label>
+        <span>Current Password</span>
+        <input type="password" name="current-password" required>
+      </label>
+      <label>
+        <span>New Password</span>
+        <input type="password" name="new-password" required>
+      </label>
+      <label>
+        <span>Repeat New Password</span>
+        <input type="password" name="repeat-new-password" required>
+      </label>
+
+      <input class="modal-password__btn  modal-password__btn--submit" type="submit" name="submit" value="Continue">
+      <input class="modal-password__btn" type="reset" name="cansel" value="Cansel">
+    </form>
+    <button class="modal-close"></button>
+  </section>
+
+  <section class="modal-thanks-review  modal" id="modal-thanks-password">
+    <svg class="icon  icon-success">
+      <use xlink:href="img/sprite/sprite.svg#success"></use>
+    </svg>
+    <h4>Your password has been changed!</h4>
+    <button class="modal-close"></button>
   </section>
 
 
