@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     $('.profile-form__btn--cancel').click(function() {
-      btn.removeClass('profile-form__save-btn--active');
       btn.removeClass('profile-form__save-btn--saved');
     });
 
@@ -43,12 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
         let questionOrder = index;
         let input = $(this).find('.profile-form__input');
         let valueAll = false;
-        console.log($(this).val());
 
-        if(input.val().length > 0) {
+        if(input.val().length > 0 || input.prop('checked')) {
           valueAll = true;
-
-          btn.addClass('profile-form__save-btn--active');
         } else {
           btn.removeClass('profile-form__save-btn--active');
           btn.removeClass('profile-form__save-btn--saved');

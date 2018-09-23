@@ -9431,16 +9431,18 @@ footer.featured-card__wrapper {
   box-sizing: border-box;
   line-height: 40px;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #8a8c8f;
+  color: #000000;
   border: solid 1px #d1d2d4; }
   .profile-form__input--saved {
-    background-color: #f1f2f2; }
+    background-color: #f1f2f2;
+    color: #8a8c8f;
+    font-weight: normal; }
   .profile-form__input--select {
     cursor: pointer;
     margin-top: 0; }
@@ -9450,7 +9452,10 @@ footer.featured-card__wrapper {
 .profile-form__textarea {
   height: auto;
   min-height: 200px;
-  resize: none; }
+  resize: none;
+  width: 100%; }
+  .profile-form__textarea:hover, .profile-form__textarea:focus {
+    width: 100%; }
 
 .profile-form__label--checkbox {
   justify-content: flex-start;
@@ -10350,8 +10355,9 @@ footer.featured-card__wrapper {
     position: absolute;
     bottom: 0px;
     padding-bottom: 10px;
+    padding-top: 60px;
     width: 100%;
-    box-shadow: inset 0px -30px 30px -25px rgba(0, 0, 0, 0.75); }
+    box-shadow: inset 0px -42px 95px -51px rgba(0, 0, 0, 0.75); }
     .page-profile .profile-card__capture input {
       display: none; }
   .page-profile .profile-card__label {
