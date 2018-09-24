@@ -9439,7 +9439,7 @@ footer.featured-card__wrapper {
   text-align: left;
   color: #000000;
   border: solid 1px #d1d2d4; }
-  .profile-form__input--saved {
+  .profile-form__input--no-changed {
     background-color: #f1f2f2;
     color: #8a8c8f;
     font-weight: normal; }
@@ -9506,8 +9506,10 @@ footer.featured-card__wrapper {
   position: relative;
   transition: 150ms; }
   .profile-form__save-btn .profile-form__btn {
-    background-color: #8a8c8f;
-    cursor: default; }
+    cursor: pointer;
+    background-color: #0cb175; }
+    .profile-form__save-btn .profile-form__btn:hover {
+      background-color: #065136; }
     .profile-form__save-btn .profile-form__btn--saved {
       display: none; }
   .profile-form__save-btn svg {
@@ -9534,11 +9536,9 @@ footer.featured-card__wrapper {
         display: none; }
     .profile-form__save-btn--saved svg {
       display: block; }
-  .profile-form__save-btn--active .profile-form__btn {
-    cursor: pointer;
-    background-color: #0cb175; }
-    .profile-form__save-btn--active .profile-form__btn:hover {
-      background-color: #065136; }
+  .profile-form__save-btn--disabled .profile-form__btn {
+    background-color: #8a8c8f;
+    cursor: default; }
 
 .profile {
   padding-top: 32px;

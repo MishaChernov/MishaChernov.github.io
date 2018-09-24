@@ -18,6 +18,18 @@ document.addEventListener('DOMContentLoaded', function() {
   // End Check Click On Log Out link
 
 
+  // Start Check If Page Has Class (profile-form__input--no-changed) And Add Disabled Attribute
+
+  if($('.profile-form__input--no-changed').length > 0) {
+    console.log($(this));
+    $('.profile-form__input--no-changed').each(function() {
+      $(this).attr('disabled', 'disabled');
+    })
+  }
+
+  // End Check If Page Has Class (profile-form__input--no-changed) And Add Disabled Attribute
+
+
   // Start Check profile-form Fields And Change Button
 
   if($('.profile-form').length > 0) {

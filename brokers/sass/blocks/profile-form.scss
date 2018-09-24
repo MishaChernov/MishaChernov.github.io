@@ -105,17 +105,19 @@
   box-sizing: border-box;
   line-height: 40px;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: $color-gray;
+  color: $color-black;
   border: solid 1px $color-input-border;
 
   &--saved {
     background-color: $color-light-gray;
+    color: $color-gray;
+    font-weight: normal;
   }
 
   &--select {
@@ -132,6 +134,12 @@
   height: auto;
   min-height: 200px;
   resize: none;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    width: 100%;
+  }
 }
 
 .profile-form__label--checkbox {
