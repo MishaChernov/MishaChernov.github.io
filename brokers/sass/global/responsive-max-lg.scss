@@ -1208,15 +1208,21 @@
       margin-bottom: 8px;
     }
   }
-  
-  .modal-password__title {
+
+  .modal-password__title,
+  .modal-cellphone__title,
+  .modal-cellphone-code__title {
     margin-bottom: 15px;
     margin-top: 15px;
   }
-  .modal-password__form label {
+  .modal-password__form label,
+  .modal-cellphone__form label,
+  .modal-cellphone-code__form label {
     margin: 7px 0;
   }
-  .modal-password__form .modal-password__btn {
+  .modal-password__form .modal-password__btn,
+  .modal-cellphone__form .modal-cellphone__btn,
+  .modal-cellphone-code__form .modal-cellphone-code__btn {
     height: 40px;
     line-height: 40px;
     font-size: 14px;
@@ -1225,5 +1231,11 @@
       margin-top: 10px;
     }
   }
-
+  .modal-cellphone-code__form {
+    label {
+      display: block;
+      width: 60%;
+      margin: 7px auto;
+    }
+  }
 }

@@ -1969,15 +1969,31 @@
     }
   }
 
-  .modal-password {
+  .modal-password,
+  .modal-cellphone,
+  .modal-cellphone-code {
     box-sizing: border-box;
     width: 90%;
     padding-left: 10px;
     padding-right: 10px;
     margin-left: 0;
   }
-  .modal-password__title {
+  .modal-password__title,
+  .modal-cellphone__title,
+  .modal-cellphone-code__title {
     margin-bottom: 15px;
     margin-top: 15px;
+  }
+  .modal-cellphone-code__form {
+    label {
+      display: block;
+      width: 80%;
+      margin: 7px auto;
+    }
+  }
+
+  .modal-cellphone-code__btn {
+    width: 80%;
+    margin: 0 auto;
   }
 }

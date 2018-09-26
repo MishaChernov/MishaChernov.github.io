@@ -52,6 +52,7 @@
         <a class="nav-menu__link  nav-menu__login-img  nav-menu__link--new-bids" href="#">
           <div><img src="img/user.png" alt="User icon"></div>
         </a>
+        <a class="nav-menu__link  my-balance" href="#">My balance: <span class="my-balance__amount">250</span></a>
         <a class="nav-menu__link  nav-menu__link--first" href="find-brokers.html">Find A broker</a>
         <a class="nav-menu__link  nav-menu__link--second" href="post-request.html">Post a request</a>
         <a class="nav-menu__link  login-link  nav-menu__login" href="#">Log in</a>
@@ -59,6 +60,7 @@
       </div>
     </nav>
     <div class="nav-menu__submenu">
+      <a class="nav-menu__submenu-link  my-balance" href="#">My balance: <span class="my-balance__amount">250</span></a>
       <a class="nav-menu__submenu-link" href="#">My Profile</a>
       <a class="nav-menu__submenu-link  logout-link" href="#">Log out</a>
     </div>
@@ -194,9 +196,34 @@
           <input class="profile-form__input" type="text" name="street" value="">
         </label>
 
-        <label class="profile-form__label  profile-form__label--half">
+        <label class="profile-form__label  profile-form__label--half  profile-form__label--cellphone  cellphone-not-verified">
           <span class="profile-form__label-name">Cellphone</span>
-          <input class="profile-form__input" type="text" name="cellphone" value="">
+
+          <div>
+            <input class="profile-form__input" type="text" name="cellphone" value="">
+
+            <span class="profile-form__verified">
+              Verified
+              <svg class="icon  icon-verified-cellphone">
+                <use xlink:href="img/sprite/sprite.svg#verified-cellphone"></use>
+              </svg>
+            </span>
+
+            <span class="profile-form__not-verified">
+              Not Verified
+
+              <i>
+                <svg class="icon  icon-not-verified-cellphone">
+                  <use xlink:href="img/sprite/sprite.svg#not-verified-cellphone"></use>
+                </svg>
+              </i>
+
+              <div class="small-hint  profile-form__hint">
+                Verify your cellphone in order to be able to rewiews.
+                <a class="verify-cellphone-link" href="#">Verify Now</a>
+              </div>
+            </span>
+          </div>
         </label>
 
 
@@ -464,6 +491,50 @@
     <h4>Your password has been changed!</h4>
     <button class="modal-close"></button>
   </section>
+
+  <section class="modal-cellphone  modal" id="modal-cellphone">
+    <svg class="icon  icon-password">
+      <use xlink:href="img/sprite/sprite.svg#password"></use>
+    </svg>
+    <h4 class="modal-cellphone__title">Get a verification code</h4>
+
+    <form class="modal-cellphone__form" action="/">
+      <label>
+        <span>Your cellphone number</span>
+        <input type="tel" name="current-password" required>
+      </label>
+
+      <input class="modal-cellphone__btn  modal-cellphone__btn--submit" type="submit" name="submit" value="Send a message">
+      <input class="modal-cellphone__btn" type="reset" name="cansel" value="Cansel">
+    </form>
+    <button class="modal-close"></button>
+  </section>
+
+  <section class="modal-cellphone-code  modal" id="modal-cellphone-code">
+    <svg class="icon  icon-password">
+      <use xlink:href="img/sprite/sprite.svg#password"></use>
+    </svg>
+    <h4 class="modal-cellphone-code__title">Enter your code</h4>
+
+    <form class="modal-cellphone-code__form" action="/">
+      <label>
+        <span>Your code</span>
+        <input type="tel" name="current-password" required>
+      </label>
+
+      <input class="modal-cellphone-code__btn  modal-cellphone-code__btn--submit" type="submit" name="submit" value="Continue">
+    </form>
+    <button class="modal-close"></button>
+  </section>
+
+  <section class="modal-thanks-cellphone  modal" id="modal-thanks-cellphone">
+    <svg class="icon  icon-success">
+      <use xlink:href="img/sprite/sprite.svg#success"></use>
+    </svg>
+    <h4>Your cellphone number has been verified!</h4>
+    <button class="modal-close"></button>
+  </section>
+
 
 
   <script>

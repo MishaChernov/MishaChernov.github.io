@@ -114,7 +114,7 @@
   color: $color-black;
   border: solid 1px $color-input-border;
 
-  &--saved {
+  &--no-changed {
     background-color: $color-light-gray;
     color: $color-gray;
     font-weight: normal;
@@ -196,8 +196,12 @@
   transition: 150ms;
 
   .profile-form__btn {
-    background-color: $color-gray;
-    cursor: default;
+    cursor: pointer;
+    background-color: $color-green;
+
+    &:hover {
+      background-color: darken($color-green, 20%);
+    }
 
     &--saved {
       display: none;
@@ -237,14 +241,149 @@
     }
   }
 
-  &--active {
+  &--disabled {
     .profile-form__btn {
-      cursor: pointer;
-      background-color: $color-green;
+      background-color: $color-gray;
+      cursor: default;
+    }
+  }
+}
 
-      &:hover {
-        background-color: darken($color-green, 20%);
-      }
+.profile-form__label--cellphone {
+
+  div {
+    position: relative;
+    width: 100%;
+    margin-top: 7px;
+
+    span {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: none;
+    }
+  }
+  input {
+    margin-top: 0;
+    padding-right: 130px;
+  }
+
+}
+
+.profile-form__hint {
+  display: none;
+}
+
+.profile-form__hint {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 60;
+  position: absolute !important;
+  right: -10px;
+  top: -73px;
+  display: block;
+  width: 236px !important;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000000;
+  padding: 10px;
+  background-color: #e5efec;
+  border: 1px solid #0cb175;
+  transition: 200ms;
+  cursor: default;
+
+  a {
+    text-transform: uppercase;
+    color: $color-green;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 150ms;
+
+    &:hover {
+      transition: 150ms;
+      color: $color-gray;
+    }
+  }
+
+  &::after {
+    z-index: 50;
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    right: 10px;
+    transform:  rotate(-45deg);
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: #e5efec;
+    border: 1px solid #0cb175;
+    border-right: none;
+    border-top: none;
+    transition: 200ms;
+  }
+}
+
+
+.cellphone-verified {
+  cursor: pointer;
+  color: $color-green;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  cursor: default;
+
+  .profile-form__verified {
+    display: block;
+    vertical-align: middle;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+
+
+.cellphone-not-verified {
+  cursor: pointer;
+  color: $color-orange;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+
+
+  &:hover .profile-form__hint {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .profile-form__not-verified {
+    display: block;
+    vertical-align: middle;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+      display: inline-block;
+      vertical-align: middle;
     }
   }
 }

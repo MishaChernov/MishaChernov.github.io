@@ -199,3 +199,31 @@
   height: 106px;
   padding-top: 45px;
 }
+
+.request-card__image-street {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 60px;
+  width: 100%;
+  box-shadow: inset 0px -70px 83px -57px rgba(0, 0, 0, 1);
+
+  a {
+    font-size: 10px;
+    font-weight: bold;
+    line-height: normal;
+    color: #d7d7d7;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $primary-font-family;
+    letter-spacing: 1px;
+    transition: 150ms;
+
+    &:hover {
+      transition: 150ms;
+      color: $color-gray;
+    }
+  }
+}

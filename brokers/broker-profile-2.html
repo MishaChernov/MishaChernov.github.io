@@ -13,7 +13,7 @@
   <script src="https://viralpatel.net/blogs/demo/jquery/jquery.shorten.1.0.js"></script>
 
 </head>
-<body class="page-broker-profile  overlay  log-in--false" id="top">
+<body class="page-broker-profile  overlay  log-in--true  im-borrower  number-not-verified" id="top">
   <header class="header">
     <div class="header__container">
       <div class="header__wrapper">
@@ -515,6 +515,17 @@
 
       <p class="modal-sign__copy">By creating my account, I agree to the <a href="#">Terms & conditions</a> and <a href="#">Privacy Policy</a></p>
       <button class="modal-close"></button>
+  </section>
+
+  <section class="modal-must-verified  modal" id="modal-must-verified">
+    <svg class="icon  icon-not-verified-cellphone">
+      <use xlink:href="img/sprite/sprite.svg#not-verified-cellphone"></use>
+    </svg>
+    <h4>Please, quickly verify your cellphone in order to write a review</h4>
+    <a class="modal__btn  btn  must-verified-link" href="#">
+      <span>Continue</span>
+    </a>
+    <button class="modal-close"></button>
   </section>
 
 

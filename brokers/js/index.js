@@ -21,13 +21,27 @@ document.addEventListener('DOMContentLoaded', function() {
   // Start Check If Page Has Class (profile-form__input--no-changed) And Add Disabled Attribute
 
   if($('.profile-form__input--no-changed').length > 0) {
-    console.log($(this));
     $('.profile-form__input--no-changed').each(function() {
       $(this).attr('disabled', 'disabled');
     })
   }
 
   // End Check If Page Has Class (profile-form__input--no-changed) And Add Disabled Attribute
+
+
+  // Start Check If My Balance Amount More Than 0 Then Change Color
+
+  if($('.my-balance__amount').length > 0) {
+    $('.my-balance__amount').each(function() {
+      var text = $(this).text();
+
+      if(+text > 0) {
+        $(this).css('color', '#0cb175');
+      }
+    })
+  }
+
+  // // Start Check If My Balance Amount More Than 0 Then Change Color
 
 
   // Start Check profile-form Fields And Change Button
@@ -41,7 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     $('.profile-form').submit(function( event ) {
       event.preventDefault();
-      btn.addClass('profile-form__save-btn--saved');
+      setTimeout(function() {
+        btn.addClass('profile-form__save-btn--saved');
+      }, 2000);
     });
 
     $('.profile-form__btn--cancel').click(function() {
@@ -350,11 +366,18 @@ document.addEventListener('DOMContentLoaded', function() {
 		let modalSign = $('#modal-sign');
     let modalRegistered = $('#modal-registered');
     let modalPassword = $('#modal-password');
+    let modalCellphone = $('#modal-cellphone');
+    let modalCellphoneCode = $('#modal-cellphone-code');
+    let modalThanksCellphone = $('#modal-thanks-cellphone');
+    let modalMustVerified = $('#modal-must-verified');
+
 		let linkLogin = $('.login-link');
 		let linkSignUp = $('.sign-up-link');
     let linkPassword = $('.change-password-link');
     let linkPasswordThanks = $('.modal-password__form');
 		let linkFeedback = $('.modal-feedback-btn');
+    let linkCellphone = $('.verify-cellphone-link');
+    let linkMustVerified = $('.must-verified-link');
 		let overlay = $('.overlay');
 		let formFeedback = $('.modal-feedback__form');
 		let modalThanksReview = $('#modal-thanks-review');
@@ -383,7 +406,37 @@ document.addEventListener('DOMContentLoaded', function() {
 		  }
 		});
 
-		formFeedback.submit(function( event ) {
+    modalCellphoneCode.submit(function( event ) {
+		  event.preventDefault();
+
+      modal.each(function() {
+        this.classList.remove('modal--visible');
+        $(this).fadeOut(0);
+      })
+
+      modalThanksCellphone.fadeIn('slow');
+      modalThanksCellphone[0].classList.add('modal--visible');
+      overlay[0].classList.add('overlay--visible');
+
+      $('.profile-form__label--cellphone').removeClass('cellphone-not-verified');
+      $('.profile-form__label--cellphone').addClass('cellphone-verified');
+		});
+
+		modalCellphone.submit(function( event ) {
+		  event.preventDefault();
+
+      modal.each(function() {
+        this.classList.remove('modal--visible');
+        $(this).fadeOut(0);
+      })
+
+      modalCellphoneCode.fadeIn('fast');
+      modalCellphoneCode[0].classList.add('modal--visible');
+      overlay[0].classList.add('overlay--visible');
+
+		});
+
+    formFeedback.submit(function( event ) {
 		  event.preventDefault();
 
 			$('.modal-feedback__input').each(function() {
@@ -407,9 +460,26 @@ document.addEventListener('DOMContentLoaded', function() {
 			})
 		});
 
-		linkFeedback.each(function() {
+    linkMustVerified.each(function() {
 			this.addEventListener('click', function(e) {
 				e.preventDefault();
+
+        modal.each(function() {
+          this.classList.remove('modal--visible');
+          $(this).fadeOut(0);
+        })
+
+        window.location.href = 'profile.html';
+        window.history.back();
+
+        $('.profile-form__label--cellphone').addClass('profile-form__label--cellphone-anim');
+
+			});
+		})
+
+    linkCellphone.each(function() {
+			this.addEventListener('click', function(e) {
+				;e.preventDefault();
 
         if($('body').hasClass('log-in--true')) {
           modal.each(function() {
@@ -417,8 +487,44 @@ document.addEventListener('DOMContentLoaded', function() {
   					$(this).fadeOut(0);
   				})
 
+  				modalCellphone.fadeIn('fast');
+  				modalCellphone[0].classList.add('modal--visible');
+  				overlay[0].classList.add('overlay--visible');
+        } else {
+          modal.each(function() {
+  					this.classList.remove('modal--visible');
+  					$(this).fadeOut(0);
+  				})
+
+  				modalRegistered.fadeIn('fast');
+  				modalRegistered[0].classList.add('modal--visible');
+  				overlay[0].classList.add('overlay--visible');
+        }
+
+			});
+		})
+
+		linkFeedback.each(function() {
+			this.addEventListener('click', function(e) {
+				e.preventDefault();
+
+        if($('body').hasClass('log-in--true') && $('body').hasClass('number-verified')) {
+          modal.each(function() {
+  					this.classList.remove('modal--visible');
+  					$(this).fadeOut(0);
+  				})
+
   				modalFeedback.fadeIn('fast');
   				modalFeedback[0].classList.add('modal--visible');
+  				overlay[0].classList.add('overlay--visible');
+        } else if ($('body').hasClass('log-in--true') && $('body').hasClass('number-not-verified')) {
+          modal.each(function() {
+  					this.classList.remove('modal--visible');
+  					$(this).fadeOut(0);
+  				})
+
+  				modalMustVerified.fadeIn('fast');
+  				modalMustVerified[0].classList.add('modal--visible');
   				overlay[0].classList.add('overlay--visible');
         } else {
           modal.each(function() {
