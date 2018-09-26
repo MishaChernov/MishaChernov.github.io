@@ -137,7 +137,7 @@
   }
 
   &--open {
-    bottom: -92px !important;
+    bottom: -130px !important;
     transition: 300ms ease;
 
     &::before {
@@ -172,6 +172,10 @@
   &:hover {
     background-color: $color-light-gray;
   }
+}
+
+.my-balance__amount {
+  color: $color-red;
 }
 
 

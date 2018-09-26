@@ -111,7 +111,7 @@
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: $color-black;
+  color: $color-gray;
   border: solid 1px $color-input-border;
 
   &--no-changed {
@@ -224,6 +224,7 @@
     margin-right: 0;
 
     .profile-form__btn {
+      transition: 1s;
       background-color: $color-purple !important;
 
       &--saved {
@@ -271,6 +272,14 @@
 
 }
 
+.profile-form__label--cellphone-anim {
+  input {
+    animation-name: animation-cellphone;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+  }
+}
+
 .profile-form__hint {
   display: none;
 }
@@ -281,7 +290,7 @@
   z-index: 60;
   position: absolute !important;
   right: -10px;
-  top: -73px;
+  top: -55px;
   display: block;
   width: 236px !important;
   box-sizing: border-box;
@@ -294,7 +303,7 @@
   text-align: center;
   text-transform: capitalize;
   color: #000000;
-  padding: 10px;
+  padding: 5px 10px;
   background-color: #e5efec;
   border: 1px solid #0cb175;
   transition: 200ms;
@@ -318,7 +327,7 @@
     z-index: 50;
     content: "";
     position: absolute;
-    bottom: -8px;
+    bottom: -9px;
     right: 10px;
     transform:  rotate(-45deg);
     display: block;
@@ -334,18 +343,17 @@
 
 
 .cellphone-verified {
-  cursor: pointer;
-  color: $color-green;
-  text-transform: uppercase;
-  font-size: 12px;
-  line-height: 12px;
-  letter-spacing: 1px;
-  font-weight: bold;
-  cursor: default;
 
   .profile-form__verified {
     display: block;
     vertical-align: middle;
+    text-transform: uppercase;
+    color: $color-green;
+    font-size: 12px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: default;
 
     svg {
       width: 20px;
@@ -364,7 +372,7 @@
   color: $color-orange;
   text-transform: uppercase;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 40px;
   letter-spacing: 1px;
   font-weight: bold;
 

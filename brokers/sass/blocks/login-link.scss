@@ -2,6 +2,9 @@
 }
 
 .log-in--true {
+  .nav-menu__link.my-balance {
+    display: none;
+  }
   .nav-menu__login-img {
     display: block;
   }

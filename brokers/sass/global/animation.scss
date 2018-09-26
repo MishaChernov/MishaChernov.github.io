@@ -174,3 +174,12 @@
     z-index: 0;
   }
 }
+
+@keyframes animation-cellphone {
+  0% {
+    border: solid 1px #d1d2d4;
+  }
+  100% {
+    border: solid 1px $color-orange;
+  }
+}

@@ -420,11 +420,16 @@
     }
   }
   .nav-menu__login-img {order: 1;}
-  .nav-menu__link--first {order: 2;}
-  .nav-menu__link--second {order: 3;}
-  .nav-menu__login {order: 4;}
-  .nav-menu__logout {order: 5;}
+  .nav-menu__link.my-balance {order: 2;}
+  .nav-menu__link--first {order: 3;}
+  .nav-menu__link--second {order: 4;}
+  .nav-menu__login {order: 5;}
+  .nav-menu__logout {order: 6;}
+
   .log-in--true {
+    .nav-menu__link.my-balance {
+      display: block;
+    }
     .nav-menu__login-img {
       display: block;
     }
@@ -438,7 +443,7 @@
       }
     }
     .nav-menu--open {
-      bottom: -200px !important;
+      bottom: -250px !important;
     }
   }
 
@@ -1199,7 +1204,8 @@
     width: 30px;
     height: 30px;
   }
-  .modal-thanks-review {
+  .modal-thanks-review,
+  .modal-thanks-cellphone {
     max-height: 290px;
     padding-top: 50px;
     padding-bottom: 30px;
@@ -1222,7 +1228,8 @@
       text-align: center;
     }
   }
-  .modal-registered {
+  .modal-registered,
+  .modal-must-verified {
     max-height: 340px;
     padding-top: 20px;
     padding-bottom: 20px;
