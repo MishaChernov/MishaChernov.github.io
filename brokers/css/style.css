@@ -4765,6 +4765,9 @@ select {
 .log-in--true .nav-menu--open {
   bottom: -200px !important; }
 
+.log-in--false .nav-menu__link.my-balance {
+  display: none; }
+
 .log-in--false .nav-menu__login-img {
   display: none; }
 
@@ -5019,6 +5022,7 @@ select {
     background-color: #0cb175;
     transition: 300ms ease; }
     .nav-menu__link--second:hover {
+      color: #ffffff;
       background-color: #065136; }
   .nav-menu__link--active {
     color: #ffffff;
