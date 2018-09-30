@@ -2006,4 +2006,17 @@
     width: 80%;
     margin: 0 auto;
   }
+
+
+  .page-broker-registration {
+    .request__flex-wrapper--padding {
+      padding: 0 10px;
+    }
+    .request__item--language .language__btn {
+      height: 40px;
+    }
+    .request__item--language .language__list {
+      top: 62px;
+    }
+  }
 }

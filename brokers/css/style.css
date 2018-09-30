@@ -10882,7 +10882,8 @@ footer.featured-card__wrapper {
   margin-top: 18px;
   margin-bottom: 25px; }
   .page-broker-registration .request__wrapper--mortgage .request__flex-wrapper--padding .request__item {
-    width: 100%;
+    width: 100% !important;
+    flex-basis: 100% !important;
     margin: 18px 0; }
 
 .page-broker-registration .request__wrapper--about {
@@ -11407,6 +11408,9 @@ footer.featured-card__wrapper {
   .request__item--mortgage {
     width: 100%;
     flex-basis: 100%; }
+  .request__wrapper--about .request__item {
+    width: 49% !important;
+    max-width: 100% !important; }
   .request__wrapper--company .request__flex-wrapper {
     flex-wrap: wrap; }
   .request__wrapper--company .request__item {
@@ -13705,7 +13709,10 @@ footer.featured-card__wrapper {
   .page-broker-registration .request__item--language .language__btn {
     height: 40px; }
   .page-broker-registration .request__item--language .language__list {
-    top: 62px; } }
+    top: 62px; }
+  .page-broker-registration .request__wrapper--introduce .request__item,
+  .page-broker-registration .request__wrapper--about .request__item {
+    max-width: 100%; } }
 
 @media (max-width: 550px) {
   .modal-login {

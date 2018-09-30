@@ -603,7 +603,13 @@
       padding: 0;
     }
   }
-  .request__wrapper--mortgage .request__flex-wrapper--padding .request__item {
+  .request__item {
+    margin: 14px 0px !important;
+  }
+  .request__wrapper--mortgage .request__item {
+    margin: 0px !important;
+  }
+  .request__item--mortgage {
     width: 100%;
     flex-basis: 100%;
   }

@@ -622,4 +622,70 @@
       }
     }
   }
+
+
+  .page-broker-registration {
+    .preview {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .preview__title {
+      margin-top: 2px;
+      font-size: 20px;
+    }
+    .preview__text {
+      font-size: 14px;
+    }
+    .preview__steps {
+      margin-top: 17px;
+    }
+    .preview__step {
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      height: 40px;
+      line-height: 40px;
+      padding-left: 10px;
+      margin-right: 3px;
+
+      &:hover {
+        transition: 150ms;
+        background-color: darken($color-bg-card-off, 20%);
+
+        &::after {
+          transition: 150ms;
+          border-left: 9px solid darken($color-bg-card-off, 20%);
+        }
+      }
+
+      &::before {
+        border-top: 30px solid transparent;
+        border-left: 12px solid white;
+        border-bottom: 30px solid transparent;
+      }
+      &::after {
+        right: -9px;
+        border-top: 20px solid transparent;
+        border-left: 9px solid $color-bg-card-off;
+        border-bottom: 20px solid transparent;
+      }
+    }
+    .preview__step--active::after {
+      border-left: 9px solid $color-green;
+    }
+    .request__flex-wrapper--padding {
+      padding: 0 10px;
+    }
+    .request__item {
+      max-width: 100% !important;
+      width: 100% !important;
+
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6){
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+    }
+  }
 }
