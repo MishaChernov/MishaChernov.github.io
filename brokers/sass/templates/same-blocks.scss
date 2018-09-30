@@ -285,8 +285,119 @@
     padding: 65px 22px;
     padding-bottom: 37px;
   }
+}
 
 
 
 
+.page-broker-registration {
+  .preview {
+    background-color: $color-white;
+    color: $color-black;
+    padding-bottom: 40px;
+  }
+  .preview__title {
+    margin-top: 25px;
+    font-family: Gilroy;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: $color-green;
+  }
+  .preview__text {
+    color: $color-black;
+  }
+
+  .request__flex-wrapper--padding {
+    padding: 0 40px;
+  }
+
+  .request__wrapper--introduce {
+    .request__flex-wrapper {
+      flex-wrap: wrap;
+    }
+    .request__item {
+      width: 100%;
+      max-width: 540px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  .request__item--language {
+
+    .language__btn {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &::after {
+        content: "";
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+        display: block;
+        width: 5px;
+        height: 5px;
+        border-left: 2px solid #8a8c8f;
+        border-bottom: 2px solid #8a8c8f;
+        transition: 500ms ease;
+      }
+    }
+    .language__list {
+      z-index: 3;
+      top: 82px;
+    }
+    .language__btn {
+      height: 60px;
+      padding: 0 8px;
+      box-sizing: border-box;
+    }
+  }
+  .request__item--mortgage span {
+    margin-top: 1px;
+    box-shadow: 1px 0 0 #f1f2f2,
+                0 1px 0 #f1f2f2;
+  }
+  .request__wrapper--about {
+    .request__flex-wrapper {
+      flex-wrap: wrap;
+    }
+    .request__item {
+      width: auto;
+      flex-basis: 47%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .request__item--textarea {
+      flex-basis: 100%;
+    }
+  }
+  .request__wrapper--company {
+    .request__flex-wrapper {
+      flex-wrap: wrap;
+    }
+    .request__item {
+      width: 100%;
+      max-width: 540px;
+      margin-left: 0;
+      margin-right: 0;
+
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6){
+        flex-basis: auto;
+        max-width: 250px;
+        width: 100%;
+      }
+      &:nth-child(7){
+        max-width: 100%;
+      }
+    }
+  }
 }

@@ -56,6 +56,7 @@
     @include transition(300ms);
 
     &:hover {
+      color: $color-white;
       background-color: darken($color-green, 20%);
     }
   }

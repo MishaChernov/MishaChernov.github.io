@@ -7832,6 +7832,92 @@ footer.featured-card__wrapper {
   text-align: center;
   color: #ffffff; }
 
+.preview__steps {
+  list-style: none;
+  margin-top: 34px;
+  display: flex;
+  justify-content: space-between; }
+
+.preview__step {
+  z-index: 2;
+  /* Added this and moved much code to here */
+  position: relative;
+  /* this was a key property missing from your code */
+  margin-right: 5px;
+  width: 100%;
+  height: 60px;
+  background-color: #e7e7e8;
+  display: inline-block;
+  /* Dirty IE Hack */
+  zoom: 1;
+  *display: inline;
+  /* margin-right: 30px; Eliminated this */
+  font-size: 18px;
+  text-align: center;
+  line-height: 60px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 1.6px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #8a8c8f;
+  transition: 150ms; }
+  .preview__step:hover {
+    transition: 150ms;
+    background-color: #b3b3b6; }
+    .preview__step:hover::after {
+      transition: 150ms;
+      border-left: 13px solid #b3b3b6; }
+  .preview__step:first-child {
+    z-index: 3; }
+    .preview__step:first-child::before {
+      display: none; }
+  .preview__step:last-child {
+    margin-right: 0;
+    z-index: 1; }
+    .preview__step:last-child::after {
+      display: none; }
+
+/* tweaked various things below here */
+.preview__step::after {
+  content: "";
+  position: absolute;
+  right: -13px;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-left: 13px solid #e7e7e8;
+  border-bottom: 30px solid transparent;
+  transition: 150ms; }
+
+.preview__step::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: -10px;
+  border-top: 40px solid transparent;
+  border-left: 18px solid white;
+  border-bottom: 40px solid transparent; }
+
+.preview__step--active {
+  background-color: #0cb175;
+  color: #ffffff; }
+  .preview__step--active:hover {
+    cursor: default;
+    background-color: #0cb175; }
+    .preview__step--active:hover::after {
+      border-left: 13px solid #0cb175; }
+
+.preview__step--active::after {
+  border-left: 13px solid #0cb175; }
+
 .request__wrapper {
   position: relative;
   border: none;
@@ -8088,6 +8174,7 @@ footer.featured-card__wrapper {
   .request__item--mortgage:last-of-type span {
     box-shadow: none; }
   .request__item--mortgage input:checked ~ span {
+    z-index: 3;
     box-shadow: 0 0 0 1px #0cb175;
     color: #0cb175; }
     .request__item--mortgage input:checked ~ span i {
@@ -10599,7 +10686,8 @@ footer.featured-card__wrapper {
     .page-broker-profile .page-nav__btn-help svg {
       margin-right: 2px; }
 
-.page-post-request main {
+.page-post-request main,
+.page-broker-registration main {
   padding-bottom: 84px; }
 
 .page-request-details {
@@ -10693,6 +10781,116 @@ footer.featured-card__wrapper {
     font-size: 20px;
     padding: 65px 22px;
     padding-bottom: 37px; }
+
+.page-broker-registration .preview {
+  background-color: #ffffff;
+  color: #000000;
+  padding-bottom: 40px; }
+
+.page-broker-registration .preview__title {
+  margin-top: 25px;
+  font-family: Gilroy;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #0cb175; }
+
+.page-broker-registration .preview__text {
+  color: #000000; }
+
+.page-broker-registration .request__flex-wrapper--padding {
+  padding: 0 40px; }
+  .page-broker-registration .request__flex-wrapper--padding .request__item {
+    margin: 18px 0; }
+
+.page-broker-registration .request__wrapper--introduce .request__flex-wrapper {
+  flex-wrap: wrap; }
+
+.page-broker-registration .request__wrapper--introduce .request__item {
+  max-width: 540px;
+  margin-left: 0;
+  margin-right: 0; }
+
+.page-broker-registration .request__item--language .language__btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .page-broker-registration .request__item--language .language__btn::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+            transform: translateY(-50%) rotate(-45deg);
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-left: 2px solid #8a8c8f;
+    border-bottom: 2px solid #8a8c8f;
+    transition: 500ms ease; }
+
+.page-broker-registration .request__item--language .language__list {
+  z-index: 3;
+  top: 82px; }
+
+.page-broker-registration .request__item--language .language__btn {
+  height: 60px;
+  padding: 0 8px;
+  box-sizing: border-box; }
+
+.page-broker-registration .request__item--mortgage span {
+  margin-top: 1px;
+  box-shadow: 1px 0 0 #f1f2f2, 0 1px 0 #f1f2f2; }
+
+.page-broker-registration .request__wrapper--about .request__flex-wrapper {
+  flex-wrap: wrap; }
+
+.page-broker-registration .request__wrapper--about .request__item {
+  width: 100%;
+  max-width: 540px;
+  margin-left: 0;
+  margin-right: 0; }
+  .page-broker-registration .request__wrapper--about .request__item--textarea {
+    max-width: 100%; }
+
+.page-broker-registration .request__wrapper--about .request__item--textarea {
+  flex-basis: 100%;
+  padding: 0; }
+
+.page-broker-registration .request__wrapper--company .request__flex-wrapper {
+  flex-wrap: wrap; }
+
+.page-broker-registration .request__wrapper--company .request__item {
+  width: 100%;
+  max-width: 540px;
+  margin-left: 0;
+  margin-right: 0; }
+  .page-broker-registration .request__wrapper--company .request__item:nth-child(3), .page-broker-registration .request__wrapper--company .request__item:nth-child(4), .page-broker-registration .request__wrapper--company .request__item:nth-child(5), .page-broker-registration .request__wrapper--company .request__item:nth-child(6) {
+    flex-basis: auto;
+    max-width: 250px;
+    width: 100%; }
+  .page-broker-registration .request__wrapper--company .request__item:nth-child(7) {
+    max-width: 100%; }
+
+.page-broker-registration .request__wrapper--mortgage .request__flex-wrapper--padding {
+  margin-top: 18px;
+  margin-bottom: 25px; }
+  .page-broker-registration .request__wrapper--mortgage .request__flex-wrapper--padding .request__item {
+    width: 100%;
+    margin: 18px 0; }
+
+.page-broker-registration .request__wrapper--about {
+  padding-bottom: 8px; }
+
+.page-broker-registration .request__btn {
+  background-color: #0cb175; }
+  .page-broker-registration .request__btn:hover {
+    background-color: #065136; }
 
 /* Slider */
 .slick-slider {
@@ -11189,7 +11387,35 @@ footer.featured-card__wrapper {
     margin-bottom: 20px; }
   .page-request .search__item--money::before,
   .page-find-brokers .search__item--money::before {
-    top: 36px; } }
+    top: 36px; }
+  .page-broker-registration .preview {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .page-broker-registration .preview__title {
+    margin-top: 10px;
+    font-size: 24px; }
+  .page-broker-registration .preview__img {
+    width: 100px;
+    height: 100px; }
+  .page-broker-registration .preview__steps {
+    padding: 0; }
+  .request__wrapper--mortgage .request__flex-wrapper--padding .request__item {
+    width: 100%;
+    flex-basis: 100%; }
+  .request__wrapper--company .request__flex-wrapper {
+    flex-wrap: wrap; }
+  .request__wrapper--company .request__item {
+    width: 49% !important;
+    max-width: 100% !important;
+    margin-left: 0;
+    margin-right: 0; }
+    .request__wrapper--company .request__item:nth-child(3), .request__wrapper--company .request__item:nth-child(4), .request__wrapper--company .request__item:nth-child(5), .request__wrapper--company .request__item:nth-child(6) {
+      flex-basis: auto;
+      max-width: 100% !important;
+      width: 49% !important; }
+    .request__wrapper--company .request__item:nth-child(7) {
+      width: 100% !important;
+      max-width: 100% !important; } }
 
 @media (max-width: 1200px) {
   .container {
@@ -11886,7 +12112,8 @@ footer.featured-card__wrapper {
       padding-left: 19px;
       padding-right: 20px;
       padding-bottom: 44px; }
-  .page-post-request main {
+  .page-post-request main,
+  .page-broker-registration main {
     padding-bottom: 34px; }
   .request-tabs {
     padding-top: 34px;
@@ -13083,7 +13310,8 @@ footer.featured-card__wrapper {
   .request__btn-save {
     font-size: 14px;
     letter-spacing: 1.4px; }
-  .page-post-request main {
+  .page-post-request main,
+  .page-broker-registration main {
     padding-bottom: 25px; }
   .request-tabs__title {
     font-size: 20px;
