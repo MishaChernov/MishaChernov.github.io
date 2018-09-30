@@ -1003,8 +1003,11 @@
       padding-bottom: 44px;
     }
   }
-  .page-post-request main {
-    padding-bottom: 34px;
+  .page-post-request,
+  .page-broker-registration {
+    main {
+     padding-bottom: 34px;
+   }
   }
 
   .request-tabs {
@@ -1238,4 +1241,5 @@
       margin: 7px auto;
     }
   }
+
 }

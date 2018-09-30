@@ -161,7 +161,8 @@
   }
 }
 
-.page-post-request {
+.page-post-request,
+.page-broker-registration {
   main {
     padding-bottom: 84px;
   }
@@ -314,6 +315,10 @@
 
   .request__flex-wrapper--padding {
     padding: 0 40px;
+
+    .request__item {
+      margin: 18px 0;
+    }
   }
 
   .request__wrapper--introduce {
@@ -321,7 +326,6 @@
       flex-wrap: wrap;
     }
     .request__item {
-      width: 100%;
       max-width: 540px;
       margin-left: 0;
       margin-right: 0;
@@ -368,13 +372,18 @@
       flex-wrap: wrap;
     }
     .request__item {
-      width: auto;
-      flex-basis: 47%;
-      margin-left: auto;
-      margin-right: auto;
+      width: 100%;
+      max-width: 540px;
+      margin-left: 0;
+      margin-right: 0;
+
+      &--textarea {
+        max-width: 100%;
+      }
     }
     .request__item--textarea {
       flex-basis: 100%;
+      padding: 0;
     }
   }
   .request__wrapper--company {
@@ -398,6 +407,27 @@
       &:nth-child(7){
         max-width: 100%;
       }
+    }
+  }
+  .request__wrapper--mortgage {
+    .request__flex-wrapper--padding {
+      margin-top: 18px;
+      margin-bottom: 25px;
+
+      .request__item {
+        width: 100%;
+        margin: 18px 0;
+      }
+    }
+  }
+  .request__wrapper--about {
+    padding-bottom: 8px;
+  }
+  .request__btn {
+    background-color: $color-green;
+
+    &:hover {
+      background-color: darken($color-green, 20%);
     }
   }
 }

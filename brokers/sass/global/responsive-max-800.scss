@@ -1462,8 +1462,11 @@
     font-size: 14px;
     letter-spacing: 1.4px;
   }
-  .page-post-request main {
-    padding-bottom: 25px;
+  .page-post-request,
+  .page-broker-registration {
+    main {
+      padding-bottom: 25px;
+    }
   }
 
 

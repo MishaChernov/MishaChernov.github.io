@@ -586,4 +586,49 @@
     top: 36px;
   }
 
+  .page-broker-registration {
+    .preview {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .preview__title {
+      margin-top: 10px;
+      font-size: 24px;
+    }
+    .preview__img {
+      width: 100px;
+      height: 100px;
+    }
+    .preview__steps {
+      padding: 0;
+    }
+  }
+  .request__wrapper--mortgage .request__flex-wrapper--padding .request__item {
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .request__wrapper--company {
+    .request__flex-wrapper {
+      flex-wrap: wrap;
+    }
+    .request__item {
+      width: 49% !important;
+      max-width: 100% !important;
+      margin-left: 0;
+      margin-right: 0;
+
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6){
+        flex-basis: auto;
+        max-width: 100% !important;
+        width: 49% !important;
+      }
+      &:nth-child(7){
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  }
 }

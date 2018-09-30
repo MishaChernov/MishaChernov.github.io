@@ -7850,6 +7850,7 @@ footer.featured-card__wrapper {
   display: inline-block;
   /* Dirty IE Hack */
   zoom: 1;
+  padding-left: 15px;
   *display: inline;
   /* margin-right: 30px; Eliminated this */
   font-size: 18px;
@@ -11399,7 +11400,11 @@ footer.featured-card__wrapper {
     height: 100px; }
   .page-broker-registration .preview__steps {
     padding: 0; }
-  .request__wrapper--mortgage .request__flex-wrapper--padding .request__item {
+  .request__item {
+    margin: 14px 0px !important; }
+  .request__wrapper--mortgage .request__item {
+    margin: 0px !important; }
+  .request__item--mortgage {
     width: 100%;
     flex-basis: 100%; }
   .request__wrapper--company .request__flex-wrapper {
@@ -13694,7 +13699,13 @@ footer.featured-card__wrapper {
     margin: 7px auto; }
   .modal-cellphone-code__btn {
     width: 80%;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .page-broker-registration .request__flex-wrapper--padding {
+    padding: 0 10px; }
+  .page-broker-registration .request__item--language .language__btn {
+    height: 40px; }
+  .page-broker-registration .request__item--language .language__list {
+    top: 62px; } }
 
 @media (max-width: 550px) {
   .modal-login {
@@ -14121,4 +14132,46 @@ footer.featured-card__wrapper {
   .page-profile .profile-form__label--checkbox {
     margin-bottom: 15px; }
     .page-profile .profile-form__label--checkbox .profile-form__label-name {
-      flex-basis: 50%; } }
+      flex-basis: 50%; }
+  .page-broker-registration .preview {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .page-broker-registration .preview__title {
+    margin-top: 2px;
+    font-size: 20px; }
+  .page-broker-registration .preview__text {
+    font-size: 14px; }
+  .page-broker-registration .preview__steps {
+    margin-top: 17px; }
+  .page-broker-registration .preview__step {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    margin-right: 3px; }
+    .page-broker-registration .preview__step:hover {
+      transition: 150ms;
+      background-color: #b3b3b6; }
+      .page-broker-registration .preview__step:hover::after {
+        transition: 150ms;
+        border-left: 9px solid #b3b3b6; }
+    .page-broker-registration .preview__step::before {
+      border-top: 30px solid transparent;
+      border-left: 12px solid white;
+      border-bottom: 30px solid transparent; }
+    .page-broker-registration .preview__step::after {
+      right: -9px;
+      border-top: 20px solid transparent;
+      border-left: 9px solid #e7e7e8;
+      border-bottom: 20px solid transparent; }
+  .page-broker-registration .preview__step--active::after {
+    border-left: 9px solid #0cb175; }
+  .page-broker-registration .request__flex-wrapper--padding {
+    padding: 0 10px; }
+  .page-broker-registration .request__item {
+    max-width: 100% !important;
+    width: 100% !important; }
+    .page-broker-registration .request__item:nth-child(3), .page-broker-registration .request__item:nth-child(4), .page-broker-registration .request__item:nth-child(5), .page-broker-registration .request__item:nth-child(6) {
+      max-width: 100% !important;
+      width: 100% !important; } }
