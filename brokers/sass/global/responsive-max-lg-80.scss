@@ -641,4 +641,13 @@
       }
     }
   }
+
+  .request__step {
+    .good-to-know {
+      margin: 20px;
+    }
+    .good-to-know p {
+      font-size: 20px;
+    }
+  }
 }

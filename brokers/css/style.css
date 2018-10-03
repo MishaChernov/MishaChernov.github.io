@@ -10902,6 +10902,9 @@ footer.featured-card__wrapper {
 .page-broker-registration .request__step:not(:first-of-type) {
   display: none; }
 
+.page-broker-registration .request__step .request__flex-wrapper {
+  flex-wrap: wrap; }
+
 .page-broker-registration .request__step .request__wrapper {
   padding-bottom: 30px;
   margin-bottom: 40px; }

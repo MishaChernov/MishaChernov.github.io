@@ -2022,5 +2022,32 @@
     .request__wrapper--about .request__item {
       max-width: 100%;
     }
+    .request__step {
+      .request__wrapper {
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+      .good-to-know {
+        margin: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .good-to-know p {
+        font-size: 16px;
+        font-weight: 600;
+        padding-top: 50px;
+        padding-left: 12px;
+        padding-right: 14px;
+        padding-bottom: 4px;
+      }
+      .request__item {
+        flex-basis: 100%;
+      }
+      .request__btn-upload {
+        height: 40px;
+        font-size: 16px;
+        letter-spacing: 1.6px;
+      }
+    }
   }
 }
