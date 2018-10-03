@@ -3395,6 +3395,10 @@ select {
   font-size: 1.6rem;
   width: 1em; }
 
+.icon-upload {
+  font-size: 1.6rem;
+  width: 1em; }
+
 .icon-verified {
   font-size: 1.6rem;
   width: 1em; }
@@ -7857,7 +7861,6 @@ footer.featured-card__wrapper {
   text-align: center;
   line-height: 60px;
   box-sizing: border-box;
-  cursor: pointer;
   font-family: Gilroy;
   font-size: 16px;
   font-weight: bold;
@@ -7868,12 +7871,6 @@ footer.featured-card__wrapper {
   text-transform: uppercase;
   color: #8a8c8f;
   transition: 150ms; }
-  .preview__step:hover {
-    transition: 150ms;
-    background-color: #b3b3b6; }
-    .preview__step:hover::after {
-      transition: 150ms;
-      border-left: 13px solid #b3b3b6; }
   .preview__step:first-child {
     z-index: 3; }
     .preview__step:first-child::before {
@@ -7883,41 +7880,49 @@ footer.featured-card__wrapper {
     z-index: 1; }
     .preview__step:last-child::after {
       display: none; }
-
-/* tweaked various things below here */
-.preview__step::after {
-  content: "";
-  position: absolute;
-  right: -13px;
-  width: 0;
-  height: 0;
-  border-top: 30px solid transparent;
-  border-left: 13px solid #e7e7e8;
-  border-bottom: 30px solid transparent;
-  transition: 150ms; }
-
-.preview__step::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: 0;
-  top: -10px;
-  border-top: 40px solid transparent;
-  border-left: 18px solid white;
-  border-bottom: 40px solid transparent; }
-
-.preview__step--active {
-  background-color: #0cb175;
-  color: #ffffff; }
-  .preview__step--active:hover {
-    cursor: default;
-    background-color: #0cb175; }
-    .preview__step--active:hover::after {
+  .preview__step::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: -10px;
+    border-top: 40px solid transparent;
+    border-left: 18px solid white;
+    border-bottom: 40px solid transparent; }
+  .preview__step::after {
+    content: "";
+    position: absolute;
+    right: -13px;
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-left: 13px solid #e7e7e8;
+    border-bottom: 30px solid transparent;
+    transition: 150ms; }
+  .preview__step--active {
+    background-color: #0cb175;
+    color: #ffffff; }
+    .preview__step--active::after {
       border-left: 13px solid #0cb175; }
+    .preview__step--active::before {
+      border-left: 18px solid #ffffff; }
 
-.preview__step--active::after {
-  border-left: 13px solid #0cb175; }
+.preview__step--click {
+  cursor: pointer;
+  transition: 150ms; }
+  .preview__step--click:hover {
+    transition: 150ms;
+    background-color: #b3b3b6 !important; }
+    .preview__step--click:hover::after {
+      transition: 150ms;
+      border-left: 13px solid #b3b3b6 !important; }
+
+.preview__step--first {
+  background-color: #0cb175 !important;
+  color: #ffffff !important; }
+  .preview__step--first::after {
+    border-left: 13px solid #0cb175 !important; }
 
 .request__wrapper {
   position: relative;
@@ -10894,6 +10899,69 @@ footer.featured-card__wrapper {
   .page-broker-registration .request__btn:hover {
     background-color: #065136; }
 
+.page-broker-registration .request__step:not(:first-of-type) {
+  display: none; }
+
+.page-broker-registration .request__step .request__wrapper {
+  padding-bottom: 30px;
+  margin-bottom: 40px; }
+
+.page-broker-registration .request__step .good-to-know {
+  margin: 40px; }
+
+.page-broker-registration .request__step--second .request__item:first-of-type {
+  width: 100%; }
+
+.page-broker-registration .request__step--second .request__item--file {
+  flex-basis: 48%; }
+
+.page-broker-registration .request__btn-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  cursor: pointer;
+  background-color: #f1f2f2;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.6px;
+  text-align: center;
+  color: #8a8c8f;
+  font-style: normal;
+  text-transform: uppercase;
+  transition: 150ms; }
+  .page-broker-registration .request__btn-upload .uploaded-svg,
+  .page-broker-registration .request__btn-upload .uploaded-text {
+    display: none; }
+  .page-broker-registration .request__btn-upload svg {
+    width: 16px;
+    height: 16px; }
+  .page-broker-registration .request__btn-upload b {
+    margin: 8px; }
+  .page-broker-registration .request__btn-upload input {
+    display: none; }
+  .page-broker-registration .request__btn-upload:hover {
+    transition: 150ms;
+    background-color: #bcc1c1;
+    color: #ffffff; }
+  .page-broker-registration .request__btn-upload--ok {
+    cursor: default;
+    box-shadow: inset 0 0 0 1px #0cb175;
+    color: #0cb175; }
+    .page-broker-registration .request__btn-upload--ok .uploaded-svg,
+    .page-broker-registration .request__btn-upload--ok .uploaded-text {
+      display: block; }
+    .page-broker-registration .request__btn-upload--ok .upload-text,
+    .page-broker-registration .request__btn-upload--ok .upload-svg {
+      display: none; }
+    .page-broker-registration .request__btn-upload--ok:hover {
+      transition: 150ms;
+      background-color: #f1f2f2;
+      color: #0cb175; }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -11424,7 +11492,11 @@ footer.featured-card__wrapper {
       width: 49% !important; }
     .request__wrapper--company .request__item:nth-child(7) {
       width: 100% !important;
-      max-width: 100% !important; } }
+      max-width: 100% !important; }
+  .request__step .good-to-know {
+    margin: 20px; }
+  .request__step .good-to-know p {
+    font-size: 20px; } }
 
 @media (max-width: 1200px) {
   .container {
@@ -13712,7 +13784,27 @@ footer.featured-card__wrapper {
     top: 62px; }
   .page-broker-registration .request__wrapper--introduce .request__item,
   .page-broker-registration .request__wrapper--about .request__item {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .page-broker-registration .request__step .request__wrapper {
+    padding-bottom: 10px;
+    margin-bottom: 20px; }
+  .page-broker-registration .request__step .good-to-know {
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .page-broker-registration .request__step .good-to-know p {
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 50px;
+    padding-left: 12px;
+    padding-right: 14px;
+    padding-bottom: 4px; }
+  .page-broker-registration .request__step .request__item {
+    flex-basis: 100%; }
+  .page-broker-registration .request__step .request__btn-upload {
+    height: 40px;
+    font-size: 16px;
+    letter-spacing: 1.6px; } }
 
 @media (max-width: 550px) {
   .modal-login {

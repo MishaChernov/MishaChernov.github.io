@@ -41,7 +41,58 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   }
 
-  // // Start Check If My Balance Amount More Than 0 Then Change Color
+  // End Check If My Balance Amount More Than 0 Then Change Color
+
+
+  // Start Check Click On Next-Btn in Broker's Registration page
+
+  if($('.page-broker-registration').length > 0) {
+    //jQuery time
+    var current_fs, next_fs, previous_fs; //fieldsets
+
+    $(".request__btn--next").click(function(event){
+
+      current_fs = $(this).parent();
+      next_fs = $(this).parent().next();
+
+      //activate next step on progressbar using the index of next_fs
+      $("#progressbar li").eq($("article").index(next_fs)).addClass("preview__step--active");
+      // $("#progressbar li").eq($("article").index(next_fs - 1)).addClass("preview__step--click");
+
+
+      //show the next fieldset
+      next_fs.addClass('request__step--active');
+      next_fs.fadeIn('fast');
+      //hide the current fieldset with style
+      current_fs.fadeOut('fast');
+    });
+
+    // $(".preview__step--click").click(function(){
+    //   console.log('click');
+    //
+    //   current_fs = $('.request__step--active');
+    //   previous_fs = current_fs.prev();
+    //
+    //   //de-activate current step on progressbar
+    //   $("#progressbar li").eq($("request__step").index(current_fs)).removeClass("acpreview__step--active");
+    //
+    //   //show the previous fieldset
+    //
+    //   previous_fs.fadeIn('fast');
+    //   //hide the current fieldset with style
+    //   current_fs.fadeOut('fast');
+    // });
+    //
+    // $(".request__btn--submit").click(function(){
+    //   return false;
+    // })
+
+  }
+  // End Check Click On Next-Btn in Broker's Registration page
+
+
+
+
 
 
   // Start Check profile-form Fields And Change Button

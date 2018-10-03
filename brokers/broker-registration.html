@@ -71,8 +71,8 @@
     <h2 class="preview__title">Welcome to MortgageBrokers.com!</h2>
     <p class="preview__text">Now, let borrowers find you!</p>
 
-    <ul class="preview__steps  container">
-      <li class="preview__step  preview__step--active">Step 1</li>
+    <ul class="preview__steps  container" id="progressbar">
+      <li class="preview__step  preview__step--first">Step 1</li>
       <li class="preview__step">Step 2</li>
       <li class="preview__step">Step 3</li>
     </ul>
@@ -81,246 +81,339 @@
   <section class="request  container">
     <form class="request__form" action="/" method="post">
 
-      <fieldset class="request__wrapper  request__wrapper--padding  request__wrapper--introduce">
-        <h3 class="title  request__title"><span>Introduce yourself</span></h3>
+      <article class="request__step  request__step--first">
+        <fieldset class="request__wrapper  request__wrapper--padding  request__wrapper--introduce">
+          <h3 class="title  request__title"><span>Introduce yourself</span></h3>
 
-        <div class="request__wrapper-show">
-          <div class="request__flex-wrapper  request__flex-wrapper--padding">
-            <label class="request__item">
-              <span class="request__item-text">First Name</span>
-              <input class="input" type="text" name="first-name">
-            </label>
+          <div class="request__wrapper-show">
+            <div class="request__flex-wrapper  request__flex-wrapper--padding">
+              <label class="request__item">
+                <span class="request__item-text">First Name</span>
+                <input class="input" type="text" name="first-name">
+              </label>
 
-            <label class="request__item">
-              <span class="request__item-text">Last Name</span>
-              <input class="input" type="text" name="last-name">
-            </label>
+              <label class="request__item">
+                <span class="request__item-text">Last Name</span>
+                <input class="input" type="text" name="last-name">
+              </label>
 
-            <label class="request__item">
-              <span class="request__item-text">My Title</span>
-              <input class="input" type="text" name="my-title">
-            </label>
+              <label class="request__item">
+                <span class="request__item-text">My Title</span>
+                <input class="input" type="text" name="my-title">
+              </label>
 
-            <div class="language__wrapper  request__item  request__item--language">
-              <span class="request__item-text">Languages</span>
-              <div class="language__btn" id="language__btn">
-                Languages
+              <div class="language__wrapper  request__item  request__item--language">
+                <span class="request__item-text">Languages</span>
+                <div class="language__btn" id="language__btn">
+                  Languages
+                </div>
+
+                <div class="language__list">
+                  <label class="language__item">
+                    <input class="language__checkbox" type="checkbox" value="English" name="language" data-lang="flag-icon-gb">
+                    <div class="language__checkmark">
+                      <svg class="icon  icon-checkmark">
+                        <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+                      </svg>
+                    </div>
+                    <div class="language__name">English <span class="language__count">(759)</span></div>
+                    <i class="flag-icon  flag-icon-gb"></i>
+                  </label>
+                  <label class="language__item">
+                    <input class="language__checkbox" type="checkbox" value="Chinese" name="language" data-lang="flag-icon-cn">
+                    <div class="language__checkmark">
+                      <svg class="icon  icon-checkmark">
+                        <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+                      </svg>
+                    </div>
+                    <div class="language__name">Chinese <span class="language__count">(423)</span></div>
+                    <i class="flag-icon  flag-icon-cn"></i>
+                  </label>
+                  <label class="language__item">
+                    <input class="language__checkbox" type="checkbox" value="Polish" name="language" data-lang="flag-icon-pl">
+                    <div class="language__checkmark">
+                      <svg class="icon  icon-checkmark">
+                        <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+                      </svg>
+                    </div>
+                    <div class="language__name">
+                      Polish <span class="language__count">(235)</span>
+                    </div>
+                    <i class="flag-icon  flag-icon-pl"></i>
+                  </label>
+                  <label class="language__item">
+                    <input class="language__checkbox" type="checkbox" value="German" name="language" data-lang="flag-icon-de">
+                    <div class="language__checkmark">
+                      <svg class="icon  icon-checkmark">
+                        <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+                      </svg>
+                    </div>
+                    <div class="language__name">German <span class="language__count">(151)</span></div>
+                    <i class="flag-icon  flag-icon-de"></i>
+                  </label>
+                </div>
               </div>
+            </div>
+          </div>
 
-              <div class="language__list">
-                <label class="language__item">
-                  <input class="language__checkbox" type="checkbox" value="English" name="language" data-lang="flag-icon-gb">
-                  <div class="language__checkmark">
-                    <svg class="icon  icon-checkmark">
-                      <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+        </fieldset>
+
+        <fieldset class="request__wrapper  request__wrapper--mortgage">
+          <h3 class="title  request__title"><span>What type of mortgage you do?</span></h3>
+
+          <div class="request__wrapper-show">
+            <div class="request__flex-wrapper">
+              <label class="request__item  request__item--mortgage">
+                <input class="input" type="radio" name="mortage-type" value="residencial fixed">
+                <span class="request__item-text">
+                  <i>residencial fixed</i>
+                  <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+                    <svg class="icon  icon-info-stroke">
+                      <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
                     </svg>
-                  </div>
-                  <div class="language__name">English <span class="language__count">(759)</span></div>
-                  <i class="flag-icon  flag-icon-gb"></i>
+                    <svg class="icon  icon-info-filled">
+                      <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
+                    </svg>
+                  </b>
+                </span>
+              </label>
+
+              <label class="request__item  request__item--mortgage">
+                <input class="input" type="radio" name="mortage-type" value="residencial arm">
+                <span class="request__item-text">
+                  <i>residencial arm</i>
+                  <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+                    <svg class="icon  icon-info-stroke">
+                      <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+                    </svg>
+                    <svg class="icon  icon-info-filled">
+                      <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
+                    </svg>
+                  </b>
+                </span>
+              </label>
+
+              <label class="request__item  request__item--mortgage">
+                <input class="input" type="radio" name="mortage-type" value="commercial">
+                <span class="request__item-text">
+                  <i>commercial</i>
+                  <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+                    <svg class="icon  icon-info-stroke">
+                      <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+                    </svg>
+                    <svg class="icon  icon-info-filled">
+                      <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
+                    </svg>
+                  </b>
+                </span>
+              </label>
+
+              <label class="request__item  request__item--mortgage">
+                <input class="input" type="radio" name="mortage-type" value="private">
+                <span class="request__item-text">
+                  <i>private</i>
+                  <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+                    <svg class="icon  icon-info-stroke">
+                      <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+                    </svg>
+                    <svg class="icon  icon-info-filled">
+                      <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
+                    </svg>
+                  </b>
+                </span>
+              </label>
+            </div>
+            <div class="request__flex-wrapper  request__flex-wrapper--padding">
+              <label class="request__item">
+                <span class="request__item-text">What Areas Do You Serve?</span>
+                <input class="input" type="text" name="serve-adress">
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="request__wrapper  request__wrapper--padding  request__wrapper--company">
+          <h3 class="title  request__title"><span>What company do you work for?</span></h3>
+
+          <div class="request__wrapper-show">
+            <div class="request__flex-wrapper  request__flex-wrapper--padding">
+              <label class="request__item">
+                <span class="request__item-text">Company Name</span>
+                <input class="input" type="text" name="company-name">
+              </label>
+
+              <label class="request__item">
+                <span class="request__item-text">Telephone Numbers / Fax</span>
+                <input class="input" type="text" name="number-fax">
+              </label>
+
+              <label class="request__item  request__item--province">
+                <span class="request__item-text">Country</span>
+
+                <span class="request__select-wrapper">
+                  <select class="request__input  request__input--select  input" size="1" name="country" onchange="handleChange(this)">
+                    <option value=""></option>
+                    <option value="CA">CA</option>
+                    <option value="province-2">province 2</option>
+                    <option value="province-3">province 3</option>
+                    <option value="province-4">province 4</option>
+                  </select>
+                  <i class="request__textbox  select-textbox"></i>
+                </span>
+              </label>
+
+              <label class="request__item  request__item--province">
+                <span class="request__item-text">Province / State</span>
+
+                <span class="request__select-wrapper">
+                  <select class="request__input  request__input--select  input" size="1" name="province-state" onchange="handleChange(this)">
+                    <option value=""></option>
+                    <option value="CA">CA</option>
+                    <option value="province-2">province 2</option>
+                    <option value="province-3">province 3</option>
+                    <option value="province-4">province 4</option>
+                  </select>
+                  <i class="request__textbox  select-textbox"></i>
+                </span>
+              </label>
+
+              <label class="request__item  request__item--city">
+                <span class="request__item-text">City</span>
+                <input class="input" type="text" name="city">
+              </label>
+
+              <label class="request__item  request__item--code">
+                <span class="request__item-text">Zip / Postal Code</span>
+                <input class="input" type="text" name="zip-code">
+              </label>
+
+              <label class="request__item  request__item--code">
+                <span class="request__item-text">Street Address</span>
+                <input class="input" type="text" name="street">
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="request__wrapper  request__wrapper--about">
+          <h3 class="title  request__title"><span>A litte more about you</span></h3>
+
+          <div class="request__wrapper-show">
+            <div class="request__flex-wrapper  request__flex-wrapper--padding">
+              <label class="request__item">
+                <span class="request__item-text">LinkedIn Account</span>
+                <input class="input" type="text" name="linkedIn-account">
+              </label>
+
+              <label class="request__item">
+                <span class="request__item-text">LinkedIn Page</span>
+                <input class="input" type="text" name="linkedIn-page">
+              </label>
+
+              <label class="request__item  request__mortgage-interest-rate  request__item--textarea  request__item--padding">
+                <span class="request__item-text">What else would you like borrowers to know?</span>
+                <textarea class="input" id="request__textarea" name="what-else" cols="30" rows="10"></textarea>
+                <i id="textarea-max" data-max="2000">2000</i>
+              </label>
+
+            </div>
+          </div>
+        </fieldset>
+
+        <button class="btn  request__btn  request__btn--next" type="button">Next Step</button>
+        <button class="request__btn-save">Or save for later</button>
+      </article>
+
+      <article class="request__step  request__step--second">
+        <fieldset class="request__wrapper  request__wrapper--padding">
+          <h3 class="title  request__title"><span>Verify your identity</span></h3>
+
+          <div class="request__hint-wrapper   good-to-know">
+            <div>
+              <svg class="icon  icon-info-stroke">
+                <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+              </svg>
+              <span>Good to know</span>
+            </div>
+            <p>All your private information stays with us safe and secure. We will never use it in any other cases rather than your identity verification. We just need to verify you are a real person.</p>
+          </div>
+
+          <div class="request__wrapper-show">
+            <div class="request__flex-wrapper  request__flex-wrapper--padding">
+              <label class="request__item">
+                <span class="request__item-text">Double Check Your Name</span>
+                <input class="input" type="text" name="check-name">
+              </label>
+
+              <div class="request__item  request__item--file">
+                <span class="request__item-text">
+                    Upload a scan of your broker certificate
+                  <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+                    <svg class="icon  icon-info-stroke">
+                      <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
+                    </svg>
+                    <svg class="icon  icon-info-filled">
+                      <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
+                    </svg>
+                  </b>
+                </span>
+                <label class="request__btn-upload">
+                  <b class="upload-text">Upload</b>
+                  <svg class="icon  icon-upload  upload-svg">
+                    <use xlink:href="img/sprite/sprite.svg#upload"></use>
+                  </svg>
+
+                  <svg class="icon  icon-checkmark  uploaded-svg">
+                    <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+                  </svg>
+                  <b class="uploaded-text">Uploaded</b>
+
+                  <input class="input" type="file" name="ID" value="Upload">
                 </label>
-                <label class="language__item">
-                  <input class="language__checkbox" type="checkbox" value="Chinese" name="language" data-lang="flag-icon-cn">
-                  <div class="language__checkmark">
-                    <svg class="icon  icon-checkmark">
-                      <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+              </div>
+              <div class="request__item  request__item--file">
+                <span class="request__item-text">
+                    Upload a scan of your ID
+                  <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
+                    <svg class="icon  icon-info-stroke">
+                      <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
                     </svg>
-                  </div>
-                  <div class="language__name">Chinese <span class="language__count">(423)</span></div>
-                  <i class="flag-icon  flag-icon-cn"></i>
-                </label>
-                <label class="language__item">
-                  <input class="language__checkbox" type="checkbox" value="Polish" name="language" data-lang="flag-icon-pl">
-                  <div class="language__checkmark">
-                    <svg class="icon  icon-checkmark">
-                      <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+                    <svg class="icon  icon-info-filled">
+                      <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
                     </svg>
-                  </div>
-                  <div class="language__name">
-                    Polish <span class="language__count">(235)</span>
-                  </div>
-                  <i class="flag-icon  flag-icon-pl"></i>
-                </label>
-                <label class="language__item">
-                  <input class="language__checkbox" type="checkbox" value="German" name="language" data-lang="flag-icon-de">
-                  <div class="language__checkmark">
-                    <svg class="icon  icon-checkmark">
-                      <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
-                    </svg>
-                  </div>
-                  <div class="language__name">German <span class="language__count">(151)</span></div>
-                  <i class="flag-icon  flag-icon-de"></i>
+                  </b>
+                </span>
+                <label class="request__btn-upload  request__btn-upload--ok">
+                  <b class="upload-text">Upload</b>
+                  <svg class="icon  icon-upload  upload-svg">
+                    <use xlink:href="img/sprite/sprite.svg#upload"></use>
+                  </svg>
+
+                  <svg class="icon  icon-checkmark  uploaded-svg">
+                    <use xlink:href="img/sprite/sprite.svg#checkmark"></use>
+                  </svg>
+                  <b class="uploaded-text">Uploaded</b>
+
+                  <input class="input" type="file" name="ID" value="Upload">
                 </label>
               </div>
             </div>
           </div>
-        </div>
 
-      </fieldset>
+        </fieldset>
 
-      <fieldset class="request__wrapper  request__wrapper--mortgage">
-        <h3 class="title  request__title"><span>What type of mortgage you do?</span></h3>
+        <button class="btn  request__btn  request__btn--next" type="button">Next Step</button>
+        <button class="request__btn-save">Or save for later</button>
+      </article>
 
-        <div class="request__wrapper-show">
-          <div class="request__flex-wrapper">
-            <label class="request__item  request__item--mortgage">
-              <input class="input" type="radio" name="mortage-type" value="residencial fixed">
-              <span class="request__item-text">
-                <i>residencial fixed</i>
-                <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
-                  <svg class="icon  icon-info-stroke">
-                    <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
-                  </svg>
-                  <svg class="icon  icon-info-filled">
-                    <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
-                  </svg>
-                </b>
-              </span>
-            </label>
+      <article class="request__step  request__step--third">
+        <fieldset class="request__wrapper  request__wrapper--padding  request__wrapper--introduce">
+          <h3 class="title  request__title"><span>Under development</span></h3>
+        </fieldset>
 
-            <label class="request__item  request__item--mortgage">
-              <input class="input" type="radio" name="mortage-type" value="residencial arm">
-              <span class="request__item-text">
-                <i>residencial arm</i>
-                <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
-                  <svg class="icon  icon-info-stroke">
-                    <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
-                  </svg>
-                  <svg class="icon  icon-info-filled">
-                    <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
-                  </svg>
-                </b>
-              </span>
-            </label>
-
-            <label class="request__item  request__item--mortgage">
-              <input class="input" type="radio" name="mortage-type" value="commercial">
-              <span class="request__item-text">
-                <i>commercial</i>
-                <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
-                  <svg class="icon  icon-info-stroke">
-                    <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
-                  </svg>
-                  <svg class="icon  icon-info-filled">
-                    <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
-                  </svg>
-                </b>
-              </span>
-            </label>
-
-            <label class="request__item  request__item--mortgage">
-              <input class="input" type="radio" name="mortage-type" value="private">
-              <span class="request__item-text">
-                <i>private</i>
-                <b class="request__data-info" data-info="A commercial mortgage is a mortgage loan secured by commercial property, such as an office building, shopping center, industrial warehouse, or apartment complex. The proceeds from a commercial mortgage are typically used to acquire, refinance, or redevelop commercial property.">
-                  <svg class="icon  icon-info-stroke">
-                    <use xlink:href="img/sprite/sprite.svg#info-stroke"></use>
-                  </svg>
-                  <svg class="icon  icon-info-filled">
-                    <use xlink:href="img/sprite/sprite.svg#info-filled"></use>
-                  </svg>
-                </b>
-              </span>
-            </label>
-          </div>
-          <div class="request__flex-wrapper  request__flex-wrapper--padding">
-            <label class="request__item">
-              <span class="request__item-text">What Areas Do You Serve?</span>
-              <input class="input" type="text" name="serve-adress">
-            </label>
-          </div>
-        </div>
-      </fieldset>
-
-      <fieldset class="request__wrapper  request__wrapper--padding  request__wrapper--company">
-        <h3 class="title  request__title"><span>What company do you work for?</span></h3>
-
-        <div class="request__wrapper-show">
-          <div class="request__flex-wrapper  request__flex-wrapper--padding">
-            <label class="request__item">
-              <span class="request__item-text">Company Name</span>
-              <input class="input" type="text" name="company-name">
-            </label>
-
-            <label class="request__item">
-              <span class="request__item-text">Telephone Numbers / Fax</span>
-              <input class="input" type="text" name="number-fax">
-            </label>
-
-            <label class="request__item  request__item--province">
-              <span class="request__item-text">Country</span>
-
-              <span class="request__select-wrapper">
-                <select class="request__input  request__input--select  input" size="1" name="country" onchange="handleChange(this)">
-                  <option value=""></option>
-                  <option value="CA">CA</option>
-                  <option value="province-2">province 2</option>
-                  <option value="province-3">province 3</option>
-                  <option value="province-4">province 4</option>
-                </select>
-                <i class="request__textbox  select-textbox"></i>
-              </span>
-            </label>
-
-            <label class="request__item  request__item--province">
-              <span class="request__item-text">Province / State</span>
-
-              <span class="request__select-wrapper">
-                <select class="request__input  request__input--select  input" size="1" name="province-state" onchange="handleChange(this)">
-                  <option value=""></option>
-                  <option value="CA">CA</option>
-                  <option value="province-2">province 2</option>
-                  <option value="province-3">province 3</option>
-                  <option value="province-4">province 4</option>
-                </select>
-                <i class="request__textbox  select-textbox"></i>
-              </span>
-            </label>
-
-            <label class="request__item  request__item--city">
-              <span class="request__item-text">City</span>
-              <input class="input" type="text" name="city">
-            </label>
-
-            <label class="request__item  request__item--code">
-              <span class="request__item-text">Zip / Postal Code</span>
-              <input class="input" type="text" name="zip-code">
-            </label>
-
-            <label class="request__item  request__item--code">
-              <span class="request__item-text">Street Address</span>
-              <input class="input" type="text" name="street">
-            </label>
-          </div>
-        </div>
-      </fieldset>
-
-      <fieldset class="request__wrapper  request__wrapper--about">
-        <h3 class="title  request__title"><span>A litte more about you</span></h3>
-
-        <div class="request__wrapper-show">
-          <div class="request__flex-wrapper  request__flex-wrapper--padding">
-            <label class="request__item">
-              <span class="request__item-text">LinkedIn Account</span>
-              <input class="input" type="text" name="linkedIn-account">
-            </label>
-
-            <label class="request__item">
-              <span class="request__item-text">LinkedIn Page</span>
-              <input class="input" type="text" name="linkedIn-page">
-            </label>
-
-            <label class="request__item  request__mortgage-interest-rate  request__item--textarea  request__item--padding">
-              <span class="request__item-text">What else would you like borrowers to know?</span>
-              <textarea class="input" id="request__textarea" name="what-else" cols="30" rows="10"></textarea>
-              <i id="textarea-max" data-max="2000">2000</i>
-            </label>
-
-          </div>
-        </div>
-      </fieldset>
-
-      <input class="btn  request__btn" type="submit" value="Next step">
-      <button class="request__btn-save">Or save for later</button>
+        <input class="btn  request__btn  request__btn--submit" type="submit" value="Next step">
+        <button class="request__btn-save">Or save for later</button>
+      </article>
     </form>
   </section>
 

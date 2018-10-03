@@ -613,6 +613,10 @@
     width: 100%;
     flex-basis: 100%;
   }
+  .request__wrapper--about .request__item {
+    width: 49% !important;
+    max-width: 100% !important;
+  }
   .request__wrapper--company {
     .request__flex-wrapper {
       flex-wrap: wrap;

@@ -415,7 +415,8 @@
       margin-bottom: 25px;
 
       .request__item {
-        width: 100%;
+        width: 100% !important;
+        flex-basis: 100% !important;
         margin: 18px 0;
       }
     }
@@ -430,4 +431,21 @@
       background-color: darken($color-green, 20%);
     }
   }
+  .request__step:not(:first-of-type) {
+	  display: none;
+  }
+  .request__step {
+    .good-to-know {
+      margin: 40px;
+    }
+
+    &--second {
+      .request__item {
+        &:first-of-type {
+          width: 100%;
+        }
+      }
+    }
+  }
+
 }

@@ -56,7 +56,6 @@
   text-align: center;
   line-height: 60px;
   box-sizing: border-box;
-  cursor: pointer;
   font-family: Gilroy;
   font-size: 16px;
   font-weight: bold;
@@ -68,15 +67,6 @@
   color: $color-gray;
   transition: 150ms;
 
-  &:hover {
-    transition: 150ms;
-    background-color: darken($color-bg-card-off, 20%);
-
-    &::after {
-      transition: 150ms;
-      border-left: 13px solid darken($color-bg-card-off, 20%);
-    }
-  }
   &:first-child {
     z-index: 3;
     &::before {
@@ -90,49 +80,61 @@
       display: none;
     }
   }
-}
-
-
-/* tweaked various things below here */
-
-.preview__step::after {
-    content: "";
-    position: absolute;
-    right: -13px;
-    width: 0;
-    height: 0;
-    border-top: 30px solid transparent;
-    border-left: 13px solid $color-bg-card-off;
-    border-bottom: 30px solid transparent;
-    transition: 150ms;
-}
-
-.preview__step::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 0;
-    top: -10px;
-    border-top: 40px solid transparent;
-    border-left: 18px solid white;
-    border-bottom: 40px solid transparent;
-}
-
-
-.preview__step--active {
-  background-color: $color-green;
-  color: $color-white;
-
-  &:hover {
-    cursor: default;
+  &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 0;
+      top: -10px;
+      border-top: 40px solid transparent;
+      border-left: 18px solid white;
+      border-bottom: 40px solid transparent;
+  }
+  &::after {
+      content: "";
+      position: absolute;
+      right: -13px;
+      width: 0;
+      height: 0;
+      border-top: 30px solid transparent;
+      border-left: 13px solid $color-bg-card-off;
+      border-bottom: 30px solid transparent;
+      transition: 150ms;
+  }
+  &--active {
     background-color: $color-green;
+    color: $color-white;
 
     &::after {
       border-left: 13px solid $color-green;
     }
+    &::before {
+      border-left: 18px solid $color-white;
+    }
   }
 }
-.preview__step--active::after {
-  border-left: 13px solid $color-green;
+
+.preview__step--click {
+  cursor: pointer;
+  transition: 150ms;
+
+  &:hover {
+    transition: 150ms;
+    background-color: darken($color-bg-card-off, 20%) !important;
+
+    &::after {
+      transition: 150ms;
+      border-left: 13px solid darken($color-bg-card-off, 20%) !important;
+    }
+  }
+}
+
+.preview__step--first {
+  background-color: $color-green !important;
+  color: $color-white !important;
+
+  &::after {
+    border-left: 13px solid $color-green !important;
+  }
 }

@@ -2018,5 +2018,9 @@
     .request__item--language .language__list {
       top: 62px;
     }
+    .request__wrapper--introduce .request__item,
+    .request__wrapper--about .request__item {
+      max-width: 100%;
+    }
   }
 }
