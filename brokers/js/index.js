@@ -44,6 +44,33 @@ document.addEventListener('DOMContentLoaded', function() {
   // End Check If My Balance Amount More Than 0 Then Change Color
 
 
+  // Start Check If File Is Uploaded And Add Name
+
+    if($('.request__btn-upload').length > 0) {
+
+      $('.input--file').each(function() {
+        $(this).on('change', function () {
+          $(this).parent().addClass('request__btn-upload--ok');
+          $(this).parent().next().find('b').text($(this).val().replace("C:\\fakepath\\", ""));
+          $(this).parent().next().fadeIn('slow');
+        });
+      })
+
+      $('.file-close-button').on('click', function() {
+        $(this).parent().siblings('label').removeClass('request__btn-upload--ok');
+        $(this).parent().siblings('label').children('input').val('');
+        $(this).parent().fadeOut('fast');
+      })
+
+
+
+    }
+
+
+
+  // End Check If File Is Uploaded And Add Name
+
+
   // Start Check Click On Next-Btn in Broker's Registration page
 
   if($('.page-broker-registration').length > 0) {
@@ -1037,7 +1064,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			slidesToScroll: 1,
 			adaptiveHeight: true,
 			arrows: false,
-			autoplay: true,
+			autoplay: false,
 			autoplaySpeed: 5000,
 			centerMode: true,
 			focusOnSelect: false,
