@@ -117,10 +117,9 @@
     }
   }
   .intro__btn {
-    display: inline-block;
+    height: 40px;
 
     &:first-of-type {
-      padding: 10px 0;
       padding-left: 20px;
       padding-right: 10px;
       margin-right: 5px;
@@ -129,9 +128,6 @@
       &::after {
         right: 20px;
       }
-    }
-    &:last-of-type {
-      padding: 10px 0;
     }
   }
 
@@ -599,15 +595,17 @@
   }
   .intro__card-percent {
     font-size: 60px;
-    margin-top: 34px;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    height: 45px;
+    line-height: 45px;
 
     &::before {
-      top: 8px;
+      top: -3px;
       right: 2px;
       font-size: 26px;
     }
     &::after {
-      top: 37px;
       right: 0;
       font-size: 10px;
       font-weight: bold;

@@ -62,13 +62,81 @@ document.addEventListener('DOMContentLoaded', function() {
         $(this).parent().fadeOut('fast');
       })
 
-
-
     }
 
 
-
   // End Check If File Is Uploaded And Add Name
+
+  // Start Click On Card Plan
+
+  if($('.card-plan').length > 0) {
+    var buttonChecked = $('.card-plan__checked');
+    var cardBack = $('.card-plan__wrapper--back');
+    var cardFront = $('.card-plan__wrapper--front');
+    var cardPlanFirst = $('.card-plan--first');
+    var btnBack = $('.btn-back');
+
+    var titleMain = $('.request__title-main');
+    var titleSecond = $('.request__title-second');
+    var payment = $('.payment');
+    var cardBackHeight = cardBack.height() + 80;
+    var cardFrontHeight = cardFront.height() + 80;
+
+    $('.card-plan__wrapper--back').css('height', cardBackHeight + 'px');
+
+    buttonChecked.on('click', function() {
+      cardBack.addClass('card-plan__wrapper--back--checked');
+      cardFront.addClass('card-plan__wrapper--front--checked');
+      payment.css('margin-top', '0px');
+      titleMain.css('display', 'none');
+      titleSecond.fadeIn('fast');
+      btnBack.fadeIn('fast');
+      cardPlanFirst.addClass('card-plan--first--checked');
+
+      cardBack.parent().css('height', '842px');
+      $('.card-plan__wrapper--back').css('height', 'auto');
+      $('.request__step-header').css('margin-top', '40px');
+      $('.request__step-header').css('margin-bottom', '3px');
+    })
+
+    $('.request__form').mouseup(function(e) {
+		  var $target = $(e.target);
+		  if($('.card-plan__wrapper--back--checked').length > 0) {
+        if ($target.closest(".card-plan__wrapper--back--checked").length == 0) {
+          cardBack.removeClass('card-plan__wrapper--back--checked');
+          cardFront.removeClass('card-plan__wrapper--front--checked');
+          cardPlanFirst.removeClass('card-plan--first--checked');
+
+          payment.css('margin-top', '-75px');
+          $('.request__step-header').css('margin-top', '31px');
+          $('.request__step-header').css('margin-bottom', '40px');
+          titleMain.fadeIn('fast');
+          titleSecond.css('display', 'none');
+          btnBack.fadeOut('fast');
+
+          setTimeout(function() {
+            $('.card-plan--second').css('height', '675px');
+            $('.card-plan__wrapper--back').css('height', '675px');
+          }, 600);
+  		  }
+      }
+		});
+  }
+
+  if($('.card-plan--first--checked').length > 0) {
+    $('.card-plan--first--checked').find('input').on('click', function(event) {
+      event.preventDefault();
+    })
+  }
+
+  if($('.btn-promo-failed').length > 0) {
+    $('.btn-promo-failed').on('click', function(event) {
+      $('.card-plan__item--promo').removeClass('card-plan__item--failed');
+    })
+  }
+
+
+  // End Click On Card Plan
 
 
   // Start Check Click On Next-Btn in Broker's Registration page
@@ -448,6 +516,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let modalCellphoneCode = $('#modal-cellphone-code');
     let modalThanksCellphone = $('#modal-thanks-cellphone');
     let modalMustVerified = $('#modal-must-verified');
+    let modalCompleteRegistered = $('#modal-complete-registered');
 
 		let linkLogin = $('.login-link');
 		let linkSignUp = $('.sign-up-link');
@@ -458,6 +527,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let linkMustVerified = $('.must-verified-link');
 		let overlay = $('.overlay');
 		let formFeedback = $('.modal-feedback__form');
+    let registrationForm = $('#registration-form');
 		let modalThanksReview = $('#modal-thanks-review');
     let modalThanksPassword = $('#modal-thanks-password');
 
@@ -465,6 +535,21 @@ document.addEventListener('DOMContentLoaded', function() {
 		if(document.getElementsByClassName('profile--pro').length > 0) {
 			$('.modal-feedback__name-last').addClass('modal-feedback__name-last--pro');
 		}
+
+    if(registrationForm.length > 0) {
+      registrationForm.submit(function( event ) {
+  		  event.preventDefault();
+
+        modal.each(function() {
+          this.classList.remove('modal--visible');
+          $(this).fadeOut(0);
+        })
+
+        modalCompleteRegistered.fadeIn('slow');
+        modalCompleteRegistered[0].classList.add('modal--visible');
+        overlay[0].classList.add('overlay--visible');
+      });
+    }
 
 		if($('.modal--visible').height() >= $(window).height()) {
 			$('.modal--visible').css('overflow-y', 'scroll');

@@ -442,6 +442,11 @@
       padding-bottom: 30px;
       margin-bottom: 40px;
     }
+    .card-plan {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      align-self: self-start;
+    }
     .good-to-know {
       margin: 40px;
     }
@@ -521,4 +526,88 @@
 
   }
 
+  .file-name-wrapper {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: none;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-transform: lowercase;
+    font-size: 12px;
+
+    b {
+      vertical-align: middle;
+    }
+    button {
+      position: relative;
+      background: none;
+      border: none;
+      outline: none;
+      width: 15px;
+      height: 15px;
+      vertical-align: middle;
+      margin-left: 8px;
+      top: auto;
+      right: auto;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%) rotate(-45deg);
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #000000;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%) rotate(45deg);
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #000000;
+      }
+    }
+  }
+
+  .request__title {
+    background: none;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+  }
+  .request__wrapper {
+    margin: 32px 0;
+  }
+  .request__title-main {
+    display: block;
+  }
+  .request__title-second {
+    display: none;
+  }
+  .btn-back {
+    position: absolute;
+    left: 0;
+    top: 0px;
+  }
 }
