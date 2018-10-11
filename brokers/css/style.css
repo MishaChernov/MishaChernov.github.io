@@ -4827,6 +4827,13 @@ select {
   font-weight: bold;
   letter-spacing: 1.5px;
   transition: 300ms ease; }
+  .btn--submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: normal !important;
+    padding: 0 !important; }
   .btn:hover {
     transition: 300ms ease;
     background-color: #065136; }
@@ -14051,19 +14058,22 @@ footer.featured-card__wrapper {
     width: 30px;
     height: 30px; }
   .modal-thanks-review,
-  .modal-thanks-cellphone {
+  .modal-thanks-cellphone,
+  .modal-complete-registered {
     max-height: 290px;
     padding-top: 50px;
     padding-bottom: 30px;
     width: 90%;
     margin-left: 0; }
     .modal-thanks-review svg,
-    .modal-thanks-cellphone svg {
+    .modal-thanks-cellphone svg,
+    .modal-complete-registered svg {
       width: 50px;
       height: 61px;
       fill: #0cb175; }
     .modal-thanks-review h4,
-    .modal-thanks-cellphone h4 {
+    .modal-thanks-cellphone h4,
+    .modal-complete-registered h4 {
       margin-top: 10px;
       font-size: 20px;
       font-weight: bold;
