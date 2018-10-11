@@ -4827,13 +4827,16 @@ select {
   font-weight: bold;
   letter-spacing: 1.5px;
   transition: 300ms ease; }
-  .btn--submit {
+  .btn--vertical {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     line-height: normal !important;
     padding: 0 !important; }
+    .btn--vertical span {
+      margin: 0 auto;
+      line-height: 0; }
   .btn:hover {
     transition: 300ms ease;
     background-color: #065136; }
@@ -5532,7 +5535,8 @@ select {
     text-align: center; }
     .intro__btn:first-of-type span {
       position: relative;
-      margin-right: 43px; }
+      margin-right: 43px;
+      line-height: 0; }
     .intro__btn:first-of-type:hover {
       transition: 300ms ease;
       background-color: #ffffff;
@@ -5645,6 +5649,11 @@ select {
     margin-left: 23px;
     text-decoration: none;
     color: #382c75; }
+
+.intro__card .btn {
+  padding: 0;
+  height: 60px;
+  max-width: 100%; }
 
 .language-list {
   display: flex;
@@ -5934,7 +5943,7 @@ select {
     .search__item--location::before {
       content: "";
       position: absolute;
-      top: 36px;
+      top: 38px;
       left: 8px;
       display: block;
       width: 16px;
@@ -6888,7 +6897,7 @@ footer.featured-card__wrapper {
   footer.featured-card__wrapper .btn {
     height: 105px;
     box-sizing: border-box;
-    padding: 35px 32px;
+    padding: 0 32px;
     letter-spacing: 1px;
     flex: 1; }
     footer.featured-card__wrapper .btn:first-child {
@@ -7910,7 +7919,15 @@ footer.featured-card__wrapper {
   text-align: center;
   text-transform: uppercase;
   color: #8a8c8f;
-  transition: 150ms; }
+  transition: 150ms;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center; }
+  .preview__step span {
+    display: block;
+    margin: 0 auto;
+    line-height: 0; }
   .preview__step:first-child {
     z-index: 3; }
     .preview__step:first-child::before {
@@ -10332,10 +10349,16 @@ footer.featured-card__wrapper {
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: left; }
+  text-align: left;
+  padding: 0;
+  padding-left: 15px;
+  line-height: 60px; }
 
 .card-plan__item-wrapper .request__select-wrapper::after {
   right: 12px; }
+
+.card-plan__item-wrapper .request__input--select {
+  padding: 0; }
 
 .card-plan__item--promo div {
   position: relative; }
@@ -12195,7 +12218,7 @@ footer.featured-card__wrapper {
     margin-bottom: 20px; }
   .page-request .search__item--money::before,
   .page-find-brokers .search__item--money::before {
-    top: 36px; }
+    top: 38px; }
   .page-broker-registration .preview {
     padding-top: 20px;
     padding-bottom: 20px; }
@@ -13161,10 +13184,14 @@ footer.featured-card__wrapper {
     margin-bottom: 23px;
     margin-right: 7px; }
   .card-plan__item input,
-  .request__select-wrapper,
-  .request__input--select {
+  .card-plan .request__select-wrapper,
+  .card-plan .request__input--select {
     height: 40px;
     padding: 0; }
+  .card-plan .request__textbox {
+    line-height: 40px;
+    padding: 0 !important;
+    padding-left: 10px !important; }
   .card-plan__item-wrapper .request__textbox {
     padding: 10px;
     padding-top: 6px; }
@@ -13657,7 +13684,7 @@ footer.featured-card__wrapper {
     padding-right: 10px; }
   .intro__card .btn {
     margin-top: 19px;
-    padding: 12px;
+    height: 40px;
     font-size: 12px; }
   .page-request .search {
     padding-top: 19px;
@@ -13704,7 +13731,7 @@ footer.featured-card__wrapper {
   .featured__title {
     margin-top: 20px; }
   footer.featured-card__wrapper .btn {
-    padding: 26px 28px;
+    padding: 0 28px;
     height: 86px; }
   .featured-card__img {
     width: 60px;
@@ -15022,7 +15049,7 @@ footer.featured-card__wrapper {
   footer.featured-card__wrapper .btn {
     font-size: 14px; }
     footer.featured-card__wrapper .btn:last-child {
-      padding: 26px 37px; }
+      padding: 0 37px; }
   .page-request .intro {
     background-position: 0px -4px; }
   .page-request .intro .btn:last-child {
@@ -15092,9 +15119,9 @@ footer.featured-card__wrapper {
     width: 50%;
     flex-basis: 50%;
     box-sizing: border-box;
-    padding: 27px 14%; }
+    padding: 0 14%; }
     .page-find-brokers footer.featured-card__wrapper .btn:last-child {
-      padding: 27px 15.5%; }
+      padding: 0 15.5%; }
   .page-find-brokers .featured-card__wrapper--footer {
     width: 100%; }
   .rating__line {

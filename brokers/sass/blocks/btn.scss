@@ -16,6 +16,20 @@
   letter-spacing: 1.5px;
   @include transition(300ms);
 
+  &--vertical {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: normal !important;
+    padding: 0 !important;
+
+    span {
+      margin: 0 auto;
+      line-height: 0;
+    }
+  }
+
   &:hover {
     @include transition(300ms);
     background-color: darken($color-green, 20%);

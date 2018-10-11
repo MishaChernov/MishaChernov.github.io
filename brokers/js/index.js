@@ -1146,7 +1146,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				slidesToScroll: 1,
 				adaptiveHeight: true,
 				arrows: false,
-				autoplay: true,
+				autoplay: false,
 				autoplaySpeed: 5000,
 				centerMode: true,
 				focusOnSelect: false,
