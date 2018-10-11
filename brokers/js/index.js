@@ -79,24 +79,16 @@ document.addEventListener('DOMContentLoaded', function() {
     var titleMain = $('.request__title-main');
     var titleSecond = $('.request__title-second');
     var payment = $('.payment');
-    var cardBackHeight = cardBack.height() + 80;
-    var cardFrontHeight = cardFront.height() + 80;
-
-    $('.card-plan__wrapper--back').css('height', cardBackHeight + 'px');
 
     buttonChecked.on('click', function() {
       cardBack.addClass('card-plan__wrapper--back--checked');
       cardFront.addClass('card-plan__wrapper--front--checked');
-      payment.css('margin-top', '0px');
       titleMain.css('display', 'none');
       titleSecond.fadeIn('fast');
       btnBack.fadeIn('fast');
       cardPlanFirst.addClass('card-plan--first--checked');
 
-      cardBack.parent().css('height', '842px');
-      $('.card-plan__wrapper--back').css('height', 'auto');
-      $('.request__step-header').css('margin-top', '40px');
-      $('.request__step-header').css('margin-bottom', '3px');
+      $('.request__step-wrapper').addClass('request__step-wrapper--checked');
     })
 
     $('.request__form').mouseup(function(e) {
@@ -106,18 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
           cardBack.removeClass('card-plan__wrapper--back--checked');
           cardFront.removeClass('card-plan__wrapper--front--checked');
           cardPlanFirst.removeClass('card-plan--first--checked');
+          $('.request__step-wrapper').removeClass('request__step-wrapper--checked');
 
-          payment.css('margin-top', '-75px');
-          $('.request__step-header').css('margin-top', '31px');
-          $('.request__step-header').css('margin-bottom', '40px');
           titleMain.fadeIn('fast');
           titleSecond.css('display', 'none');
           btnBack.fadeOut('fast');
-
-          setTimeout(function() {
-            $('.card-plan--second').css('height', '675px');
-            $('.card-plan__wrapper--back').css('height', '675px');
-          }, 600);
   		  }
       }
 		});
@@ -1168,5 +1153,58 @@ document.addEventListener('DOMContentLoaded', function() {
 				variableWidth: true
 				});
 	}
+
+  if(windowWidth <= 800 && $('.request__step--third').length > 0) {
+
+    document.addEventListener('touchstart', handleTouchStart, false);
+    document.addEventListener('touchmove', handleTouchMove, false);
+
+    var xDown = null;
+    var yDown = null;
+
+    function getTouches(evt) {
+      return evt.touches ||             // browser API
+             evt.originalEvent.touches; // jQuery
+    }
+
+    function handleTouchStart(evt) {
+        xDown = getTouches(evt)[0].clientX;
+        yDown = getTouches(evt)[0].clientY;
+    };
+
+    function handleTouchMove(evt) {
+        if ( ! xDown || ! yDown ) {
+            return;
+        }
+
+        var xUp = evt.touches[0].clientX;
+        var yUp = evt.touches[0].clientY;
+
+        var xDiff = xDown - xUp;
+        var yDiff = yDown - yUp;
+
+        if ( Math.abs( xDiff ) > Math.abs( yDiff ) && !($('.card-plan__wrapper--back').hasClass('card-plan__wrapper--back--checked'))) {/*most significant*/
+            if ( xDiff > 0 ) {
+                $('.request__step-slider').css('transform', 'translateX(-70%)');
+                $('.card-plan--second').removeClass('card-plan--mobile');
+                $('.card-plan--first').addClass('card-plan--mobile');
+            } else {
+                $('.request__step-slider').css('transform', 'translateX(0%)');
+                $('.card-plan--first').removeClass('card-plan--mobile');
+                $('.card-plan--second').addClass('card-plan--mobile');
+            }
+        } else {
+            return;
+        }
+        /* reset values */
+        xDown = null;
+        yDown = null;
+    };
+
+
+
+  }
+
+
 
 })

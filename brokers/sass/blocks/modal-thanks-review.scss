@@ -1,5 +1,6 @@
 .modal-thanks-review,
-.modal-thanks-cellphone {
+.modal-thanks-cellphone,
+.modal-complete-registered {
   display: none;
   box-sizing: border-box;
   max-width: 580px;
@@ -21,6 +22,19 @@
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
+    text-align: center;
+  }
+  a {
+    margin: 0 auto;
+    height: 40px;
+    padding: 0;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.4px;
     text-align: center;
   }
 }

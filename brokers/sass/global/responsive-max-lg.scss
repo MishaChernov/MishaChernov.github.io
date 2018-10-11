@@ -1245,4 +1245,188 @@
     }
   }
 
+  .request__step-wrapper {
+    .request__step-header {
+      margin-top: 21px;
+      margin-bottom: 9px;
+    }
+
+    &--checked {
+      .request__step-header {
+        margin-top: 21px;
+        margin-bottom: 3px;
+      }
+    }
+  }
+  .request__step--third .request__step-wrapper {
+    padding-bottom: 0;
+    padding: 0 10px;
+  }
+  .card-plan__wrapper {
+    padding: 20px;
+  }
+  .card-plan__choice {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    line-height: 12px;
+  }
+  .card-plan__name {
+    margin-top: 11px;
+    span {
+      font-size: 30px;
+      letter-spacing: 3px;
+    }
+    i {
+      font-size: 16px;
+    }
+  }
+  .card-plan__text {
+    margin-top: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    margin-right: -10px;
+  }
+  .card-plan__features li {
+    margin: 11.5px;
+    font-size: 14px;
+    margin-left: 0px;
+
+    span {
+      line-height: 1.07;
+    }
+    svg {
+      margin-right: 9px;
+    }
+  }
+  .card-plan__btn {
+    margin-top: 20px;
+  }
+  .card-plan__name--price {
+    margin-top: 6px;
+    span {
+      font-size: 40px;
+      letter-spacing: normal;
+    }
+  }
+  .card-plan__features {
+    margin-right: -10px;
+  }
+  .card-plan__checked {
+    margin-top: 19px;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .page-broker-registration {
+    .request__step--first {
+      padding-top: 21px;
+    }
+    .request__step--second {
+      padding-top: 41px;
+
+      .request__wrapper-show {
+        padding-bottom: 15px;
+      }
+
+      .good-to-know {
+        p {
+          font-size: 20px;
+          padding-bottom: 20px;
+        }
+      }
+    }
+    .request__step--third {
+      .request__title {
+        font-size: 24px;
+      }
+      .request__title-second {
+        margin-top: -10px;
+      }
+    }
+  }
+  .request__step-wrapper--checked .payment {
+    margin-top: -7px;
+  }
+  .card-plan.card-plan--first--checked {
+    left: 100px;
+  }
+  .card-plan__wrapper--back .card-plan__text {
+    margin-top: 15px;
+    margin-bottom: 23px;
+    margin-right: 7px;
+  }
+  .card-plan__item input,
+  .request__select-wrapper,
+  .request__input--select {
+    height: 40px;
+    padding: 0;
+  }
+  .card-plan__item-wrapper .request__textbox {
+    padding: 10px;
+    padding-top: 6px;
+  }
+  .card-plan__wrapper--back .card-plan__item {
+    margin-bottom: 27px;
+  }
+  .card-plan__item-wrapper {
+    flex-wrap: wrap;
+  }
+  .card-plan__item-wrapper .request__select-wrapper {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .card-plan__select-wrapper {
+    max-width: 100%;
+    justify-content: space-between;
+    margin-bottom: 27px;
+  }
+  .card-plan__item-wrapper .card-plan__item,
+  .card-plan__item-wrapper .request__select-wrapper {
+    width: 47%;
+  }
+  .card-plan__item-wrapper {
+    margin-bottom: 0;
+  }
+  .card-plan__total {
+    font-size: 40px;
+    margin-top: -5px;
+    margin-left: -5px;
+    margin-bottom: -3px;
+  }
+  .card-plan__total-wrapper i {
+    font-size: 14px;
+    text-align: center;
+  }
+  .card-plan__info-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 82px;
+    text-align: center;
+
+    i {
+      font-size: 12px;
+    }
+    span {
+      margin-top: -3px;
+    }
+    svg {
+      margin-right: 0;
+      margin-bottom: 3px;
+    }
+  }
+  .card-plan__wrapper--back .card-plan__btn {
+    margin-top: 26px;
+  }
+  .request__step-wrapper--checked .card-plan__wrapper--back {
+    padding-bottom: 4px;
+  }
+  .request__step-wrapper--checked .card-plan--second {
+    height: 784px;
+  }
+  .page-broker-registration .request__step--third {
+    padding-bottom: 0;
+  }
+
 }

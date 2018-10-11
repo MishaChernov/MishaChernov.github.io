@@ -161,8 +161,7 @@
   }
 }
 
-.page-post-request,
-.page-broker-registration {
+.page-post-request {
   main {
     padding-bottom: 84px;
   }
@@ -292,6 +291,7 @@
 
 
 .page-broker-registration {
+
   .preview {
     background-color: $color-white;
     color: $color-black;
@@ -384,6 +384,7 @@
     .request__item--textarea {
       flex-basis: 100%;
       padding: 0;
+      margin-bottom: 26px;
     }
   }
   .request__wrapper--company {
@@ -441,6 +442,14 @@
     .request__wrapper {
       padding-bottom: 30px;
       margin-bottom: 40px;
+    }
+    .request__wrapper--introduce {
+      .request__flex-wrapper {
+
+        .request__item {
+          width: 48%;
+        }
+      }
     }
     .card-plan {
       padding-bottom: 0;
@@ -528,9 +537,11 @@
 
   .file-name-wrapper {
     position: absolute;
+    height: 15px;
     bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
     text-align: center;
     display: none;
     margin-top: 10px;
@@ -541,7 +552,12 @@
     font-size: 12px;
 
     b {
+      display: inline-block;
+      max-width: 85%;
+      overflow: hidden;
+      margin: 0 auto;
       vertical-align: middle;
+      box-sizing: border-box;
     }
     button {
       position: relative;
@@ -551,7 +567,7 @@
       width: 15px;
       height: 15px;
       vertical-align: middle;
-      margin-left: 8px;
+      margin-left: 10px;
       top: auto;
       right: auto;
       cursor: pointer;
@@ -582,32 +598,57 @@
       }
     }
   }
+  .request__step--first {
+    margin-bottom: 35px;
+    .request__wrapper {
+      padding-bottom: 0;
+    }
+  }
+  .request__step--second {
+    padding-top: 41px;
+    padding-bottom: 32px;
 
+    .request__wrapper {
+      padding-bottom: 0px;
+    }
+    .good-to-know {
+      margin-bottom: 19px;
+      p {
+        font-size: 20px;
+        padding-bottom: 36px;
+        max-width: 900px;
+      }
+    }
+  }
+  .request__step--third {
+    padding-bottom: 41px;
+    
+    .request__title {
+      z-index: 2;
+      background: $color-light-gray;
+      border: none;
+      margin-bottom: 0px;
+      font-size: 30px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+    }
+  }
   .request__title {
-    background: none;
-    border: none;
-    margin-top: 30px;
-    margin-bottom: 0px;
-    font-size: 30px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
+    span {
+      margin-left: 0;
+    }
   }
   .request__wrapper {
-    margin: 32px 0;
+    margin: 0;
   }
   .request__title-main {
     display: block;
   }
   .request__title-second {
     display: none;
-  }
-  .btn-back {
-    position: absolute;
-    left: 0;
-    top: 0px;
   }
 }

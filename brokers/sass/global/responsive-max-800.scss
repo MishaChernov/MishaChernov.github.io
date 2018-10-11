@@ -2047,5 +2047,26 @@
         letter-spacing: 1.6px;
       }
     }
+    .btn-back {
+      display: none;
+    }
+  }
+
+  .card-plan__wrapper {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .card-plan__wrapper--back {
+    position: absolute;
+    opacity: 0;
+    transform: rotateY(0) scale(1) !important;
+    left: -50% !important;
+    height: auto;
+  }
+  .card-plan__wrapper {
+    backface-visibility: visible !important;
+  }
+  .card-plan.card-plan--second {
+    perspective: none !important;
   }
 }

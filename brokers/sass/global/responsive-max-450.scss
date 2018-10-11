@@ -646,16 +646,6 @@
       padding-left: 10px;
       margin-right: 3px;
 
-      &:hover {
-        transition: 150ms;
-        background-color: darken($color-bg-card-off, 20%);
-
-        &::after {
-          transition: 150ms;
-          border-left: 9px solid darken($color-bg-card-off, 20%);
-        }
-      }
-
       &::before {
         border-top: 30px solid transparent;
         border-left: 12px solid white;
@@ -670,6 +660,12 @@
     }
     .preview__step--active::after {
       border-left: 9px solid $color-green;
+    }
+    .preview__step--first {
+
+      &::after {
+        border-left: 9px solid $color-green !important;
+      }
     }
     .request__flex-wrapper--padding {
       padding: 0 10px;

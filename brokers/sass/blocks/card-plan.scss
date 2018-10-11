@@ -1,23 +1,79 @@
-.request__step--first {
+.request__step--third {
+  .request__step-wrapper {
+    padding-bottom: 0;
+  }
+}
+
+.request__step-wrapper {
   display: flex;
   flex-wrap: wrap;
   padding: 0 20px;
+  padding-bottom: 40px;
 }
 
 .request__step-header {
   flex-basis: 100%;
-  margin-top: 10px;
+  margin-top: 31px;
+  margin-bottom: 40px;
 
   .step-header {
+    overflow: hidden;
     position: relative;
     margin: 0 auto;
-    max-width: 580px;
     width: 100%;
+  }
+  .btn-back {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
   }
 }
 
+.request__step-wrapper {
+  .request__step-header {
+    margin-top: 31px;
+    margin-bottom: 40px;
+  }
+
+  &--checked {
+    .request__step-header {
+      margin-top: 40px;
+      margin-bottom: 3px;
+    }
+    .request__step--third .request__title-second {
+      margin-top: -25px;
+    }
+    .payment {
+      margin-top: 0px;
+    }
+    .card-plan__wrapper--back {
+      height: auto;
+      transition: 0.5s;
+    }
+    .card-plan--second {
+      height: 842px;
+      transition: 0.5s;
+    }
+  }
+}
+
+.card-plan__wrapper--back {
+  transform: rotateY(180deg) scale(0) !important;
+  transition: 0.5s;
+}
+
+
+
 .card-plan {
   flex-basis: 50%;
+}
+
+.payment {
+  z-index: -1;
+  margin-top: -75px;
+  transition: 0.5s;
+  position: relative;
 }
 
 .payment__list {
@@ -32,15 +88,16 @@
     background-image: url('../img/payments.jpg');
     background-repeat: no-repeat;
     display: block;
-    width: 232px;
+    width: 240px;
     height: 41px;
   }
 }
 
 .card-plan.card-plan--second {
   background: none;
-  perspective: 1000px;
   position: relative;
+  perspective: 2000px;
+  transition: 1s;
 
   .card-plan__features svg {
     color: $color-green;
@@ -48,12 +105,16 @@
 }
 
 .card-plan.card-plan--first {
-  margin-top: 72px !important;
-  transition: 0.5s;
+  margin-top: 40px !important;
+  transition: 0.8s;
+  left: 0;
 
   &--checked {
     filter: blur(3px);
     transition: 0.5s;
+    left: 166px;
+    transition: 0.8s;
+
     .btn {
       cursor: default;
 
@@ -82,23 +143,40 @@
   }
 }
 
+@keyframes anim-height {
+  100% {
+    height: 675px;
+  }
+}
+
 .card-plan__wrapper--back {
+  overflow: hidden;
+  padding-bottom: 26px;
   transform: rotateY(180deg);
   position: absolute;
   width: 100%;
+  box-sizing: border-box;
   left: 0;
   top: 0;
   display: flex;
   flex-wrap: wrap;
-  transition: 1s;
+  transition: 0.5s;
   backface-visibility: hidden;
   border: 5px solid $color-green;
 
   &--checked {
-    transform: rotateY(360deg) !important;
+    transform: rotateY(360deg) scale(1) !important;
     left: -50% !important;
+    height: auto;
   }
 
+  .card-plan__text {
+    margin-top: 9px;
+    margin-bottom: 32px;
+  }
+  .card-plan__item {
+    margin-bottom: 36px;
+  }
   .card-plan__choice {
     color: $color-green;
   }
@@ -106,6 +184,13 @@
     background-color: $color-green;
     color: $color-white;
     text-transform: uppercase;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 2px;
 
     &:hover {
       background-color: darken($color-green, 20%);
@@ -182,6 +267,8 @@
     color: $color-purple;
   }
   li {
+    display: flex;
+    align-items: baseline;
     margin-left: -4px;
     vertical-align: middle;
     font-size: 16px;
@@ -275,7 +362,7 @@
 
 .card-plan-text {
   font-size: 14px;
-  margin-bottom: 9px;
+  margin-bottom: 7px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -288,7 +375,7 @@
 .card-plan__item-wrapper {
   display: flex;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 37px;
   justify-content: space-between;
 
   .card-plan__item {
@@ -345,6 +432,17 @@
   .request__textbox {
     text-align: left;
     cursor: pointer;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+  }
+  .request__select-wrapper::after {
+    right: 12px;
   }
 }
 
@@ -489,6 +587,7 @@
 
 .card-plan__total {
   margin: 0;
+  margin-bottom: -4px;
   font-size: 50px;
   font-weight: bold;
   font-style: normal;
@@ -530,13 +629,16 @@
   svg {
     width: 16px;
     height: 16px;
+    margin-right: 3px;
+    margin-bottom: -2px;
   }
   span {
     color: $color-gray;
     font-weight: bold;
     text-transform: lowercase;
-    font-size: 24px;
+    font-size: 30px;
     letter-spacing: -1px;
+    line-height: 32px;
   }
 }
 
@@ -554,5 +656,35 @@
   }
 }
 
-// .card-plan__radio:checked .card-plan__wrapper--front {transform: rotateY(180deg);}
-// .card-plan__radio:checked .card-plan__wrapper--back {transform: rotateY(360deg); left: -50%;}
+.card-plan__copy {
+  display: block;
+  margin-top: 7px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: $color-gray;
+
+  a {
+    color: $color-gray;
+  }
+}
+
+.request__step--third  {
+  .request__title {
+    span {
+      margin-left: 0;
+    }
+  }
+  .request__title-second {
+    margin-top: -25px;
+  }
+}
+.request__step-slider {
+  display: flex;
+  max-width: 100%;
+}

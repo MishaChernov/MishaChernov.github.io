@@ -7565,6 +7565,8 @@ footer.featured-card__wrapper {
   box-sizing: border-box;
   max-width: 580px;
   max-height: 370px;
+  width: 90%;
+  margin: 0;
   padding: 0;
   padding-top: 70px;
   padding-bottom: 50px; }
@@ -8938,6 +8940,9 @@ footer.featured-card__wrapper {
 .tabs-controls__label--ended .tabs-controls__count {
   color: #000000; }
 
+.request__step--first {
+  padding-top: 41px; }
+
 .tabs-controls {
   display: flex;
   flex: 2;
@@ -9965,8 +9970,39 @@ footer.featured-card__wrapper {
     overflow: hidden;
     position: relative;
     margin: 0 auto;
-    max-width: 580px;
     width: 100%; }
+  .request__step-header .btn-back {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    text-align: left; }
+
+.request__step-wrapper .request__step-header {
+  margin-top: 31px;
+  margin-bottom: 40px; }
+
+.request__step-wrapper--checked .request__step-header {
+  margin-top: 40px;
+  margin-bottom: 3px; }
+
+.request__step-wrapper--checked .request__step--third .request__title-second {
+  margin-top: -25px; }
+
+.request__step-wrapper--checked .payment {
+  margin-top: 0px; }
+
+.request__step-wrapper--checked .card-plan__wrapper--back {
+  height: auto;
+  transition: 0.5s; }
+
+.request__step-wrapper--checked .card-plan--second {
+  height: 842px;
+  transition: 0.5s; }
+
+.card-plan__wrapper--back {
+  -webkit-transform: rotateY(180deg) scale(0) !important;
+          transform: rotateY(180deg) scale(0) !important;
+  transition: 0.5s; }
 
 .card-plan {
   flex-basis: 50%; }
@@ -9995,7 +10031,8 @@ footer.featured-card__wrapper {
   background: none;
   position: relative;
   -webkit-perspective: 2000px;
-          perspective: 2000px; }
+          perspective: 2000px;
+  transition: 1s; }
   .card-plan.card-plan--second .card-plan__features svg {
     color: #0cb175; }
 
@@ -10039,6 +10076,7 @@ footer.featured-card__wrapper {
     height: 675px; } }
 
 .card-plan__wrapper--back {
+  overflow: hidden;
   padding-bottom: 26px;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
@@ -10049,13 +10087,13 @@ footer.featured-card__wrapper {
   top: 0;
   display: flex;
   flex-wrap: wrap;
-  transition: 1s;
+  transition: 0.5s;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   border: 5px solid #0cb175; }
   .card-plan__wrapper--back--checked {
-    -webkit-transform: rotateY(360deg) !important;
-            transform: rotateY(360deg) !important;
+    -webkit-transform: rotateY(360deg) scale(1) !important;
+            transform: rotateY(360deg) scale(1) !important;
     left: -50% !important;
     height: auto; }
   .card-plan__wrapper--back .card-plan__text {
@@ -10140,6 +10178,8 @@ footer.featured-card__wrapper {
     vertical-align: middle;
     color: #382c75; }
   .card-plan__features li {
+    display: flex;
+    align-items: baseline;
     margin-left: -4px;
     vertical-align: middle;
     font-size: 16px;
@@ -10277,7 +10317,18 @@ footer.featured-card__wrapper {
 
 .card-plan__item-wrapper .request__textbox {
   text-align: left;
-  cursor: pointer; }
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left; }
+
+.card-plan__item-wrapper .request__select-wrapper::after {
+  right: 12px; }
 
 .card-plan__item--promo div {
   position: relative; }
@@ -10458,6 +10509,16 @@ footer.featured-card__wrapper {
   color: #8a8c8f; }
   .card-plan__copy a {
     color: #8a8c8f; }
+
+.request__step--third .request__title span {
+  margin-left: 0; }
+
+.request__step--third .request__title-second {
+  margin-top: -25px; }
+
+.request__step-slider {
+  display: flex;
+  max-width: 100%; }
 
 .profile {
   padding-top: 32px;
@@ -11247,8 +11308,7 @@ footer.featured-card__wrapper {
     .page-broker-profile .page-nav__btn-help svg {
       margin-right: 2px; }
 
-.page-post-request main,
-.page-broker-registration main {
+.page-post-request main {
   padding-bottom: 84px; }
 
 .page-request-details {
@@ -11421,7 +11481,8 @@ footer.featured-card__wrapper {
 
 .page-broker-registration .request__wrapper--about .request__item--textarea {
   flex-basis: 100%;
-  padding: 0; }
+  padding: 0;
+  margin-bottom: 26px; }
 
 .page-broker-registration .request__wrapper--company .request__flex-wrapper {
   flex-wrap: wrap; }
@@ -11463,6 +11524,9 @@ footer.featured-card__wrapper {
 .page-broker-registration .request__step .request__wrapper {
   padding-bottom: 30px;
   margin-bottom: 40px; }
+
+.page-broker-registration .request__step .request__wrapper--introduce .request__flex-wrapper .request__item {
+  width: 48%; }
 
 .page-broker-registration .request__step .card-plan {
   padding-bottom: 0;
@@ -11527,6 +11591,7 @@ footer.featured-card__wrapper {
 
 .page-broker-registration .file-name-wrapper {
   position: absolute;
+  height: 15px;
   bottom: -20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -11541,7 +11606,12 @@ footer.featured-card__wrapper {
   text-transform: lowercase;
   font-size: 12px; }
   .page-broker-registration .file-name-wrapper b {
-    vertical-align: middle; }
+    display: inline-block;
+    max-width: 85%;
+    overflow: hidden;
+    margin: 0 auto;
+    vertical-align: middle;
+    box-sizing: border-box; }
   .page-broker-registration .file-name-wrapper button {
     position: relative;
     background: none;
@@ -11550,7 +11620,7 @@ footer.featured-card__wrapper {
     width: 15px;
     height: 15px;
     vertical-align: middle;
-    margin-left: 8px;
+    margin-left: 10px;
     top: auto;
     right: auto;
     cursor: pointer; }
@@ -11579,18 +11649,40 @@ footer.featured-card__wrapper {
       height: 1px;
       background-color: #000000; }
 
-.page-broker-registration .request__title {
-  z-index: 2;
-  background: #f1f2f2;
-  border: none;
-  margin-bottom: 0px;
-  font-size: 30px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center; }
+.page-broker-registration .request__step--first {
+  margin-bottom: 35px; }
+  .page-broker-registration .request__step--first .request__wrapper {
+    padding-bottom: 0; }
+
+.page-broker-registration .request__step--second {
+  padding-top: 41px;
+  padding-bottom: 32px; }
+  .page-broker-registration .request__step--second .request__wrapper {
+    padding-bottom: 0px; }
+  .page-broker-registration .request__step--second .good-to-know {
+    margin-bottom: 19px; }
+    .page-broker-registration .request__step--second .good-to-know p {
+      font-size: 20px;
+      padding-bottom: 36px;
+      max-width: 900px; }
+
+.page-broker-registration .request__step--third {
+  padding-bottom: 41px; }
+  .page-broker-registration .request__step--third .request__title {
+    z-index: 2;
+    background: #f1f2f2;
+    border: none;
+    margin-bottom: 0px;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center; }
+
+.page-broker-registration .request__title span {
+  margin-left: 0; }
 
 .page-broker-registration .request__wrapper {
   margin: 0; }
@@ -11600,11 +11692,6 @@ footer.featured-card__wrapper {
 
 .page-broker-registration .request__title-second {
   display: none; }
-
-.page-broker-registration .btn-back {
-  position: absolute;
-  left: 0;
-  top: 0px; }
 
 /* Slider */
 .slick-slider {
@@ -12996,7 +13083,128 @@ footer.featured-card__wrapper {
   .modal-cellphone-code__form label {
     display: block;
     width: 60%;
-    margin: 7px auto; } }
+    margin: 7px auto; }
+  .request__step-wrapper .request__step-header {
+    margin-top: 21px;
+    margin-bottom: 9px; }
+  .request__step-wrapper--checked .request__step-header {
+    margin-top: 21px;
+    margin-bottom: 3px; }
+  .request__step--third .request__step-wrapper {
+    padding-bottom: 0;
+    padding: 0 10px; }
+  .card-plan__wrapper {
+    padding: 20px; }
+  .card-plan__choice {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    line-height: 12px; }
+  .card-plan__name {
+    margin-top: 11px; }
+    .card-plan__name span {
+      font-size: 30px;
+      letter-spacing: 3px; }
+    .card-plan__name i {
+      font-size: 16px; }
+  .card-plan__text {
+    margin-top: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    margin-right: -10px; }
+  .card-plan__features li {
+    margin: 11.5px;
+    font-size: 14px;
+    margin-left: 0px; }
+    .card-plan__features li span {
+      line-height: 1.07; }
+    .card-plan__features li svg {
+      margin-right: 9px; }
+  .card-plan__btn {
+    margin-top: 20px; }
+  .card-plan__name--price {
+    margin-top: 6px; }
+    .card-plan__name--price span {
+      font-size: 40px;
+      letter-spacing: normal; }
+  .card-plan__features {
+    margin-right: -10px; }
+  .card-plan__checked {
+    margin-top: 19px;
+    font-size: 20px;
+    letter-spacing: 2px; }
+  .page-broker-registration .request__step--first {
+    padding-top: 21px; }
+  .page-broker-registration .request__step--second {
+    padding-top: 41px; }
+    .page-broker-registration .request__step--second .request__wrapper-show {
+      padding-bottom: 15px; }
+    .page-broker-registration .request__step--second .good-to-know p {
+      font-size: 20px;
+      padding-bottom: 20px; }
+  .page-broker-registration .request__step--third .request__title {
+    font-size: 24px; }
+  .page-broker-registration .request__step--third .request__title-second {
+    margin-top: -10px; }
+  .request__step-wrapper--checked .payment {
+    margin-top: -7px; }
+  .card-plan.card-plan--first--checked {
+    left: 100px; }
+  .card-plan__wrapper--back .card-plan__text {
+    margin-top: 15px;
+    margin-bottom: 23px;
+    margin-right: 7px; }
+  .card-plan__item input,
+  .request__select-wrapper,
+  .request__input--select {
+    height: 40px;
+    padding: 0; }
+  .card-plan__item-wrapper .request__textbox {
+    padding: 10px;
+    padding-top: 6px; }
+  .card-plan__wrapper--back .card-plan__item {
+    margin-bottom: 27px; }
+  .card-plan__item-wrapper {
+    flex-wrap: wrap; }
+  .card-plan__item-wrapper .request__select-wrapper:last-child {
+    margin-right: 0; }
+  .card-plan__select-wrapper {
+    max-width: 100%;
+    justify-content: space-between;
+    margin-bottom: 27px; }
+  .card-plan__item-wrapper .card-plan__item,
+  .card-plan__item-wrapper .request__select-wrapper {
+    width: 47%; }
+  .card-plan__item-wrapper {
+    margin-bottom: 0; }
+  .card-plan__total {
+    font-size: 40px;
+    margin-top: -5px;
+    margin-left: -5px;
+    margin-bottom: -3px; }
+  .card-plan__total-wrapper i {
+    font-size: 14px;
+    text-align: center; }
+  .card-plan__info-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 82px;
+    text-align: center; }
+    .card-plan__info-text i {
+      font-size: 12px; }
+    .card-plan__info-text span {
+      margin-top: -3px; }
+    .card-plan__info-text svg {
+      margin-right: 0;
+      margin-bottom: 3px; }
+  .card-plan__wrapper--back .card-plan__btn {
+    margin-top: 26px; }
+  .request__step-wrapper--checked .card-plan__wrapper--back {
+    padding-bottom: 4px; }
+  .request__step-wrapper--checked .card-plan--second {
+    height: 784px; }
+  .page-broker-registration .request__step--third {
+    padding-bottom: 0; } }
 
 @media (max-width: 800px) {
   .intro__btn-wrapper {
@@ -14449,7 +14657,133 @@ footer.featured-card__wrapper {
   .page-broker-registration .request__step .request__btn-upload {
     height: 40px;
     font-size: 16px;
-    letter-spacing: 1.6px; } }
+    letter-spacing: 1.6px; }
+  .page-broker-registration .btn-back {
+    display: none; }
+  .card-plan__wrapper {
+    max-width: 100% !important;
+    height: auto !important; }
+  .card-plan__wrapper--back {
+    position: absolute;
+    display: none;
+    -webkit-transform: rotateY(0) scale(1) !important;
+            transform: rotateY(0) scale(1) !important;
+    left: -50% !important;
+    height: auto; }
+  .card-plan__wrapper {
+    -webkit-backface-visibility: none !important;
+            backface-visibility: none !important; }
+  .request__step-wrapper--checked .card-plan__wrapper--back {
+    display: block;
+    left: 0 !important;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  .card-plan.card-plan--second {
+    -webkit-perspective: none !important;
+            perspective: none !important; }
+  .request__step-slider {
+    transition: 0.8s; }
+  .card-plan {
+    width: 100%;
+    z-index: 1;
+    min-width: 85%;
+    max-width: 100%;
+    flex-basis: 100%; }
+    .card-plan--mobile::after {
+      content: "";
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 100%; }
+  .request__step--third {
+    transition: 0.8s;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px;
+    overflow: hidden; }
+  .page-broker-registration .request__step--third .request__title {
+    font-size: 16px; }
+  .request__step-wrapper .request__step-header {
+    margin-top: 5px;
+    margin-bottom: 14px; }
+  .card-plan.card-plan--first {
+    margin-top: 20px !important; }
+  .card-plan__wrapper {
+    padding: 10px;
+    padding-top: 20px; }
+  .card-plan__choice {
+    font-size: 14px;
+    letter-spacing: 1.4px; }
+  .card-plan__name {
+    margin-top: 3px;
+    display: flex;
+    align-items: baseline; }
+    .card-plan__name span {
+      font-size: 24px;
+      letter-spacing: 2.4px; }
+    .card-plan__name i {
+      font-size: 14px;
+      padding-right: 8px; }
+  .card-plan__text {
+    font-size: 14px;
+    margin-top: 11px; }
+  .card-plan__features li {
+    font-size: 12px;
+    padding-left: 5px;
+    line-height: 1.25;
+    margin: 13.5px 0; }
+    .card-plan__features li span {
+      line-height: normal; }
+  .card-plan__btn {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    height: 40px; }
+  .card-plan__checked {
+    height: 40px;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    line-height: 40px; }
+  .request__step-header .btn-back {
+    width: 100%; }
+  .page-broker-registration .request__step--third .request__title {
+    padding: 0;
+    min-height: 13px;
+    margin-top: 13px; }
+  .page-broker-registration .request__step--third .request__title-second {
+    font-size: 20px; }
+  .payment__list li {
+    width: 254px;
+    height: 30px; }
+  .card-plan__wrapper--back .card-plan__text {
+    margin-bottom: 14px; }
+  .card-plan__wrapper--back .card-plan__item--failed {
+    margin-bottom: 7px; }
+  .card-plan__total {
+    font-size: 30px; }
+  .card-plan__info-text span {
+    font-size: 20px; }
+  .card-plan__total-wrapper {
+    position: relative;
+    top: 10px; }
+  .card-plan__wrapper--back .card-plan__btn {
+    margin-top: 20px;
+    font-size: 16px;
+    letter-spacing: 1.6px; }
+  .card-plan__copy {
+    margin-bottom: 0; }
+  .request__step-wrapper--checked .card-plan--second {
+    height: 710px; }
+  .payment {
+    margin-top: 0;
+    display: none; }
+  .request__step-wrapper--checked .payment {
+    display: block; } }
 
 @media (max-width: 550px) {
   .modal-login {
@@ -14893,12 +15227,6 @@ footer.featured-card__wrapper {
     line-height: 40px;
     padding-left: 10px;
     margin-right: 3px; }
-    .page-broker-registration .preview__step:hover {
-      transition: 150ms;
-      background-color: #b3b3b6; }
-      .page-broker-registration .preview__step:hover::after {
-        transition: 150ms;
-        border-left: 9px solid #b3b3b6; }
     .page-broker-registration .preview__step::before {
       border-top: 30px solid transparent;
       border-left: 12px solid white;
@@ -14910,6 +15238,8 @@ footer.featured-card__wrapper {
       border-bottom: 20px solid transparent; }
   .page-broker-registration .preview__step--active::after {
     border-left: 9px solid #0cb175; }
+  .page-broker-registration .preview__step--first::after {
+    border-left: 9px solid #0cb175 !important; }
   .page-broker-registration .request__flex-wrapper--padding {
     padding: 0 10px; }
   .page-broker-registration .request__item {
