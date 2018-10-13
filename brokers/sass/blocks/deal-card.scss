@@ -270,3 +270,19 @@
     }
   }
 }
+
+@media (min-width: 800px) and (max-width: 885px) {
+  .btn--color-purple {
+    padding-top: 12px !important;
+    box-sizing: border-box;
+    line-height: normal !important;
+  }
+}
+
+@media (max-width: 505px) {
+  .btn--color-purple {
+    padding-top: 12px !important;
+    box-sizing: border-box;
+    line-height: normal !important;
+  }
+}

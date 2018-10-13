@@ -291,7 +291,7 @@
     max-width: 105%;
     margin: 0 auto;
     margin-top: 25px;
-    padding: 10px 0;
+    height: 40px;
     padding-left: 20px;
     padding-right: 50px;
     box-sizing: border-box;
@@ -335,7 +335,7 @@
     max-width: 450px;
     margin: 0 auto;
     margin-top: 18px;
-    padding: 10px 0;
+    height: 40px;
     padding-left: 20px;
     padding-right: 50px;
     box-sizing: border-box;
@@ -1003,16 +1003,18 @@
   }
   .profile-info__btn {
     height: 41px;
+    display: block;
+    line-height: 41px;
     font-size: 14px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    line-height: normal;
     letter-spacing: 1.4px;
     box-sizing: border-box;
 
     &--hide {
-      display: flex;
+      display: block;
+      line-height: 41px;
     }
   }
   .profile {
