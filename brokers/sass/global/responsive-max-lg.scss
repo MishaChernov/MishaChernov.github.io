@@ -1356,10 +1356,15 @@
     margin-right: 7px;
   }
   .card-plan__item input,
-  .request__select-wrapper,
-  .request__input--select {
+  .card-plan .request__select-wrapper,
+  .card-plan .request__input--select {
     height: 40px;
     padding: 0;
+  }
+  .card-plan .request__textbox {
+    line-height: 40px;
+    padding: 0 !important;
+    padding-left: 10px !important;
   }
   .card-plan__item-wrapper .request__textbox {
     padding: 10px;

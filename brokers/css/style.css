@@ -4828,15 +4828,13 @@ select {
   letter-spacing: 1.5px;
   transition: 300ms ease; }
   .btn--vertical {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    line-height: normal !important;
-    padding: 0 !important; }
+    display: block !important;
+    text-align: center !important;
+    line-height: normal;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important; }
     .btn--vertical span {
-      margin: 0 auto;
-      line-height: 0; }
+      line-height: normal; }
   .btn:hover {
     transition: 300ms ease;
     background-color: #065136; }
@@ -5816,6 +5814,7 @@ select {
   position: relative;
   display: block;
   margin: 0 auto;
+  height: 60px;
   margin-top: 120px;
   width: 210px;
   max-width: 240px;
@@ -5858,6 +5857,7 @@ select {
     line-height: 37px; }
 
 .relationships__btn {
+  height: 60px;
   margin-top: 73px;
   padding-right: 35px;
   width: 215px;
@@ -5994,7 +5994,8 @@ select {
       display: inline-block;
       vertical-align: middle;
       box-sizing: border-box;
-      width: 42%; }
+      width: 42%;
+      cursor: text; }
       .search__item--range input:nth-of-type(2) {
         padding-left: 8px;
         padding-right: 32px; }
@@ -6533,7 +6534,6 @@ select {
       display: block;
       width: 29px;
       height: 29px;
-      padding-top: 8px;
       font-family: "Gilroy", "Arial", sans-serif;
       font-weight: bold;
       font-size: 10px;
@@ -10670,12 +10670,14 @@ footer.featured-card__wrapper {
     background-color: #faa61a;
     color: #ffffff; }
   .rating__btn span {
-    margin-right: 30px; }
+    margin-right: 30px;
+    vertical-align: middle; }
   .rating__btn svg {
     position: relative;
     margin-right: 10px;
     width: 32px;
-    height: 32px; }
+    height: 32px;
+    vertical-align: middle; }
 
 .rating__custom-percent p {
   display: flex;
@@ -10899,7 +10901,8 @@ footer.featured-card__wrapper {
   .profile-info__btn:hover {
     background-color: #aa6c04; }
   .profile-info__btn--hide {
-    display: none; }
+    display: none;
+    line-height: 41px; }
 
 .profile-about {
   margin-top: 35px;
@@ -11824,19 +11827,15 @@ footer.featured-card__wrapper {
   .page-find-brokers .featured-card {
     margin: 7px 5% !important; } }
 
+@media (min-width: 800px) and (max-width: 885px) {
+  .btn--color-purple {
+    padding-top: 12px !important;
+    box-sizing: border-box;
+    line-height: normal !important; } }
+
 @media (min-width: 900px) and (max-width: 1200px) {
   .page-find-brokers .featured-card {
     margin: 10px 3% !important; } }
-
-@media (prefers-reduced-motion) {
-  .animated {
-    -webkit-animation: unset !important;
-    animation: unset !important;
-    transition: none !important; } }
-
-@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
-  .intro {
-    background-image: url("../img/intro-bg@2x.jpg"); } }
 
 @media (max-width: 1282px) {
   .search {
@@ -13240,6 +13239,486 @@ footer.featured-card__wrapper {
   .page-broker-registration .request__step--third {
     padding-bottom: 0; } }
 
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  .intro {
+    background-image: url("../img/intro-bg@2x.jpg"); } }
+
+@media (max-width: 550px) {
+  .modal-login {
+    max-height: 255px; }
+  .modal-sign,
+  .modal-login {
+    padding: 10px; }
+  .modal-sign {
+    max-height: 525px; }
+  .modal-sign__title,
+  .modal-login__title {
+    font-size: 18px;
+    margin-top: 0; }
+  .modal-sign__text,
+  .modal-login__text {
+    font-size: 13px; }
+  .modal-sign__form {
+    margin-top: 15px; }
+  .modal-sign__wrapper {
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0; }
+    .modal-sign__wrapper div {
+      flex-wrap: wrap; }
+      .modal-sign__wrapper div input {
+        flex-basis: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 0; }
+  .modal-sign__wrapper {
+    margin-top: 5px; }
+  .modal-sign__input {
+    margin: 5px 5px; }
+  .modal-select__textbox {
+    font-size: 14px; } }
+
+@media (max-width: 450px) {
+  .intro h1 {
+    padding-top: 61px;
+    max-width: 270px;
+    margin-bottom: 10px; }
+  .intro__list {
+    margin-top: 14px; }
+  .intro__btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; }
+  .intro__btn:first-of-type, .intro__btn:last-of-type {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-left: 0; }
+  .intro__btn:first-of-type {
+    margin-bottom: 10px;
+    padding-right: 37px; }
+    .intro__btn:first-of-type::after {
+      right: 20%; }
+  .features__item {
+    padding-left: 63px;
+    padding-right: 10px; }
+    .features__item::before {
+      width: 54px;
+      height: 62px;
+      top: 10px;
+      left: -5px; }
+    .features__item:nth-child(2) {
+      padding-bottom: 5px; }
+      .features__item:nth-child(2) h3 {
+        margin-top: 12px; }
+      .features__item:nth-child(2)::before {
+        width: 54px;
+        height: 62px;
+        top: 10px;
+        left: 0px; }
+    .features__item:nth-child(3) {
+      padding-bottom: 0px; }
+      .features__item:nth-child(3) h3 {
+        margin-top: 15px; }
+      .features__item:nth-child(3) p {
+        margin-bottom: 16px; }
+    .features__item:nth-child(4) {
+      padding-bottom: 0px; }
+      .features__item:nth-child(4) h3 {
+        margin-top: 11px; }
+      .features__item:nth-child(4) p {
+        margin-bottom: 23px; }
+    .features__item:nth-child(1)::before {
+      width: 38px;
+      height: 45px;
+      top: 10px;
+      left: 8px; }
+    .features__item:nth-child(2) h3 {
+      padding: 0px; }
+    .features__item:nth-child(2)::before {
+      width: 43px;
+      height: 44px;
+      top: 10px;
+      left: 8px; }
+    .features__item:nth-child(3)::before {
+      width: 32px;
+      height: 38px;
+      top: 10px;
+      left: 8px; }
+    .features__item:nth-child(4)::before {
+      width: 38px;
+      height: 44px;
+      top: 10px;
+      left: 8px; }
+    .features__item h3 {
+      letter-spacing: -0.7px;
+      margin-top: 19px; }
+    .features__item p {
+      margin-bottom: 19px; }
+  .features__info h2 {
+    max-width: 300px; }
+  .features__info p {
+    max-width: 300px; }
+  .features__info img {
+    margin-top: 8px; }
+  .about {
+    margin-top: 15px; }
+  .about__bg {
+    margin-top: 6px;
+    width: 153px;
+    min-width: 146px;
+    height: 321px; }
+  .about__list {
+    padding-top: 10px;
+    padding-bottom: 7px;
+    padding-left: 11px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    margin-top: 0;
+    flex-direction: column;
+    max-width: 220px;
+    min-height: 326px; }
+  .about__btn {
+    margin-top: 27px; }
+  .about__btn::after {
+    right: 25%; }
+  .relationships__btn::after {
+    right: 25%; }
+  .questions__subtitle {
+    line-height: 18px; }
+  .questions__item {
+    padding: 17px 0; }
+  .footer {
+    padding: 15px; }
+  .footer__nav {
+    margin-bottom: 11px; }
+  .footer__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    margin: 15px 7px;
+    font-size: 10px;
+    line-height: 24px;
+    transition: 500ms ease; }
+    .footer__link:first-child {
+      margin-left: 0; }
+  .footer__nav {
+    width: 100%;
+    flex: none;
+    margin-bottom: 11px; }
+  .deal-card__item {
+    flex-wrap: wrap;
+    margin: 5px 0;
+    margin-left: 0px; }
+    .deal-card__item img {
+      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      min-height: 160px; }
+  .page-nav__btn-top {
+    display: block;
+    width: 100% !important;
+    flex: none !important;
+    text-align: right !important;
+    margin-top: 10px !important; }
+  .page-nav {
+    flex-wrap: wrap; }
+    .page-nav div {
+      display: none; }
+  .page-nav__list {
+    display: flex !important; }
+  .footer__link:last-child {
+    display: block;
+    margin: 0;
+    width: 100%;
+    margin-left: 0; }
+  .select {
+    width: 135px; }
+  .intro__list-item {
+    margin-top: 9px;
+    margin-bottom: 8px; }
+    .intro__list-item:last-of-type {
+      margin-bottom: 20px; }
+  .intro__btn:first-of-type {
+    padding-right: 0px; }
+    .intro__btn:first-of-type span {
+      margin-right: 31px; }
+  .features__item p {
+    letter-spacing: 0;
+    padding: 0 2px; }
+  .features__item h3 {
+    letter-spacing: 0; }
+  .about__list {
+    padding-right: 0;
+    padding-left: 9px;
+    min-height: 320px; }
+  .about__item {
+    line-height: 15px; }
+  .about__btn {
+    margin-top: 33px; }
+  .limit .sticker {
+    left: 0; }
+  .limit__wrapper {
+    height: 120px; }
+  .limit__title {
+    margin-top: 37px; }
+  .featured-card__name {
+    font-size: 16px;
+    font-weight: 400; }
+  footer.featured-card__wrapper .btn {
+    font-size: 14px; }
+    footer.featured-card__wrapper .btn:last-child {
+      padding: 0 37px; }
+  .page-request .intro {
+    background-position: 0px -4px; }
+  .page-request .intro .btn:last-child {
+    width: 100%;
+    max-width: 100%; }
+  .page-request .intro__list {
+    margin-bottom: 9px; }
+    .page-request .intro__list li {
+      margin-bottom: 8px; }
+  .operations {
+    margin-top: -10px; }
+  .operations__list {
+    margin-top: 53px; }
+  .operations__about {
+    margin-top: 48px; }
+  .operations__item:nth-child(1) img {
+    width: 183px;
+    height: 189px; }
+  .operations__item:nth-child(2) img {
+    width: 188px;
+    height: 189px; }
+  .operations__item:nth-child(2) .operations__about {
+    margin-top: 52px; }
+  .operations__item:nth-child(3) .operations__name span {
+    margin-top: 24px; }
+  .operations__item:nth-child(3) .operations__about {
+    margin-top: 41px; }
+  .operations__item:nth-child(3) img {
+    width: 190px;
+    height: 190px; }
+  .intro__card-percent::after {
+    right: 1px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px; }
+  .page-find-brokers .page-nav div {
+    display: block; }
+    .page-find-brokers .page-nav div:first-child {
+      flex: 2; }
+  .page-find-brokers .featured__cards {
+    margin-left: -2px;
+    margin-right: -2px; }
+  .page-find-brokers .page-nav__btn-top {
+    width: auto !important;
+    flex: 1 !important;
+    text-align: right !important;
+    margin-top: 0 !important;
+    margin-bottom: 5px; }
+  .page-find-brokers .featured-card {
+    width: 100% !important;
+    margin: 7px 1%; }
+    .page-find-brokers .featured-card:nth-child(3), .page-find-brokers .featured-card:nth-child(4) {
+      display: none; }
+  .page-find-brokers header.featured-card__wrapper {
+    padding: 0px 23px;
+    padding-top: 13px;
+    padding-bottom: 5px;
+    padding-left: 10px; }
+  .page-find-brokers .featured__reputation {
+    width: 100%; }
+  .page-find-brokers main.featured-card__wrapper {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 25px; }
+  .page-find-brokers footer.featured-card__wrapper .btn {
+    flex: 1;
+    width: 50%;
+    flex-basis: 50%;
+    box-sizing: border-box;
+    padding: 0 14%; }
+    .page-find-brokers footer.featured-card__wrapper .btn:last-child {
+      padding: 0 15.5%; }
+  .page-find-brokers .featured-card__wrapper--footer {
+    width: 100%; }
+  .rating__line {
+    width: 86px; }
+  .profile-header p {
+    margin-bottom: 18px; }
+    .profile-header p:first-child {
+      margin-top: 10px; }
+  .profile-card {
+    margin-top: 20px; }
+  .profile-card__name {
+    display: none; }
+  .profile-card .btn-back {
+    display: none; }
+  .profile-card .profile-info__btn {
+    display: none; }
+  .page-nav__list--hidden {
+    display: none !important; }
+  .page-broker-profile .mobile-hide {
+    display: block; }
+  .page-broker-profile .header {
+    margin-bottom: 0; }
+  .page-broker-profile .page-nav {
+    margin-top: -23px;
+    margin-bottom: 10px; }
+  .page-broker-profile .page-nav div {
+    flex: 1;
+    order: 2;
+    display: block;
+    margin-top: 12px !important; }
+  .page-broker-profile .page-nav__list {
+    order: 1 !important;
+    flex: 2 100% !important; }
+  .page-broker-profile .page-nav__btn-top {
+    order: 3 !important;
+    flex: 1 !important;
+    margin-top: 8px !important;
+    text-align: right !important; }
+  .modal-sign__btn,
+  .modal-login__btn {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.4px;
+    box-sizing: border-box;
+    line-height: 40px;
+    padding: 0; }
+  .tabs-controls div {
+    flex: 2; }
+  .tabs-controls__label {
+    min-width: 145px; }
+  .request-tabs__submit {
+    margin-bottom: 9px; }
+  .my-request .deal-card__item {
+    margin: 12px 0; }
+  .my-request .deal-card__img-wrapper {
+    max-height: 150px; }
+  .my-request .deal-card__wrapper--description p:nth-child(3) {
+    margin-top: 6px;
+    min-width: 60%;
+    display: block; }
+  .my-request .deal-card__buttons .btn {
+    height: 64px;
+    line-height: 60px; }
+  .my-request .deal-card__buttons--ended-bids .btn:nth-child(3) {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-align: center; }
+  .request-card {
+    margin-top: 20px; }
+  .request-card__name {
+    display: none; }
+  .request-card .btn-back {
+    display: none; }
+  .request-card .request-info__btn {
+    display: none; }
+  .request-header p {
+    margin-bottom: 18px; }
+    .request-header p:first-child {
+      margin-top: 10px; }
+  .request-info {
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .request-info p {
+      margin: 6px 0px !important; }
+  .request-header__hint {
+    max-width: 126px; }
+    .request-header__hint::after {
+      bottom: 70%;
+      -webkit-transform: translateY(0) rotate(45deg);
+              transform: translateY(0) rotate(45deg); }
+  .request-header__name {
+    vertical-align: top; }
+  .request-header__img {
+    vertical-align: top; }
+  .request-header p {
+    margin-bottom: 4px; }
+  .request-header p:nth-of-type(1) {
+    margin-top: -27px; }
+  .choose-broker__info {
+    padding-left: 10px !important; }
+  .choose-broker__comments {
+    padding: 0 10px; }
+  .page-profile .profile-card .btn-back {
+    display: block;
+    text-align: left;
+    margin-right: 5px; }
+  .page-profile .profile-card__image-wrapper {
+    height: 300px; }
+  .page-profile .profile-form__label-name {
+    flex-basis: 100%; }
+  .page-profile .profile-form__label--email .profile-form__label-name {
+    flex-basis: 30%; }
+  .page-profile .profile-form__label--textarea {
+    margin-bottom: 15px; }
+  .page-profile .profile-form__label--checkbox {
+    margin-bottom: 15px; }
+    .page-profile .profile-form__label--checkbox .profile-form__label-name {
+      flex-basis: 50%; }
+  .page-broker-registration .preview {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .page-broker-registration .preview__title {
+    margin-top: 2px;
+    font-size: 20px; }
+  .page-broker-registration .preview__text {
+    font-size: 14px; }
+  .page-broker-registration .preview__steps {
+    margin-top: 17px; }
+  .page-broker-registration .preview__step {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    margin-right: 3px; }
+    .page-broker-registration .preview__step::before {
+      border-top: 30px solid transparent;
+      border-left: 12px solid white;
+      border-bottom: 30px solid transparent; }
+    .page-broker-registration .preview__step::after {
+      right: -9px;
+      border-top: 20px solid transparent;
+      border-left: 9px solid #e7e7e8;
+      border-bottom: 20px solid transparent; }
+  .page-broker-registration .preview__step--active::after {
+    border-left: 9px solid #0cb175; }
+  .page-broker-registration .preview__step--first::after {
+    border-left: 9px solid #0cb175 !important; }
+  .page-broker-registration .request__flex-wrapper--padding {
+    padding: 0 10px; }
+  .page-broker-registration .request__item {
+    max-width: 100% !important;
+    width: 100% !important; }
+    .page-broker-registration .request__item:nth-child(3), .page-broker-registration .request__item:nth-child(4), .page-broker-registration .request__item:nth-child(5), .page-broker-registration .request__item:nth-child(6) {
+      max-width: 100% !important;
+      width: 100% !important; } }
+
+@media (prefers-reduced-motion) {
+  .animated {
+    -webkit-animation: unset !important;
+    animation: unset !important;
+    transition: none !important; } }
+
+@media (max-width: 505px) {
+  .btn--color-purple {
+    padding-top: 12px !important;
+    box-sizing: border-box;
+    line-height: normal !important; } }
+
 @media (max-width: 800px) {
   .intro__btn-wrapper {
     display: flex;
@@ -13442,7 +13921,7 @@ footer.featured-card__wrapper {
     max-width: 105%;
     margin: 0 auto;
     margin-top: 25px;
-    padding: 10px 0;
+    height: 40px;
     padding-left: 20px;
     padding-right: 50px;
     box-sizing: border-box;
@@ -13472,7 +13951,7 @@ footer.featured-card__wrapper {
     max-width: 450px;
     margin: 0 auto;
     margin-top: 18px;
-    padding: 10px 0;
+    height: 40px;
     padding-left: 20px;
     padding-right: 50px;
     box-sizing: border-box; }
@@ -13937,15 +14416,17 @@ footer.featured-card__wrapper {
       margin-bottom: 14px; }
   .profile-info__btn {
     height: 41px;
+    display: block;
+    line-height: 41px;
     font-size: 14px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    line-height: normal;
     letter-spacing: 1.4px;
     box-sizing: border-box; }
     .profile-info__btn--hide {
-      display: flex; }
+      display: block;
+      line-height: 41px; }
   .profile {
     width: 100%;
     box-sizing: border-box; }
@@ -14821,467 +15302,3 @@ footer.featured-card__wrapper {
     display: none; }
   .request__step-wrapper--checked .payment {
     display: block; } }
-
-@media (max-width: 550px) {
-  .modal-login {
-    max-height: 255px; }
-  .modal-sign,
-  .modal-login {
-    padding: 10px; }
-  .modal-sign {
-    max-height: 525px; }
-  .modal-sign__title,
-  .modal-login__title {
-    font-size: 18px;
-    margin-top: 0; }
-  .modal-sign__text,
-  .modal-login__text {
-    font-size: 13px; }
-  .modal-sign__form {
-    margin-top: 15px; }
-  .modal-sign__wrapper {
-    flex-wrap: wrap;
-    margin-left: 0;
-    margin-right: 0; }
-    .modal-sign__wrapper div {
-      flex-wrap: wrap; }
-      .modal-sign__wrapper div input {
-        flex-basis: 100%;
-        width: 100%;
-        box-sizing: border-box;
-        margin-left: 0;
-        margin-right: 0; }
-  .modal-sign__wrapper {
-    margin-top: 5px; }
-  .modal-sign__input {
-    margin: 5px 5px; }
-  .modal-select__textbox {
-    font-size: 14px; } }
-
-@media (max-width: 450px) {
-  .intro h1 {
-    padding-top: 61px;
-    max-width: 270px;
-    margin-bottom: 10px; }
-  .intro__list {
-    margin-top: 14px; }
-  .intro__btn-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; }
-  .intro__btn:first-of-type, .intro__btn:last-of-type {
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-    margin-left: 0; }
-  .intro__btn:first-of-type {
-    margin-bottom: 10px;
-    padding-right: 37px; }
-    .intro__btn:first-of-type::after {
-      right: 20%; }
-  .features__item {
-    padding-left: 63px;
-    padding-right: 10px; }
-    .features__item::before {
-      width: 54px;
-      height: 62px;
-      top: 10px;
-      left: -5px; }
-    .features__item:nth-child(2) {
-      padding-bottom: 5px; }
-      .features__item:nth-child(2) h3 {
-        margin-top: 12px; }
-      .features__item:nth-child(2)::before {
-        width: 54px;
-        height: 62px;
-        top: 10px;
-        left: 0px; }
-    .features__item:nth-child(3) {
-      padding-bottom: 0px; }
-      .features__item:nth-child(3) h3 {
-        margin-top: 15px; }
-      .features__item:nth-child(3) p {
-        margin-bottom: 16px; }
-    .features__item:nth-child(4) {
-      padding-bottom: 0px; }
-      .features__item:nth-child(4) h3 {
-        margin-top: 11px; }
-      .features__item:nth-child(4) p {
-        margin-bottom: 23px; }
-    .features__item:nth-child(1)::before {
-      width: 38px;
-      height: 45px;
-      top: 10px;
-      left: 8px; }
-    .features__item:nth-child(2) h3 {
-      padding: 0px; }
-    .features__item:nth-child(2)::before {
-      width: 43px;
-      height: 44px;
-      top: 10px;
-      left: 8px; }
-    .features__item:nth-child(3)::before {
-      width: 32px;
-      height: 38px;
-      top: 10px;
-      left: 8px; }
-    .features__item:nth-child(4)::before {
-      width: 38px;
-      height: 44px;
-      top: 10px;
-      left: 8px; }
-    .features__item h3 {
-      letter-spacing: -0.7px;
-      margin-top: 19px; }
-    .features__item p {
-      margin-bottom: 19px; }
-  .features__info h2 {
-    max-width: 300px; }
-  .features__info p {
-    max-width: 300px; }
-  .features__info img {
-    margin-top: 8px; }
-  .about {
-    margin-top: 15px; }
-  .about__bg {
-    margin-top: 6px;
-    width: 153px;
-    min-width: 146px;
-    height: 321px; }
-  .about__list {
-    padding-top: 10px;
-    padding-bottom: 7px;
-    padding-left: 11px;
-    padding-right: 10px;
-    box-sizing: border-box;
-    margin-top: 0;
-    flex-direction: column;
-    max-width: 220px;
-    min-height: 326px; }
-  .about__btn {
-    margin-top: 27px; }
-  .about__btn::after {
-    right: 25%; }
-  .relationships__btn::after {
-    right: 25%; }
-  .questions__subtitle {
-    line-height: 18px; }
-  .questions__item {
-    padding: 17px 0; }
-  .footer {
-    padding: 15px; }
-  .footer__nav {
-    margin-bottom: 11px; }
-  .footer__link {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold;
-    margin: 15px 7px;
-    font-size: 10px;
-    line-height: 24px;
-    transition: 500ms ease; }
-    .footer__link:first-child {
-      margin-left: 0; }
-  .footer__nav {
-    width: 100%;
-    flex: none;
-    margin-bottom: 11px; }
-  .deal-card__item {
-    flex-wrap: wrap;
-    margin: 5px 0;
-    margin-left: 0px; }
-    .deal-card__item img {
-      width: 100%;
-      max-width: 100%;
-      max-height: 100%;
-      min-height: 160px; }
-  .page-nav__btn-top {
-    display: block;
-    width: 100% !important;
-    flex: none !important;
-    text-align: right !important;
-    margin-top: 10px !important; }
-  .page-nav {
-    flex-wrap: wrap; }
-    .page-nav div {
-      display: none; }
-  .page-nav__list {
-    display: flex !important; }
-  .footer__link:last-child {
-    display: block;
-    margin: 0;
-    width: 100%;
-    margin-left: 0; }
-  .select {
-    width: 135px; }
-  .intro__list-item {
-    margin-top: 9px;
-    margin-bottom: 8px; }
-    .intro__list-item:last-of-type {
-      margin-bottom: 20px; }
-  .intro__btn:first-of-type {
-    padding-right: 0px; }
-    .intro__btn:first-of-type span {
-      margin-right: 31px; }
-  .features__item p {
-    letter-spacing: 0;
-    padding: 0 2px; }
-  .features__item h3 {
-    letter-spacing: 0; }
-  .about__list {
-    padding-right: 0;
-    padding-left: 9px;
-    min-height: 320px; }
-  .about__item {
-    line-height: 15px; }
-  .about__btn {
-    margin-top: 33px; }
-  .limit .sticker {
-    left: 0; }
-  .limit__wrapper {
-    height: 120px; }
-  .limit__title {
-    margin-top: 37px; }
-  .featured-card__name {
-    font-size: 16px;
-    font-weight: 400; }
-  footer.featured-card__wrapper .btn {
-    font-size: 14px; }
-    footer.featured-card__wrapper .btn:last-child {
-      padding: 0 37px; }
-  .page-request .intro {
-    background-position: 0px -4px; }
-  .page-request .intro .btn:last-child {
-    width: 100%;
-    max-width: 100%; }
-  .page-request .intro__list {
-    margin-bottom: 9px; }
-    .page-request .intro__list li {
-      margin-bottom: 8px; }
-  .operations {
-    margin-top: -10px; }
-  .operations__list {
-    margin-top: 53px; }
-  .operations__about {
-    margin-top: 48px; }
-  .operations__item:nth-child(1) img {
-    width: 183px;
-    height: 189px; }
-  .operations__item:nth-child(2) img {
-    width: 188px;
-    height: 189px; }
-  .operations__item:nth-child(2) .operations__about {
-    margin-top: 52px; }
-  .operations__item:nth-child(3) .operations__name span {
-    margin-top: 24px; }
-  .operations__item:nth-child(3) .operations__about {
-    margin-top: 41px; }
-  .operations__item:nth-child(3) img {
-    width: 190px;
-    height: 190px; }
-  .intro__card-percent::after {
-    right: 1px;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 1px; }
-  .page-find-brokers .page-nav div {
-    display: block; }
-    .page-find-brokers .page-nav div:first-child {
-      flex: 2; }
-  .page-find-brokers .featured__cards {
-    margin-left: -2px;
-    margin-right: -2px; }
-  .page-find-brokers .page-nav__btn-top {
-    width: auto !important;
-    flex: 1 !important;
-    text-align: right !important;
-    margin-top: 0 !important;
-    margin-bottom: 5px; }
-  .page-find-brokers .featured-card {
-    width: 100% !important;
-    margin: 7px 1%; }
-    .page-find-brokers .featured-card:nth-child(3), .page-find-brokers .featured-card:nth-child(4) {
-      display: none; }
-  .page-find-brokers header.featured-card__wrapper {
-    padding: 0px 23px;
-    padding-top: 13px;
-    padding-bottom: 5px;
-    padding-left: 10px; }
-  .page-find-brokers .featured__reputation {
-    width: 100%; }
-  .page-find-brokers main.featured-card__wrapper {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 25px; }
-  .page-find-brokers footer.featured-card__wrapper .btn {
-    flex: 1;
-    width: 50%;
-    flex-basis: 50%;
-    box-sizing: border-box;
-    padding: 0 14%; }
-    .page-find-brokers footer.featured-card__wrapper .btn:last-child {
-      padding: 0 15.5%; }
-  .page-find-brokers .featured-card__wrapper--footer {
-    width: 100%; }
-  .rating__line {
-    width: 86px; }
-  .profile-header p {
-    margin-bottom: 18px; }
-    .profile-header p:first-child {
-      margin-top: 10px; }
-  .profile-card {
-    margin-top: 20px; }
-  .profile-card__name {
-    display: none; }
-  .profile-card .btn-back {
-    display: none; }
-  .profile-card .profile-info__btn {
-    display: none; }
-  .page-nav__list--hidden {
-    display: none !important; }
-  .page-broker-profile .mobile-hide {
-    display: block; }
-  .page-broker-profile .header {
-    margin-bottom: 0; }
-  .page-broker-profile .page-nav {
-    margin-top: -23px;
-    margin-bottom: 10px; }
-  .page-broker-profile .page-nav div {
-    flex: 1;
-    order: 2;
-    display: block;
-    margin-top: 12px !important; }
-  .page-broker-profile .page-nav__list {
-    order: 1 !important;
-    flex: 2 100% !important; }
-  .page-broker-profile .page-nav__btn-top {
-    order: 3 !important;
-    flex: 1 !important;
-    margin-top: 8px !important;
-    text-align: right !important; }
-  .modal-sign__btn,
-  .modal-login__btn {
-    font-size: 14px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 1.4px;
-    box-sizing: border-box;
-    line-height: 40px;
-    padding: 0; }
-  .tabs-controls div {
-    flex: 2; }
-  .tabs-controls__label {
-    min-width: 145px; }
-  .request-tabs__submit {
-    margin-bottom: 9px; }
-  .my-request .deal-card__item {
-    margin: 12px 0; }
-  .my-request .deal-card__img-wrapper {
-    max-height: 150px; }
-  .my-request .deal-card__wrapper--description p:nth-child(3) {
-    margin-top: 6px;
-    min-width: 60%;
-    display: block; }
-  .my-request .deal-card__buttons .btn {
-    height: 64px;
-    line-height: 60px; }
-  .my-request .deal-card__buttons--ended-bids .btn:nth-child(3) {
-    font-size: 16px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 0.8px;
-    text-align: center; }
-  .request-card {
-    margin-top: 20px; }
-  .request-card__name {
-    display: none; }
-  .request-card .btn-back {
-    display: none; }
-  .request-card .request-info__btn {
-    display: none; }
-  .request-header p {
-    margin-bottom: 18px; }
-    .request-header p:first-child {
-      margin-top: 10px; }
-  .request-info {
-    flex-direction: row;
-    flex-wrap: wrap; }
-    .request-info p {
-      margin: 6px 0px !important; }
-  .request-header__hint {
-    max-width: 126px; }
-    .request-header__hint::after {
-      bottom: 70%;
-      -webkit-transform: translateY(0) rotate(45deg);
-              transform: translateY(0) rotate(45deg); }
-  .request-header__name {
-    vertical-align: top; }
-  .request-header__img {
-    vertical-align: top; }
-  .request-header p {
-    margin-bottom: 4px; }
-  .request-header p:nth-of-type(1) {
-    margin-top: -27px; }
-  .choose-broker__info {
-    padding-left: 10px !important; }
-  .choose-broker__comments {
-    padding: 0 10px; }
-  .page-profile .profile-card .btn-back {
-    display: block;
-    text-align: left;
-    margin-right: 5px; }
-  .page-profile .profile-card__image-wrapper {
-    height: 300px; }
-  .page-profile .profile-form__label-name {
-    flex-basis: 100%; }
-  .page-profile .profile-form__label--email .profile-form__label-name {
-    flex-basis: 30%; }
-  .page-profile .profile-form__label--textarea {
-    margin-bottom: 15px; }
-  .page-profile .profile-form__label--checkbox {
-    margin-bottom: 15px; }
-    .page-profile .profile-form__label--checkbox .profile-form__label-name {
-      flex-basis: 50%; }
-  .page-broker-registration .preview {
-    padding-top: 10px;
-    padding-bottom: 10px; }
-  .page-broker-registration .preview__title {
-    margin-top: 2px;
-    font-size: 20px; }
-  .page-broker-registration .preview__text {
-    font-size: 14px; }
-  .page-broker-registration .preview__steps {
-    margin-top: 17px; }
-  .page-broker-registration .preview__step {
-    font-size: 14px;
-    letter-spacing: 1.4px;
-    height: 40px;
-    line-height: 40px;
-    padding-left: 10px;
-    margin-right: 3px; }
-    .page-broker-registration .preview__step::before {
-      border-top: 30px solid transparent;
-      border-left: 12px solid white;
-      border-bottom: 30px solid transparent; }
-    .page-broker-registration .preview__step::after {
-      right: -9px;
-      border-top: 20px solid transparent;
-      border-left: 9px solid #e7e7e8;
-      border-bottom: 20px solid transparent; }
-  .page-broker-registration .preview__step--active::after {
-    border-left: 9px solid #0cb175; }
-  .page-broker-registration .preview__step--first::after {
-    border-left: 9px solid #0cb175 !important; }
-  .page-broker-registration .request__flex-wrapper--padding {
-    padding: 0 10px; }
-  .page-broker-registration .request__item {
-    max-width: 100% !important;
-    width: 100% !important; }
-    .page-broker-registration .request__item:nth-child(3), .page-broker-registration .request__item:nth-child(4), .page-broker-registration .request__item:nth-child(5), .page-broker-registration .request__item:nth-child(6) {
-      max-width: 100% !important;
-      width: 100% !important; } }

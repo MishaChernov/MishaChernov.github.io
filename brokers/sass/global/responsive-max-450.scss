@@ -302,7 +302,7 @@
     font-size: 14px;
 
     &:last-child {
-      padding: 26px 37px;
+      padding: 0 37px;
     }
   }
   .page-request {
@@ -417,10 +417,10 @@
       width: 50%;
       flex-basis: 50%;
       box-sizing: border-box;
-      padding: 27px 14%;
+      padding: 0 14%;
 
       &:last-child {
-        padding: 27px 15.5%;
+        padding: 0 15.5%;
       }
     }
     .featured-card__wrapper--footer {

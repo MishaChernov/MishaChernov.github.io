@@ -440,9 +440,15 @@
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
+    padding: 0;
+    padding-left: 15px;
+    line-height: 60px;
   }
   .request__select-wrapper::after {
     right: 12px;
+  }
+  .request__input--select {
+    padding: 0;
   }
 }
 

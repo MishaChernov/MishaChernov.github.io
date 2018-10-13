@@ -87,6 +87,7 @@
     span {
       position: relative;
       margin-right: 43px;
+      line-height: 0;
     }
     &:hover {
       @include transition(300ms);
@@ -228,4 +229,10 @@
     text-decoration: none;
     color: $color-purple;
   }
+}
+
+.intro__card .btn {
+  padding: 0;
+  height: 60px;
+  max-width: 100%;
 }

@@ -2,6 +2,17 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+  // Start Find All Buttons And Make Them Vertical Align middle
+
+  if($('.btn--vertical').length > 0) {
+    $('.btn--vertical').each(function() {
+      var height = $(this).height();
+      $(this).css('line-height', height + 'px');
+    })
+  }
+
+  // End Find All Buttons And Make Them Vertical Align middle
+
   // Start Check Click On Log Out link
 
   if($('body').hasClass('log-in--true')) {

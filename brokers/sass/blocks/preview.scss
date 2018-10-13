@@ -67,6 +67,17 @@
   color: $color-gray;
   transition: 150ms;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  span {
+    display: block;
+    margin: 0 auto;
+    line-height: 0;
+  }
+
   &:first-child {
     z-index: 3;
     &::before {
