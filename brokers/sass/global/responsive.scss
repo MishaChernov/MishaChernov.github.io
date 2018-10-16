@@ -84,3 +84,16 @@
     }
   }
 }
+
+@media(min-width: 800px) and (max-width: 1200px) {
+  .profile-info__licence {
+    position: relative;
+    
+    svg {
+     position: absolute;
+     right: -3px;
+     top: 50%;
+     transform: translateY(-50%);
+    }
+  }
+}

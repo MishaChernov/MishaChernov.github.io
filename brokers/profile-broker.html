@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MortgageBrokets</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://viralpatel.net/blogs/demo/jquery/jquery.shorten.1.0.js"></script>
+
+</head>
+<body class="page-broker-profile  overlay  log-in--true  im-borrower  number-not-verified" id="top">
+  <header class="header">
+    <div class="header__container">
+      <div class="header__wrapper">
+        <a class="header__web-link" href="/">MortgageBrokers<span>.com</span></a>
+        <a class="logo  logo--hidden" href="index.html">
+          <svg class="icon  icon-logo">
+            <use xlink:href="img/sprite/sprite.svg#logo"></use>
+          </svg>
+        </a>
+
+        <div class="select">
+          <div class="select__btn">For <span>Borrower</span></div>
+        </div>
+      </div>
+
+      <a class="logo  logo--main" href="#">
+        <svg class="icon  icon-logo">
+          <use xlink:href="img/sprite/sprite.svg#logo"></use>
+        </svg>
+      </a>
+
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="for-grid"></div>
+    </div>
+    <ul class="select__list">
+      <li><a class="select__link" href="index.html">For Brokers</a></li>
+    </ul>
+
+    <nav class="nav-menu">
+      <div class="nav-menu__wrapper">
+        <a class="nav-menu__link  nav-menu__login-img  nav-menu__link--new-bids" href="profile.html">
+          <div><img src="img/user.png" alt="User icon"></div>
+        </a>
+        <a class="nav-menu__link  my-balance" href="#">My balance: <span class="my-balance__amount">250</span></a>
+        <a class="nav-menu__link  nav-menu__link--first" href="find-brokers.html">Find A broker</a>
+        <a class="nav-menu__link  nav-menu__link--second" href="post-request.html">Post a request</a>
+        <a class="nav-menu__link  login-link  nav-menu__login" href="#">Log in</a>
+        <a class="nav-menu__link  nav-menu__logout  logout-link" href="#">Log out</a>
+      </div>
+    </nav>
+    <div class="nav-menu__submenu">
+      <a class="nav-menu__submenu-link  my-balance" href="#">My balance: <span class="my-balance__amount">250</span></a>
+      <a class="nav-menu__submenu-link" href="profile.html">My Profile</a>
+      <a class="nav-menu__submenu-link  logout-link" href="#">Log out</a>
+    </div>
+  </header>
+  <div class="mobile-hide">
+    <a class="btn-back" href="#">
+      <svg class="icon  icon-arrow-right">
+        <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+      </svg>
+      <span>Back</span>
+    </a>
+
+    <h3 class="mobile-hide__name">
+      <span class="mobile-hide__name-first"></span>
+      <span class="mobile-hide__name-second"></span>
+    </h3>
+
+    <a class="profile-info__btn  btn" href="brokers-profile.html">Edit Profile</a>
+  </div>
+
+  <main class="main  profile  container  clearfix">
+
+    <aside class="profile-card">
+
+      <a class="btn-back" href="#">
+        <svg class="icon  icon-arrow-right">
+          <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+        </svg>
+        <span>Back</span>
+      </a>
+
+      <h3 class="profile-card__name">
+        <span class="profile-card__name-first">Steven</span>
+        <span class="profile-card__name-second">Dunn</span>
+      </h3>
+
+      <div class="profile-card__image-wrapper">
+        <img class="profile-card__image" src="" width="271px" height="271px" alt="Steven Dunn image">
+
+        <div class="sticker  sticker--pro">
+          <span>Pro</span>
+        </div>
+
+        <span class="profile-card__without-picture"></span>
+      </div>
+
+      <address class="profile-info  profile-card__address">
+        <p class="parent---JS">
+          <span class="title---JS">Brokerage licence #</span>
+          <b class="profile-info__licence  profile-info__licence--process  feed---JS">In Verification Process
+            <svg class="icon  icon-clock">
+              <use xlink:href="img/sprite/sprite.svg#clock"></use>
+            </svg>
+          </b>
+        </p>
+
+        <p class="parent---JS">
+          <span class="title---JS">I work for</span>
+          <b class="profile-info__work  feed---JS">CompayName.com</b>
+        </p>
+
+        <p class="parent---JS">
+          <span class="title---JS">Address</span>
+          <b class="profile-info__address  feed---JS">
+            675 Cochrane Drive, North Tower, Markham, Ontario, L3R 0B8
+          </b>
+        </p>
+
+        <p class="parent---JS">
+          <span class="title---JS">Telephone</span>
+          <a class="profile-info__phone  feed---JS" href="tel:9059477200">C. (905) 947-7200</a>
+          <a class="profile-info__phone  feed---JS" href="tel:9059477244">F. (905) 947-7244</a>
+        </p>
+
+        <p class="profile-info__social-list">
+          <span>Social</span>
+
+          <a class="profile-info__social  profile-info__social--ln" href="#" title="Linkedin">
+            Linkedin
+            <svg class="icon  icon-social-linkedin">
+              <use xlink:href="img/sprite/sprite.svg#social-linkedin"></use>
+            </svg>
+          </a>
+
+          <a class="profile-info__social  profile-info__social--fb" href="#" title="Facebook">
+            Facebook
+            <svg class="icon  icon-social-facebook">
+              <use xlink:href="img/sprite/sprite.svg#social-facebook"></use>
+            </svg>
+          </a>
+
+        </p>
+      </address>
+
+      <!-- <a class="profile-info__btn  btn" href="#">Invite to bid</a> -->
+      <a class="profile-info__btn  profile-info__btn--edit  btn" href="brokers-profile.html">Edit Profile</a>
+    </aside>
+
+    <section class="profile-about">
+      <header class="profile-header">
+        <div class="profile-header__wrapper">
+          <p>
+            <span>Title</span>
+            <b class="profile-header__title">Mortgage Broker, Mortgage Agent, Mortgage Planner</b>
+          </p>
+          <p>
+            <span>I serve</span>
+            <b class="profile-header__serve">Waterloo, Brampton, Kitchener, London</b>
+          </p>
+        </div>
+        <div class="profile-header__wrapper">
+          <p>
+            <span>Types of mortgages done</span>
+            <b class="profile-header__mortgages">Commerial, Residential</b>
+          </p>
+          <div>
+            <span>I speak</span>
+
+            <ul class="language-list">
+              <li class="language-list__item  flag-icon  flag-icon-de">german</li>
+              <li class="language-list__item  flag-icon  flag-icon-gb">united kingdom</li>
+              <li class="language-list__item  flag-icon  flag-icon-pl">poland</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="profile-info__description">
+          <h4>Description</h4>
+          <div class="show-more-wrapper">
+            <p class="profile-info__text  readmore">
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque nec purus id arcu finibus pharetra. Donec leo nisi, iaculis sed convallis in, porttitor vitae arcu. Pellentesque molestie tortor vitae purus ultrices porttitor. Duis nunc odio, lacinia eu enim quis, viverra accumsan diam. Mauris condimentum lorem enim, a accumsan nisl vulputate vel. Cras faucibus nisl et urna sodales tincidunt. Maecenas eu justo turpis. Cras tortor lectus, feugiat in malesuada a, fermentum imperdiet dolor. In a sodales est. Aenean vel mi id velit ullamcorper laoreet. Suspendisse sapien purus, eleifend sed mi vel, dapibus iaculis metus. Sed varius est sed ante gravida pharetra. In hendrerit massa ac sodales porta. Donec eget lacus ac turpis dictum finibus.
+              <br><br>
+              Nullam elit enim, maximus sed euismod eget, condimentum ut felis. Ut rutrum, metus nec commodo pellentesque, ligula neque dictum purus, eget convallis urna leo eu lorem. Pellentesque faucibus eu orci et dictum. Nullam eget facilisis felis, id luctus nunc. Phasellus eleifend est et luctus auctor. Sed in est malesuada, consectetur arcu id, porttitor nisi. Vivamus sollicitudin porttitor porttitor. Duis ac ultricies nulla, id iaculis urna. Vivamus lorem lectus, tincidunt a posuere eu, eleifend porttitor dui. Aliquam vulputate eros placerat neque iaculis lacinia. Ut varius posuere efficitur. Duis auctor nunc arcu,vehicula iaculis nunc porttitor et. Nulla id auctor leo, id ornare libero. Fusce pulvinar vestibulum sem non gravida. In a facilisis sapien, et vestibulum elit.
+            </p>
+          </div>
+        </section>
+
+        <section class="profile-info__options">
+
+          <div class="rating  profile-info__rating">
+            <div class="rating__count-wrapper">
+              <p>
+                <span class="rating__count">0.0</span>
+                <b class="rating__count-text">Rating out <br> of 5 stars</b>
+              </p>
+            </div>
+
+            <div class="rating__list">
+              <p class="rating__item">
+                <span class="rating__item-stars">5 star</span>
+                <span class="rating__line"><i class="rating__progress" data-percent="0"></i></span>
+                <span class="rating__percent">0%</span>
+              </p>
+
+              <p class="rating__item">
+                <span class="rating__item-stars">4 star</span>
+                <span class="rating__line"><i class="rating__progress" data-percent="0"></i></span>
+                <span class="rating__percent">0%</span>
+              </p>
+
+              <p class="rating__item">
+                <span class="rating__item-stars">3 star</span>
+                <span class="rating__line"><i class="rating__progress" data-percent="0"></i></span>
+                <span class="rating__percent">0%</span>
+              </p>
+
+              <p class="rating__item">
+                <span class="rating__item-stars">2 star</span>
+                <span class="rating__line"><i class="rating__progress" data-percent="0"></i></span>
+                <span class="rating__percent">0%</span>
+              </p>
+
+              <p class="rating__item">
+                <span class="rating__item-stars">1 star</span>
+                <span class="rating__line"><i class="rating__progress" data-percent="0"></i></span>
+                <span class="rating__percent">0%</span>
+              </p>
+            </div>
+
+          </div>
+
+          <div class="rating__custom-percent">
+            <p>
+               <span class="rating__custom-percent-number">0%</span>   <!--If here will be 0% then some text will be gray as the design-->
+              <span>Of customers would recommend</span>
+            </p>
+          </div>
+
+          <div class="profile-info__btn-wrapper  profile-info__share">
+            <p>Share your <br> profile</p>
+            <p class="profile-info__share-text  profile-info__share-text--hide">You’ll be able to share your profile once your identity is verified</p>
+
+            <p class="profile-info__social-list  profile-info__social-list--bigger">
+
+              <a class="profile-info__social  profile-info__social--ln" href="#" title="Linkedin">
+                Linkedin
+                <svg class="icon  icon-social-linkedin">
+                  <use xlink:href="img/sprite/sprite.svg#social-linkedin"></use>
+                </svg>
+              </a>
+
+              <a class="profile-info__social  profile-info__social--fb" href="#" title="Facebook">
+                Facebook
+                <svg class="icon  icon-social-facebook">
+                  <use xlink:href="img/sprite/sprite.svg#social-facebook"></use>
+                </svg>
+              </a>
+
+              <!-- <a class="profile-info__social  profile-info__social--fb" href="#" title="Facebook">
+                Facebook
+                <svg class="icon  icon-social-facebook">
+                  <use xlink:href="img/sprite/sprite.svg#social-facebook"></use>
+                </svg>
+              </a>
+
+              <a class="profile-info__social  profile-info__social--inst" href="#" title="Instagram">
+                Instagram
+                <svg class="icon  icon-social-instagram">
+                  <use xlink:href="img/sprite/sprite.svg#social-instagram"></use>
+                </svg>
+              </a>
+
+              <a class="profile-info__social  profile-info__social--tw" href="#" title="Twitter">
+                Twitter
+                <svg class="icon  icon-social-twitter">
+                  <use xlink:href="img/sprite/sprite.svg#social-twitter"></use>
+                </svg>
+              </a>
+
+              <a class="profile-info__social  profile-info__social--ln" href="#" title="Linkedin">
+                Linkedin
+                <svg class="icon  icon-social-linkedin">
+                  <use xlink:href="img/sprite/sprite.svg#social-linkedin"></use>
+                </svg>
+              </a>
+
+              <a class="profile-info__social  profile-info__social--yt" href="#" title="YouTube">
+                YouTube
+                <svg class="icon  icon-social-youtube">
+                  <use xlink:href="img/sprite/sprite.svg#social-youtube"></use>
+                </svg>
+              </a> -->
+
+            </p>
+
+          </div>
+
+        </section>
+
+        <section class="broker-feedback">
+          <div class="broker-feedback__list"></div>
+
+          <div class="broker-feedback__no-feedbacks">
+            <svg class="icon  icon-write-review">
+              <use xlink:href="img/sprite/sprite.svg#write-review"></use>
+            </svg>
+
+            <p>
+              You don’t have any reviews yet.
+            </p>
+          </div>
+        </section>
+
+      </main>
+
+      <footer>
+        <div class="page-nav">
+          <div>
+
+          </div>
+
+          <div class="page-nav__list">
+
+            <span>
+              <input type="radio" value="page-1" name="page" id="deal-page-1" checked>
+              <label class="btn--vertical" for="deal-page-1">1</label>
+            </span>
+
+            <span>
+              <input type="radio" value="page-2" name="page" id="deal-page-2">
+              <label class="btn--vertical" for="deal-page-2">2</label>
+            </span>
+
+            <span>
+              <input type="radio" value="page-3" name="page" id="deal-page-3">
+              <label class="btn--vertical" for="deal-page-3">3</label>
+            </span>
+
+            <span>
+              <input type="radio" value="page-4" name="page" id="deal-page-4">
+              <label class="btn--vertical" for="deal-page-4">4</label>
+            </span>
+
+          </div>
+          <a class="page-nav__btn-top" href="#top">Back to top <span>&uarr;</span></a>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__nav">
+      <a class="footer__link" href="#">Calculators</a>
+      <a class="footer__link" href="#">Education</a>
+      <a class="footer__link" href="#">FAQ</a>
+      <a class="footer__link" href="#">Privacy</a>
+      <a class="footer__link" href="#">For brokers</a>
+    </div>
+    <a class="logo  logo--footer" href="index.html">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <p class="footer__copy">
+      &copy; 2018 mortgagebrokers.com. <br />
+        all rights recerved.
+    </p>
+  </footer>
+
+  <section class="modal-feedback  modal" id="modal-feedback">
+    <header>
+      <svg class="icon  icon-start">
+        <use xlink:href="img/sprite/sprite.svg#start"></use>
+      </svg>
+
+      <span>write a review</span>
+
+      <button class="modal-close"></button>
+    </header>
+
+    <main>
+      <img class="modal-feedback__img" src="" alt="">
+      <h4 class="modal-feedback__name">
+        <span class="modal-feedback__name-first">Steven</span>
+        <span class="modal-feedback__name-last">Dunn</span>
+      </h4>
+
+      <form class="modal-feedback__form" action="/">
+
+        <div class="modal-feedback__stars">
+          <input id="rate1-star5" type="radio" name="rate1" value="5" />
+          <label for="rate1-star5" title="Excellent">
+            <svg class="icon  icon-start">
+              <use xlink:href="img/sprite/sprite.svg#start"></use>
+            </svg>
+          </label>
+
+          <input id="rate1-star4" type="radio" name="rate1" value="4" />
+          <label for="rate1-star4" title="Good">
+            <svg class="icon  icon-start">
+              <use xlink:href="img/sprite/sprite.svg#start"></use>
+            </svg>
+          </label>
+
+          <input id="rate1-star3" type="radio" name="rate1" value="3" />
+          <label for="rate1-star3" title="Satisfactory">
+            <svg class="icon  icon-start">
+              <use xlink:href="img/sprite/sprite.svg#start"></use>
+            </svg>
+          </label>
+
+          <input id="rate1-star2" type="radio" name="rate1" value="2" />
+          <label for="rate1-star2" title="Bad">
+            <svg class="icon  icon-start">
+              <use xlink:href="img/sprite/sprite.svg#start"></use>
+            </svg>
+          </label>
+
+          <input id="rate1-star1" type="radio" name="rate1" value="1" />
+          <label for="rate1-star1" title="Very bad">
+            <svg class="icon  icon-start">
+              <use xlink:href="img/sprite/sprite.svg#start"></use>
+            </svg>
+          </label>
+        </div>
+
+        <label class="modal-feedback__label">
+          <span>Your review’s title</span>
+          <input class="modal-feedback__input" name="reviews-title" type="text" data-max="150" required>
+          <i><span>0</span> / 150</i>
+        </label>
+
+        <label class="modal-feedback__label">
+          <span>Say something about Alexandra</span>
+          <textarea class="modal-feedback__input  modal-feedback__input--textarea" name="feedback-text" data-max="1500" required></textarea>
+          <i><span>0</span> / 1500</i>
+        </label>
+
+        <input class="modal-feedback__btn  btn  btn--vertical" type="submit" value="Post your review">
+      </form>
+    </main>
+  </section>
+
+  <section class="modal-thanks-review  modal" id="modal-thanks-review">
+    <svg class="icon  icon-success">
+      <use xlink:href="img/sprite/sprite.svg#success"></use>
+    </svg>
+    <h4>Thank you for your review!</h4>
+    <button class="modal-close"></button>
+  </section>
+
+  <section class="modal-registered  modal" id="modal-registered">
+    <svg class="icon  icon-write-review">
+      <use xlink:href="img/sprite/sprite.svg#write-review"></use>
+    </svg>
+    <h4>If you like to write a review log-in now!</h4>
+    <a class="modal__btn  btn  login-link  btn--vertical" href="#">
+      <span>Log in</span>
+    </a>
+    <a class="modal__btn  btn  signup-link  btn--vertical" href="#">
+      <span>Sign up</span>
+    </a>
+    <button class="modal-close"></button>
+  </section>
+
+  <section class="modal-login  modal" id="modal-login">
+    <a class="logo  logo--modal" href="index.html">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <h4 class="modal-login__title">Please, login to continue...</h4>
+    <p class="modal-login__text">
+      <span>Don’t have an account?</span>
+      <a class="sign-up-link  modal-link" href="#">Sign Up</a>
+
+      <form class="modal-login__form" action="/">
+        <input class="modal-login__input  modal-login__input--email" type="email" value="" name="email" placeholder="email" required>
+
+        <div>
+          <input class="modal-login__input  modal-login__input--password" type="password" value="" name="password" placeholder="password" required>
+          <a href="#" class="modal-login__btn-forgot">Forgot?</a>
+        </div>
+
+        <input class="modal-login__btn  btn  btn--vertical" type="submit" value="continue">
+      </form>
+    </p>
+    <button class="modal-close"></button>
+  </section>
+
+  <section class="modal-sign  modal" id="modal-sign">
+    <a class="logo  logo--modal" href="index.html">
+      <svg class="icon  icon-logo">
+        <use xlink:href="img/sprite/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <h4 class="modal-sign__title">Sign Up</h4>
+    <p class="modal-sign__text">
+      <span>Do you have an account?</span>
+      <a class="login-link  modal-link" href="#">Log In</a>
+
+      <form class="modal-sign__form" action="/">
+        <span class="modal-sign-wrapper">
+          <select class="modal-sign__input  modal-sign__input--select" size="1" name="sign-in" onchange="handleChange(this)">
+            <option value="I'm, a borrower" selected>I'm, a borrower</option>
+            <option value="I'm, a broker">I'm, a broker</option>
+          </select>
+          <i class="modal-select__textbox">I'm, a borrower</i>
+        </span>
+
+        <div class="modal-sign__wrapper">
+          <div>
+            <input class="modal-sign__input  modal-sign__input--first-name" type="text" value="" name="first-name" placeholder="first name" required>
+            <input class="modal-sign__input  modal-sign__input--last-name" type="text" value="" name="last-name" placeholder="last name" required>
+          </div>
+          <div>
+            <input class="modal-sign__input  modal-sign__input--email" type="email" value="" name="email" placeholder="email" required>
+            <input class="modal-sign__input  modal-sign__input--confirm-email" type="email" value="" name="confirm-email" placeholder="confirm email" required>
+          </div>
+          <div>
+            <input class="modal-sign__input  modal-sign__input--password" type="password" value="" name="pasword" placeholder="pasword" required>
+            <input class="modal-sign__input  modal-sign__input--confirm-password" type="password" value="" name="confirm-pasword" placeholder="confirm pasword" required>
+          </div>
+        </div>
+
+        <input class="modal-sign__btn  btn  btn--vertical" type="submit" value="continue">
+
+      </form>
+
+      <p class="modal-sign__copy">By creating my account, I agree to the <a href="#">Terms & conditions</a> and <a href="#">Privacy Policy</a></p>
+      <button class="modal-close"></button>
+  </section>
+
+  <section class="modal-must-verified  modal" id="modal-must-verified">
+    <svg class="icon  icon-not-verified-cellphone">
+      <use xlink:href="img/sprite/sprite.svg#not-verified-cellphone"></use>
+    </svg>
+    <h4>Please, quickly verify your cellphone in order to write a review</h4>
+    <a class="modal__btn  btn  must-verified-link  btn--vertical" href="#">
+      <span>Continue</span>
+    </a>
+    <button class="modal-close"></button>
+  </section>
+
+
+  <script>
+    function handleChange (el) {
+      el
+      .nextElementSibling
+      .innerHTML = el.value
+    }
+  </script>
+
+  <script src="js/svg4everybody-min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

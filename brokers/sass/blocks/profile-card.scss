@@ -1,4 +1,5 @@
 .mobile-hide {
+  margin-top: -5px;
   z-index: 1;
   width: 100%;
   padding-left: 10px;
@@ -169,7 +170,7 @@
 
 .profile-info__social {
   font-size: 0;
-  margin: 0 9px;
+  margin: 0 5px;
 
   &:first-of-type {
     margin-left: 0;
@@ -239,5 +240,37 @@
   &--hide {
     display: none;
     line-height: 41px;
+  }
+  &--edit {
+    height: 60px;
+    background: none;
+    border: 1px solid $color-gray;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.4px;
+    color: $color-gray;
+
+    &:hover {
+      background-color: $color-gray;
+      color: $color-white;
+    }
+  }
+}
+
+.profile-info__licence {
+  svg {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-left: 5px;
+    position: relative;
+    bottom: 2px;
+  }
+  &--process {
+    color: $color-purple;
+    vertical-align: middle;
   }
 }

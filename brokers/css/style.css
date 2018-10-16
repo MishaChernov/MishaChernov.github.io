@@ -3315,6 +3315,10 @@ select {
   font-size: 1.6rem;
   width: 1em; }
 
+.icon-clock {
+  font-size: 1.6rem;
+  width: 1em; }
+
 .icon-info-filled {
   font-size: 1.6rem;
   width: 0.75em; }
@@ -9668,6 +9672,66 @@ footer.featured-card__wrapper {
   text-align: left; }
   .profile-form__label--half {
     flex-basis: 48%; }
+  .profile-form__label--fourth {
+    flex-basis: 22%; }
+    .profile-form__label--fourth .profile-form__label-name {
+      flex-basis: 100%; }
+
+.profile-form__label .language__list {
+  top: 60px; }
+
+.profile-form__label .language__btn {
+  position: relative;
+  margin-top: 7px;
+  flex-basis: 100%;
+  padding-left: 10px;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  line-height: 40px;
+  font-size: 0;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #8a8c8f;
+  border: solid 1px #d1d2d4; }
+  .profile-form__label .language__btn::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    transform: translateY(-50%) rotate(-45deg);
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-left: 2px solid #8a8c8f;
+    border-bottom: 2px solid #8a8c8f;
+    transition: 500ms ease; }
+
+.profile-form__label--morgage .profile-form__label-name {
+  margin-bottom: 7px; }
+
+.profile-form__label--morgage .request__flex-wrapper {
+  width: 100%; }
+
+.profile-form__label--morgage input[type="radio"] {
+  display: none; }
+
+.profile-form__label--morgage .request__item {
+  max-width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+  flex-basis: 25%;
+  width: 100% !important;
+  box-shadow: 0 0 0 1px #d1d2d4; }
+  .profile-form__label--morgage .request__item span {
+    padding: 0;
+    height: auto;
+    line-height: 60px; }
 
 .profile-form__label-name {
   display: block;
@@ -10711,6 +10775,7 @@ footer.featured-card__wrapper {
     text-align: center; }
 
 .mobile-hide {
+  margin-top: -5px;
   z-index: 1;
   width: 100%;
   padding-left: 10px;
@@ -10855,7 +10920,7 @@ footer.featured-card__wrapper {
 
 .profile-info__social {
   font-size: 0;
-  margin: 0 9px; }
+  margin: 0 5px; }
   .profile-info__social:first-of-type {
     margin-left: 0; }
   .profile-info__social svg {
@@ -10903,6 +10968,32 @@ footer.featured-card__wrapper {
   .profile-info__btn--hide {
     display: none;
     line-height: 41px; }
+  .profile-info__btn--edit {
+    height: 60px;
+    background: none;
+    border: 1px solid #8a8c8f;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.4px;
+    color: #8a8c8f; }
+    .profile-info__btn--edit:hover {
+      background-color: #8a8c8f;
+      color: #ffffff; }
+
+.profile-info__licence svg {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-left: 5px;
+  position: relative;
+  bottom: 2px; }
+
+.profile-info__licence--process {
+  color: #382c75;
+  vertical-align: middle; }
 
 .profile-about {
   margin-top: 35px;
@@ -11006,6 +11097,55 @@ footer.featured-card__wrapper {
 
 .profile-info__options--no-active .rating__item-stars {
   color: #8a8c8f !important; }
+
+.profile-info__share {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .profile-info__share p {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.4px;
+    text-transform: uppercase; }
+    .profile-info__share p:first-of-type {
+      margin: 0 10px; }
+  .profile-info__share .profile-info__social-list {
+    margin-left: 20px; }
+  .profile-info__share .profile-info__social {
+    width: 32px;
+    height: 32px;
+    margin: 3px 0;
+    margin-right: 10px; }
+    .profile-info__share .profile-info__social svg {
+      width: 100%;
+      height: 100%; }
+
+.number-not-verified .profile-info__social svg {
+  fill: #8a8c8f;
+  cursor: default; }
+
+.number-not-verified .profile-info__share-text--hide {
+  display: block;
+  max-width: 55%;
+  margin: 0 10px;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px; }
+
+.number-not-verified .profile-info__share p {
+  color: #8a8c8f; }
+  .number-not-verified .profile-info__share p:first-of-type {
+    display: none; }
+
+.number-not-verified .profile-info__share .profile-info__social svg {
+  fill: #8a8c8f;
+  cursor: default; }
 
 .broker-feedback__item {
   margin: 40px 0;
@@ -11827,6 +11967,16 @@ footer.featured-card__wrapper {
   .page-find-brokers .featured-card {
     margin: 7px 5% !important; } }
 
+@media (min-width: 800px) and (max-width: 1200px) {
+  .profile-info__licence {
+    position: relative; }
+    .profile-info__licence svg {
+      position: absolute;
+      right: -3px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); } }
+
 @media (min-width: 800px) and (max-width: 885px) {
   .btn--color-purple {
     padding-top: 12px !important;
@@ -11836,427 +11986,6 @@ footer.featured-card__wrapper {
 @media (min-width: 900px) and (max-width: 1200px) {
   .page-find-brokers .featured-card {
     margin: 10px 3% !important; } }
-
-@media (max-width: 1282px) {
-  .search {
-    position: relative;
-    padding-top: 15px;
-    padding-bottom: 36px; }
-    .search--deals {
-      padding-bottom: 30px; }
-    .search .search__title {
-      margin-top: 20px; }
-  .search__popular {
-    display: block; }
-  .search--deals .search__form {
-    margin-top: -382px;
-    opacity: 0;
-    top: -300px;
-    position: relative; }
-  .search__button {
-    display: block; }
-  .search__submit {
-    flex-basis: calc(50% - 14px);
-    max-width: calc(50% - 14px); }
-  .search__item {
-    flex-basis: calc(50% - 14px);
-    max-width: calc(50% - 14px); }
-    .search__item--range {
-      flex-basis: 100%;
-      max-width: 100%;
-      width: 100%; }
-      .search__item--range input {
-        width: 47%; }
-  .deal-card__info {
-    flex-wrap: wrap; }
-  .deal-card__wrapper {
-    width: auto; }
-    .deal-card__wrapper--controls {
-      border-top: 1px solid #f1f2f2;
-      margin-top: 14px;
-      flex-direction: row;
-      max-width: 100%;
-      width: 100%; }
-      .deal-card__wrapper--controls p {
-        border-bottom: none;
-        border-left: none; }
-        .deal-card__wrapper--controls p:first-of-type {
-          padding: 10px 0; }
-          .deal-card__wrapper--controls p:first-of-type b {
-            font-size: 20px; }
-        .deal-card__wrapper--controls p:last-of-type {
-          border-right: none; }
-        .deal-card__wrapper--controls p a::after {
-          display: none !important; }
-  .deal-card__item {
-    margin: 10px 0;
-    margin-right: 0;
-    margin-left: 0px; }
-    .deal-card__item img {
-      margin-right: 0;
-      width: 104%;
-      max-width: 260px; }
-  .deal-card__info {
-    width: auto;
-    flex-basis: auto;
-    padding-left: 0px; }
-  .deal-card__wrapper--description {
-    margin-left: 20px;
-    padding-right: 11px; }
-    .deal-card__wrapper--description p:nth-of-type(2) {
-      width: 127px;
-      margin-left: auto; }
-  .deal-card__description {
-    margin-top: 28px; }
-  .deal-card__wrapper p b {
-    font-size: 16px;
-    font-weight: 400; }
-  .deal-card__borrower {
-    font-size: 20px !important; }
-  .deal-card__wrapper--controls p:last-child a svg {
-    display: none; }
-  .page-nav {
-    margin-right: 30px;
-    margin-top: 13px;
-    margin-bottom: 16px; }
-  .featured-card {
-    position: relative;
-    padding-bottom: 110px;
-    height: 466px; }
-    .featured-card footer {
-      position: absolute;
-      bottom: 0; }
-  .intro__card {
-    margin: 0 10px; }
-  .intro__card-list {
-    max-width: 100%;
-    padding: 0 !important; }
-  .page-find-brokers .page-nav {
-    margin-top: 5px; }
-  .page-find-brokers header.featured-card__wrapper {
-    padding: 0px 15px;
-    padding-top: 16px;
-    padding-left: 22px;
-    padding-bottom: 5px; }
-  .page-find-brokers main.featured-card__wrapper {
-    padding-left: 21px;
-    padding-right: 10px; }
-  .page-find-brokers .search__submit {
-    margin-top: 31px; }
-  .page-find-brokers .search__item {
-    margin-top: 31px; }
-  .page-find-brokers .search__item-text {
-    margin-bottom: 5px; }
-  .page-find-brokers .search {
-    padding-bottom: 27px;
-    padding-top: 1px; }
-  .page-find-brokers .featured__cards {
-    justify-content: space-around; }
-  .page-find-brokers .featured-card {
-    width: 240px !important;
-    margin: 10px;
-    box-sizing: border-box; }
-  .page-find-brokers .featured-card__wrapper .btn {
-    padding: 33px 20px;
-    letter-spacing: 1.5px; }
-  .page-find-brokers footer.featured-card__wrapper .btn:last-child {
-    background-color: #ffffff;
-    color: #0cb175; }
-    .page-find-brokers footer.featured-card__wrapper .btn:last-child:hover {
-      background-color: #0cb175;
-      color: #ffffff; }
-  .language__list {
-    top: 61px; }
-  .my-request {
-    margin-top: -10px; }
-    .my-request .deal-card__img-wrapper {
-      min-width: auto;
-      max-width: 257px;
-      width: 100%; }
-    .my-request .deal-card__img-wrapper {
-      margin-right: 0; }
-    .my-request .deal-card__wrapper--controls {
-      max-width: 100%;
-      height: 63px;
-      margin-top: auto;
-      flex-wrap: nowrap; }
-      .my-request .deal-card__wrapper--controls p {
-        width: auto; }
-        .my-request .deal-card__wrapper--controls p:first-child {
-          width: auto;
-          padding: 0 25px;
-          max-width: 100px;
-          box-sizing: border-box; }
-      .my-request .deal-card__wrapper--controls .deal-card__time {
-        font-size: 20px; }
-    .my-request .deal-card__wrapper-info {
-      height: 100%;
-      width: 230px; }
-      .my-request .deal-card__wrapper-info p:first-child {
-        border-right: 1px solid #f1f2f2; }
-    .my-request .deal-card__buttons {
-      flex-direction: row;
-      flex-wrap: nowrap; }
-    .my-request .deal-card__item {
-      margin: 19px 0; }
-    .my-request .deal-card__item--draft .deal-card__buttons div {
-      height: 100%; }
-    .my-request .deal-card__item--draft .deal-card__buttons .btn {
-      height: 100%; }
-    .my-request .deal-card__description {
-      margin-top: 42px; }
-    .my-request .deal-card__description p br {
-      display: none; }
-    .my-request .deal-card__tab-wrapper {
-      padding-top: 10px; }
-    .my-request .deal-card__buttons {
-      overflow: hidden; }
-      .my-request .deal-card__buttons .btn {
-        font-size: 12px;
-        line-height: 63px;
-        border-top: none;
-        padding: 0; }
-      .my-request .deal-card__buttons div .btn {
-        font-size: 12px; }
-    .my-request .deal-card__buttons--new .btn {
-      font-size: 16px;
-      font-weight: bold; }
-    .my-request .deal-card__item--draft .deal-card__buttons .btn {
-      font-size: 16px;
-      font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: 0.8px;
-      text-align: center; }
-  .request-card {
-    width: 260px; }
-  .request-card__name {
-    font-size: 24px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal; }
-  .request-card__image-wrapper {
-    width: 260px;
-    height: 260px; }
-  .request-card__image {
-    width: 100%;
-    height: 100%; }
-  .request-info {
-    padding-top: 22px;
-    padding-left: 20px;
-    padding-right: 10px; }
-    .request-info p {
-      margin-bottom: 22px; }
-      .request-info p:last-child {
-        margin-bottom: 5px; }
-      .request-info p b {
-        font-size: 16px; }
-    .request-info br {
-      display: none; }
-  .request-info__description p {
-    margin-top: 5px;
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 17px;
-    letter-spacing: normal;
-    padding-right: 10px; }
-  .request-info__options {
-    margin-top: 14px;
-    margin-bottom: 15px; }
-  .request-about {
-    padding-left: 7px; }
-  .request-header {
-    margin-bottom: 20px; }
-  .request-header p b {
-    font-size: 16px;
-    font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal; }
-  .request-header p {
-    margin-bottom: 4px; }
-    .request-header p:last-child {
-      margin-bottom: 0px; }
-  .request-header__wrapper {
-    padding-right: 10px; }
-    .request-header__wrapper:last-child {
-      padding-left: 20px; }
-  .request-details__name-wrapper {
-    margin-top: 32px;
-    margin-bottom: 11px; }
-    .request-details__name-wrapper b {
-      font-size: 10px; }
-  .request-details__name {
-    font-size: 24px;
-    display: block;
-    margin-bottom: -39px; }
-  .request-header__title {
-    margin-bottom: 11px;
-    font-size: 14px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 1.4px; }
-  .request-header__name {
-    font-size: 16px;
-    margin-right: 15px; }
-  .request-info__description {
-    margin-bottom: 37px; }
-  .request-hint {
-    padding-top: 21px; }
-  .request-hint__wrapper h4 {
-    font-size: 20px;
-    margin-bottom: 15px; }
-    .request-hint__wrapper h4 span {
-      display: block; }
-  .request__info-wrapper {
-    margin: 0 20px; }
-  .request__item--mortgage .request__item-text--height {
-    height: 250px; }
-  .good-to-know p {
-    padding-bottom: 25px;
-    font-size: 14px; }
-  .request__hint-wrapper {
-    padding-bottom: 21px;
-    margin-bottom: 20px; }
-    .request__hint-wrapper p {
-      font-size: 20px; }
-  .request-hint__brokers-list {
-    padding: 0 20px;
-    margin-top: 20px; }
-  .request-hint__broker {
-    margin: 20px 0; }
-  .choose-broker {
-    padding-bottom: 0; }
-  .choose-broker__name {
-    font-size: 16px; }
-  .choose-broker__img {
-    margin-right: 9px; }
-  .choose-broker--verified .choose-broker__name span::after {
-    right: -19px; }
-  .choose-broker__online {
-    display: block;
-    margin-top: 5px;
-    font-size: 10px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 10px;
-    letter-spacing: 1px; }
-    .choose-broker__online br {
-      display: block; }
-    .choose-broker__online b {
-      display: none; }
-  .choose-broker__img-wrapper {
-    max-width: 310px; }
-  .choose-broker__img-wrapper {
-    order: 1;
-    max-width: none;
-    flex-basis: 75%; }
-  .choose-broker__star {
-    order: 2;
-    flex-basis: 25%; }
-  .choose-broker__info:nth-of-type(2) {
-    order: 3;
-    border-top: 1px solid #f1f2f2;
-    padding-top: 5px; }
-  .choose-broker__info:nth-of-type(3) {
-    order: 4;
-    border-top: 1px solid #f1f2f2;
-    padding-top: 5px; }
-  .choose-broker__info:nth-of-type(4) {
-    order: 5;
-    border-top: 1px solid #f1f2f2;
-    padding-top: 5px; }
-  .choose-broker__info:nth-of-type(5) {
-    order: 6; }
-  .choose-broker__info:nth-of-type(6) {
-    order: 7; }
-  .choose-broker__comments {
-    order: 8; }
-  .choose-broker__btn:nth-of-type(1) {
-    order: 9; }
-  .choose-broker__btn:nth-of-type(2) {
-    order: 10; }
-  .choose-broker__info {
-    border-top: none;
-    align-items: left;
-    padding-left: 20px !important;
-    flex-basis: 33.3%;
-    align-content: flex-start; }
-    .choose-broker__info:last-of-type {
-      margin-right: auto; }
-  .choose-broker__info {
-    height: 58px; }
-    .choose-broker__info b {
-      font-size: 16px; }
-  .choose-broker__comments {
-    margin-top: 10px; }
-    .choose-broker__comments p {
-      font-size: 16px; }
-  .choose-broker__btn {
-    margin-top: 17px;
-    border-top: 1px solid #f1f2f2;
-    flex-basis: 50%;
-    height: 60px;
-    padding: 0;
-    min-height: 60px;
-    box-sizing: border-box;
-    max-width: none !important;
-    width: 100%; }
-    .choose-broker__btn br {
-      display: none; }
-  .request-hint {
-    margin-bottom: 20px; }
-  .page-request .search__item--money::before,
-  .page-find-brokers .search__item--money::before {
-    top: 38px; }
-  .page-broker-registration .preview {
-    padding-top: 20px;
-    padding-bottom: 20px; }
-  .page-broker-registration .preview__title {
-    margin-top: 10px;
-    font-size: 24px; }
-  .page-broker-registration .preview__img {
-    width: 100px;
-    height: 100px; }
-  .page-broker-registration .preview__steps {
-    padding: 0; }
-  .request__item {
-    margin: 14px 0px !important; }
-  .request__wrapper--mortgage .request__item {
-    margin: 0px !important; }
-  .request__item--mortgage {
-    width: 100%;
-    flex-basis: 100%; }
-  .request__wrapper--about .request__item {
-    width: 49% !important;
-    max-width: 100% !important; }
-  .request__wrapper--company .request__flex-wrapper {
-    flex-wrap: wrap; }
-  .request__wrapper--company .request__item {
-    width: 49% !important;
-    max-width: 100% !important;
-    margin-left: 0;
-    margin-right: 0; }
-    .request__wrapper--company .request__item:nth-child(3), .request__wrapper--company .request__item:nth-child(4), .request__wrapper--company .request__item:nth-child(5), .request__wrapper--company .request__item:nth-child(6) {
-      flex-basis: auto;
-      max-width: 100% !important;
-      width: 49% !important; }
-    .request__wrapper--company .request__item:nth-child(7) {
-      width: 100% !important;
-      max-width: 100% !important; }
-  .request__step .good-to-know {
-    margin: 20px; }
-  .request__step .good-to-know p {
-    font-size: 20px; } }
 
 @media (max-width: 1200px) {
   .container {
@@ -13237,7 +12966,29 @@ footer.featured-card__wrapper {
   .request__step-wrapper--checked .card-plan--second {
     height: 784px; }
   .page-broker-registration .request__step--third {
-    padding-bottom: 0; } }
+    padding-bottom: 0; }
+  .profile-form__label--fax .profile-form__label-name {
+    flex-basis: 100%; }
+  .profile-form__label--fourth {
+    flex-basis: 48%; }
+  .profile-form__label--morgage .profile-form__label-name {
+    margin-bottom: 7px; }
+  .profile-form__label--morgage .request__item {
+    flex-basis: 48%;
+    margin: 0 !important;
+    margin-bottom: 0px !important;
+    box-shadow: none; }
+    .profile-form__label--morgage .request__item span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60px;
+      padding: 0 30px;
+      box-sizing: border-box;
+      box-shadow: none;
+      box-shadow: 0 0 0 1px #f1f2f2; }
+      .profile-form__label--morgage .request__item span i {
+        flex: 2; } }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
   .intro {
@@ -13546,7 +13297,7 @@ footer.featured-card__wrapper {
   .page-find-brokers .featured-card__wrapper--footer {
     width: 100%; }
   .rating__line {
-    width: 86px; }
+    width: 86px !important; }
   .profile-header p {
     margin-bottom: 18px; }
     .profile-header p:first-child {
@@ -13705,7 +13456,13 @@ footer.featured-card__wrapper {
     width: 100% !important; }
     .page-broker-registration .request__item:nth-child(3), .page-broker-registration .request__item:nth-child(4), .page-broker-registration .request__item:nth-child(5), .page-broker-registration .request__item:nth-child(6) {
       max-width: 100% !important;
-      width: 100% !important; } }
+      width: 100% !important; }
+  .number-not-verified .profile-info__share-text--hide {
+    margin: 0;
+    margin-left: 5px;
+    max-width: 62%; }
+  .profile-info__share .profile-info__social-list {
+    margin-left: 10px; } }
 
 @media (prefers-reduced-motion) {
   .animated {
@@ -13718,6 +13475,427 @@ footer.featured-card__wrapper {
     padding-top: 12px !important;
     box-sizing: border-box;
     line-height: normal !important; } }
+
+@media (max-width: 1282px) {
+  .search {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 36px; }
+    .search--deals {
+      padding-bottom: 30px; }
+    .search .search__title {
+      margin-top: 20px; }
+  .search__popular {
+    display: block; }
+  .search--deals .search__form {
+    margin-top: -382px;
+    opacity: 0;
+    top: -300px;
+    position: relative; }
+  .search__button {
+    display: block; }
+  .search__submit {
+    flex-basis: calc(50% - 14px);
+    max-width: calc(50% - 14px); }
+  .search__item {
+    flex-basis: calc(50% - 14px);
+    max-width: calc(50% - 14px); }
+    .search__item--range {
+      flex-basis: 100%;
+      max-width: 100%;
+      width: 100%; }
+      .search__item--range input {
+        width: 47%; }
+  .deal-card__info {
+    flex-wrap: wrap; }
+  .deal-card__wrapper {
+    width: auto; }
+    .deal-card__wrapper--controls {
+      border-top: 1px solid #f1f2f2;
+      margin-top: 14px;
+      flex-direction: row;
+      max-width: 100%;
+      width: 100%; }
+      .deal-card__wrapper--controls p {
+        border-bottom: none;
+        border-left: none; }
+        .deal-card__wrapper--controls p:first-of-type {
+          padding: 10px 0; }
+          .deal-card__wrapper--controls p:first-of-type b {
+            font-size: 20px; }
+        .deal-card__wrapper--controls p:last-of-type {
+          border-right: none; }
+        .deal-card__wrapper--controls p a::after {
+          display: none !important; }
+  .deal-card__item {
+    margin: 10px 0;
+    margin-right: 0;
+    margin-left: 0px; }
+    .deal-card__item img {
+      margin-right: 0;
+      width: 104%;
+      max-width: 260px; }
+  .deal-card__info {
+    width: auto;
+    flex-basis: auto;
+    padding-left: 0px; }
+  .deal-card__wrapper--description {
+    margin-left: 20px;
+    padding-right: 11px; }
+    .deal-card__wrapper--description p:nth-of-type(2) {
+      width: 127px;
+      margin-left: auto; }
+  .deal-card__description {
+    margin-top: 28px; }
+  .deal-card__wrapper p b {
+    font-size: 16px;
+    font-weight: 400; }
+  .deal-card__borrower {
+    font-size: 20px !important; }
+  .deal-card__wrapper--controls p:last-child a svg {
+    display: none; }
+  .page-nav {
+    margin-right: 30px;
+    margin-top: 13px;
+    margin-bottom: 16px; }
+  .featured-card {
+    position: relative;
+    padding-bottom: 110px;
+    height: 466px; }
+    .featured-card footer {
+      position: absolute;
+      bottom: 0; }
+  .intro__card {
+    margin: 0 10px; }
+  .intro__card-list {
+    max-width: 100%;
+    padding: 0 !important; }
+  .page-find-brokers .page-nav {
+    margin-top: 5px; }
+  .page-find-brokers header.featured-card__wrapper {
+    padding: 0px 15px;
+    padding-top: 16px;
+    padding-left: 22px;
+    padding-bottom: 5px; }
+  .page-find-brokers main.featured-card__wrapper {
+    padding-left: 21px;
+    padding-right: 10px; }
+  .page-find-brokers .search__submit {
+    margin-top: 31px; }
+  .page-find-brokers .search__item {
+    margin-top: 31px; }
+  .page-find-brokers .search__item-text {
+    margin-bottom: 5px; }
+  .page-find-brokers .search {
+    padding-bottom: 27px;
+    padding-top: 1px; }
+  .page-find-brokers .featured__cards {
+    justify-content: space-around; }
+  .page-find-brokers .featured-card {
+    width: 240px !important;
+    margin: 10px;
+    box-sizing: border-box; }
+  .page-find-brokers .featured-card__wrapper .btn {
+    padding: 33px 20px;
+    letter-spacing: 1.5px; }
+  .page-find-brokers footer.featured-card__wrapper .btn:last-child {
+    background-color: #ffffff;
+    color: #0cb175; }
+    .page-find-brokers footer.featured-card__wrapper .btn:last-child:hover {
+      background-color: #0cb175;
+      color: #ffffff; }
+  .language__list {
+    top: 61px; }
+  .my-request {
+    margin-top: -10px; }
+    .my-request .deal-card__img-wrapper {
+      min-width: auto;
+      max-width: 257px;
+      width: 100%; }
+    .my-request .deal-card__img-wrapper {
+      margin-right: 0; }
+    .my-request .deal-card__wrapper--controls {
+      max-width: 100%;
+      height: 63px;
+      margin-top: auto;
+      flex-wrap: nowrap; }
+      .my-request .deal-card__wrapper--controls p {
+        width: auto; }
+        .my-request .deal-card__wrapper--controls p:first-child {
+          width: auto;
+          padding: 0 25px;
+          max-width: 100px;
+          box-sizing: border-box; }
+      .my-request .deal-card__wrapper--controls .deal-card__time {
+        font-size: 20px; }
+    .my-request .deal-card__wrapper-info {
+      height: 100%;
+      width: 230px; }
+      .my-request .deal-card__wrapper-info p:first-child {
+        border-right: 1px solid #f1f2f2; }
+    .my-request .deal-card__buttons {
+      flex-direction: row;
+      flex-wrap: nowrap; }
+    .my-request .deal-card__item {
+      margin: 19px 0; }
+    .my-request .deal-card__item--draft .deal-card__buttons div {
+      height: 100%; }
+    .my-request .deal-card__item--draft .deal-card__buttons .btn {
+      height: 100%; }
+    .my-request .deal-card__description {
+      margin-top: 42px; }
+    .my-request .deal-card__description p br {
+      display: none; }
+    .my-request .deal-card__tab-wrapper {
+      padding-top: 10px; }
+    .my-request .deal-card__buttons {
+      overflow: hidden; }
+      .my-request .deal-card__buttons .btn {
+        font-size: 12px;
+        line-height: 63px;
+        border-top: none;
+        padding: 0; }
+      .my-request .deal-card__buttons div .btn {
+        font-size: 12px; }
+    .my-request .deal-card__buttons--new .btn {
+      font-size: 16px;
+      font-weight: bold; }
+    .my-request .deal-card__item--draft .deal-card__buttons .btn {
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.8px;
+      text-align: center; }
+  .request-card {
+    width: 260px; }
+  .request-card__name {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal; }
+  .request-card__image-wrapper {
+    width: 260px;
+    height: 260px; }
+  .request-card__image {
+    width: 100%;
+    height: 100%; }
+  .request-info {
+    padding-top: 22px;
+    padding-left: 20px;
+    padding-right: 10px; }
+    .request-info p {
+      margin-bottom: 22px; }
+      .request-info p:last-child {
+        margin-bottom: 5px; }
+      .request-info p b {
+        font-size: 16px; }
+    .request-info br {
+      display: none; }
+  .request-info__description p {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 17px;
+    letter-spacing: normal;
+    padding-right: 10px; }
+  .request-info__options {
+    margin-top: 14px;
+    margin-bottom: 15px; }
+  .request-about {
+    padding-left: 7px; }
+  .request-header {
+    margin-bottom: 20px; }
+  .request-header p b {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal; }
+  .request-header p {
+    margin-bottom: 4px; }
+    .request-header p:last-child {
+      margin-bottom: 0px; }
+  .request-header__wrapper {
+    padding-right: 10px; }
+    .request-header__wrapper:last-child {
+      padding-left: 20px; }
+  .request-details__name-wrapper {
+    margin-top: 32px;
+    margin-bottom: 11px; }
+    .request-details__name-wrapper b {
+      font-size: 10px; }
+  .request-details__name {
+    font-size: 24px;
+    display: block;
+    margin-bottom: -39px; }
+  .request-header__title {
+    margin-bottom: 11px;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.4px; }
+  .request-header__name {
+    font-size: 16px;
+    margin-right: 15px; }
+  .request-info__description {
+    margin-bottom: 37px; }
+  .request-hint {
+    padding-top: 21px; }
+  .request-hint__wrapper h4 {
+    font-size: 20px;
+    margin-bottom: 15px; }
+    .request-hint__wrapper h4 span {
+      display: block; }
+  .request__info-wrapper {
+    margin: 0 20px; }
+  .request__item--mortgage .request__item-text--height {
+    height: 250px; }
+  .good-to-know p {
+    padding-bottom: 25px;
+    font-size: 14px; }
+  .request__hint-wrapper {
+    padding-bottom: 21px;
+    margin-bottom: 20px; }
+    .request__hint-wrapper p {
+      font-size: 20px; }
+  .request-hint__brokers-list {
+    padding: 0 20px;
+    margin-top: 20px; }
+  .request-hint__broker {
+    margin: 20px 0; }
+  .choose-broker {
+    padding-bottom: 0; }
+  .choose-broker__name {
+    font-size: 16px; }
+  .choose-broker__img {
+    margin-right: 9px; }
+  .choose-broker--verified .choose-broker__name span::after {
+    right: -19px; }
+  .choose-broker__online {
+    display: block;
+    margin-top: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 10px;
+    letter-spacing: 1px; }
+    .choose-broker__online br {
+      display: block; }
+    .choose-broker__online b {
+      display: none; }
+  .choose-broker__img-wrapper {
+    max-width: 310px; }
+  .choose-broker__img-wrapper {
+    order: 1;
+    max-width: none;
+    flex-basis: 75%; }
+  .choose-broker__star {
+    order: 2;
+    flex-basis: 25%; }
+  .choose-broker__info:nth-of-type(2) {
+    order: 3;
+    border-top: 1px solid #f1f2f2;
+    padding-top: 5px; }
+  .choose-broker__info:nth-of-type(3) {
+    order: 4;
+    border-top: 1px solid #f1f2f2;
+    padding-top: 5px; }
+  .choose-broker__info:nth-of-type(4) {
+    order: 5;
+    border-top: 1px solid #f1f2f2;
+    padding-top: 5px; }
+  .choose-broker__info:nth-of-type(5) {
+    order: 6; }
+  .choose-broker__info:nth-of-type(6) {
+    order: 7; }
+  .choose-broker__comments {
+    order: 8; }
+  .choose-broker__btn:nth-of-type(1) {
+    order: 9; }
+  .choose-broker__btn:nth-of-type(2) {
+    order: 10; }
+  .choose-broker__info {
+    border-top: none;
+    align-items: left;
+    padding-left: 20px !important;
+    flex-basis: 33.3%;
+    align-content: flex-start; }
+    .choose-broker__info:last-of-type {
+      margin-right: auto; }
+  .choose-broker__info {
+    height: 58px; }
+    .choose-broker__info b {
+      font-size: 16px; }
+  .choose-broker__comments {
+    margin-top: 10px; }
+    .choose-broker__comments p {
+      font-size: 16px; }
+  .choose-broker__btn {
+    margin-top: 17px;
+    border-top: 1px solid #f1f2f2;
+    flex-basis: 50%;
+    height: 60px;
+    padding: 0;
+    min-height: 60px;
+    box-sizing: border-box;
+    max-width: none !important;
+    width: 100%; }
+    .choose-broker__btn br {
+      display: none; }
+  .request-hint {
+    margin-bottom: 20px; }
+  .page-request .search__item--money::before,
+  .page-find-brokers .search__item--money::before {
+    top: 38px; }
+  .page-broker-registration .preview {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .page-broker-registration .preview__title {
+    margin-top: 10px;
+    font-size: 24px; }
+  .page-broker-registration .preview__img {
+    width: 100px;
+    height: 100px; }
+  .page-broker-registration .preview__steps {
+    padding: 0; }
+  .request__item {
+    margin: 14px 0px !important; }
+  .request__wrapper--mortgage .request__item {
+    margin: 0px !important; }
+  .request__item--mortgage {
+    width: 100%;
+    flex-basis: 100%; }
+  .request__wrapper--about .request__item {
+    width: 49% !important;
+    max-width: 100% !important; }
+  .request__wrapper--company .request__flex-wrapper {
+    flex-wrap: wrap; }
+  .request__wrapper--company .request__item {
+    width: 49% !important;
+    max-width: 100% !important;
+    margin-left: 0;
+    margin-right: 0; }
+    .request__wrapper--company .request__item:nth-child(3), .request__wrapper--company .request__item:nth-child(4), .request__wrapper--company .request__item:nth-child(5), .request__wrapper--company .request__item:nth-child(6) {
+      flex-basis: auto;
+      max-width: 100% !important;
+      width: 49% !important; }
+    .request__wrapper--company .request__item:nth-child(7) {
+      width: 100% !important;
+      max-width: 100% !important; }
+  .request__step .good-to-know {
+    margin: 20px; }
+  .request__step .good-to-know p {
+    font-size: 20px; } }
 
 @media (max-width: 800px) {
   .intro__btn-wrapper {
@@ -15301,4 +15479,19 @@ footer.featured-card__wrapper {
     margin-top: 0;
     display: none; }
   .request__step-wrapper--checked .payment {
-    display: block; } }
+    display: block; }
+  .profile-form__label--fourth {
+    flex-basis: 100%; }
+  .profile-form__label--morgage .request__item {
+    flex-basis: 100%;
+    margin: 0 !important;
+    margin-bottom: 2px !important; }
+    .profile-form__label--morgage .request__item:last-of-type span {
+      box-shadow: 1px -1px 0 0 #f1f2f2, -1px 0 0 0 #f1f2f2, 0 1px 0 0 #f1f2f2; }
+    .profile-form__label--morgage .request__item span {
+      box-shadow: none;
+      box-shadow: 1px -1px 0 0 #f1f2f2, -1px 0 0 0 #f1f2f2; }
+  .request__item--mortgage input:checked ~ span {
+    z-index: 3;
+    box-shadow: 0 0 0 1px #0cb175 !important;
+    color: #0cb175; } }
