@@ -428,7 +428,7 @@
     }
   }
   .rating__line {
-    width: 86px;
+    width: 86px !important;
   }
 
   .profile-header p {
@@ -682,5 +682,14 @@
         width: 100% !important;
       }
     }
+  }
+
+  .number-not-verified .profile-info__share-text--hide {
+    margin: 0;
+    margin-left: 5px;
+    max-width: 62%;
+  }
+  .profile-info__share .profile-info__social-list {
+    margin-left: 10px;
   }
 }

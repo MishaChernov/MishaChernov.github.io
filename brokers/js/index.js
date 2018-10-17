@@ -55,6 +55,23 @@ document.addEventListener('DOMContentLoaded', function() {
   // End Check If My Balance Amount More Than 0 Then Change Color
 
 
+
+  // Start Check If Profile Share Social Buttons More Than Two Then Modified Block
+
+  if($('.profile-info__share').length > 0) {
+
+    let socialsAmount = $('.profile-info__share').find('a').length;
+
+    if(socialsAmount >= 3) {
+      $('.profile-info__share').addClass('profile-info__share--many-items');
+    } else {
+      $('.profile-info__share').removeClass('profile-info__share--many-items');
+    }
+  }
+
+  // End Check If Profile Share Social Buttons More Than Two Then Modified Block
+
+
   // Start Check If File Is Uploaded And Add Name
 
     if($('.request__btn-upload').length > 0) {
