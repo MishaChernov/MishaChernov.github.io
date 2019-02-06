@@ -1,0 +1,38 @@
+.btn {
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  z-index: 9;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 10px 25px;
+  color: #3b414c;
+  border: 1px solid #3b414c;
+  text-decoration: none;
+  font-family: $secondary-font-family;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #3b414c;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  &:hover {
+    color: #ffffff;
+
+    span {
+      width: 225%;
+      height: 300px;
+    }
+  }
+}

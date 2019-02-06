@@ -1,0 +1,83 @@
+.social {
+  &--aside {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  &--about {
+    z-index: 9;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    background-color: #ffffff;
+    width: 40px;
+    margin: 0 auto;
+    text-align: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate3d(0, 1, 0, 90deg);
+    transition: all 0.5s;
+  }
+  &--contacts {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.social--aside .social__icon {
+  margin: 5px;
+  transition-duration: 500ms;
+
+  svg {
+    display: block;
+    width: 35px;
+    height: 35px;
+    fill: $primary-text-color;
+    transition-duration: 500ms;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.social--about .social__icon {
+  margin: 5px;
+  transition-duration: 500ms;
+
+  svg {
+    display: block;
+    width: 25px;
+    height: 25px;
+    fill: $primary-text-color;
+    transition-duration: 500ms;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.social--contacts .social__icon {
+  margin: 3px;
+  transition-duration: 500ms;
+
+  svg {
+    display: block;
+    width: 40px;
+    height: 40px;
+    fill: $primary-text-color;
+    transition-duration: 500ms;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}

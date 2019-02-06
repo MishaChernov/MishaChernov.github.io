@@ -1,0 +1,37 @@
+@media (min-width: $device-md-width) {
+  body {
+    font-size: 16px;
+  }
+
+  .works__item-bg {
+    height: 400px;
+  }
+  .works__item {
+    max-width: 350px;
+    margin: 20px;
+  }
+  .about__wrapper {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+  }
+  .about__info {
+    max-width: 650px;
+  }
+  .about__title {
+    &--desktop {
+      text-align: left;
+    }
+  }
+  .about__data {
+    flex-wrap: wrap;
+    max-width: 100%;
+    font-size: 16px;
+  }
+  .about__btn {
+    font-size: 16px;
+  }
+  .about__data li {
+    margin: 10px 0;
+  }
+}

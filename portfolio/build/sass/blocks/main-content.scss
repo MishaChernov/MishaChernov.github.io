@@ -1,0 +1,7 @@
+.main-content {
+  z-index: 5;
+  position: relative;
+  top: 100vh;
+  background-color: $primary-content-bg-color;
+  transition: transform 500ms ease;
+}

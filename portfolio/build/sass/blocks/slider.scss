@@ -1,0 +1,26 @@
+.slider__label {
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  border-radius: 5px;
+  margin: 2px;
+  background: #D6D6D6;
+  transition: opacity .2s ease;
+}
+
+.slider__input:checked ~ .slider__label {
+  width: 20px;
+  background: #869791;
+}
+
+.slider__slide-1 {
+  left: -100%;
+}
+
+.slider__slide-2 {
+  left: 0;
+}
+
+.slider__slide-3 {
+  right: -100%;
+}

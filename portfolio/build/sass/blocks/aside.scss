@@ -1,0 +1,17 @@
+#menu:checked ~ .aside {
+  right: 0px;
+  transition: left 500ms ease;
+}
+
+.aside {
+  position: fixed;
+  top: 0;
+  right: -210px;
+  width: 314px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #bdbdbd;
+  transition: right 500ms ease;
+  z-index: 0;
+}

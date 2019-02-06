@@ -1,0 +1,55 @@
+.scroll-btn {
+  z-index: 5;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  opacity: 0.9;
+  animation: btn-scroll-go-down 1.5s linear 0s infinite;
+  font-size: 0;
+
+  span {
+    display: inline-block;
+    position: relative;
+    background-color: #ffffff;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 14px;
+      top: 27px;
+      width: 13px;
+      height: 2px;
+      background-color: inherit;
+      transform: rotate(-126deg);
+      transform-origin: 0% 45%;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:last-of-type {
+      transform: scale(0.7);
+      top: -3px;
+      left: 4px;
+      transition: all 0.3s ease-in-out;
+    }
+    &::before {
+      transform: rotate(-54deg);
+    }
+  }
+  &:hover {
+    span {
+      &:last-of-type {
+        &::before {
+          transform: rotate(-90deg);
+        }
+        &::after {
+          transform: rotate(-270deg);
+        }
+      }
+    }
+  }
+}

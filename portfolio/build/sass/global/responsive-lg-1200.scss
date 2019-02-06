@@ -1,0 +1,118 @@
+@media (min-width: $device-lg-width) {
+  .section__border {
+    padding: 60px 0 20px 35px;
+  }
+  .header-content {
+    background-size: contain;
+  }
+  .intro__title {
+    font-size: 60px;
+  }
+  .about__wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+  .about__img-wrapper {
+    position: relative;
+    z-index: 9;
+    margin: 0 20px;
+    box-sizing: border-box;
+    margin-left: auto;
+    float: left;
+
+    &::after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: -20px;
+      height: 100%;
+      width: 100%;
+      background: #f4f4f4;
+      opacity: 0.9;
+    }
+
+    &:hover .social--about {
+      transform: rotate3d(0, 1, 0, 0deg);
+      transition: all 0.5s;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .about__info {
+    max-width: 700px;
+    margin-left: 20px;
+    margin-right: auto;
+
+    h3 {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    h4 {
+      margin-top: 10px;
+      font-size: 20px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+  }
+
+  .about__btn {
+    z-index: 9;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 10px 25px;
+    margin: 0 5px;
+    color: #3b414c;
+    border: 1px solid #3b414c;
+    text-decoration: none;
+    font-family: $secondary-font-family;
+
+    span {
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background-color: #3b414c;
+      transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    &:hover {
+      color: #ffffff;
+
+      span {
+        width: 225%;
+        height: 300px;
+      }
+    }
+  }
+
+  .about__data {
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      margin-right: 50px;
+      padding: 0;
+    }
+  }
+
+  .about__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section__border h3 {
+    font-size: 44px;
+    margin-bottom: 30px;
+  }
+}
