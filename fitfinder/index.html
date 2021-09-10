@@ -1,0 +1,316 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+        />
+        <meta name="msapplication-tap-highlight" content="no" />
+
+        <style type="text/css">
+            html,
+            body {
+                padding: 0px;
+                margin: 0px;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body class="uclw_embed" style="background-color: #9c9b9b">
+        <div id="info">INFO:</div>
+        <script type="text/javascript">
+            window._fitAnalytics = function () {
+                // App embed content page, for integrations inside the native application webview
+
+                //// General utility functions
+
+                var slice = Array.prototype.slice;
+
+                var extend = function (dst, src) {
+                    var rest = slice.call(arguments, 2);
+                    for (var k in src) {
+                        dst[k] = src[k];
+                    }
+                    if (rest.length) {
+                        rest.unshift(dst);
+                        extend.apply(this, rest);
+                    }
+                    return dst;
+                };
+
+                var parseQuery = function (str) {
+                    var parts = str.replace(/^\?/, '').split('&'),
+                        out = {};
+
+                    for (var i = 0, n = parts.length; i < n; i++) {
+                        var kv = parts[i].split('=');
+                        if (kv.length > 1) {
+                            out[kv[0]] = decodeURIComponent(kv[1]);
+                        } else {
+                            out[kv[0]] = true;
+                        }
+                    }
+                };
+
+                var attachEvent = function (target, name, handler) {
+                    if (target.addEventListener) {
+                        target.addEventListener(name, handler, false);
+                    } else {
+                        target.attachEvent('on' + name, handler);
+                    }
+                };
+
+                var makeAction = function (action) {
+                    return function (data) {
+                        var t = this;
+                        var widget = this.widget;
+
+                        // set up callback, if specified
+                        if (data.cbids != null) {
+                            for (
+                                var i = 0, n = data.arguments.length;
+                                i < n;
+                                i++
+                            ) {
+                                var arg = data.arguments[i];
+                                if (
+                                    typeof arg == 'string' &&
+                                    data.cbids[arg] === 1
+                                ) {
+                                    // replace the callback argument placeholder with a function
+                                    data.arguments[i] = function () {
+                                        t.sendMessage({
+                                            action: '__callback',
+                                            arguments: [
+                                                arg,
+                                                slice.call(arguments),
+                                            ],
+                                        });
+                                    };
+                                }
+                            }
+                        }
+
+                        this.log('action', data);
+
+                        var rval = widget[action].apply(
+                            widget,
+                            data.arguments || []
+                        );
+
+                        // pass the return value back, if requested
+                        if (data.rid != null) {
+                            this.sendMessage({
+                                action: '__return',
+                                arguments: [data.rid, rval],
+                            });
+                        }
+                    };
+                };
+
+                // Manager class
+                // wraps the widget instance and marshalls calls and callbacks to the parent window
+
+                var Manager = function () {
+                    // TODO: decide whether we need to use query (currently everything is passed via 'init' action)
+                    this.queryParams = parseQuery(window.location.search);
+                    this.initialize(this.queryParams);
+                };
+
+                Manager.prototype = {
+                    initialize: function (params) {
+                        var t = this;
+                        this.logs = [];
+                    },
+
+                    enableLogs: false,
+
+                    actions: {
+                        // triggered by the parent loader, handles widget creation
+                        // and passing options and callbacks
+                        init: function (data) {
+                            if (this.widget != null) {
+                                console.error(
+                                    'The widget is already initialized'
+                                );
+                                return;
+                            }
+
+                            var t = this;
+                            var config = data.arguments[0];
+
+                            // container page config
+                            var opts = extend(
+                                {
+                                    load: true,
+                                    open: true,
+                                    cart: false,
+                                    recommend: true,
+                                    close: true,
+                                    error: true,
+                                    metricEvent: false,
+                                },
+                                config
+                            );
+
+                            createActionHandler = function (action) {
+                                return function () {
+                                    t.sendMessage({
+                                        action: action,
+                                        arguments: slice.apply(arguments),
+                                    });
+                                };
+                            };
+
+                            // insert the widget callback handlers
+                            // "cart" and "metricEvent" are disabled by default, the rest is enabled
+                            opts.load &&
+                                (opts.load = createActionHandler('load'));
+                            opts.open &&
+                                (opts.open = createActionHandler('open'));
+                            opts.cart &&
+                                (opts.cart = createActionHandler('cart'));
+                            opts.recommend &&
+                                (opts.recommend =
+                                    createActionHandler('recommend'));
+                            opts.close &&
+                                (opts.close = createActionHandler('close'));
+                            opts.error &&
+                                (opts.error = createActionHandler('error'));
+                            opts.metricEvent &&
+                                (opts.metricEvent =
+                                    createActionHandler('metricEvent'));
+
+                            // special handlers and options
+                            opts.setLocalCookie =
+                                createActionHandler('setLocalCookie');
+                            opts.isIFrame = true;
+                            opts.isEmbed = true;
+
+                            opts.hostname = 'embed';
+                            if (config.hostname != null) {
+                                opts.hostname += '-' + config.hostname;
+                            } else if (
+                                /iPad|iPhone|iPod/.test(navigator.platform)
+                            ) {
+                                opts.hostname += '-ios';
+                            }
+
+                            window.fitaWidget = this.widget =
+                                new FitAnalyticsWidget(opts);
+
+                            this.sendMessage({ action: '__init' });
+                        },
+
+                        open: makeAction('open'),
+                        close: makeAction('close'),
+                        openSizeCharts: makeAction('openSizeCharts'),
+
+                        reconfigure: makeAction('reconfigure'),
+                        requestProduct: makeAction('requestProduct'),
+                        requestProducts: makeAction('requestProducts'),
+                        getRecommendation: makeAction('getRecommendation'),
+                        isSizeAvailable: makeAction('isSizeAvailable'),
+
+                        getExperimentVariant: makeAction('getRecommendation'),
+                        getAllExperiments: makeAction('getAllExperiments'),
+
+                        isABTestEnabled: makeAction('isABTestEnabled'),
+                        getUserABTestFunnel: makeAction('getUserABTestFunnel'),
+                        meterABTestSizeChartOpen: makeAction(
+                            'meterABTestSizeChartOpen'
+                        ),
+                        meterClick: makeAction('meterClick'),
+                        meterEvent: makeAction('meterEvent'),
+                        meterExternalAB: makeAction('meterExternalAB'),
+
+                        getSid: makeAction('getSid'),
+                        setSid: makeAction('setSid'),
+                    },
+
+                    encodeMessage: function (data) {
+                        return btoa(
+                            unescape(encodeURIComponent(JSON.stringify(data)))
+                        );
+                    },
+
+                    decodeMessage: function (str) {
+                        var out = null;
+                        try {
+                            out = JSON.parse(
+                                decodeURIComponent(escape(atob(str)))
+                            );
+                        } catch (err) {
+                            console.error(err);
+                        }
+                        return out;
+                    },
+
+                    receiveMessage: function (str) {
+                        var msg = this.decodeMessage(str);
+                        var handler = this.actions[msg.action];
+                        try {
+                            handler && handler.call(this, msg);
+                        } catch (e) {
+                            console.error(e);
+                        }
+                    },
+
+                    sendMessage: function (msg) {
+                        var encodedMessage = this.encodeMessage(msg);
+                        document.getElementById('info').innerHTML =
+                            JSON.stringify(window.fitaMessageInterface);
+                        console.log(
+                            'window.fitaMessageInterface',
+                            window.fitaMessageInterface
+                        );
+                        if (true) {
+                            // Android-specific message interface object
+                            window.fitaMessageInterface.receiveMessage(
+                                encodedMessage
+                            );
+                        } else if (
+                            window.webkit != null &&
+                            window.webkit.messageHandlers != null &&
+                            window.webkit.messageHandlers
+                                .fitaMessageInterface != null
+                        ) {
+                            // iOS WKWebView message interface
+                            window.webkit.messageHandlers.fitaMessageInterface.postMessage(
+                                encodedMessage
+                            );
+                        } else {
+                            // iOS UIWebView scheme request
+                            window.location = 'fita:' + encodedMessage;
+                        }
+                    },
+
+                    log: function () {
+                        if (this.enableLogs === true) {
+                            this.logs.push(slice.apply(arguments));
+                        }
+                    },
+
+                    destroy: function () {
+                        this.widget && this.widget.destroy();
+                    },
+                };
+
+                setTimeout(() => {
+                    var manager = (window.__widgetManager = new Manager());
+                    manager.sendMessage({ action: '__ready' });
+                    document.getElementById('info').innerHTML +=
+                        ' MANAGER READY';
+                }, 10000);
+            };
+            window._fitAnalytics.isEmbedded = true;
+        </script>
+        <script
+            type="text/javascript"
+            src="https://widget.fitanalytics.com/widget_jq.js?rel=1621426628"
+        ></script>
+    </body>
+</html>
